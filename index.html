@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>크리크리 뷰티샵</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -16,57 +16,96 @@
       font-family: 'Noto Sans KR', sans-serif;
     }
 
-    /* 전체 배경 이미지 */
-    .hero {
-      background: url('main.png') no-repeat center center/cover;
-      height: 100vh;
+    /* 전체 슬라이드 배경 */
+    .slider {
       position: relative;
-      color: white;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      width: 400%;
+      height: 100%;
+      animation: slide 16s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { margin-left: 0%; }
+      25% { margin-left: -100%; }
+      50% { margin-left: -200%; }
+      75% { margin-left: -300%; }
+      100% { margin-left: 0%; }
     }
 
     /* 메뉴 왼쪽 정렬 */
     nav {
       position: absolute;
-      top: 20px;
+      top: 30px;
       left: 40px;
       display: flex;
       gap: 30px;
-      font-size: 17px;
-      font-weight: bold;
+      z-index: 10;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      transition: 0.3s;
+      font-weight: bold;
+      font-size: 18px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
 
-    nav a:hover {
-      color: #ffd3e0;
-    }
-
-    /* 가운데 텍스트 */
+    /* 중앙 텍스트 */
     .hero-text {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
+      color: white;
+      z-index: 10;
     }
 
     .hero-text h1 {
       font-size: 3em;
-      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     }
 
     .hero-text p {
       font-size: 1.2em;
+      margin-top: 10px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* 어두운 배경 필터 (가독성 향상용) */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.25);
+      z-index: 1;
     }
   </style>
 </head>
 <body>
+  <div class="slider">
+    <div class="slides">
+      <img src="main.png" alt="메인 이미지">
+      <img src="main2.png" alt="슬라이드 이미지2">
+      <img src="shop.png" alt="슬라이드 이미지3">
+    </div>
 
-  <div class="hero">
+    <div class="overlay"></div>
+
     <nav>
       <a href="#">홈</a>
       <a href="#">서비스</a>
@@ -79,6 +118,5 @@
       <p>당신의 아름다움을 위한 프라이빗 공간</p>
     </div>
   </div>
-
 </body>
 </html>
