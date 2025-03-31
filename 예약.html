@@ -14,25 +14,66 @@
     }
 
     h1 {
-      margin-top: 80px;
-      font-size: 2.5em;
+      margin-top: 60px;
+      font-size: 2.2em;
       color: #333;
     }
 
-    p {
+    p.desc {
       font-size: 1.1em;
       color: #666;
       margin-bottom: 40px;
     }
 
+    .notice-box {
+      background-color: #fff;
+      padding: 40px 30px;
+      margin: 30px auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      max-width: 800px;
+      text-align: left;
+    }
+
+    .notice-box h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      color: #d94f7b;
+    }
+
+    .notice-box ul {
+      font-size: 1em;
+      color: #444;
+      line-height: 1.8;
+      padding-left: 20px;
+    }
+
+    .notice-box li {
+      margin-bottom: 10px;
+    }
+
+    .check-confirm {
+      margin-top: 30px;
+      font-size: 1em;
+      color: #333;
+    }
+
     .btn {
       display: inline-block;
       padding: 15px 30px;
-      margin: 10px;
+      margin: 15px;
       font-size: 1em;
       font-weight: bold;
       border-radius: 8px;
       text-decoration: none;
+      cursor: pointer;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .btn.active {
+      opacity: 1;
+      pointer-events: auto;
     }
 
     .naver {
@@ -44,36 +85,51 @@
       background-color: #FEE500;
       color: #000;
     }
-
-    .btn:hover {
-      opacity: 0.85;
-    }
   </style>
 </head>
-<section style="background-color: #fff; padding: 60px 20px; max-width: 800px; margin: 0 auto; text-align: left; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-  <h2 style="color: #333; font-size: 1.8em; margin-bottom: 20px;">📌 예약 전 꼭 확인해주세요</h2>
-  <ul style="color: #555; font-size: 1em; line-height: 1.8;">
-    <li><strong>시술 당일</strong>은 메이크업/선크림 없이 내원 부탁드립니다.</li>
-    <li><strong>지각 시</strong> 다음 예약에 영향을 줄 수 있어 시술이 제한될 수 있습니다.</li>
-    <li><strong>당일 예약 변경/취소</strong>는 어려우며, 최소 1일 전 연락 부탁드립니다.</li>
-    <li><strong>노쇼(무단결석)</strong> 시 이후 예약이 제한될 수 있습니다.</li>
-    <li><strong>민감성 피부</strong> 또는 <strong>임산부</strong>는 사전 상담 후 시술 여부가 결정됩니다.</li>
-    <li>눈썹/속눈썹 시술 후 <strong>세안, 사우나, 수영장 등은 3일간 피해주세요.</strong></li>
-    <li>방문 시 <strong>마스크 착용</strong>을 권장드립니다.</li>
-    <li>모든 시술은 <strong>1:1 프라이빗 룸</strong>에서 안전하게 진행됩니다.</li>
-  </ul>
-</section>
-
 <body>
 
-  <h1>🗓 예약 안내</h1>
-  <p>아래 버튼을 통해 편리하게 예약 및 상담을 진행해보세요</p>
+  <h1>🗓 크리크리 뷰티샵 예약</h1>
+  <p class="desc">소중한 당신을 위한 맞춤 시술, 예약 전 안내사항을 꼭 확인해주세요 💖</p>
 
-  <!-- 네이버 예약 버튼 -->
-  <a href="https://booking.naver.com/your-shop-url" target="_blank" class="btn naver">네이버 예약 바로가기</a>
+  <div class="notice-box">
+    <h2>📌 예약 전 안내사항</h2>
+    <ul>
+      <li>시술 당일에는 메이크업, 선크림 없이 편하게 방문해주세요.</li>
+      <li>지각하실 경우 다음 예약에 영향을 줄 수 있어 시술 시간이 조정될 수 있습니다.</li>
+      <li>예약 변경 및 취소는 최소 하루 전까지 연락 부탁드립니다.</li>
+      <li>무단 결석(노쇼) 시 이후 예약이 제한될 수 있습니다.</li>
+      <li>민감성 피부 또는 임산부 고객님은 사전 상담 후 시술 여부를 결정해드립니다.</li>
+      <li>시술 후 3일간 세안, 사우나, 수영장 등은 피해주세요.</li>
+      <li>방문 시 마스크 착용을 권장드리며, 모든 시술은 1:1 프라이빗 공간에서 진행됩니다.</li>
+    </ul>
+  </div>
 
-  <!-- 카카오톡 채널 버튼 -->
-  <a href="https://pf.kakao.com/_your_channel_id" target="_blank" class="btn kakao">카카오톡 상담하기</a>
+  <div class="check-confirm">
+    <input type="checkbox" id="agree" />
+    <label for="agree">위 내용을 모두 확인하였으며, 동의합니다.</label>
+  </div>
+
+  <div>
+    <a href="https://booking.naver.com/your-shop-url" target="_blank" class="btn naver" id="naverBtn">네이버 예약 바로가기</a>
+    <a href="https://pf.kakao.com/_your_channel_id" target="_blank" class="btn kakao" id="kakaoBtn">카카오톡 상담하기</a>
+  </div>
+
+  <script>
+    const checkbox = document.getElementById('agree');
+    const naverBtn = document.getElementById('naverBtn');
+    const kakaoBtn = document.getElementById('kakaoBtn');
+
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        naverBtn.classList.add('active');
+        kakaoBtn.classList.add('active');
+      } else {
+        naverBtn.classList.remove('active');
+        kakaoBtn.classList.remove('active');
+      }
+    });
+  </script>
 
 </body>
 </html>
