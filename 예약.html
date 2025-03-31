@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>예약 | 크리크리 뷰티샵</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
   <style>
@@ -10,58 +11,61 @@
       background-color: #fff5f7;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
 
     h1 {
-      margin-top: 60px;
-      font-size: 2.2em;
+      margin-top: 50px;
+      font-size: 2em;
       color: #333;
+      text-align: center;
     }
 
     p.desc {
-      font-size: 1.1em;
+      font-size: 1em;
       color: #666;
-      margin-bottom: 40px;
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 0 20px;
     }
 
-    .notice-box {
+    .section {
       background-color: #fff;
-      padding: 40px 30px;
-      margin: 30px auto;
+      padding: 30px 20px;
+      margin: 20px auto;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       max-width: 800px;
-      text-align: left;
     }
 
-    .notice-box h2 {
-      font-size: 1.5em;
-      margin-bottom: 20px;
+    .section h2 {
+      font-size: 1.4em;
+      margin-bottom: 15px;
       color: #d94f7b;
+      text-align: center;
     }
 
-    .notice-box ul {
-      font-size: 1em;
+    .section ul {
+      font-size: 0.95em;
       color: #444;
       line-height: 1.8;
       padding-left: 20px;
     }
 
-    .notice-box li {
+    .section li {
       margin-bottom: 10px;
     }
 
     .check-confirm {
-      margin-top: 30px;
-      font-size: 1em;
+      text-align: center;
+      margin: 30px auto;
+      font-size: 0.95em;
       color: #333;
     }
 
     .btn {
       display: inline-block;
-      padding: 15px 30px;
-      margin: 15px;
+      padding: 14px 24px;
+      margin: 10px;
       font-size: 1em;
       font-weight: bold;
       border-radius: 8px;
@@ -69,6 +73,7 @@
       cursor: pointer;
       opacity: 0.5;
       pointer-events: none;
+      transition: 0.3s;
     }
 
     .btn.active {
@@ -85,6 +90,57 @@
       background-color: #FEE500;
       color: #000;
     }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.95em;
+    }
+
+    table, th, td {
+      border: 1px solid #eee;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #fff0f5;
+      color: #333;
+    }
+
+    .btn-wrap {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 400px;
+      margin-top: 10px;
+      border-radius: 12px;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 1.6em;
+      }
+      .section h2 {
+        font-size: 1.2em;
+      }
+      table, th, td {
+        font-size: 0.85em;
+      }
+      .btn {
+        width: 90%;
+        display: block;
+        margin: 10px auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -92,27 +148,68 @@
   <h1>🗓 크리크리 뷰티샵 예약</h1>
   <p class="desc">소중한 당신을 위한 맞춤 시술, 예약 전 안내사항을 꼭 확인해주세요 💖</p>
 
-  <div class="notice-box">
+  <!-- 시술 리스트 -->
+  <div class="section">
+    <h2>💅 시술 리스트 및 가격</h2>
+    <table>
+      <tr>
+        <th>시술 항목</th>
+        <th>소요 시간</th>
+        <th>가격</th>
+      </tr>
+      <tr>
+        <td>속눈썹 연장 (자연 스타일)</td>
+        <td>60분</td>
+        <td>40,000원</td>
+      </tr>
+      <tr>
+        <td>속눈썹 연장 (볼륨 스타일)</td>
+        <td>80분</td>
+        <td>50,000원</td>
+      </tr>
+      <tr>
+        <td>눈썹 왁싱 + 정리</td>
+        <td>30분</td>
+        <td>20,000원</td>
+      </tr>
+      <tr>
+        <td>반영구 눈썹 (자연/그라데이션)</td>
+        <td>90분</td>
+        <td>150,000원</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 주의사항 -->
+  <div class="section">
     <h2>📌 예약 전 안내사항</h2>
     <ul>
-      <li>시술 당일에는 메이크업, 선크림 없이 편하게 방문해주세요.</li>
-      <li>지각하실 경우 다음 예약에 영향을 줄 수 있어 시술 시간이 조정될 수 있습니다.</li>
-      <li>예약 변경 및 취소는 최소 하루 전까지 연락 부탁드립니다.</li>
-      <li>무단 결석(노쇼) 시 이후 예약이 제한될 수 있습니다.</li>
-      <li>민감성 피부 또는 임산부 고객님은 사전 상담 후 시술 여부를 결정해드립니다.</li>
-      <li>시술 후 3일간 세안, 사우나, 수영장 등은 피해주세요.</li>
-      <li>방문 시 마스크 착용을 권장드리며, 모든 시술은 1:1 프라이빗 공간에서 진행됩니다.</li>
+      <li>시술 당일엔 메이크업/선크림 없이 방문해주세요.</li>
+      <li>지각 시 시술 시간이 조정될 수 있습니다.</li>
+      <li>예약 변경은 최소 하루 전까지 부탁드립니다.</li>
+      <li>노쇼 발생 시 이후 예약이 제한됩니다.</li>
+      <li>민감성 피부/임산부는 상담 후 시술 여부가 결정됩니다.</li>
+      <li>시술 후 3일간 세안/사우나/수영장 이용은 피해주세요.</li>
     </ul>
   </div>
 
+  <!-- 달력 -->
+  <div class="section">
+    <h2>📆 예약 가능 일정</h2>
+    <p style="color:#666; font-size:0.9em; text-align:center;">※ 아래 달력은 참고용이며, 예약은 네이버 또는 카카오톡으로 진행해주세요.</p>
+    <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
+  </div>
+
+  <!-- 체크박스 -->
   <div class="check-confirm">
     <input type="checkbox" id="agree" />
     <label for="agree">위 내용을 모두 확인하였으며, 동의합니다.</label>
   </div>
 
-  <div>
-    <a href="https://booking.naver.com/your-shop-url" target="_blank" class="btn naver" id="naverBtn">네이버 예약 바로가기</a>
-    <a href="https://pf.kakao.com/_your_channel_id" target="_blank" class="btn kakao" id="kakaoBtn">카카오톡 상담하기</a>
+  <!-- 예약 버튼 -->
+  <div class="btn-wrap">
+    <a href="https://booking.naver.com/your-shop-url" target="_blank" class="btn naver" id="naverBtn">네이버 예약</a>
+    <a href="https://pf.kakao.com/_your_channel_id" target="_blank" class="btn kakao" id="kakaoBtn">카카오톡 상담</a>
   </div>
 
   <script>
@@ -121,13 +218,9 @@
     const kakaoBtn = document.getElementById('kakaoBtn');
 
     checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        naverBtn.classList.add('active');
-        kakaoBtn.classList.add('active');
-      } else {
-        naverBtn.classList.remove('active');
-        kakaoBtn.classList.remove('active');
-      }
+      const isChecked = checkbox.checked;
+      naverBtn.classList.toggle('active', isChecked);
+      kakaoBtn.classList.toggle('active', isChecked);
     });
   </script>
 
