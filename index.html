@@ -2,118 +2,83 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>크리크리뷰티</title>
+  <title>크리크리 뷰티샵</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@2.1.2/css/SpoqaHanSansNeo.css" rel="stylesheet">
   <style>
-    body {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
       font-family: 'Noto Sans KR', sans-serif;
-      margin: 0;
-      background-color: #fff9f9;
-      color: #333;
     }
 
-    h1, h2, h3, header h1, header p {
-      font-family: 'Spoqa Han Sans Neo', 'Noto Sans KR', sans-serif;
+    /* 전체 배경 이미지 */
+    .hero {
+      background: url('main.png') no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+      color: white;
     }
 
-    header {
-      background-color: #ffc0cb;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
+    /* 메뉴 왼쪽 정렬 */
     nav {
-      background-color: #ffe4e1;
-      text-align: center;
-      padding: 10px 0;
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: #333;
-      text-decoration: none;
+      position: absolute;
+      top: 20px;
+      left: 40px;
+      display: flex;
+      gap: 30px;
+      font-size: 17px;
       font-weight: bold;
     }
 
-    .slider {
-      width: 100%;
-      max-width: 800px;
-      margin: 40px auto;
-      overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
     }
 
-    .slides {
-      display: flex;
-      width: 400%;
-      animation: slide 12s infinite;
+    nav a:hover {
+      color: #ffd3e0;
     }
 
-    .slides img {
-      width: 100%;
-      height: auto;
-    }
-
-    @keyframes slide {
-      0% {margin-left: 0%;}
-      25% {margin-left: -100%;}
-      50% {margin-left: -200%;}
-      75% {margin-left: -300%;}
-      100% {margin-left: 0%;}
-    }
-
-    section {
-      padding: 40px 20px;
+    /* 가운데 텍스트 */
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
     }
 
-    footer {
-      background-color: #f0f0f0;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #777;
+    .hero-text h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 1.2em;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>크리크리뷰티</h1>
-    <p>당신의 아름다움을 위한 프라이빗 공간</p>
-  </header>
+  <div class="hero">
+    <nav>
+      <a href="#">홈</a>
+      <a href="#">서비스</a>
+      <a href="#">예약</a>
+      <a href="#">오시는 길</a>
+    </nav>
 
-  <nav>
-    <a href="#">홈</a>
-    <a href="#">서비스</a>
-    <a href="#">예약하기</a>
-    <a href="#">오시는 길</a>
-  </nav>
-
-  <div class="slider">
-    <div class="slides">
-      <img src="main.png" alt="샵 사진1">
-      <img src="shop.png" alt="샵 사진2">
-      <img src="main2.jpg" alt="샵 사진3">
-          </div>
+    <div class="hero-text">
+      <h1>크리크리 뷰티샵</h1>
+      <p>당신의 아름다움을 위한 프라이빗 공간</p>
+    </div>
   </div>
-
-  <section>
-    <h2>Welcome to CriCriBeauty 💖</h2>
-    <p>피부, 눈썹, 속눈썹, 반영구 메이크업 등 다양한 뷰티 서비스를 경험하세요.</p>
-    <p>편안한 분위기에서 1:1 맞춤 시술을 진행합니다.</p>
-  </section>
-
-  <footer>
-    © 2025 CriCriBeauty | 대전시청역5번출구 센티온빌딩  근처 | 인스타: @cricribeauty
-  </footer>
 
 </body>
 </html>
