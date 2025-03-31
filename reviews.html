@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>고객 후기 | 크리크리 뷰티샵</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
@@ -14,7 +15,7 @@
 
     h1 {
       text-align: center;
-      margin: 60px 0 30px;
+      margin: 60px 20px 30px;
       font-size: 2em;
       color: #d94f7b;
     }
@@ -31,17 +32,16 @@
     .review {
       background: #fff;
       border-radius: 12px;
-      padding: 20px;
+      padding: 20px 25px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       position: relative;
     }
 
     .review::before {
-      content: "“";
-      font-size: 2.5em;
-      color: #d94f7b;
+      content: "💬";
+      font-size: 1.2em;
       position: absolute;
-      top: 10px;
+      top: 15px;
       left: 15px;
     }
 
@@ -50,36 +50,79 @@
       font-size: 1em;
       line-height: 1.6;
       color: #444;
+      padding-left: 25px;
     }
 
     .review span {
       display: block;
-      margin-top: 15px;
+      margin-top: 12px;
       text-align: right;
       font-size: 0.9em;
       color: #999;
     }
+
+    .form-button {
+      text-align: center;
+      margin: 40px 0 80px;
+    }
+
+    .form-button a {
+      display: inline-block;
+      background-color: #d94f7b;
+      color: white;
+      text-decoration: none;
+      padding: 15px 30px;
+      font-size: 1em;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-button a:hover {
+      background-color: #c8436f;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 1.6em;
+      }
+      .review p {
+        font-size: 0.95em;
+      }
+    }
   </style>
 </head>
 <body>
+
   <h1>💬 고객 후기</h1>
+
   <div class="reviews">
     <div class="review">
       <p>처음 방문했는데 너무 친절하시고 시술도 깔끔하게 해주셨어요! 속눈썹이 자연스럽고 오래가요.</p>
       <span>- 김** 고객님</span>
     </div>
+
     <div class="review">
       <p>샵 분위기도 너무 아늑하고, 반영구 눈썹도 정말 자연스러워요. 다음에 또 방문할게요 💖</p>
       <span>- 박** 고객님</span>
     </div>
+
     <div class="review">
       <p>예약부터 상담까지 꼼꼼하게 해주시고, 만족스러워서 친구들에게도 추천했어요!</p>
       <span>- 이** 고객님</span>
     </div>
+
     <div class="review">
       <p>속눈썹 시술받고 나니 얼굴이 확 살아보여요. 아침 메이크업도 훨씬 빨라졌어요.</p>
       <span>- 정** 고객님</span>
     </div>
   </div>
+
+  <div class="form-button">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeENTyOtfgCEWfNg6hxlWOW6mL0523sYrxSp-1OyW7PHtaEaw/viewform?usp=dialog" target="_blank">
+      ✍ 후기 작성하기
+    </a>
+  </div>
+
 </body>
 </html>
