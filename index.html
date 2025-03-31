@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>크리크리뷰티</title>
-  <!-- 폰트 불러오기 -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@2.1.2/css/SpoqaHanSansNeo.css" rel="stylesheet">
-
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
@@ -43,6 +41,34 @@
       font-weight: bold;
     }
 
+    .slider {
+      width: 100%;
+      max-width: 800px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .slides {
+      display: flex;
+      width: 400%;
+      animation: slide 12s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: auto;
+    }
+
+    @keyframes slide {
+      0% {margin-left: 0%;}
+      25% {margin-left: -100%;}
+      50% {margin-left: -200%;}
+      75% {margin-left: -300%;}
+      100% {margin-left: 0%;}
+    }
+
     section {
       padding: 40px 20px;
       text-align: center;
@@ -71,6 +97,14 @@
     <a href="#">오시는 길</a>
   </nav>
 
+  <div class="slider">
+    <div class="slides">
+      <img src="main.png" alt="샵 사진1">
+      <img src="shop.png" alt="샵 사진2">
+      <img src="main2.jpg" alt="샵 사진3">
+          </div>
+  </div>
+
   <section>
     <h2>Welcome to CriCriBeauty 💖</h2>
     <p>피부, 눈썹, 속눈썹, 반영구 메이크업 등 다양한 뷰티 서비스를 경험하세요.</p>
@@ -78,7 +112,7 @@
   </section>
 
   <footer>
-    © 2025 CriCriBeauty | 대전시청역 5번출구 센티온빌딩 근처 | 인스타: @cricribeauty
+    © 2025 CriCriBeauty | 대전시청역5번출구 센티온빌딩  근처 | 인스타: @cricribeauty
   </footer>
 
 </body>
