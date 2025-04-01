@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>크리크리 뷰티샵</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -16,7 +17,6 @@
       font-family: 'Noto Sans KR', sans-serif;
     }
 
-    /* 전체 슬라이드 배경 */
     .slider {
       position: relative;
       height: 100vh;
@@ -44,7 +44,6 @@
       100% { margin-left: 0%; }
     }
 
-    /* 메뉴 왼쪽 정렬 */
     nav {
       position: absolute;
       top: 30px;
@@ -62,7 +61,22 @@
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
 
-    /* 중앙 텍스트 */
+    .language-switch {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      z-index: 10;
+    }
+
+    .language-switch a {
+      margin-left: 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9em;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
     .hero-text {
       position: absolute;
       top: 50%;
@@ -84,7 +98,6 @@
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     }
 
-    /* 어두운 배경 필터 (가독성 향상용) */
     .overlay {
       position: absolute;
       top: 0;
@@ -94,97 +107,82 @@
       background: rgba(0, 0, 0, 0.25);
       z-index: 1;
     }
-<head>
-  <meta charset="UTF-8" />
-  <title>크리크리 뷰티샵</title>
 
-  <!-- 폰트 -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
-
-  <!-- ✅ 여기에 추가 -->
-  <style>
-    /* 기존 스타일 */
-
-    .language-switch {
-      position: absolute;
-      top: 30px;
-      right: 40px;
-      z-index: 10;
+    footer {
+      background-color:#fef0f4;
+      padding: 30px 20px;
+      text-align: center;
+      font-family:'Noto Sans KR', sans-serif;
     }
 
-    .language-switch a {
-      margin-left: 10px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 0.9em;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    footer img {
+      vertical-align: middle;
     }
-
-    /* 다른 스타일 계속 이어짐 */
-  </style>
-</head>
-
   </style>
 </head>
 <body>
+
   <div class="slider">
     <div class="slides">
       <img src="main.png" alt="메인 이미지">
       <img src="main2.png" alt="슬라이드 이미지2">
       <img src="shop.png" alt="슬라이드 이미지3">
-    </div>
+       </div>
 
     <div class="overlay"></div>
 
-  <nav style="display:flex; gap:20px; padding:20px; background-color: #fffafc; font-family:'Noto Sans KR', sans-serif; font-weight:bold; font-size:1em;">
-  <a href="index.html" style="color:#333; text-decoration:none;">홈</a>
-   <a href="#">서비스</a>
-  <a href="예약.html" style="color:#333; text-decoration:none;">예약</a>
-  <a href="gallery.html" style="color:#333; text-decoration:none;">갤러리</a>
-  <a href="reviews.html" style="color:#333; text-decoration:none;">후기</a>
-  <a href="map.html">오시는 길</a>
+    <!-- 메뉴 -->
+    <nav>
+      <a href="index.html">홈</a>
+      <a href="#">서비스</a>
+      <a href="예약.html">예약</a>
+      <a href="gallery.html">갤러리</a>
+      <a href="reviews.html">후기</a>
+      <a href="map.html">오시는 길</a>
+    </nav>
 
-</nav>
+    <!-- 언어 전환 -->
+    <div class="language-switch">
+      <a href="index.html">🇰🇷</a>
+      <a href="index-en.html">🇺🇸</a>
+    </div>
 
+    <!-- 메인 텍스트 -->
     <div class="hero-text">
       <h1>크리크리 뷰티샵</h1>
       <p>당신의 아름다움을 위한 프라이빗 공간</p>
     </div>
   </div>
 
-<!-- footer(꼬리말) -->
+  <!-- 푸터 -->
+  <footer>
+    <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">크리크리 뷰티샵</div>
+    <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
+      영업시간: 10:00 ~ 20:00 ｜ 연락처: 010-1234-5678
+    </div>
 
-<footer style="background-color:#fef0f4; padding: 30px 20px; text-align: center; font-family:'Noto Sans KR', sans-serif;">
-  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">크리크리 뷰티샵</div>
-  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
-    영업시간: 10:00 ~ 20:00 ｜ 연락처: 010-1234-5678
-  </div>
+    <div style="margin: 15px 0;">
+      <a href="#" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="인스타그램" width="24" />
+      </a>
+      <a href="#" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111491.png" alt="카카오톡 채널" width="24" />
+      </a>
+      <a href="#" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="블로그" width="24" />
+      </a>
+    </div>
 
-  <!-- SNS 아이콘 링크 -->
-  <div style="margin: 15px 0;">
-    <a href="#" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="인스타그램" width="24" />
-    </a>
-    <a href="#" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111491.png" alt="카카오톡 채널" width="24" />
-    </a>
-    <a href="#" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="블로그" width="24" />
-    </a>
-  </div>
+    <div>
+      <a href="#" onclick="alert('팝업 안내 주소는 곧 업데이트됩니다 😊'); return false;" style="display:inline-block; margin-top: 10px; color: #d94f7b; font-weight: bold; text-decoration: underline; font-size: 0.95em;">
+        📢 안내사항 보기
+      </a>
+    </div>
 
-  <!-- 팝업 안내 버튼 -->
-  <div>
-    <a href="#" onclick="alert('팝업 안내 주소는 곧 업데이트됩니다 😊'); return false;" style="display:inline-block; margin-top: 10px; color: #d94f7b; font-weight: bold; text-decoration: underline; font-size: 0.95em;">
-      📢 안내사항 보기
-    </a>
-  </div>
-
-  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-    &copy; 2025 Cricri Beauty Shop. All rights reserved.
-  </div>
-</footer>
+    <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
+      &copy; 2025 Cricri Beauty Shop. All rights reserved.
+    </div>
+  </footer>
 
 </body>
 </html>
