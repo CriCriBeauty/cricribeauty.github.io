@@ -2,87 +2,76 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>크리크리 뷰티샵</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- 폰트 -->
+  <title>컴파이드 형 스크롤</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
-
-  <!-- AOS CSS (스크롤 애니메이션용) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- 외부 스타일 시트 -->
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    section {
+      height: 100vh;
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section-1 {
+      background: url('main.png') no-repeat center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .section-1 h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .section-2 {
+      background-color: #fff;
+      color: #333;
+    }
+
+    .section-3 {
+      background-color: #f2e5e5;
+      color: #333;
+    }
+
+    .footer {
+      background-color: #fef0f4;
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
+  <!-- 1페이지: 메인 -->
+  <section class="section-1">
+    <h1>크리크리 뷰티샵</h1>
+    <p>당신의 아름답음을 위한 프라이비트 공간</p>
+  </section>
 
-  <!-- 슬라이더 영역 -->
-  <div class="slider">
-    <div class="slides">
-      <img src="main.png" alt="메인 이미지">
-      <img src="main2.png" alt="슬라이드 이미지2">
-    </div>
+  <!-- 2페이지: 소개영역 -->
+  <section class="section-2">
+    <img src="main2.png" alt="서비스 소개" style="width:90%; max-width: 1000px;" />
+  </section>
 
-    <div class="overlay"></div>
+  <!-- 3페이지: 소개2 -->
+  <section class="section-3">
+    <img src="shop.png" alt="연대 담기" style="width:90%; max-width: 1000px;" />
+  </section>
 
-    <!-- 메뉴 -->
-    <nav>
-      <a href="index.html">홈</a>
-      <a href="#">서비스</a>
-      <a href="예약.html">예약</a>
-      <a href="gallery.html">갤러리</a>
-      <a href="reviews.html">후기</a>
-      <a href="map.html">오시는 길</a>
-    </nav>
-
-    <!-- 언어 전환 -->
-    <div class="language-switch">
-      <a href="index.html">🇰🇷</a>
-      <a href="index-en.html">🇺🇸</a>
-    </div>
-
-    <!-- 메인 문구 -->
-    <div class="hero-text" data-aos="fade-up">
-      <h1>크리크리 뷰티샵</h1>
-      <p>당신의 아름다움을 위한 프라이빗 공간</p>
-    </div>
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2025 Cricri Beauty Shop. All rights reserved.
   </div>
-
-  <!-- 푸터 -->
-  <footer data-aos="fade-up">
-    <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">크리크리 뷰티샵</div>
-    <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
-      영업시간: 10:00 ~ 20:00 ｜ 연락처: 010-1234-5678
-    </div>
-
-    <div style="margin: 15px 0;">
-      <a href="#" target="_blank" style="margin: 0 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="인스타그램" width="24" />
-      </a>
-      <a href="#" target="_blank" style="margin: 0 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111491.png" alt="카카오톡 채널" width="24" />
-      </a>
-      <a href="#" target="_blank" style="margin: 0 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="블로그" width="24" />
-      </a>
-    </div>
-
-    <div>
-      <a href="#" onclick="alert('팝업 안내 주소는 곧 업데이트됩니다 😊'); return false;" style="display:inline-block; margin-top: 10px; color: #d94f7b; font-weight: bold; text-decoration: underline; font-size: 0.95em;">
-        📢 안내사항 보기
-      </a>
-    </div>
-
-    <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-      &copy; 2025 Cricri Beauty Shop. All rights reserved.
-    </div>
-  </footer>
-
-  <!-- AOS 스크립트 -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
 </body>
 </html>
