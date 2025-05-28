@@ -4,6 +4,36 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* 반응형 최적화 */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2em;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    left: 20px;
+    top: 20px;
+  }
+
+  .language-switch {
+    top: 20px;
+    right: 20px;
+  }
+}
+/*여기까지임*/
 
 body, html {
   height: 100%;
