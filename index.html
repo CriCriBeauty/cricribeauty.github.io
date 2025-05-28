@@ -2,21 +2,26 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>크리크리 뷰티샵</title>
-  <link rel="stylesheet" href="css/style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 폰트 -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
- 
+
+  <!-- AOS CSS (스크롤 애니메이션용) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- 외부 스타일 시트 -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
+  <!-- 슬라이더 영역 -->
   <div class="slider">
     <div class="slides">
       <img src="main.png" alt="메인 이미지">
       <img src="main2.png" alt="슬라이드 이미지2">
-       </div>
+    </div>
 
     <div class="overlay"></div>
 
@@ -36,15 +41,15 @@
       <a href="index-en.html">🇺🇸</a>
     </div>
 
-    <!-- 메인 텍스트 -->
-    <div class="hero-text">
+    <!-- 메인 문구 -->
+    <div class="hero-text" data-aos="fade-up">
       <h1>크리크리 뷰티샵</h1>
       <p>당신의 아름다움을 위한 프라이빗 공간</p>
     </div>
   </div>
 
   <!-- 푸터 -->
-  <footer>
+  <footer data-aos="fade-up">
     <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">크리크리 뷰티샵</div>
     <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
       영업시간: 10:00 ~ 20:00 ｜ 연락처: 010-1234-5678
@@ -72,11 +77,12 @@
       &copy; 2025 Cricri Beauty Shop. All rights reserved.
     </div>
   </footer>
-<!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+
+  <!-- AOS 스크립트 -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
