@@ -4,61 +4,73 @@
   <meta charset="UTF-8" />
   <title>크리크리 뷰티샵</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <nav>
-    <a href="#home">홈</a>
-    <a href="#about">서비스</a>
-    <a href="#gallery">갤러리</a>
-    <a href="#map">찾아오시는길</a>
-  </nav>
-  <div class="language-switch">
-    <a href="#">KO</a>
-    <a href="#">EN</a>
-  </div>
+  <!-- 상단 메뉴 -->
+  <header class="main-header">
+    <div class="logo">CriCri Beauty</div>
+    <nav class="main-nav">
+      <a href="#home">찾아오시는길</a>
+      <a href="#reservation">예약</a>
+      <a href="#gallery">갤러리</a>
+      <a href="#service">서비스</a>
+    </nav>
+  </header>
 
-  <!-- 슬라이드 섹션 -->
-  <section class="slider" id="home">
-    <div class="overlay"></div>
-    <div class="slides">
-      <img src="images/main2.png" alt="메인 이미지1" />
-      <img src="images/main.png" alt="메인 이미지2" />
+  <!-- 1페이지: 메인 히어로 -->
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <h1>BLONDE & HIGHLIGHT</h1>
+      <p>DIVIDE YOUR UNIQUENESS BY YOUR HAIRS IN STYLE</p>
+      <div class="hero-buttons">
+        <a href="#service" class="btn dark">- OUR SERVICES</a>
+        <a href="#reservation" class="btn light">- BOOK ONLINE</a>
+      </div>
     </div>
-    <div class="hero-text">
-      <h1>크리크리 뷰티샵</h1>
-      <p>당신의 아름다운 프라이빗</p>
+    <div class="hero-right">
+      <img src="images/main1.jpg" alt="모델 이미지" />
     </div>
   </section>
 
-  <!-- 소개 섹션 -->
-  <section id="about">
-    <h2>하이트 특징 설명</h2>
+  <!-- 2페이지: 서비스 소개 -->
+  <section id="service" class="panel service-section">
+    <h2>서비스 소개</h2>
     <div class="features">
       <div>
-        <img src=main2.png" width="60">
-        <h3>가득한 전문인</h3>
-        <p>전문 여름 사이트에서 가장 자주 투입되는 표준을 제공</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922561.png" width="60" />
+        <h3>전문 시술</h3>
+        <p>풍부한 경험을 가진 아티스트가 직접 시술합니다.</p>
       </div>
       <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/599/599305.png" width="60">
-        <h3>고지된 서비스</h3>
-        <p>최신 리트 사이드 스타일 진화 설계</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/1047/1047090.png" width="60" />
+        <h3>프리미엄 제품</h3>
+        <p>검증된 고품질 제품만을 사용합니다.</p>
       </div>
       <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/1047/1047090.png" width="60">
-        <h3>품질 공급</h3>
-        <p>컴퓨터와 같은 품질 공급을 매우 중요시합니다</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/599/599305.png" width="60" />
+        <h3>맞춤 컨설팅</h3>
+        <p>고객에게 최적화된 스타일을 제안합니다.</p>
       </div>
     </div>
   </section>
 
-  <!-- 갤러리 섹션 -->
-  <section id="gallery">
-    <h2>여름 뷰티 경험을 가졌는가요?</h2>
-    <video src="video/your-video.mp4" width="320" controls></video>
-    <p style="margin-top: 20px;">* 참고: 이미지나 비디오 보고싶을 경우 연락처에 문의해주세요 :)</p>
+  <!-- 3페이지: 갤러리 -->
+  <section id="gallery" class="panel gallery-section">
+    <h2>시술 갤러리</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="갤러리1" />
+      <img src="images/gallery2.jpg" alt="갤러리2" />
+      <img src="images/gallery3.jpg" alt="갤러리3" />
+      <img src="images/gallery4.jpg" alt="갤러리4" />
+    </div>
+  </section>
+
+  <!-- 예약 섹션 (빈 상태) -->
+  <section id="reservation" class="panel reservation-section">
+    <h2>예약 안내</h2>
+    <p>카카오톡 또는 인스타그램으로 문의해주세요.</p>
   </section>
 
   <!-- 푸터 -->
