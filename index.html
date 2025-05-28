@@ -2,76 +2,143 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
+  <title>크리크리 뷰티스튜디오</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>컴파이드 형 스크롤</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
-      font-family: 'Noto Sans KR', sans-serif;
+      box-sizing: border-box;
     }
-
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 999;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: #fff;
+      background: rgba(0,0,0,0.6);
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: rgba(0,0,0,0.85);
+    }
     section {
       height: 100vh;
-      padding: 80px 20px;
+      padding: 60px 40px;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
-
-    .section-1 {
-      background: url('main.png') no-repeat center/cover;
+    #home {
+      background: url('main.png') center/cover no-repeat;
       color: white;
       text-align: center;
     }
-
-    .section-1 h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+    #home h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
     }
-
-    .section-2 {
-      background-color: #fff;
-      color: #333;
+    #home p {
+      margin-top: 12px;
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
     }
-
-    .section-3 {
-      background-color: #f2e5e5;
-      color: #333;
+    #about {
+      background: #f8f8f8;
     }
-
-    .footer {
-      background-color: #fef0f4;
+    #about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    #about .features {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      max-width: 1000px;
       text-align: center;
-      padding: 30px 10px;
+    }
+    #about .features div {
+      width: 30%;
+    }
+    #about .features h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+    #gallery {
+      background: #e7dad6;
+    }
+    #gallery h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background: #d3c0b8;
+      padding: 30px;
+      text-align: center;
       font-size: 0.9em;
     }
   </style>
 </head>
 <body>
-  <!-- 1페이지: 메인 -->
-  <section class="section-1">
+  <nav>
+    <a href="#home">홈</a>
+    <a href="#예약">예약</a>
+    <a href="#gallery">갤러리</a>
+      <a href="#map">찾아오시는길</a>
+  </nav>
+
+  <section id="home">
     <h1>크리크리 뷰티샵</h1>
-    <p>당신의 아름답음을 위한 프라이비트 공간</p>
+    <p>당신의 아름다운 프라이빗 시술  </p>
   </section>
 
-  <!-- 2페이지: 소개영역 -->
-  <section class="section-2">
-    <img src="main2.png" alt="서비스 소개" style="width:90%; max-width: 1000px;" />
+  <section id="about">
+    <h2>하이트 특징 설명</h2>
+    <div class="features">
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922561.png" width="60">
+        <h3>가득한 전문인</h3>
+        <p>전문 여름 사이트에서 가장 자주 투입되는 표준을 제공</p>
+      </div>
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/599/599305.png" width="60">
+        <h3>고지된 서비스</h3>
+        <p>최신 리트 사이드 스타일 진화 설계</p>
+      </div>
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/1047/1047090.png" width="60">
+        <h3>품질 공급</h3>
+        <p>컴퓨터와 같은 품질 공급을 매우 중요시합니다</p>
+      </div>
+    </div>
   </section>
 
-  <!-- 3페이지: 소개2 -->
-  <section class="section-3">
-    <img src="shop.png" alt="연대 담기" style="width:90%; max-width: 1000px;" />
+  <section id="gallery">
+    <h2>여름 뷰티 경험을 가졌는가요?</h2>
+    <video src="your-video.mp4" width="320" controls></video>
+    <p style="margin-top: 20px;">* 참고: 이미지나 비디오 보고싶을 경우 연\uub77d처에 문의해주세요 :)</p>
   </section>
 
-  <!-- Footer -->
-  <div class="footer">
-    &copy; 2025 Cricri Beauty Shop. All rights reserved.
-  </div>
+  <footer>
+    &copy; 2025 CriCri Beauty Studio. All rights reserved.
+  </footer>
 </body>
 </html>
