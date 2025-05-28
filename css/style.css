@@ -51,6 +51,32 @@ nav a {
   font-size: 18px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
+/* 메뉴에 마우스를 눌렀을때, 밑줄이 부드럽게 나타나는 효과 */
+nav a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
 
 /* 언어 전환 */
 .language-switch {
