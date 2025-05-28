@@ -53,8 +53,8 @@ body, html {
   animation: slide 16s infinite;
 }
 .slides img {
-  width: 100%;
-  height: 50vh;
+  width: 80%;
+  height: 80vh;
   object-fit: cover;
 }
 @keyframes slide {
