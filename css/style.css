@@ -72,6 +72,26 @@ html, body {
     font-size: 2rem;
   }
 }
+ /* 모바일: 버튼 사이즈 줄이기 */
+  .hero-buttons .btn {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  /* 모바일: 특징 카드 내 이미지와 텍스트 크기 줄이기 */
+  .feature-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feature-item h3 {
+    font-size: 1rem;
+  }
+
+  .feature-item p {
+    font-size: 0.9rem;
+  }
+
 .hero-left p {
   font-size: 1.1rem;
   margin-bottom: 30px;
