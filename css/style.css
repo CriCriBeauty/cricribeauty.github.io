@@ -93,63 +93,53 @@ html, body {
   height: auto;
 }
 
-/* 2페이지 - 좌우 분할 특징 */
-.split-feature {
+/* 2페이지 - 3/2 이미지 + 3/1 특징 텍스트 */
+.three-split {
   display: flex;
   height: 100vh;
   width: 100%;
 }
 
-.left-panel {
-  width: 50%;
+.image-area {
+  flex: 2;
+  overflow: hidden;
+}
+.image-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-area {
+  flex: 1;
   background-color: #fff;
-  padding: 80px 40px;
+  padding: 60px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-
-.left-panel h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
+.text-area h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
   color: #111;
 }
-
-.feature-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  width: 100%;
-  max-width: 500px;
+.feature-item {
+  margin-bottom: 30px;
 }
-
-.feature-card img {
-  width: 60px;
-  margin-bottom: 15px;
+.feature-item img {
+  width: 50px;
+  margin-bottom: 10px;
 }
-
-.feature-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
+.feature-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
   color: #333;
 }
-
-.feature-card p {
-  font-size: 1rem;
+.feature-item p {
+  font-size: 0.95rem;
   color: #666;
-}
-
-.right-panel {
-  width: 50%;
-  overflow: hidden;
-}
-
-.right-panel img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
 }
 
 /* 푸터 */
@@ -184,20 +174,24 @@ footer {
     padding: 0;
   }
 
-  .split-feature {
+  .three-split {
     flex-direction: column;
   }
 
-  .left-panel, .right-panel {
+  .image-area, .text-area {
     width: 100%;
     height: auto;
   }
 
-  .right-panel img {
+  .image-area img {
     height: auto;
   }
 
-  .feature-cards {
-    padding: 0 20px;
+  .text-area {
+    padding: 40px 20px;
+  }
+
+  .feature-item {
+    margin-bottom: 25px;
   }
 }
