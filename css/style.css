@@ -133,7 +133,7 @@ html, body {
 }
 
 .image-area {
-  flex: 2;
+  flex: 1;
   overflow: hidden;
 }
 .image-area img {
