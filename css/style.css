@@ -42,7 +42,7 @@ html, body {
   color: #c39;
 }
 
-/* 히어로 */
+/* 히어로 영역 */
 .hero {
   display: flex;
   height: 100vh;
@@ -57,7 +57,7 @@ html, body {
   padding-left: 80px;
 }
 .hero-left h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -87,7 +87,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 80px;
+  padding-right: 60px;
 }
 .hero-right img {
   max-width: 100%;
@@ -117,7 +117,6 @@ footer {
   .main-nav a {
     margin: 0 10px;
   }
-
   .hero {
     flex-direction: column;
     text-align: center;
@@ -126,11 +125,9 @@ footer {
   .hero-left, .hero-right {
     padding: 0;
   }
-
   .hero-left h1 {
     font-size: 2rem;
   }
-
   .hero-buttons .btn {
     font-size: 0.9rem;
     padding: 10px 16px;
