@@ -61,6 +61,17 @@ html, body {
   font-weight: bold;
   margin-bottom: 10px;
 }
+/* 데스크탑 기준 기본 설정 */
+.hero-left h1 {
+  font-size: 2.8rem;
+}
+
+/* 모바일일 때 (예: 768px 이하) 더 작게 */
+@media (max-width: 768px) {
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+}
 .hero-left p {
   font-size: 1.1rem;
   margin-bottom: 30px;
