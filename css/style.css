@@ -150,7 +150,10 @@ html, body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  min-height: 500px;     /* ✅ 최소 높이 확보 */
+  overflow-y: auto;      /* ✅ 넘칠 경우 스크롤 허용 */
 }
+
 .text-area h2 {
   font-size: 1.8rem;
   margin-bottom: 30px;
