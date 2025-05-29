@@ -127,10 +127,9 @@ html, body {
 /* 2페이지 - 3/2 이미지 + 3/1 특징 텍스트 */
 .three-split {
   display: flex;
-  height: 100vh;
-  width: 100%;
+  height: auto;       /* ← 화면 높이 고정 제거 */
+  min-height: 100vh;  /* ← 너무 짧을 때 대비한 최소 높이 설정 */
 }
-
 .image-area {
   flex: 2;
   overflow: hidden;
@@ -150,9 +149,10 @@ html, body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 500px;     /* ✅ 최소 높이 확보 */
-  overflow-y: auto;      /* ✅ 넘칠 경우 스크롤 허용 */
+  min-height: 500px;
+  overflow-y: auto;
 }
+
 
 .text-area h2 {
   font-size: 1.8rem;
