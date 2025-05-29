@@ -50,7 +50,7 @@ html, body {
   background-color: #f7f3f1;
 }
 .hero-left {
-  flex: 2;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,37 +61,6 @@ html, body {
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* 데스크탑 기준 기본 설정 */
-.hero-left h1 {
-  font-size: 2.8rem;
-}
-
-/* 모바일일 때 (예: 768px 이하) 더 작게 */
-@media (max-width: 768px) {
-  .hero-left h1 {
-    font-size: 2rem;
-  }
-}
- /* 모바일: 버튼 사이즈 줄이기 */
-  .hero-buttons .btn {
-    font-size: 0.9rem;
-    padding: 10px 16px;
-  }
-
-  /* 모바일: 특징 카드 내 이미지와 텍스트 크기 줄이기 */
-  .feature-item img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .feature-item h3 {
-    font-size: 1rem;
-  }
-
-  .feature-item p {
-    font-size: 0.9rem;
-  }
-
 .hero-left p {
   font-size: 1.1rem;
   margin-bottom: 30px;
@@ -114,7 +83,7 @@ html, body {
   color: #111;
 }
 .hero-right {
-  flex: 3;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,12 +93,13 @@ html, body {
   height: auto;
 }
 
-/* 2페이지 - 3/2 이미지 + 3/1 특징 텍스트 */
+/* 2페이지 - 반반 레이아웃 (1:1 비율) */
 .three-split {
   display: flex;
-  flex-wrap: wrap;       /* 모바일 대비 */
-  height: auto;          /* 고정 해제 */
-  min-height: 100vh;     /* 너무 짧은 화면 대비 */
+  flex-wrap: nowrap;
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .image-area {
@@ -148,11 +118,10 @@ html, body {
   padding: 60px 30px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;  /* ✅ 중요: center → flex-start */
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
 }
-
 .text-area h2 {
   font-size: 1.8rem;
   margin-bottom: 30px;
@@ -182,10 +151,9 @@ footer {
   padding: 20px;
   text-align: center;
   font-size: 0.9rem;
-  position: static;   /* 혹시 fixed라면 static으로 */
+  position: static;
   clear: both;
 }
-
 
 /* 반응형 */
 @media (max-width: 768px) {
@@ -229,5 +197,22 @@ footer {
 
   .feature-item {
     margin-bottom: 25px;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons .btn {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .feature-item h3 {
+    font-size: 1rem;
+  }
+
+  .feature-item p {
+    font-size: 0.9rem;
   }
 }
