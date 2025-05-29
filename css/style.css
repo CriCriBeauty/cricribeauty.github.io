@@ -57,7 +57,7 @@ html, body {
   padding-left: 80px;
 }
 .hero-left h1 {
-  font-size: 2.8rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -93,6 +93,53 @@ html, body {
   height: auto;
 }
 
+/* 2페이지 - 배경 이미지 + 세로 3분할 특징 */
+.feature-section {
+  position: relative;
+  height: 100vh;
+  background: url('../images/service-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.feature-overlay {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 60px 20px;
+  border-radius: 16px;
+  max-width: 800px;
+  width: 90%;
+}
+
+.feature-overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.feature-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.feature-card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
 /* 푸터 */
 footer {
   background-color: #333;
@@ -121,17 +168,15 @@ footer {
     text-align: center;
     padding: 100px 20px 20px;
   }
-
   .hero-left, .hero-right {
     padding: 0;
   }
 
-  .hero-left h1 {
-    font-size: 2rem;
+  .feature-cards {
+    flex-direction: column;
   }
 
-  .hero-buttons .btn {
-    font-size: 0.9rem;
-    padding: 10px 16px;
+  .feature-card {
+    padding: 0 10px;
   }
 }
