@@ -42,28 +42,39 @@ html, body {
   color: #c39;
 }
 
-/* 1페이지 - 메인 히어로 */
-.hero {
+/* 1페이지 - 메인 히어로 (3/2 이미지 + 3/1 텍스트) */
+.hero-split {
   display: flex;
   height: 100vh;
+  width: 100%;
   padding-top: 70px;
-  background-color: #f7f3f1;
 }
-.hero-left {
+.hero-image {
+  flex: 2;
+  overflow: hidden;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-text {
   flex: 1;
+  background-color: #f7f3f1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 80px;
+  align-items: flex-start;
+  padding: 0 60px;
+  text-align: left;
 }
-.hero-left h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
+.hero-text h1 {
+  font-size: 2.8rem;
   margin-bottom: 10px;
 }
-.hero-left p {
+.hero-text p {
   font-size: 1.1rem;
-  margin-bottom: 30px;
+  margin: 20px 0;
 }
 .hero-buttons .btn {
   display: inline-block;
@@ -82,35 +93,23 @@ html, body {
   background-color: #f5d3dd;
   color: #111;
 }
-.hero-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-right img {
-  max-width: 100%;
-  height: auto;
-}
 
-/* 2페이지 - 3/2 이미지 + 3/1 특징 텍스트 */
-.three-split {
+/* 2페이지 - 크리크리뷰티샵 특징 (3/2 이미지 + 3/1 텍스트) */
+.feature-split {
   display: flex;
   height: 100vh;
   width: 100%;
 }
-
-.image-area {
+.feature-image {
   flex: 2;
   overflow: hidden;
 }
-.image-area img {
+.feature-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-.text-area {
+.feature-text {
   flex: 1;
   background-color: #fff;
   padding: 60px 30px;
@@ -120,7 +119,7 @@ html, body {
   align-items: center;
   text-align: center;
 }
-.text-area h2 {
+.feature-text h2 {
   font-size: 1.8rem;
   margin-bottom: 30px;
   color: #111;
@@ -165,33 +164,24 @@ footer {
     margin: 0 10px;
   }
 
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 100px 20px 20px;
-  }
-  .hero-left, .hero-right {
-    padding: 0;
-  }
-
-  .three-split {
+  .hero-split,
+  .feature-split {
     flex-direction: column;
   }
 
-  .image-area, .text-area {
+  .hero-image,
+  .feature-image,
+  .hero-text,
+  .feature-text {
     width: 100%;
     height: auto;
-  }
-
-  .image-area img {
-    height: auto;
-  }
-
-  .text-area {
     padding: 40px 20px;
+    text-align: center;
+    align-items: center;
   }
 
-  .feature-item {
-    margin-bottom: 25px;
+  .hero-text h1,
+  .feature-text h2 {
+    font-size: 2rem;
   }
 }
