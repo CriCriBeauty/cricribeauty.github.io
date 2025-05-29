@@ -127,9 +127,11 @@ html, body {
 /* 2페이지 - 3/2 이미지 + 3/1 특징 텍스트 */
 .three-split {
   display: flex;
-  height: auto;       /* ← 화면 높이 고정 제거 */
-  min-height: 100vh;  /* ← 너무 짧을 때 대비한 최소 높이 설정 */
+  flex-wrap: wrap;       /* 모바일 대비 */
+  height: auto;          /* 고정 해제 */
+  min-height: 100vh;     /* 너무 짧은 화면 대비 */
 }
+
 .image-area {
   flex: 2;
   overflow: hidden;
@@ -146,13 +148,10 @@ html, body {
   padding: 60px 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;  /* ✅ 중요: center → flex-start */
   align-items: center;
   text-align: center;
-  min-height: 500px;
-  overflow-y: auto;
 }
-
 
 .text-area h2 {
   font-size: 1.8rem;
@@ -183,7 +182,10 @@ footer {
   padding: 20px;
   text-align: center;
   font-size: 0.9rem;
+  position: static;   /* 혹시 fixed라면 static으로 */
+  clear: both;
 }
+
 
 /* 반응형 */
 @media (max-width: 768px) {
