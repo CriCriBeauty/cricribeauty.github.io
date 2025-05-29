@@ -1,4 +1,3 @@
-
 /* 기본 설정 */
 * {
   margin: 0;
@@ -94,83 +93,53 @@ html, body {
   height: auto;
 }
 
-/* 2페이지 - 슬라이드 + 설명 */
-.feature-section {
+/* 2페이지 - 3/2 이미지 + 3/1 특징 텍스트 */
+.three-split {
   display: flex;
   height: 100vh;
   width: 100%;
 }
 
-.feature-left {
+.image-area {
   flex: 2;
   overflow: hidden;
-  position: relative;
 }
-
-.slider {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  width: 300%;
-  height: 100%;
-  animation: slideShow 12s infinite;
-}
-
-.slides img {
+.image-area img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-@keyframes slideShow {
-  0% { transform: translateX(0); }
-  33% { transform: translateX(-100%); }
-  66% { transform: translateX(-200%); }
-  100% { transform: translateX(0); }
-}
-
-.feature-right {
+.text-area {
   flex: 1;
   background-color: #fff;
-  padding: 60px 40px;
+  padding: 60px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-}
-
-.feature-right h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  font-weight: 700;
-}
-
-.feature-item {
-  margin-bottom: 40px;
-  display: flex;
   align-items: center;
-  gap: 20px;
+  text-align: center;
 }
-
+.text-area h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #111;
+}
+.feature-item {
+  margin-bottom: 30px;
+}
 .feature-item img {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  margin-bottom: 10px;
 }
-
 .feature-item h3 {
-  font-size: 1.3rem;
-  margin-bottom: 6px;
-  color: #222;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
 }
-
 .feature-item p {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #666;
 }
 
 /* 푸터 */
@@ -205,22 +174,24 @@ footer {
     padding: 0;
   }
 
-  .feature-section {
+  .three-split {
     flex-direction: column;
   }
 
-  .feature-left, .feature-right {
+  .image-area, .text-area {
     width: 100%;
     height: auto;
   }
 
-  .slides {
-    flex-direction: column;
+  .image-area img {
     height: auto;
-    animation: none;
   }
 
-  .slides img {
-    height: auto;
+  .text-area {
+    padding: 40px 20px;
+  }
+
+  .feature-item {
+    margin-bottom: 25px;
   }
 }
