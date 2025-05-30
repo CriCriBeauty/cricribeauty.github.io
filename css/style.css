@@ -179,6 +179,34 @@ footer {
   text-align: center;
   font-size: 0.9rem;
 }
+/* === 슬라이드 캐러셀 === */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.feature-item {
+  min-width: 100%;
+  text-align: center;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+}
+.prev { left: 0; }
+.next { right: 0; }
 
 /* 반응형 */
 @media (max-width: 768px) {
