@@ -251,4 +251,8 @@ footer {
   .feature-item {
     margin-bottom: 25px;
   }
+  .carousel-btn:hover {
+  background-color: #eee;
+}
+
 }
