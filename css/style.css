@@ -42,7 +42,7 @@ html, body {
   color: #c39;
 }
 
-/* 히어로 영역 */
+/* 1페이지 - 메인 히어로 */
 .hero {
   display: flex;
   height: 100vh;
@@ -57,12 +57,12 @@ html, body {
   padding-left: 80px;
 }
 .hero-left h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 .hero-left p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 30px;
 }
 .hero-buttons .btn {
@@ -72,7 +72,7 @@ html, body {
   border-radius: 4px;
   font-weight: bold;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 .btn.dark {
   background-color: #111;
@@ -87,12 +87,59 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 60px;
 }
 .hero-right img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
+}
+
+/* 2페이지 - 3/2 이미지 + 3/1 특징 텍스트 */
+.three-split {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.image-area {
+  flex: 2;
+  overflow: hidden;
+}
+.image-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-area {
+  flex: 1;
+  background-color: #fff;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.text-area h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #111;
+}
+.feature-item {
+  margin-bottom: 30px;
+}
+.feature-item img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+.feature-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+.feature-item p {
+  font-size: 0.95rem;
+  color: #666;
 }
 
 /* 푸터 */
@@ -117,6 +164,7 @@ footer {
   .main-nav a {
     margin: 0 10px;
   }
+
   .hero {
     flex-direction: column;
     text-align: center;
@@ -125,11 +173,25 @@ footer {
   .hero-left, .hero-right {
     padding: 0;
   }
-  .hero-left h1 {
-    font-size: 2rem;
+
+  .three-split {
+    flex-direction: column;
   }
-  .hero-buttons .btn {
-    font-size: 0.9rem;
-    padding: 10px 16px;
+
+  .image-area, .text-area {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-area img {
+    height: auto;
+  }
+
+  .text-area {
+    padding: 40px 20px;
+  }
+
+  .feature-item {
+    margin-bottom: 25px;
   }
 }
