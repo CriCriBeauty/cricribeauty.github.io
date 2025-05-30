@@ -11,6 +11,35 @@ html, body {
   overflow-x: hidden;
   background: #fff;
 }
+/* 고정헤더 스크롤보정(찾아가시는길 등 선택시 해당되는것) */
+section[id]::before {
+  content: "";
+  display: block;
+  height: 70px; /* header height */
+  margin-top: -70px;
+  visibility: hidden;
+}
+/* HOVER 효과 추가 */
+.btn.dark:hover {
+  background-color: #444;
+  transition: 0.3s;
+}
+.btn.light:hover {
+  background-color: #e0bfc7;
+  transition: 0.3s;
+}
+/* 모바일뷰에서도 버튼 쌓이도록 개선 */
+@media (max-width: 768px) {
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .hero-buttons .btn {
+    margin-right: 0;
+  }
+}
+
 
 /* 상단 메뉴 */
 .main-header {
