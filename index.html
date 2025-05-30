@@ -71,5 +71,22 @@
   <footer>
     &copy; 2025 CriCri Beauty Studio. All rights reserved.
   </footer>
+  
+<script>
+  const inner = document.querySelector('.carousel-inner');
+  const items = document.querySelectorAll('.feature-item');
+  const total = items.length;
+  let index = 0;
+
+  document.querySelector('.next').onclick = () => {
+    index = (index + 1) % total;
+    inner.style.transform = `translateX(-${index * 100}%)`;
+  };
+
+  document.querySelector('.prev').onclick = () => {
+    index = (index - 1 + total) % total;
+    inner.style.transform = `translateX(-${index * 100}%)`;
+  };
+</script>
 </body>
 </html>
