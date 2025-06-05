@@ -154,6 +154,20 @@ section[id]::before {
   }
 }
 
+/* 강조 문구 애니메이션 */
+.highlight-text {
+  animation: fadeInOut 3s ease-in-out infinite;
+  font-weight: bold;
+  color: #c0397e;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 /* 2페이지 하단 경계선 */
 #feature {
   padding-bottom: 40px;
