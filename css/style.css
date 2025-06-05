@@ -73,7 +73,6 @@ section[id]::before {
   display: flex;
   padding-top: 70px;
   background-color: #f7f3f1;
-  min-height: 600px; /* 필요 시 최소 높이만 설정 */
 }
 .hero-left {
   flex: 1;
@@ -136,6 +135,12 @@ section[id]::before {
   height: auto;
   object-fit: contain;
   border-radius: 10px;
+}
+
+/* 2페이지 하단 경계선 */
+#feature {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ddd;
 }
 
 footer {
