@@ -12,6 +12,7 @@ html, body {
   background: #fff;
 }
 
+/* 고정 헤더 스크롤 위치 보정 */
 section[id]::before {
   content: "";
   display: block;
@@ -20,6 +21,7 @@ section[id]::before {
   visibility: hidden;
 }
 
+/* 버튼 hover */
 .btn.dark:hover {
   background-color: #444;
   transition: 0.3s;
@@ -29,6 +31,7 @@ section[id]::before {
   transition: 0.3s;
 }
 
+/* 모바일 버튼 정렬 */
 @media (max-width: 768px) {
   .hero-buttons {
     display: flex;
@@ -40,6 +43,7 @@ section[id]::before {
   }
 }
 
+/* 상단 메뉴 */
 .main-header {
   position: fixed;
   top: 0;
@@ -69,6 +73,7 @@ section[id]::before {
   color: #c39;
 }
 
+/* hero 영역 */
 .hero {
   display: flex;
   padding-top: 70px;
@@ -174,6 +179,7 @@ section[id]::before {
   border-bottom: 1px solid #ddd;
 }
 
+/* 푸터 */
 footer {
   background-color: #333;
   color: #fff;
@@ -182,6 +188,7 @@ footer {
   font-size: 0.9rem;
 }
 
+/* 반응형 */
 @media (max-width: 768px) {
   .main-header {
     flex-direction: column;
