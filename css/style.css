@@ -122,7 +122,7 @@ section[id]::before {
   height: auto;
 }
 
-/* 2페이지 - 3/2 이미지 + 3/1 특징 텍스트 */
+/* 2페이지 - 3/2 이미지 + 3/1 특징 텍스트
 .three-split {
   display: flex;
   height: 100vh;
@@ -170,7 +170,7 @@ section[id]::before {
   font-size: 1.05rem;
   color: #555;
 }
-
+ */
 /* 푸터 */
 footer {
   background-color: #333;
