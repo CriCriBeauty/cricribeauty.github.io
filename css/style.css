@@ -89,7 +89,7 @@ section[id]::before {
 .hero-left h2 {
   font-size: 2.2rem;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 .hero-left h3 {
   font-size: 1.4rem;
@@ -135,6 +135,23 @@ section[id]::before {
   height: auto;
   object-fit: contain;
   border-radius: 10px;
+}
+
+/* 순차 등장 효과 */
+.fade-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1.3s; }
+.delay-3 { animation-delay: 2.1s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 2페이지 하단 경계선 */
