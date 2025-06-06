@@ -2,23 +2,58 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>고객 포토 갤러리 | 크리크리 뷰티샵</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
+  <title>시술 사진진 및 뷰티샵 내부 | 크리크리 뷰티샵</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
       background-color: #fff;
       margin: 0;
-      padding: 0;
+      padding-top: 100px;
     }
-
+    .main-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .logo {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #d94f7b;
+      margin-bottom: 5px;
+      text-decoration: none;
+    }
+    .main-nav {
+      display: flex;
+      gap: 30px;
+      margin-top: 5px;
+    }
+    .main-nav a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .main-nav a:hover {
+      color: #c0397e;
+    }
     h1 {
       text-align: center;
-      margin: 60px 0 30px;
+      margin: 30px 0 30px;
       font-size: 2em;
       color: #d94f7b;
     }
-
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -27,27 +62,52 @@
       max-width: 1200px;
       margin: 0 auto;
     }
-
     .gallery-item {
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       transition: transform 0.3s;
+      cursor: pointer;
     }
-
     .gallery-item:hover {
       transform: scale(1.03);
     }
-
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 12px;
+    }
   </style>
 </head>
 <body>
+  <header class="main-header">
+    <a href="index.html" class="logo">CriCri Beauty</a>
+    <nav class="main-nav">
+      <a href="예약.html">예약</a>
+      <a href="service.html">시술(서비스)</a>
+      <a href="map.html">찾아오시는 길</a>
+      <a href="gallery.html">갤러리</a>
+    </nav>
+  </header>
+
   <h1>📸 고객 포토 갤러리</h1>
   <div class="gallery">
     <div class="gallery-item"><img src="main.png" alt="시술 예시1"></div>
@@ -57,5 +117,27 @@
     <div class="gallery-item"><img src="main2.png" alt="시술 예시3"></div>
     <div class="gallery-item"><img src="main.png" alt="시술 예시4"></div>
   </div>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="확대 이미지" id="lightbox-img">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+
+    galleryItems.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
