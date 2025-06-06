@@ -258,5 +258,22 @@
     &copy; 2025 Cricri Beauty Shop. All rights reserved.
   </div>
 </footer>
+  
+  <script>
+  checkbox.addEventListener('change', () => {
+    const isChecked = checkbox.checked;
+    naverBtn.classList.toggle('active', isChecked);
+    kakaoBtn.classList.toggle('active', isChecked);
+  });
+
+  [naverBtn, kakaoBtn].forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      if (!checkbox.checked) {
+        e.preventDefault();
+        alert("예약 전 안내사항에 동의해 주세요.");
+      }
+    });
+  });
+</script>
 </body>
 </html>
