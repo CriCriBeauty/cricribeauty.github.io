@@ -61,6 +61,8 @@ section[id]::before {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  text-decoration: none;
+  color: inherit;
 }
 .main-nav a {
   margin-left: 30px;
