@@ -13,6 +13,9 @@ html, body {
 }
 /* 한국어 영어 선택  */
 .lang-switch {
+  position: absolute;
+  right: 40px;
+  top: 20px;
   display: flex;
   gap: 6px;
   align-items: center;
