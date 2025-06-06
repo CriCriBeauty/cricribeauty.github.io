@@ -48,58 +48,50 @@
     .main-nav a:hover {
       color: #c0397e;
     }
-    h1 {
+    h1, h2 {
       text-align: center;
-      margin: 30px 0 10px;
-      font-size: 2em;
       color: #d94f7b;
+      margin-top: 40px;
     }
-    h2 {
-      text-align: center;
-      margin: 40px 0 20px;
-      font-size: 1.5em;
-      color: #c0397e;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 0 20px 60px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .gallery-item {
-      border-radius: 12px;
+    .slider-container {
+      position: relative;
+      max-width: 800px;
+      margin: 20px auto 60px;
       overflow: hidden;
+      border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
-      cursor: pointer;
     }
-    .gallery-item:hover {
-      transform: scale(1.03);
-    }
-    .gallery-item img {
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
       width: 100%;
-      height: 100%;
+    }
+    .slide {
+      min-width: 100%;
+      transition: 0.5s;
+    }
+    .slide img {
+      width: 100%;
+      height: 400px;
       object-fit: cover;
       display: block;
     }
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 2000;
+    .nav-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 15px;
     }
-    .lightbox img {
-      max-width: 90vw;
-      max-height: 90vh;
-      border-radius: 12px;
+    .nav-buttons button {
+      background-color: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
     }
   </style>
 </head>
@@ -107,8 +99,8 @@
   <header class="main-header">
     <a href="index.html" class="logo">CriCri Beauty</a>
     <nav class="main-nav">
-      <a href="예약.html">예약</a>
-      <a href="service.html">시술(서비스)</a>
+      <a href="reservation.html">예약</a>
+      <a href="services.html">시술(서비스)</a>
       <a href="map.html">찾아오시는 길</a>
       <a href="gallery.html">갤러리</a>
     </nav>
@@ -117,38 +109,46 @@
   <h1>📸 고객 포토 갤러리</h1>
 
   <h2>💄 시술 사진</h2>
-  <div class="gallery">  
-    <div class="gallery-item"><img src="images/시술사진.jpg" alt="시술 예시"/></div>
-    <div class="gallery-item"><img src="images/시술사진2.jpg" alt="시술 예시2"/></div>
+  <div class="slider-container">
+    <div class="slider" id="treatmentSlider">
+      <div class="slide"><img src="images/시술사진.jpg" alt="시술 예시"/></div>
+      <div class="slide"><img src="images/시술사진2.jpg" alt="시술 예시"/></div>
+         </div>
+    <div class="nav-buttons">
+      <button onclick="moveSlide('treatmentSlider', -1)">&#10094;</button>
+      <button onclick="moveSlide('treatmentSlider', 1)">&#10095;</button>
+    </div>
   </div>
 
   <h2>🏠 샵 내부 사진</h2>
-  <div class="gallery">
-     <div class="gallery-item"><img src="images/이미지1.jpg" alt="시술 예시2"/></div>
-    <div class="gallery-item"><img src="images/이미지2.jpg" alt="시술 예시2"/></div>
-    <div class="gallery-item"><img src="images/이미지3.jpg" alt="시술 예시2"/></div>
-  </div>
+  <div class="slider-container">
+    <div class="slider" id="interiorSlider">
+      <div class="slide"><img src="images/이미지1.jpg" alt="시술 예시"/></div>
+     <div class="slide"><img src="images/이미지2.jpg" alt="시술 예시2"/></div>
+     <div class="slide"><img src="images/이미지3.jpg" alt="시술 예시3"/></div>
 
-  <div class="lightbox" id="lightbox">
-    <img src="" alt="확대 이미지" id="lightbox-img">
+    </div>
+    <div class="nav-buttons">
+      <button onclick="moveSlide('interiorSlider', -1)">&#10094;</button>
+      <button onclick="moveSlide('interiorSlider', 1)">&#10095;</button>
+    </div>
   </div>
 
   <script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const sliderIndex = {
+      treatmentSlider: 0,
+      interiorSlider: 0
+    };
 
-    galleryItems.forEach(img => {
-      img.addEventListener('click', () => {
-        lightbox.style.display = 'flex';
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-      });
-    });
+    function moveSlide(id, direction) {
+      const slider = document.getElementById(id);
+      const slides = slider.children.length;
+      sliderIndex[id] = (sliderIndex[id] + direction + slides) % slides;
+      slider.style.transform = `translateX(-${sliderIndex[id] * 100}%)`;
+    }
 
-    lightbox.addEventListener('click', () => {
-      lightbox.style.display = 'none';
-    });
+    setInterval(() => moveSlide('treatmentSlider', 1), 4000);
+    setInterval(() => moveSlide('interiorSlider', 1), 6000);
   </script>
 </body>
 </html>
