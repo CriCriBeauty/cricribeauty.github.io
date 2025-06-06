@@ -1,1 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>预约 | CriCri Beauty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #fff5f7;
+      margin: 0;
+      padding: 0;
+      padding-top: 70px;
+    }
+    h1 {
+      margin-top: 50px;
+      font-size: 2em;
+      color: #333;
+      text-align: center;
+    }
+    p.desc {
+      font-size: 1em;
+      color: #666;
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 0 20px;
+    }
+    .section {
+      background-color: #fff;
+      padding: 30px 20px;
+      margin: 20px auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      max-width: 800px;
+    }
+    .section h2 {
+      font-size: 1.4em;
+      margin-bottom: 15px;
+      color: #d94f7b;
+      text-align: center;
+    }
+    .section ul {
+      font-size: 0.95em;
+      color: #444;
+      line-height: 1.8;
+      padding-left: 20px;
+    }
+    .section li {
+      margin-bottom: 10px;
+    }
+    .check-confirm {
+      text-align: center;
+      margin: 30px auto;
+      font-size: 0.95em;
+      color: #333;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      margin: 10px;
+      font-size: 1em;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.5;
+      pointer-events: none;
+      transition: 0.3s;
+    }
+    .btn.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .naver { background-color: #03C75A; color: white; }
+    .kakao { background-color: #FEE500; color: #000; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.95em;
+    }
+    table, th, td { border: 1px solid #eee; }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #fff0f5;
+      color: #333;
+    }
+    .btn-wrap {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 400px;
+      margin-top: 10px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <a href="index_ch.html" class="logo">CriCri Beauty</a>
+    <nav class="main-nav">
+      <a href="예약_ch.html">预约</a>
+      <a href="service_ch.html">服务</a>
+      <a href="map_ch.html">路线</a>
+      <a href="gallery.html">画廊</a>
+    </nav>
+  </header>
+
+  <h1>🗓 预约服务</h1>
+  <p class="desc">请在预约前精细阅读下面的注意事项💖</p>
+
+  <div class="section">
+    <h2>💅 服务项目和价格</h2>
+    <table>
+      <tr><th>项目</th><th>价格(KRW)</th></tr>
+      <tr><td>营养型睡睡捷热</td><td>￥45,000</td></tr>
+      <tr><td>基础型睡睡捷</td><td>￥35,000</td></tr>
+      <tr><td>黑彩表现睡睡捷</td><td>￥50,000</td></tr>
+      <tr><td>双效睡睡捷</td><td>￥65,000</td></tr>
+      <tr><td>黑彩附加</td><td>￥15,000</td></tr>
+      <tr><td>眉毛系上卸印</td><td>￥30,000</td></tr>
+      <tr><td>眉形设计</td><td>免费</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>📌 预约前注意事项</h2>
+    <ul>
+      <li>预约日请勿使用妆面或防晒产品。</li>
+      <li>迟到可能会缩短服务时长。</li>
+      <li>请至少提前1天通知更改预约。</li>
+      <li>未提前取消者或迟到者不会再次接受预约。</li>
+      <li>治疗前如有违应或怀孕情况请先进行咨询。</li>
+      <li>治疗后3小时内请勿洗脸、温泉或游泳。</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🗓 服务日期</h2>
+    <p style="color:#666; font-size:0.9em; text-align:center;">（此日历仅供参考，预约通过网络进行）</p>
+    <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
+  </div>
+
+  <div class="check-confirm">
+    <input type="checkbox" id="agree" />
+    <label for="agree">我已阅读并同意上述内容。</label>
+  </div>
+
+  <div class="btn-wrap">
+    <a href="https://map.naver.com/p/entry/place/2023374701?placePath=/home&entry=plt" target="_blank" class="btn naver" id="naverBtn">通过Naver预约</a>
+    <a href="https://pf.kakao.com/_your_channel_id" target="_blank" class="btn kakao" id="kakaoBtn">通过KakaoTalk咨询</a>
+  </div>
+
+  <script>
+    const checkbox = document.getElementById('agree');
+    const naverBtn = document.getElementById('naverBtn');
+    const kakaoBtn = document.getElementById('kakaoBtn');
+
+    checkbox.addEventListener('change', () => {
+      const isChecked = checkbox.checked;
+      naverBtn.classList.toggle('active', isChecked);
+      kakaoBtn.classList.toggle('active', isChecked);
+    });
+
+    [naverBtn, kakaoBtn].forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (!checkbox.checked) {
+          e.preventDefault();
+          alert("请先同意预约项目后继续操作。");
+        }
+      });
+    });
+  </script>
+
+  <footer style="background-color:#fef0f4; padding: 30px 20px; text-align: center; font-family:'Noto Sans KR', sans-serif;">
+    <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">CriCri Beauty 美容店</div>
+    <div style="margin: 10px 0; color:#666; font-size: 0.95em;">营业时间：11:00 ~ 20:00 ｜ 联系电话：0507-1367-6984</div>
+    <div style="margin: 15px 0;">
+      <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="24" />
+      </a>
+      <a href="#" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111491.png" alt="KakaoTalk" width="24" />
+      </a>
+      <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png" alt="Naver Blog" width="24" />
+      </a>
+    </div>
+    <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
+      &copy; 2025 Cricri Beauty Shop. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
 
