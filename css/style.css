@@ -62,6 +62,27 @@ section[id]::before {
     margin-right: 0;
   }
 }
+@media screen and (max-width: 600px) {
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    align-self: flex-start;
+    margin-bottom: 0;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lang-switch {
+    margin-left: auto;
+  }
+}
 
 /* 상단 메뉴 */
 .main-header {
