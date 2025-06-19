@@ -11,12 +11,6 @@ html, body {
   overflow-x: hidden;
   background: #fff;
 }
-/* 로고설정  */
-.logo-img {
-  height: 80px;  /* 기존보다 크게 조정 (원하는 만큼 조절 가능) */
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
 
 
 /* 한국어 영어 선택  */
