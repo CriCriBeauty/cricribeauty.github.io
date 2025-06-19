@@ -10,29 +10,22 @@ html, body {
   color: #333;
   background: #fff;
   overflow-x: hidden;
-  padding-top: 80px; /* 상단 고정 헤더 보정 */
+  padding-top: 80px; /* 헤더 높이만큼 공간 확보 */
 }
 
-/* 헤더: 로고 + 메뉴 + 언어 */
+/* ===== 헤더 (로고 + 메뉴 + 언어) ===== */
 .main-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
-  padding: 10px 40px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-.header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
+  background: #fffaf8;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
 /* 로고 */
@@ -76,7 +69,7 @@ html, body {
   text-decoration: underline;
 }
 
-/* Hero Section */
+/* ===== Hero Section ===== */
 .hero {
   display: flex;
   padding: 60px 40px 40px;
@@ -137,7 +130,7 @@ html, body {
   height: auto;
 }
 
-/* 특징 섹션 */
+/* ===== 특징 소개 ===== */
 #feature {
   display: flex;
   padding: 60px 40px;
@@ -167,7 +160,7 @@ html, body {
   border-radius: 10px;
 }
 
-/* 푸터 */
+/* ===== 푸터 ===== */
 footer {
   background-color: #333;
   color: #fff;
@@ -176,19 +169,26 @@ footer {
   font-size: 0.9rem;
 }
 
-/* 반응형 */
-@media (max-width: 768px) {
-  .header-inner {
+/* ===== 반응형 ===== */
+@media (max-width: 1024px) {
+  .main-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    padding: 15px 20px;
   }
 
   .main-nav {
+    margin-top: 10px;
     flex-wrap: wrap;
-    gap: 15px;
   }
 
+  .lang-switch {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
   .hero,
   #feature {
     flex-direction: column;
