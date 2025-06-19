@@ -3,260 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <title>크리크리 뷰티샵</title>
-  <meta name="naver-site-verification" content="c60525941de5015113326d80263e650d47c90b6d" />
+   <meta name="naver-site-verification" content="c60525941de5015113326d80263e650d47c90b6d" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="크리크리뷰티샵 - 속눈썹, 반영구, 맞춤 컨설팅 전문 뷰티샵. 예약 및 서비스 안내 제공.">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-      scroll-behavior: smooth;
-      margin: 0;
-      padding-top: 60px; /* 메뉴바 높이 보정 */
-      background: #fff;
-      color: #333;
-    }
-
-    /* 메뉴바 상단 고정 */
-    .main-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #f7f3f1;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 12px 0;
-      z-index: 1001;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .main-nav a {
-      text-decoration: none;
-      color: #111;
-      font-weight: 500;
-      font-size: 1rem;
-    }
-    .main-nav a:hover {
-      color: #c0397e;
-    }
-
-    /* 헤더: 로고 + 언어 */
-    .main-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px 10px;
-      background: #fff;
-    }
-
-    .logo img {
-      height: 60px;
-      object-fit: contain;
-    }
-
-    .lang-switch {
-      display: flex;
-      gap: 6px;
-      font-size: 0.9rem;
-    }
-
-    .lang-switch .lang {
-      color: #333;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .lang-switch .lang.active {
-      font-weight: bold;
-      color: #c0397e;
-    }
-
-    /* Hero section */
-    .hero {
-      display: flex;
-      padding: 60px 40px 40px;
-      background-color: #f7f3f1;
-      flex-wrap: wrap;
-    }
-
-    .hero-left {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .hero-left h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .hero-left p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-      color: #c0397e;
-      font-weight: bold;
-    }
-
-    .hero-buttons .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      margin-right: 15px;
-      border-radius: 4px;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    .btn.dark {
-      background-color: #111;
-      color: #fff;
-    }
-
-    .btn.light {
-      background-color: #f5d3dd;
-      color: #111;
-    }
-
-    .btn.dark:hover {
-      background-color: #444;
-      transition: 0.3s;
-    }
-
-    .btn.light:hover {
-      background-color: #e0bfc7;
-      transition: 0.3s;
-    }
-
-    .hero-right {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-right img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* 특징 섹션 */
-    #feature {
-      display: flex;
-      padding: 60px 40px;
-      background-color: #fffaf8;
-      border-bottom: 1px solid #ddd;
-      flex-wrap: wrap;
-    }
-
-    .feature-texts {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .hero-left h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .hero-left h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-
-    .hero-left p {
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    .feature-img {
-      max-width: 90%;
-      border-radius: 10px;
-    }
-
-    /* 푸터 */
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    /* 반응형 */
-    @media (max-width: 768px) {
-      .hero, #feature {
-        flex-direction: column;
-        padding: 20px;
-      }
-
-      .main-header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
-      }
-
-      .main-nav {
-        flex-wrap: wrap;
-        gap: 15px;
-      }
-
-      .hero-left h1 {
-        font-size: 2rem;
-        text-align: center;
-      }
-
-      .hero-right {
-        margin-top: 20px;
-      }
-    }
-  </style>
 </head>
 <body>
-
-  <!-- 메뉴가 최상단 -->
-  <nav class="main-nav">
-    <a href="예약.html">예약</a>
-    <a href="service.html">시술(서비스)</a>
-    <a href="map.html">찾아오시는 길</a>
-    <a href="gallery.html">갤러리</a>
-  </nav>
-
-  <!-- 로고 + 언어 선택 -->
-<header class="main-header">
+  <!-- 상단 메뉴 -->
+  <header class="main-header">
+    <!-- 로고 -->
   <a href="index.html" class="logo">
-    <img src="images/logo_black.jpg" alt="CriCri Beauty Logo" />
-  </a>
+  <img src="images/logo_black.jpg" alt="CriCri Beauty Logo" style="height: 50px;" />
+</a>
   <nav class="main-nav">
     <a href="예약.html">예약</a>
     <a href="service.html">시술(서비스)</a>
     <a href="map.html">찾아오시는 길</a>
     <a href="gallery.html">갤러리</a>
   </nav>
-  <div class="lang-switch">
-    <a href="index.html" class="lang active">KR</a> |
-    <a href="index_en.html" class="lang">EN</a> |
-    <a href="index_ch.html" class="lang">CH</a> |
-    <a href="index_jp.html" class="lang">JP</a>
-  </div>
+ <div class="lang-switch">
+  <span><a href="index.html" class="lang active">KR</a></span>
+  <span>|</span>
+  <span><a href="index_en.html" class="lang">EN</a></span>
+  <span>|</span>
+  <span><a href="index_ch.html" class="lang">CH</a></span>
+   <span>|</span>
+  <span><a href="index_jp.html" class="lang">JP</a></span>
+</div>
 </header>
 
-  <!-- 메인 히어로 -->
-  <section class="hero">
+  <!-- 1페이지: 메인 히어로 -->
+  <section id="home" class="hero">
     <div class="hero-left">
       <h1>Own Your Style,</h1>
       <h1>Right Here at CriCri</h1>
-      <p>당신만의 아름다움을 위한 완벽한 선택</p>
+      <p class="highlight-text">당신만의 아름다움을 위한 완벽한 선택</p>
       <div class="hero-buttons">
-        <a href="service.html" class="btn dark">OUR SERVICES</a>
-        <a href="https://map.naver.com/p/entry/place/2023374701" class="btn light">BOOK ONLINE (예약)</a>
+        <a href="service.html" class="btn dark"> OUR SERVICES</a>
+        <a href="https://map.naver.com/p/entry/place/2023374701?placePath=/ticket?entry=plt&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202506070012&locale=ko&svcName=map_pcv5&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202506070012&locale=ko&svcName=map_pcv5&searchType=place&lng=127.3871167&lat=36.3515941&c=15.00,0,0,0,dh" class="btn light"> BOOK ONLINE(예약)</a>
       </div>
     </div>
     <div class="hero-right">
@@ -264,20 +50,20 @@
     </div>
   </section>
 
-  <!-- 특징 소개 -->
-  <section id="feature">
+  <!-- 2페이지: 특징 소개 - 순차 등장 -->
+  <section id="feature" class="hero" style="background-color:#fffaf8">
     <div class="hero-left">
       <h2>크리크리뷰티샵의 특징</h2>
       <div class="feature-texts">
-        <div>
+        <div class="fade-text delay-1">
           <h3>전문 시술</h3>
           <p>풍부한 경험을 가진 아티스트가<br>직접 시술합니다.</p>
         </div>
-        <div>
+        <div class="fade-text delay-2">
           <h3>프리미엄 제품</h3>
           <p>검증된 고품질 제품만 사용합니다.</p>
         </div>
-        <div>
+        <div class="fade-text delay-3">
           <h3>맞춤 컨설팅</h3>
           <p>고객 개개인에 맞춘 스타일을 제안합니다.</p>
         </div>
@@ -287,7 +73,7 @@
       <img src="images/service_bg.jpg" alt="전문 시술 모델" class="feature-img" />
     </div>
   </section>
-
+  
   <!-- 푸터 -->
   <footer>
     &copy; 2025 CriCri Beauty Studio. All rights reserved.
