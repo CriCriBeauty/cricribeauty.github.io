@@ -85,6 +85,43 @@ body {
 .hero-text p {
   font-size: 1rem;
 }
+/* === Hero Section 이미지와 텍스트 === */
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  background-color: #000;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto; /* ✅ 비율 유지하며 가로폭에 맞게 표시 */
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1em;
+}
+
+
 
 /* 푸터
 footer {
