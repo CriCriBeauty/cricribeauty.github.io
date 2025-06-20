@@ -1,4 +1,4 @@
-/* 기본 설정 */
+/* Reset 기본 */
 * {
   margin: 0;
   padding: 0;
@@ -6,99 +6,91 @@
 }
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  background-color: #fff;
+  background: #fff;
   color: #333;
-  line-height: 1.6;
 }
 
 /* 헤더 */
 .main-header {
-  width: 100%;
-  background: #fff;
   position: fixed;
   top: 0;
-  left: 0;
+  width: 100%;
+  background: #fff;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #eee;
 }
-.container {
+.main-header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px 20px;
 }
 .logo img {
-  height: 36px;
-}
-.main-nav {
-  display: flex;
-  gap: 20px;
+  height: 40px;
 }
 .main-nav a {
-  color: #333;
+  margin: 0 10px;
   text-decoration: none;
+  color: #111;
   font-weight: 500;
-  font-size: 1rem;
 }
 .main-nav a:hover {
   color: #c0397e;
 }
+
+/* 언어 전환 */
 .lang-switch {
   display: flex;
-  gap: 10px;
+  gap: 8px;
+}
+.lang-switch .lang {
   font-size: 0.9rem;
-  margin-left: 20px;
-}
-.lang-switch a {
+  color: #666;
   text-decoration: none;
-  color: #777;
 }
-.lang-switch a.active {
+.lang-switch .lang.active {
   font-weight: bold;
   color: #c0397e;
 }
 
-/* 메인 이미지 섹션 */
+/* 메인 비주얼 */
 .hero {
   margin-top: 80px;
 }
 .main-visual {
   position: relative;
   width: 100%;
-  max-height: 90vh;
+  height: 100vh;
   overflow: hidden;
 }
 .main-visual img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 .hero-text {
   position: absolute;
   bottom: 15%;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  color: white;
 }
 .hero-text h1 {
-  font-size: 2.8rem;
   font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 .hero-text p {
   font-size: 1rem;
-  margin-top: 10px;
 }
-/* 푸터 내림 */
+
 /* 푸터
 footer {
   text-align: center;
-  padding: 30px 20px;
-  background-color: #fef0f4;
-  color: #777; */
+  background: #fef0f4;
+  padding: 20px;
   font-size: 0.9rem;
-  margin-top: 60px;
-}
+  color: #666;
+} */
