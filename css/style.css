@@ -61,7 +61,7 @@ body {
 /* 히어로 섹션 (백그라운드 이미지 방식) */
 .hero {
   height: 100vh;
-  background-image: url('images/main.png');
+  background-image: url('../images/main.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
