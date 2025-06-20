@@ -1,134 +1,148 @@
-/* 기본 초기화 */
+/* Reset 기본 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Noto Sans KR', sans-serif;
+  background: #fff;
   color: #333;
-  overflow-x: hidden;
 }
 
-/* 헤더 영역 */
+/* 헤더 */
 .main-header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 40px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background: #fff;
   z-index: 1000;
+  border-bottom: 1px solid #eee;
 }
-
+.main-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
 .logo img {
-  height: 36px;
+  height: 40px;
 }
-
 .main-nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: #333;
+  color: #111;
   font-weight: 500;
 }
-
 .main-nav a:hover {
   color: #c0397e;
 }
 
+/* 언어 전환 */
 .lang-switch {
   display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.9rem;
+  gap: 8px;
 }
-
 .lang-switch .lang {
+  font-size: 0.9rem;
+  color: #666;
   text-decoration: none;
-  color: #333;
 }
-
 .lang-switch .lang.active {
-  color: #c0397e;
   font-weight: bold;
+  color: #c0397e;
 }
 
-/* 히어로 섹션 (백그라운드 이미지 방식) */
+/* 메인 비주얼 */
 .hero {
-  height: 100vh;
-  background-image: url('../images/main.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin-top: 80px;
+}
+.main-visual {
   position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* 어두운 오버레이 */
+.main-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
-.hero-content {
+.hero-text {
   position: absolute;
-  top: 50%;
-  left: 100px;
-  transform: translateY(-50%);
+  bottom: 15%;
+  width: 100%;
+  text-align: center;
   color: white;
-  z-index: 2;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+.hero-text h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.hero-text p {
+  font-size: 1rem;
+}
+/* === Hero Section 이미지와 텍스트 === */
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  background-color: #000;
 }
 
-.hero-content h1 {
+.hero-image img {
+  width: 100%;
+  height: auto; /* ✅ 비율 유지하며 가로폭에 맞게 표시 */
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h1 {
   font-family: 'Dancing Script', cursive;
-  font-size: 2.4rem;
+  font-size: 2.5em;
   margin-bottom: 10px;
 }
 
-.hero-content p {
-  font-size: 1rem;
-  margin-bottom: 20px;
+.hero-text p {
+  font-size: 1em;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 16px;
-  margin-right: 10px;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
+.hero-fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 화면 전체 높이 */
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
 }
 
-.btn.dark {
-  background-color: #d94f7b;
-  color: #fff;
-}
-
-.btn.light {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #ccc;
-}
-
-.btn:hover {
-  opacity: 0.85;
+.hero-fullscreen img {
+  max-height: 100vh;
+  max-width: 100%;
+  object-fit: contain; /* ✅ 이미지 왜곡 없이 꽉 차게 */
+  display: block;
 }
 
 /* 푸터
 footer {
-  background-color: #fff0f5;
   text-align: center;
-  padding: 20px 10px;
+  background: #fef0f4;
+  padding: 20px;
   font-size: 0.9rem;
-  color: #888;
-}
- */
+  color: #666;
+} */
