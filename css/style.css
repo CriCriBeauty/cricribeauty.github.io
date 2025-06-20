@@ -121,7 +121,22 @@ body {
   font-size: 1em;
 }
 
+.hero-fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 화면 전체 높이 */
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+}
 
+.hero-fullscreen img {
+  max-height: 100vh;
+  max-width: 100%;
+  object-fit: contain; /* ✅ 이미지 왜곡 없이 꽉 차게 */
+  display: block;
+}
 
 /* 푸터
 footer {
