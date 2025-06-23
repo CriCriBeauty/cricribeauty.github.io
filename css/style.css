@@ -1,97 +1,84 @@
-/* 기본 초기화 */
+/* ===== 기본 초기화 ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body, html {
   height: 100%;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  background-color: #000;
 }
 
-/* 히어로 전체 배경 */
-.hero {
-  position: relative;
-  height: 100vh;
-  background: url('../images/main.png') no-repeat center center;
+/* ===== 전체 배경 이미지 ===== */
+.background {
+  background: url('main.png') no-repeat center center fixed;
   background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
   overflow: hidden;
 }
 
-/* 상단 네비(투명 배경 + 흰 글씨) */
-.main-header {
+/* ===== 중앙 텍스트 애니메이션 ===== */
+.slide-text {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  padding: 30px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+  animation: slideUp 1.5s ease-out forwards;
 }
-.logo img {
-  height: 40px;
-}
-.main-nav a {
+
+/* CriCri 폰트 (로고 느낌) */
+.cricri {
+  font-family: 'Parisienne', cursive;
+  font-size: 80px;
   color: white;
-  font-weight: bold;
-  margin: 0 15px;
-  text-decoration: none;
+  font-weight: normal;
 }
-.main-nav a:hover {
-  text-decoration: underline;
-}
-.lang-switch .lang {
+
+/* BEAUTY STUDIO 폰트 */
+.studio {
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
   color: white;
-  font-weight: bold;
-  margin: 0 5px;
-}
-.lang-switch .active {
-  color: #ffc0cb;
+  letter-spacing: 6px;
+  margin-top: 10px;
 }
 
-/* 슬라이드 애니메이션 */
-.logo-slide {
-  position: absolute;
-  top: 40%;
-  left: -100%;
-  transform: translateY(-50%);
-  z-index: 5;
-  animation: slideLogo 2s ease-out forwards;
-}
-.logo-slide img {
-  width: 60%;
-  max-width: 500px;
+/* ===== 슬라이드 애니메이션 ===== */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 80%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
-@keyframes slideLogo {
-  0% { left: -100%; opacity: 0; }
-  60% { left: 10%; opacity: 1; }
-  100% { left: 10%; opacity: 1; }
-}
-
-/* 푸터 스타일 */
+/* ===== 푸터 ===== */
 footer {
+  background: #111;
+  color: #ccc;
   text-align: center;
   padding: 20px 0;
   font-size: 14px;
-  background: #222;
-  color: #ccc;
+  position: relative;
+  z-index: 10;
 }
 
-/* 반응형(모바일 대응) */
+/* ===== 반응형 (모바일 대응) ===== */
 @media (max-width: 768px) {
-  .main-header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
+  .cricri {
+    font-size: 48px;
   }
-  .main-nav {
-    flex-wrap: wrap;
-    margin-top: 10px;
-    gap: 10px;
-  }
-  .logo-slide img {
-    width: 80%;
+
+  .studio {
+    font-size: 18px;
+    letter-spacing: 4px;
   }
 }
