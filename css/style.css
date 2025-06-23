@@ -88,19 +88,21 @@ body, html {
 }
 
 /* 언어 선택 */
-.lang {
-  color: white;
+.lang-switcher {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 1.3rem;      /* 글자 크기 조절 */
   font-weight: bold;
-  font-size: 0.9rem;
+  z-index: 10;
 }
 
-.lang a {
+.lang-switcher a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
   margin: 0 5px;
 }
 
-.lang a:hover {
+.lang-switcher a:hover {
   text-decoration: underline;
 }
