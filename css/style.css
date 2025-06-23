@@ -101,26 +101,31 @@ html, body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-image: url("../images/main.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
+
 .overlay-text {
-  position: absolute;
-  bottom: 80px;
-  width: 100%;
+  position: relative;
+  z-index: 1;
   text-align: center;
+  padding-top: 20px;
 }
-.overlay-text .hero-buttons .btn {
-  margin: 10px;
-  padding: 14px 26px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 4px;
-  text-decoration: none;
-}
+
 
 /* 푸터 */
 footer {
