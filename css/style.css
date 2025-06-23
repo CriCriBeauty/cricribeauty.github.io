@@ -1,108 +1,84 @@
-/* 기본 초기화 */
+/* ===== 기본 초기화 ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 배경 이미지 */
-body {
-  height: 100vh;
-  width: 100vw;
-  background-image: url('images/main.png');
+body, html {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  background-color: #000;
+}
+
+/* ===== 전체 배경 이미지 ===== */
+.background {
+  background: url('main.png') no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  font-family: 'Arial', sans-serif;
-  color: white;
+  width: 100%;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
 
-/* 어두운 필터와 텍스트용 오버레이 */
-.overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  height: 100%;
-  width: 100%;
+/* ===== 중앙 텍스트 애니메이션 ===== */
+.slide-text {
   position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* 네비게이션 */
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  font-weight: bold;
-}
-
-.logo img {
-  height: 40px;
-}
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-/* 언어 선택 */
-.lang-select {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.lang-select a {
-  color: white;
-  text-decoration: none;
-  margin: 0 4px;
-}
-
-.lang-select a.active {
-  text-decoration: underline;
-}
-
-/* 메인 로고 슬라이드 */
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 100px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
   text-align: center;
+  animation: slideUp 1.5s ease-out forwards;
 }
 
-.logo-slide {
-  animation: slideFade 2s ease-out forwards;
-  opacity: 0;
-  transform: translateY(20px);
+/* CriCri 폰트 (로고 느낌) */
+.cricri {
+  font-family: 'Parisienne', cursive;
+  font-size: 80px;
+  color: white;
+  font-weight: normal;
 }
 
-@keyframes slideFade {
+/* BEAUTY STUDIO 폰트 */
+.studio {
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  color: white;
+  letter-spacing: 6px;
+  margin-top: 10px;
+}
+
+/* ===== 슬라이드 애니메이션 ===== */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 80%);
+  }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(-50%, -50%);
   }
 }
 
-.logo-text {
-  font-size: 64px;
-  font-weight: 300;
-  font-family: 'Brush Script MT', cursive;
-  display: block;
-  margin-bottom: 10px;
+/* ===== 푸터 ===== */
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  position: relative;
+  z-index: 10;
 }
 
-.logo-subtext {
-  font-size: 20px;
-  letter-spacing: 5px;
-  font-weight: bold;
+/* ===== 반응형 (모바일 대응) ===== */
+@media (max-width: 768px) {
+  .cricri {
+    font-size: 48px;
+  }
+
+  .studio {
+    font-size: 18px;
+    letter-spacing: 4px;
+  }
 }
