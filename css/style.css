@@ -79,7 +79,7 @@ body, html {
   color: white;
   font-weight: bold;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 20px; /* 또는 1.25rem 등으로 변경 가능 1rem ≒ 16px */
   transition: color 0.3s;
 }
 
