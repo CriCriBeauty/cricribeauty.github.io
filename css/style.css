@@ -1,91 +1,97 @@
-/* Reset 기본 스타일 초기화 */
+/* 기본 초기화 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body, html {
   height: 100%;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
-/* 전체 배경 이미지 */
+/* 히어로 전체 배경 */
 .hero {
-  background: url("../images/main.png") no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
   position: relative;
+  height: 100vh;
+  background: url('../images/main.png') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
 }
 
-/* 헤더: 로고, 메뉴, 언어 스위치 */
+/* 상단 네비(투명 배경 + 흰 글씨) */
 .main-header {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   padding: 30px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0); /* 배경 투명 */
   z-index: 10;
 }
-
-/* 로고 이미지 */
 .logo img {
   height: 40px;
 }
-
-/* 네비 메뉴 */
-.main-nav {
-  display: flex;
-  gap: 30px;
-}
-
 .main-nav a {
   color: white;
-  font-weight: 700;
+  font-weight: bold;
+  margin: 0 15px;
   text-decoration: none;
-  font-size: 16px;
 }
-
 .main-nav a:hover {
   text-decoration: underline;
 }
-
-/* 언어 선택 */
-.lang-switch {
-  font-size: 14px;
-}
-
 .lang-switch .lang {
   color: white;
-  font-weight: 700;
-  text-decoration: none;
+  font-weight: bold;
   margin: 0 5px;
 }
-
 .lang-switch .active {
-  color: #ffc0cb; /* 현재 언어는 연한 핑크 강조 */
+  color: #ffc0cb;
 }
 
-/* 반응형 */
+/* 슬라이드 애니메이션 */
+.logo-slide {
+  position: absolute;
+  top: 40%;
+  left: -100%;
+  transform: translateY(-50%);
+  z-index: 5;
+  animation: slideLogo 2s ease-out forwards;
+}
+.logo-slide img {
+  width: 60%;
+  max-width: 500px;
+}
+
+@keyframes slideLogo {
+  0% { left: -100%; opacity: 0; }
+  60% { left: 10%; opacity: 1; }
+  100% { left: 10%; opacity: 1; }
+}
+
+/* 푸터 스타일 */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  background: #222;
+  color: #ccc;
+}
+
+/* 반응형(모바일 대응) */
 @media (max-width: 768px) {
   .main-header {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
   }
-
   .main-nav {
     flex-wrap: wrap;
-    gap: 15px;
     margin-top: 10px;
+    gap: 10px;
   }
-
-  .lang-switch {
-    margin-top: 10px;
+  .logo-slide img {
+    width: 80%;
   }
 }
