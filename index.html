@@ -2,37 +2,39 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CriCri Beauty Studio</title>
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
-  </style>
 </head>
 <body>
-  <div class="hero">
-    <!-- 언어 선택 오른쪽 상단 -->
-    <div class="lang-switcher">
+
+  <!-- 배경 이미지 -->
+  <div class="background"></div>
+
+  <!-- 로고 애니메이션 텍스트 -->
+  <div class="logo-slide">
+    <h1>
+      <span class="slide">CriCri</span>
+      <span class="slide">BEAUTY</span>
+      <span class="slide">STUDIO</span>
+    </h1>
+  </div>
+
+  <!-- 네비게이션 -->
+  <nav class="nav">
+    <ul class="menu">
+      <li><a href="예약.html">예약</a></li>
+      <li><a href="service.html">시술 서비스</a></li>
+      <li><a href="map.html">찾아오시는 길</a></li>
+      <li><a href="gallery.html">갤러리</a></li>
+    </ul>
+    <div class="lang">
       <a href="index.html">KR</a> |
       <a href="index_en.html">EN</a> |
       <a href="index_ch.html">CH</a> |
       <a href="index_jp.html">JP</a>
     </div>
+  </nav>
 
-    <!-- 상단 네비게이션 메뉴 -->
-    <div class="navbar">
-      <div class="menu">
-        <a href="예약.html">예약</a>
-        <a href="service.html">시술 서비스</a>
-        <a href="map.html">찾아오시는 길</a>
-        <a href="gallery.html">갤러리</a>
-      </div>
-    </div>
-
-    <!-- 가운데 로고 텍스트 -->
-    <div id="hero-text">
-      CriCri&nbsp;&nbsp;BEAUTY&nbsp;&nbsp;STUDIO<span class="typing-cursor">|</span>
-    </div>
-  </div>
 </body>
 </html>
