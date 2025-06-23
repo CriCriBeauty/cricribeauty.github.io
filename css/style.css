@@ -1,82 +1,106 @@
-body, html {
+/* 기본 스타일 초기화 */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
   height: 100%;
   font-family: 'Noto Sans KR', sans-serif;
   color: white;
-  background-color: black;
-  overflow: hidden;
 }
 
-.hero {
+/* 배경 이미지 */
+.background {
   background-image: url('../images/main.png');
   background-size: cover;
-  background-position: center top;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-/* 언어 선택 오른쪽 상단 */
-.lang-switcher {
+/* 로고 슬라이드 애니메이션 */
+.logo-slide {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.lang-switcher a {
-  color: white;
-  text-decoration: none;
-  margin: 0 4px;
-}
-
-.lang-switcher a:hover {
-  text-decoration: underline;
-}
-
-/* 네비게이션 메뉴 */
-.navbar {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  margin-right: 20px;
-}
-
-.menu a:hover {
-  text-decoration: underline;
-}
-
-/* 메인 타이핑 애니메이션 텍스트 */
-#hero-text {
-  font-size: 40px;
-  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  margin-bottom: 80px; /* 아래로 내림 */
-  animation: fadeIn 2s ease-in-out;
 }
 
-.typing-cursor {
+.logo-slide h1 {
+  font-size: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid white;
+  animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+}
+
+.logo-slide .slide {
   display: inline-block;
-  animation: blink 1s infinite;
+  padding: 0 0.2em;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out forwards;
+  opacity: 0;
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
+.logo-slide .slide:nth-child(1) { animation-delay: 0s; }
+.logo-slide .slide:nth-child(2) { animation-delay: 1.5s; }
+.logo-slide .slide:nth-child(3) { animation-delay: 3s; }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 네비게이션 */
+.nav {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.menu li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #f4c2c2;
+}
+
+/* 언어 선택 */
+.lang {
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.lang a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.lang a:hover {
+  text-decoration: underline;
 }
