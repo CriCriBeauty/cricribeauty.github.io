@@ -13,6 +13,34 @@ html, body {
   padding-top: 80px; /* 헤더 전체 높이 보정 */
 }
 
+/* 메인 배경 이미지 */
+.full-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 버튼 오버레이 영역 */
+.overlay-text {
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+  text-align: center;
+}
+.overlay-text .hero-buttons .btn {
+  margin: 10px;
+  padding: 14px 26px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+
 /* 언어 선택 */
 .lang-switch {
   position: absolute;
