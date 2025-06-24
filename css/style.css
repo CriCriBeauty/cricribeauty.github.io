@@ -170,24 +170,34 @@ body, html {
 /* 예약.html  */
 .service-row {
   display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .service-table {
-  flex: 1 1 360px;
+  flex: 1 1 48%;
 }
 
 .service-image {
-  flex: 1 1 300px;
+  flex: 1 1 48%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .service-image img {
+  width: 100%;
   max-width: 100%;
   border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
+/* 반응형: 모바일에서 위아래로 정렬 */
+@media (max-width: 768px) {
+  .service-row {
+    flex-direction: column;
+  }
+}
+
