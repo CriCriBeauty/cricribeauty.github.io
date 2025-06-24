@@ -189,9 +189,11 @@ body, html {
 
 .service-image img {
   width: 100%;
-  max-width: 100%;
+  max-width: 400px;  /* 💡 적당한 최대 폭 설정 */
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  object-fit: cover;
 }
 
 /* 반응형: 모바일에서 위아래로 정렬 */
