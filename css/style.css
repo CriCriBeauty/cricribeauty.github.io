@@ -106,3 +106,28 @@ body, html {
 .lang-switcher a:hover {
   text-decoration: underline;
 }
+/* 버튼 설정(ourservice, booking onlie */
+.cta-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.05);
+}
+
