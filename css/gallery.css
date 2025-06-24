@@ -12,22 +12,16 @@ header {
   left: 0;
   width: 100%;
   background: #fff;
-  padding: 20px 0; /* 기존보다 위아래 여백 넉넉히 */
+  padding: 25px 0; /* 더 넉넉한 여백 */
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
-
-header .logo {
-  font-size: 1.8em;
-  font-weight: bold;
-}
-
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 40px; /* 기존 20px → 40px */
+  gap: 50px; /* 넓은 간격 */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -37,7 +31,7 @@ nav a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
-  font-size: 1.2em; /* 기존보다 확대 */
+  font-size: 1.4em; /* 더 큰 글자 */
 }
 
 main {
@@ -47,7 +41,7 @@ main {
 }
 
 .category-title {
-  font-size: 1.5em;
+  font-size: 1.6em;
   margin: 40px 0 20px;
   border-bottom: 2px solid #000;
   display: inline-block;
@@ -76,7 +70,7 @@ main {
 
 .caption {
   margin-top: 8px;
-  font-size: 0.95em;
+  font-size: 1em;
   color: #333;
 }
 
@@ -98,15 +92,36 @@ main {
 }
 
 .cta .button {
-  padding: 12px 24px;
+  padding: 14px 28px;
   background: #000;
   color: #fff;
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
+  font-size: 1.1em;
   transition: background 0.3s;
 }
 
 .cta .button:hover {
   background: #444;
+}
+
+.lang-switcher {
+  position: fixed;
+  top: 5px;
+  right: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+.lang-switcher a {
+  color: #333 !important;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.lang-switcher a:hover {
+  text-decoration: underline;
 }
