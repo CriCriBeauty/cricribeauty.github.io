@@ -45,9 +45,9 @@
   </table>
 </div>
 
-<!-- 📋 가격표 보기 버튼 -->
+<!-- 가격표 팝업 보기 버튼 -->
 <div style="text-align: center; margin: 20px 0;">
-  <button onclick="togglePriceImage()" style="padding: 10px 20px; border-radius: 8px; background-color: #d94f7b; color: white; border: none; font-weight: bold; cursor: pointer;">
+  <button onclick="openPricePopup()" style="padding: 10px 20px; border-radius: 8px; background-color: #d94f7b; color: white; border: none; font-weight: bold; cursor: pointer;">
     📋 가격표 보기
   </button>
 </div>
@@ -91,6 +91,11 @@
 
 <!-- 스크립트: 버튼 활성화 + 가격표 보기 -->
 <script>
+  function openPricePopup() {
+    window.open('images/price.png', '_blank', 'width=800,height=600,resizable=yes');
+  }
+
+  // 기존 예약 버튼 스크립트 유지
   const checkbox = document.getElementById('agree');
   const naverBtn = document.getElementById('naverBtn');
   const kakaoBtn = document.getElementById('kakaoBtn');
@@ -109,11 +114,6 @@
       }
     });
   });
-
-  function togglePriceImage() {
-    const box = document.getElementById('priceImageContainer');
-    box.style.display = (box.style.display === 'none') ? 'block' : 'none';
-  }
 </script>
 
 <!-- 푸터 -->
