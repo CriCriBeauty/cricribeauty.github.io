@@ -166,3 +166,28 @@ body, html {
   opacity: 0.8;
   font-weight: 300;
 }
+
+/* 예약.html  */
+.service-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.service-table {
+  flex: 1 1 360px;
+}
+
+.service-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-image img {
+  max-width: 100%;
+  border-radius: 12px;
+}
