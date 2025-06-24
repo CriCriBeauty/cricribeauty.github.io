@@ -12,11 +12,12 @@ header {
   left: 0;
   width: 100%;
   background: #fff;
-  padding: 15px 0;
+  padding: 20px 0; /* 기존보다 위아래 여백 넉넉히 */
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
+
 
 header .logo {
   font-size: 1.8em;
@@ -26,9 +27,9 @@ header .logo {
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px; /* 기존 20px → 40px */
   list-style: none;
-  margin: 10px 0 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -36,6 +37,7 @@ nav a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
+  font-size: 1.2em; /* 기존보다 확대 */
 }
 
 main {
