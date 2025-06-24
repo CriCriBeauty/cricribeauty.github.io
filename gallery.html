@@ -25,22 +25,35 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       z-index: 1000;
     }
-    header .logo {
-      font-size: 1.8em;
-      font-weight: bold;
-    }
     nav ul {
       display: flex;
       justify-content: center;
       gap: 20px;
       list-style: none;
-      margin: 10px 0 0;
+      margin: 0;
       padding: 0;
     }
     nav a {
       text-decoration: none;
       color: #000;
       font-weight: bold;
+    }
+    .lang-switcher {
+      position: fixed;
+      top: 5px;
+      right: 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      z-index: 9999;
+    }
+    .lang-switcher a {
+      color: #333 !important;
+      text-decoration: none;
+      margin: 0 5px;
+      font-weight: bold;
+    }
+    .lang-switcher a:hover {
+      text-decoration: underline;
     }
     main {
       max-width: 1200px;
@@ -104,8 +117,11 @@
   </style>
 </head>
 <body>
+  <div class="lang-switcher">
+    <a href="#">KR</a> | <a href="#">EN</a> | <a href="#">CH</a>
+  </div>
+
   <header>
-    <div class="logo">CriCri BEAUTY</div>
     <nav>
       <ul>
         <li><a href="index.html">홈</a></li>
@@ -158,3 +174,4 @@
   </main>
 </body>
 </html>
+ㅉㅉㅉㅈ
