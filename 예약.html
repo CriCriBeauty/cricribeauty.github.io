@@ -3,76 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>예약 | 크리크리 뷰티샵</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <title>예약 | 크리크리 뷰티</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
   <style>
     body {
+      background-color: #fffafc;
       font-family: 'Noto Sans KR', sans-serif;
-      background-color: #fff5f7;
       margin: 0;
-      padding: 0;
-      padding-top: 70px; /* 헤더 높이만큼 밀기 */
+      padding-top: 100px;
+      color: #333;
+    }
+
+    .main-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: white;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .main-header .logo {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 15px 0 5px;
+      color: #c0397e;
+      text-decoration: none;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #111;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .main-nav a:hover {
+      color: #c0397e;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
 
     h1 {
-      margin-top: 50px;
-      font-size: 2em;
-      color: #333;
+      font-size: 2rem;
       text-align: center;
+      color: #c0397e;
+      margin-bottom: 10px;
     }
 
-    p.desc {
-      font-size: 1em;
-      color: #666;
+    .desc {
       text-align: center;
-      margin-bottom: 30px;
-      padding: 0 20px;
+      margin-bottom: 40px;
+      color: #666;
     }
 
     .section {
-      background-color: #fff;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
       padding: 30px 20px;
-      margin: 20px auto;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      max-width: 800px;
+      margin-bottom: 40px;
     }
 
     .section h2 {
-      font-size: 1.4em;
-      margin-bottom: 15px;
-      color: #d94f7b;
+      color: #c0397e;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid #eee;
+      padding: 12px;
       text-align: center;
     }
 
-    .section ul {
-      font-size: 0.95em;
-      color: #444;
-      line-height: 1.8;
-      padding-left: 20px;
+    th {
+      background-color: #fff0f6;
     }
 
-    .section li {
+    ul {
+      line-height: 1.8;
+      padding-left: 20px;
+      color: #444;
+    }
+
+    .image-wrap {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .image-wrap img {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 12px;
+    }
+
+    .calendar-note {
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
       margin-bottom: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
     }
 
     .check-confirm {
       text-align: center;
       margin: 30px auto;
-      font-size: 0.95em;
-      color: #333;
+    }
+
+    .btn-wrap {
+      text-align: center;
+      margin-top: 20px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 24px;
+      padding: 14px 28px;
       margin: 10px;
-      font-size: 1em;
+      border-radius: 30px;
       font-weight: bold;
-      border-radius: 8px;
+      font-size: 1rem;
       text-decoration: none;
-      cursor: pointer;
       opacity: 0.5;
       pointer-events: none;
       transition: 0.3s;
@@ -83,141 +162,109 @@
       pointer-events: auto;
     }
 
-    .naver {
+    .btn.naver {
       background-color: #03C75A;
       color: white;
     }
 
-    .kakao {
+    .btn.kakao {
       background-color: #FEE500;
       color: #000;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      font-size: 0.95em;
-    }
-
-    table, th, td {
-      border: 1px solid #eee;
-    }
-
-    th, td {
-      padding: 10px;
+    footer {
+      background-color: #fdf0f4;
       text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #666;
     }
 
-    th {
-      background-color: #fff0f5;
-      color: #333;
+    footer .brand {
+      font-weight: bold;
+      color: #c0397e;
     }
 
-    .btn-wrap {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    iframe {
-      border: none;
-      width: 100%;
-      height: 400px;
-      margin-top: 10px;
-      border-radius: 12px;
-    }
-
-    @media screen and (max-width: 600px) {
-      h1 {
-        font-size: 1.6em;
-      }
-      .section h2 {
-        font-size: 1.2em;
-      }
-      table, th, td {
-        font-size: 0.85em;
-      }
-      .btn {
-        width: 90%;
-        display: block;
-        margin: 10px auto;
+    @media (max-width: 600px) {
+      .main-nav {
+        flex-direction: column;
+        gap: 12px;
       }
     }
   </style>
 </head>
 <body>
- <!-- 여기에 넣기 -->
+
   <header class="main-header">
-  <a href="index.html" class="logo">CriCri Beauty</a>
-  <nav class="main-nav">
-    <a href="예약.html">예약</a>
-    <a href="service.html">시술(서비스)</a>
-    <a href="map.html">찾아오시는 길</a>
-    <a href="gallery.html">갤러리</a>
-  </nav>
-</header>
-  <h1>🗓 크리크리 뷰티샵 예약</h1>
-  <p class="desc">소중한 당신을 위한 맞춤 시술, 예약 전 안내사항을 꼭 확인해주세요 💖</p>
+    <a href="index.html" class="logo">CriCri Beauty</a>
+    <nav class="main-nav">
+      <a href="예약.html">예약</a>
+      <a href="service.html">시술 서비스</a>
+      <a href="map.html">찾아오시는 길</a>
+      <a href="gallery.html">갤러리</a>
+    </nav>
+  </header>
 
-  <!-- 시술 리스트 -->
- <!-- 시술 리스트 -->
-<!-- 시술 리스트와 이미지 나란히 배치 -->
-<div class="section" style="display: flex; flex-direction: row; gap: 30px; flex-wrap: wrap; align-items: flex-start;">
-  
-  <!-- 왼쪽: 시술표 -->
-  <div style="flex: 1; min-width: 300px;">
-    <h2>💅 시술 리스트 및 가격</h2>
-    <table>
-      <tr><th>시술 항목</th><th>가격</th></tr>
-      <tr><td>영양가득 클리닉펌</td><td>45,000원</td></tr>
-      <tr><td>바짝올린 베이직펌</td><td>35,000원</td></tr>
-      <tr><td>선명한눈매 블랙틴팅펌</td><td>50,000원</td></tr>
-      <tr><td>듀얼펌</td><td>65,000원</td></tr>
-      <tr><td>블랙틴팅 추가</td><td>15,000원</td></tr>
-      <tr><td>눈썹 리프트펌</td><td>30,000원</td></tr>
-      <tr><td>눈썹 디자인</td><td>무료</td></tr>
-    </table>
+  <div class="container">
+    <h1>🗓 예약 안내</h1>
+    <p class="desc">프리미엄 시술을 원하신다면 예약 전 안내사항을 꼭 확인해주세요.</p>
+
+    <div class="section">
+      <h2>💅 시술 항목 및 가격</h2>
+      <table>
+        <tr><th>시술 항목</th><th>가격</th></tr>
+        <tr><td>영양가득 클리닉펌</td><td>45,000원</td></tr>
+        <tr><td>바짝올린 베이직펌</td><td>35,000원</td></tr>
+        <tr><td>선명한눈매 블랙틴팅펌</td><td>50,000원</td></tr>
+        <tr><td>듀얼펌</td><td>65,000원</td></tr>
+        <tr><td>블랙틴팅 추가</td><td>15,000원</td></tr>
+        <tr><td>눈썹 리프트펌</td><td>30,000원</td></tr>
+        <tr><td>눈썹 디자인</td><td>무료</td></tr>
+      </table>
+      <div class="image-wrap">
+        <img src="images/price.png" alt="시술 예시" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📌 예약 전 유의사항</h2>
+      <ul>
+        <li>시술 당일엔 메이크업 없이 방문해주세요.</li>
+        <li>지각 시 시술 시간이 조정될 수 있습니다.</li>
+        <li>노쇼 발생 시 이후 예약이 제한됩니다.</li>
+        <li>민감성 피부/임산부는 상담 후 시술 결정됩니다.</li>
+        <li>시술 후 3시간 내 세안, 수영, 사우나는 피해주세요.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📆 예약 가능 일정</h2>
+      <p class="calendar-note">※ 달력은 참고용이며, 예약은 네이버로 연결됩니다.</p>
+      <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
+    </div>
+
+    <div class="check-confirm">
+      <input type="checkbox" id="agree" />
+      <label for="agree">위 내용을 모두 확인하였으며 동의합니다.</label>
+    </div>
+
+    <div class="btn-wrap">
+      <a href="https://map.naver.com/p/entry/place/2023374701?..." target="_blank" class="btn naver" id="naverBtn">네이버 예약</a>
+      <a href="https://pf.kakao.com/_your_channel_id" target="_blank" class="btn kakao" id="kakaoBtn">카카오톡 상담</a>
+    </div>
   </div>
 
-  <!-- 오른쪽: 이미지 -->
-  <div style="flex: 1; min-width: 280px;">
-    <img src="images/price.png" alt="시술 상세 이미지" style="width: 100%; border-radius: 12px;" />
-  </div>
-
-</div>
-
-
-  <!-- 주의사항 -->
-  <div class="section">
-    <h2>📌 예약 전 안내사항</h2>
-    <ul>
-      <li>시술 당일엔 메이크업/선크림 없이 방문해주세요.</li>
-      <li>지각 시 시술 시간이 조정될 수 있습니다.</li>
-      <li>예약 변경은 최소 하루 전까지 부탁드립니다.</li>
-      <li>노쇼 발생 시 이후 예약이 제한됩니다.</li>
-      <li>민감성 피부/임산부는 상담 후 시술 여부가 결정됩니다.</li>
-      <li>시술 후 3시간정 세안/사우나/수영장 이용은 피해주세요.</li>
-    </ul>
-  </div>
-
-  <!-- 달력 -->
-  <div class="section">
-    <h2>📆 예약 가능 일정</h2>
-    <p style="color:#666; font-size:0.9em; text-align:center;">※ 아래 달력은 참고용이며, 예약은 네이버로 진행해주세요.</p>
-    <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
-  </div>
-
-  <!-- 체크박스 -->
-  <div class="check-confirm">
-    <input type="checkbox" id="agree" />
-    <label for="agree">위 내용을 모두 확인하였으며, 동의합니다.</label>
-  </div>
-
-  <!-- 예약 버튼 -->
-  <div class="btn-wrap">
-    <a href="https://map.naver.com/p/entry/place/2023374701?placePath=/home?additionalHeight=76&from=map&fromPanelNum=1&locale=ko&svcName=map_pcv5&timestamp=202506062130&from=map&fromPanelNum=1&locale=ko&svcName=map_pcv5&timestamp=202506062119&additionalHeight=76&entry=plt&searchType=place&lng=127.3871167&lat=36.3515941&c=15.00,0,0,0,dh" target="_blank" class="btn naver" id="naverBtn">네이버 예약</a>
-    <a href="https://pf.kakao.com/_your_channel_id" target="_blank" class="btn kakao" id="kakaoBtn">카카오톡 상담</a>
-  </div>
+  <footer>
+    <div class="brand">크리크리 뷰티샵</div>
+    <div>영업시간: 11:00 ~ 20:00 ｜ 연락처: 0507-1367-6984</div>
+    <div style="margin-top: 10px;">
+      <a href="https://instagram.com/cricribeautystudio" target="_blank">Instagram</a> ｜ 
+      <a href="https://blog.naver.com/cricri_beauty" target="_blank">Blog</a>
+    </div>
+    <div style="margin-top: 10px; font-size: 0.8em; color: #aaa;">
+      &copy; 2025 CriCri Beauty Studio
+    </div>
+  </footer>
 
   <script>
     const checkbox = document.getElementById('agree');
@@ -229,47 +276,15 @@
       naverBtn.classList.toggle('active', isChecked);
       kakaoBtn.classList.toggle('active', isChecked);
     });
-  </script>
 
-<!-- footer(꼬리말) -->
-<footer style="background-color:#fef0f4; padding: 30px 20px; text-align: center; font-family:'Noto Sans KR', sans-serif;">
-  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">크리크리 뷰티샵</div>
-  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
-    영업시간: 11:00 ~ 20:00 ｜ 연락처: 0507-1367-6984
-  </div>
-
-  <!-- SNS 아이콘 링크 -->
-  <div style="margin: 15px 0;">
-    <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="인스타그램" width="24" />
-    </a>
-    <a href="#" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111491.png" alt="카카오톡 채널" width="24" />
-    </a>
-    <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png" alt="블로그" width="24" />
-    </a>
-  </div>
-  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-    &copy; 2025 Cricri Beauty Shop. All rights reserved.
-  </div>
-</footer>
-  
-  <script>
-  checkbox.addEventListener('change', () => {
-    const isChecked = checkbox.checked;
-    naverBtn.classList.toggle('active', isChecked);
-    kakaoBtn.classList.toggle('active', isChecked);
-  });
-
-  [naverBtn, kakaoBtn].forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      if (!checkbox.checked) {
-        e.preventDefault();
-        alert("예약 전 안내사항에 동의해 주세요.");
-      }
+    [naverBtn, kakaoBtn].forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (!checkbox.checked) {
+          e.preventDefault();
+          alert("예약 전 안내사항에 동의해 주세요.");
+        }
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
