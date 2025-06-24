@@ -1,154 +1,160 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>고객 포토 갤러리 | 크리크리 뷰티샵</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Dancing+Script&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>갤러리 | 크리크리 뷰티</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/gallery.css">
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
-      background-color: #fff;
       margin: 0;
       padding-top: 100px;
+      background: #fff;
+      color: #000;
     }
-    .main-header {
+    header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       background: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       z-index: 1000;
     }
-    .logo {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2rem;
+    header .logo {
+      font-size: 1.8em;
       font-weight: bold;
-      color: #d94f7b;
-      margin-bottom: 5px;
-      text-decoration: none;
     }
-    .main-nav {
+    nav ul {
       display: flex;
-      gap: 30px;
-      margin-top: 5px;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      margin: 10px 0 0;
+      padding: 0;
     }
-    .main-nav a {
+    nav a {
       text-decoration: none;
-      color: #111;
-      font-weight: 500;
-      font-size: 1rem;
+      color: #000;
+      font-weight: bold;
     }
-    .main-nav a:hover {
-      color: #c0397e;
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
-    h1, h2 {
+    .category-title {
+      font-size: 1.5em;
+      margin: 40px 0 20px;
+      border-bottom: 2px solid #000;
+      display: inline-block;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .image-card {
       text-align: center;
-      color: #d94f7b;
-      margin-top: 40px;
     }
-    .slider-container {
-      position: relative;
-      max-width: 800px;
-      margin: 20px auto 60px;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-    .slider {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
+    .image-card img {
       width: 100%;
-    }
-    .slide {
-      min-width: 100%;
-      transition: 0.5s;
-    }
-    .slide img {
-      width: 100%;
-      height: 400px;
+      border-radius: 8px;
       object-fit: cover;
-      display: block;
+      transition: transform 0.3s ease;
     }
-    .nav-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
+    .image-card img:hover {
+      transform: scale(1.05);
+    }
+    .caption {
+      margin-top: 8px;
+      font-size: 0.95em;
+      color: #333;
+    }
+    .before-after {
       display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-      padding: 0 15px;
+      flex-wrap: wrap;
+      gap: 20px;
     }
-    .nav-buttons button {
-      background-color: rgba(0,0,0,0.5);
-      border: none;
-      color: white;
-      padding: 10px;
-      cursor: pointer;
-      border-radius: 50%;
+    .before-after img {
+      width: 48%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .cta {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .cta .button {
+      padding: 12px 24px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .cta .button:hover {
+      background: #444;
     }
   </style>
 </head>
 <body>
-  <header class="main-header">
-    <a href="index.html" class="logo">CriCri Beauty</a>
-    <nav class="main-nav">
-      <a href="예약.html">예약</a>
-      <a href="service.html">시술(서비스)</a>
-      <a href="map.html">찾아오시는 길</a>
-      <a href="gallery.html">갤러리</a>
+  <header>
+    <div class="logo">CriCri BEAUTY</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="service.html">시술</a></li>
+        <li><a href="예약.html">예약</a></li>
+        <li><a href="map.html">오시는 길</a></li>
+        <li><a href="gallery.html">갤러리</a></li>
+      </ul>
     </nav>
   </header>
 
-  <h1>📸 고객 포토 갤러리</h1>
+  <main>
+    <section>
+      <h2 class="category-title">Classic 스타일</h2>
+      <div class="gallery-grid">
+        <div class="image-card">
+          <img src="images/classic1.jpg" alt="클래식 래쉬 1">
+          <p class="caption">클래식 래쉬 / C컬</p>
+        </div>
+        <div class="image-card">
+          <img src="images/classic2.jpg" alt="클래식 래쉬 2">
+          <p class="caption">자연스러운 눈매 연출</p>
+        </div>
+      </div>
+    </section>
 
-  <h2>💄 시술 사진</h2>
-  <div class="slider-container">
-    <div class="slider" id="treatmentSlider">
-      <div class="slide"><img src="images/시술사진.jpg" alt="시술 예시"/></div>
-      <div class="slide"><img src="images/시술사진2.jpg" alt="시술 예시"/></div>
-         </div>
-    <div class="nav-buttons">
-      <button onclick="moveSlide('treatmentSlider', -1)">&#10094;</button>
-      <button onclick="moveSlide('treatmentSlider', 1)">&#10095;</button>
+    <section>
+      <h2 class="category-title">Before & After</h2>
+      <div class="before-after">
+        <img src="images/before1.jpg" alt="시술 전">
+        <img src="images/after1.jpg" alt="시술 후">
+      </div>
+    </section>
+
+    <section>
+      <h2 class="category-title">샵 인테리어</h2>
+      <div class="gallery-grid">
+        <div class="image-card">
+          <img src="images/interior1.jpg" alt="인테리어 1">
+        </div>
+        <div class="image-card">
+          <img src="images/interior2.jpg" alt="인테리어 2">
+        </div>
+      </div>
+    </section>
+
+    <div class="cta">
+      <a href="예약.html" class="button">이 스타일로 예약하기</a>
     </div>
-  </div>
-
-  <h2>🏠 샵 내부 사진</h2>
-  <div class="slider-container">
-    <div class="slider" id="interiorSlider">
-      <div class="slide"><img src="images/이미지1.jpg" alt="시술 예시"/></div>
-     <div class="slide"><img src="images/이미지2.jpg" alt="시술 예시2"/></div>
-     <div class="slide"><img src="images/이미지3.jpg" alt="시술 예시3"/></div>
-
-    </div>
-    <div class="nav-buttons">
-      <button onclick="moveSlide('interiorSlider', -1)">&#10094;</button>
-      <button onclick="moveSlide('interiorSlider', 1)">&#10095;</button>
-    </div>
-  </div>
-
-  <script>
-    const sliderIndex = {
-      treatmentSlider: 0,
-      interiorSlider: 0
-    };
-
-    function moveSlide(id, direction) {
-      const slider = document.getElementById(id);
-      const slides = slider.children.length;
-      sliderIndex[id] = (sliderIndex[id] + direction + slides) % slides;
-      slider.style.transform = `translateX(-${sliderIndex[id] * 100}%)`;
-    }
-
-    setInterval(() => moveSlide('treatmentSlider', 1), 4000);
-    setInterval(() => moveSlide('interiorSlider', 1), 6000);
-  </script>
+  </main>
 </body>
 </html>
