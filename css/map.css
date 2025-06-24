@@ -22,30 +22,32 @@ body {
 
 /* 네비게이션 바 */
 .nav {
-  background-color: #fff6f8;
-  border-bottom: 1px solid #eee;
-  padding: 16px 0;
+  background-color: #fff7f9;
+  padding: 20px 0;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: fixed;
   top: 30px;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
+
 .menu {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 40px;
   padding: 0;
   margin: 0;
 }
+
 .menu li a {
   text-decoration: none;
   color: #111;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.05rem;  /* 여기서 크기 조정 */
 }
+
 .menu li a:hover {
   color: #d94f7b;
 }
