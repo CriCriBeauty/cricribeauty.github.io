@@ -8,15 +8,18 @@
   <link rel="stylesheet" href="css/gallery.css">
   <script>
     let slideIndex = 0;
-    function moveSlide(n) {
-      const track = document.querySelector('.interior-slider-track');
-      const slides = document.querySelectorAll('.interior-slide');
+    function moveSlide(n, trackSelector) {
+      const track = document.querySelector(trackSelector);
+      const slides = track.children;
+      if (!slides.length) return;
       slideIndex = (slideIndex + n + slides.length) % slides.length;
       track.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
     }
     document.addEventListener('DOMContentLoaded', () => {
-      moveSlide(0);
-      setInterval(() => moveSlide(1), 2000);
+      moveSlide(0, '.interior-slider-track');
+      setInterval(() => moveSlide(1, '.interior-slider-track'), 2000);
+      moveSlide(0, '.beforeafter-slider-track');
+      setInterval(() => moveSlide(1, '.beforeafter-slider-track'), 3000);
     });
   </script>
 </head>
@@ -54,14 +57,16 @@
 
     <section>
       <h2 class="category-title">Before & After</h2>
-      <div class="gallery-grid">
-        <div class="image-card">
-          <img src="images/B_F1.jpg" alt="시술 전후 1">
-          <p class="caption">왼쪽: 시술완료 / 오른쪽: 시술상세</p>
-        </div>
-        <div class="image-card">
-          <img src="images/B_F2.png" alt="시술 전후 2">
-           <p class="caption">왼쪽: 시술 전 / 오른쪽: 시술 후</p>
+      <div class="interior-slider">
+        <div class="interior-slider-track beforeafter-slider-track">
+          <div class="interior-slide">
+            <img src="images/B_F1.jpg" alt="시술 전후 1">
+            <p class="caption">왼쪽: 시술 완료 / 오른쪽: 시술 상세</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/B_F2.jpg" alt="시술 전후 2">
+            <p class="caption">왼쪽: 시술 전 / 오른쪽: 시술 후</p>
+          </div>
         </div>
       </div>
     </section>
@@ -77,13 +82,13 @@
         </div>
       </div>
       <div class="slider-buttons">
-        <button onclick="moveSlide(-1)">&laquo; 이전</button>
-        <button onclick="moveSlide(1)">다음 &raquo;</button>
+        <button onclick="moveSlide(-1, '.interior-slider-track')">&laquo; 이전</button>
+        <button onclick="moveSlide(1, '.interior-slider-track')">다음 &raquo;</button>
       </div>
     </section>
 
     <div class="cta">
-      <a href="https://map.naver.com/p/entry/place/2023374701?placePath=/home?entry=plt&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202506242003&locale=ko&svcName=map_pcv5&searchType=place&lng=127.3871167&lat=36.3515941&c=15.00,0,0,0,dh" class="button">이 스타일로 예약하기</a>
+      <a href="예약.html" class="button">이 스타일로 예약하기</a>
     </div>
   </main>
 </body>
