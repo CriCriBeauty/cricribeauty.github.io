@@ -7,86 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    body {
-      background-color: #fffafc;
-      font-family: 'Noto Sans KR', sans-serif;
-      margin: 0;
-      padding-top: 100px;
-      color: #333;
-    }
-
-    .main-header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: white;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    }
-
-    .main-header .logo {
-      display: block;
-      font-size: 1.4rem;
-      font-weight: bold;
-      text-align: center;
-      padding: 15px 0 5px;
-      color: #c0397e;
-      text-decoration: none;
-    }
-
-    .main-nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 10px 0;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-    }
-
-    .main-nav a {
-      text-decoration: none;
-      color: #111;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    .main-nav a:hover {
-      color: #c0397e;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      text-align: center;
-      color: #c0397e;
-      margin-bottom: 10px;
-    }
-
-    .desc {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #666;
-    }
-
-    .section {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-      padding: 30px 20px;
-      margin-bottom: 40px;
-    }
-
-    .section h2 {
-      color: #c0397e;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
+    /* 예약 전용 스타일 */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -107,17 +28,6 @@
       line-height: 1.8;
       padding-left: 20px;
       color: #444;
-    }
-
-    .image-wrap {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .image-wrap img {
-      width: 100%;
-      max-width: 360px;
-      border-radius: 12px;
     }
 
     .calendar-note {
@@ -171,26 +81,6 @@
       background-color: #FEE500;
       color: #000;
     }
-
-    footer {
-      background-color: #fdf0f4;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    footer .brand {
-      font-weight: bold;
-      color: #c0397e;
-    }
-
-    @media (max-width: 600px) {
-      .main-nav {
-        flex-direction: column;
-        gap: 12px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -205,25 +95,35 @@
     </nav>
   </header>
 
-     <div class="section-flex">
-      <div class="price-table">
+  <main class="container">
+    <h1>📅 예약 안내</h1>
+    <p class="desc">프리미엄 시술을 원하신다면 예약 전 안내사항을 꼭 확인해주세요.</p>
+
+    <!-- 시술 항목 및 이미지 - 좌우 배치 -->
+    <div class="section service-row">
+      <div class="service-table">
+        <h2 style="color: #c0397e; text-align: center;">💅 시술 항목 및 가격</h2>
         <table>
-          <tr><th>시술 항목</th><th>가격</th></tr>
-          <tr><td>영양가득 클리닉펌</td><td>45,000원</td></tr>
-          <tr><td>바짝올린 베이직펌</td><td>35,000원</td></tr>
-          <tr><td>선명한눈매 블랙틴팅펌</td><td>50,000원</td></tr>
-          <tr><td>듀얼펌</td><td>65,000원</td></tr>
-          <tr><td>블랙틴팅 추가</td><td>15,000원</td></tr>
-          <tr><td>눈썹 리프트펌</td><td>30,000원</td></tr>
-          <tr><td>눈썹 디자인</td><td>무료</td></tr>
+          <thead>
+            <tr><th>시술 항목</th><th>가격</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>영양가득 클리닉펌</td><td>45,000원</td></tr>
+            <tr><td>바짝올린 베이직펌</td><td>35,000원</td></tr>
+            <tr><td>선명한눈매 블랙틴팅펌</td><td>50,000원</td></tr>
+            <tr><td>듀얼펌</td><td>65,000원</td></tr>
+            <tr><td>블랙틴팅 추가</td><td>15,000원</td></tr>
+            <tr><td>눈썹 리프트펌</td><td>30,000원</td></tr>
+            <tr><td>눈썹 디자인</td><td>무료</td></tr>
+          </tbody>
         </table>
       </div>
-
-      <div class="price-image">
-        <img src="images/price.png" alt="시술 가격표 이미지">
+      <div class="service-image">
+        <img src="images/price.png" alt="시술 가격표 이미지" />
       </div>
     </div>
 
+    <!-- 예약 전 유의사항 -->
     <div class="section">
       <h2>📌 예약 전 유의사항</h2>
       <ul>
@@ -235,22 +135,25 @@
       </ul>
     </div>
 
+    <!-- 달력 -->
     <div class="section">
       <h2>📆 예약 가능 일정</h2>
       <p class="calendar-note">※ 달력은 참고용이며, 예약은 네이버로 연결됩니다.</p>
       <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
     </div>
 
+    <!-- 체크박스 -->
     <div class="check-confirm">
       <input type="checkbox" id="agree" />
       <label for="agree">위 내용을 모두 확인하였으며 동의합니다.</label>
     </div>
 
+    <!-- 버튼 -->
     <div class="btn-wrap">
-      <a href="https://map.naver.com/p/entry/place/2023374701?..." target="_blank" class="btn naver" id="naverBtn">네이버 예약</a>
+      <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">네이버 예약</a>
       <a href="https://pf.kakao.com/_your_channel_id" target="_blank" class="btn kakao" id="kakaoBtn">카카오톡 상담</a>
     </div>
-  </div>
+  </main>
 
   <footer>
     <div class="brand">크리크리 뷰티샵</div>
