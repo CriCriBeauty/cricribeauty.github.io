@@ -196,6 +196,58 @@ body, html {
   object-fit: cover;
 }
 
+/* 예약 페이지용 보정 */
+body.booking-page {
+  background-color: #fffafc;
+  color: #333;
+}
+
+.booking-page .main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.booking-page .main-header .logo {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 0 5px;
+  color: #c0397e;
+  text-decoration: none;
+}
+
+.booking-page .main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.booking-page .main-nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.booking-page .main-nav a:hover {
+  color: #c0397e;
+}
+
+/* 테이블 글씨 안보이는 문제 해결 */
+.booking-page table,
+.booking-page th,
+.booking-page td {
+  color: #333;
+}
+
 /* 반응형: 모바일에서 위아래로 정렬 */
 @media (max-width: 768px) {
   .service-row {
