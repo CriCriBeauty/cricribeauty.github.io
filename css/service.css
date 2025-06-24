@@ -84,3 +84,39 @@ body {
   color: #444;
   margin-bottom: 4px;
 }
+
+/* 네비게이션 */
+.lang-switcher {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 0.9em;
+}
+
+.nav {
+  background-color: #fff7f9;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.menu li a:hover {
+  color: #d94f7b;
+}
+
