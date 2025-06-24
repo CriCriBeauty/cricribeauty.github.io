@@ -6,131 +6,29 @@
   <title>갤러리 | 크리크리 뷰티</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/gallery.css">
-  <style>
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-      margin: 0;
-      padding-top: 100px;
-      background: #fff;
-      color: #000;
+  <script>
+    let slideIndex = 0;
+    function moveSlide(n) {
+      const track = document.querySelector('.interior-slider-track');
+      const slides = document.querySelectorAll('.interior-slide');
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      track.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
     }
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #fff;
-      padding: 15px 0;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      z-index: 1000;
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-    .lang-switcher {
-      position: fixed;
-      top: 5px;
-      right: 30px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      z-index: 9999;
-    }
-    .lang-switcher a {
-      color: #333 !important;
-      text-decoration: none;
-      margin: 0 5px;
-      font-weight: bold;
-    }
-    .lang-switcher a:hover {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    .category-title {
-      font-size: 1.5em;
-      margin: 40px 0 20px;
-      border-bottom: 2px solid #000;
-      display: inline-block;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .image-card {
-      text-align: center;
-    }
-    .image-card img {
-      width: 100%;
-      border-radius: 8px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-    .image-card img:hover {
-      transform: scale(1.05);
-    }
-    .caption {
-      margin-top: 8px;
-      font-size: 0.95em;
-      color: #333;
-    }
-    .before-after {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .before-after img {
-      width: 48%;
-      border-radius: 8px;
-      object-fit: cover;
-    }
-    .cta {
-      margin-top: 50px;
-      text-align: center;
-    }
-    .cta .button {
-      padding: 12px 24px;
-      background: #000;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .cta .button:hover {
-      background: #444;
-    }
-  </style>
+    document.addEventListener('DOMContentLoaded', () => {
+      moveSlide(0);
+    });
+  </script>
 </head>
 <body>
   <div class="lang-switcher">
-    <div class="lang-switcher">
-  <a href="index.html">KR</a> |
-  <a href="index_en.html">EN</a> |
-  <a href="index_jp.html">JP</a> |
-  <a href="index_ch.html">CH</a>
-</div> 
+    <a href="#">KR</a> | <a href="#">EN</a> | <a href="#">CH</a>
   </div>
 
   <header>
     <nav>
       <ul>
         <li><a href="index.html">홈</a></li>
-        <li><a href="service.html">시술(서비스)</a></li>
+        <li><a href="service.html">시술</a></li>
         <li><a href="예약.html">예약</a></li>
         <li><a href="map.html">오시는 길</a></li>
         <li><a href="gallery.html">갤러리</a></li>
@@ -163,20 +61,24 @@
 
     <section>
       <h2 class="category-title">샵 인테리어</h2>
-      <div class="gallery-grid">
-        <div class="image-card">
-          <img src="images/interior1.jpg" alt="인테리어 1">
+      <div class="interior-slider">
+        <div class="interior-slider-track">
+          <div class="interior-slide"><img src="images/inte.jpg" alt="인테리어 0"></div>
+          <div class="interior-slide"><img src="images/inte1.jpg" alt="인테리어 1"></div>
+          <div class="interior-slide"><img src="images/inte2.jpg" alt="인테리어 2"></div>
+          <div class="interior-slide"><img src="images/inte4.jpg" alt="인테리어 4"></div>
+          <div class="interior-slide"><img src="images/inte5.jpg" alt="인테리어 5"></div>
         </div>
-        <div class="image-card">
-          <img src="images/interior2.jpg" alt="인테리어 2">
-        </div>
+      </div>
+      <div class="slider-buttons">
+        <button onclick="moveSlide(-1)">&laquo; 이전</button>
+        <button onclick="moveSlide(1)">다음 &raquo;</button>
       </div>
     </section>
 
     <div class="cta">
-      <a href="https://map.naver.com/p/entry/place/2023374701?placePath=/ticket?entry=plt&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202506241749&locale=ko&svcName=map_pcv5&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202506241749&locale=ko&svcName=map_pcv5&searchType=place&lng=127.3871167&lat=36.3515941&c=15.00,0,0,0,dh" class="button">예약하기</a>
+      <a href="예약.html" class="button">이 스타일로 예약하기</a>
     </div>
   </main>
 </body>
 </html>
-
