@@ -1,214 +1,153 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>予約 | CriCri Beauty</title>
+  <title>予約 | クリクリビューティーショップ</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    body {
-      font-family: 'Noto Sans JP', sans-serif;
-      background-color: #fff5f7;
-      margin: 0;
-      padding: 0;
-      padding-top: 70px;
-    }
-    h1 {
-      margin-top: 50px;
-      font-size: 2em;
-      color: #333;
-      text-align: center;
-    }
-    p.desc {
-      font-size: 1em;
-      color: #666;
-      text-align: center;
-      margin-bottom: 30px;
-      padding: 0 20px;
-    }
-    .section {
-      background-color: #fff;
-      padding: 30px 20px;
-      margin: 20px auto;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      max-width: 800px;
-    }
-    .section h2 {
-      font-size: 1.4em;
-      margin-bottom: 15px;
-      color: #d94f7b;
-      text-align: center;
-    }
-    .section ul {
-      font-size: 0.95em;
-      color: #444;
-      line-height: 1.8;
-      padding-left: 20px;
-    }
-    .section li {
-      margin-bottom: 10px;
-    }
-    .check-confirm {
-      text-align: center;
-      margin: 30px auto;
-      font-size: 0.95em;
-      color: #333;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      margin: 10px;
-      font-size: 1em;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      cursor: pointer;
-      opacity: 0.5;
-      pointer-events: none;
-      transition: 0.3s;
-    }
-    .btn.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .naver { background-color: #03C75A; color: white; }
-    .kakao { background-color: #FEE500; color: #000; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      font-size: 0.95em;
-    }
-    table, th, td { border: 1px solid #eee; }
-    th, td {
-      padding: 10px;
-      text-align: center;
-    }
-    th {
-      background-color: #fff0f5;
-      color: #333;
-    }
-    .btn-wrap {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-    iframe {
-      border: none;
-      width: 100%;
-      height: 400px;
-      margin-top: 10px;
-      border-radius: 12px;
-    }
-    @media screen and (max-width: 600px) {
-      h1 { font-size: 1.6em; }
-      .section h2 { font-size: 1.2em; }
-      table, th, td { font-size: 0.85em; }
-      .btn {
-        width: 90%;
-        display: block;
-        margin: 10px auto;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/booking.css" />
 </head>
 <body>
-  <header class="main-header">
-    <a href="index_jp.html" class="logo">CriCri Beauty</a>
-    <nav class="main-nav">
-      <a href="予約_jp.html">予約</a>
-      <a href="service_jp.html">サービス</a>
-      <a href="map_jp.html">アクセス</a>
-      <a href="gallery.html">ギャラリー</a>
-    </nav>
-  </header>
 
-  <h1>🗓 美容セッションの予約</h1>
-  <p class="desc">あなたに合ったケアをカスタマイズするため、予約前に注意事項をご確認ください 💖</p>
+<!-- 言語選択 -->
+<div class="lang-switcher">
+  <a href="예약.html">KR</a> |
+  <a href="예약_en.html">EN</a> |
+  <a href="예약_jp.html">JP</a> |
+  <a href="예약_ch.html">CH</a>
+</div>
 
-  <div class="section">
-    <h2>💅 サービス内容と価格</h2>
-    <table>
-      <tr><th>サービス</th><th>価格(KRW)</th></tr>
-      <tr><td>クリニック系まつげパーマ</td><td>￡45,000</td></tr>
-      <tr><td>ベーシックまつげパーマ</td><td>￡35,000</td></tr>
-      <tr><td>ブラックティントで眼の形を強調</td><td>￡50,000</td></tr>
-      <tr><td>デュアルカールまつげ</td><td>￡65,000</td></tr>
-      <tr><td>ブラックティント追加</td><td>￡15,000</td></tr>
-      <tr><td>目光パーマ</td><td>￡30,000</td></tr>
-      <tr><td>アイブロウデザイン</td><td>無料</td></tr>
-    </table>
-  </div>
+<!-- ナビゲーション -->
+<header class="nav">
+  <ul class="menu">
+    <li><a href="예약_jp.html">予約</a></li>
+    <li><a href="service_jp.html">施術（サービス）</a></li>
+    <li><a href="map_jp.html">アクセス</a></li>
+    <li><a href="gallery.html">ギャラリー</a></li>
+  </ul>
+</header>
 
-  <div class="section">
-    <h2>📌 予約前の注意事項</h2>
-    <ul>
-      <li>当日はメイクや日焼水を付けずにご来店ください。</li>
-      <li>遅刻された場合、時間が短縮されることがあります。</li>
-      <li>日経つ前にキャンセル連絡をお願いします。</li>
-      <li>無日の場合、以後の予約が制限されることがあります。</li>
-      <li>敏感肌や婦乳中の方は、予約前にご相談ください。</li>
-      <li>予約後3時間は、顔を洗わないようにしてください。</li>
-    </ul>
-  </div>
+<h1>🗓 クリクリビューティーショップ 予約</h1>
+<p class="desc">あなたのためのカスタマイズ施術、予約前に注意事項を必ずご確認ください 💖</p>
 
-  <div class="section">
-    <h2>🗓 空き状況</h2>
-    <p style="color:#666; font-size:0.9em; text-align:center;">＊このカレンダーは参考用です。予約はネイバーから行います。</p>
-    <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
-  </div>
+<!-- 施術リスト -->
+<div class="section">
+  <h2>💅 施術リストと料金</h2>
+  <table>
+    <tr><th>施術項目</th><th>料金</th></tr>
+    <tr><td>しっかり上げるベーシックパーマ</td><td>35,000ウォン</td></tr>
+    <tr><td>栄養たっぷりクリニックパーマ</td><td>45,000ウォン</td></tr>
+    <tr><td>はっきり目元ブラックティントパーマ</td><td>50,000ウォン</td></tr>
+    <tr><td>デュアルパーマ</td><td>65,000ウォン</td></tr>
+    <tr><td>追加施術（栄養/ブラックティント）</td><td>10,000 / 15,000ウォン</td></tr>
+    <tr><td>眉毛リフトパーマ</td><td>30,000ウォン</td></tr>
+    <tr><td>自然な眉毛デザイン</td><td>お問い合わせ</td></tr>
+    <tr><td>ワンデイメイクアップ</td><td>お問い合わせ</td></tr>
+  </table>
+</div>
 
-  <div class="check-confirm">
-    <input type="checkbox" id="agree" />
-    <label for="agree">上記内容に合意しました</label>
-  </div>
+<!-- 価格表を見る -->
+<div style="text-align: center; margin: 30px 0;">
+  <button onclick="openPricePopup()" style="
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    background-color: #d94f7b;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  ">
+    📋 価格表を見る
+  </button>
+</div>
 
-  <div class="btn-wrap">
-    <a href="https://map.naver.com/p/entry/place/2023374701?placePath=/home&entry=plt" target="_blank" class="btn naver" id="naverBtn">ネイバーで予約</a>
-    <a href="https://pf.kakao.com/_your_channel_id" target="_blank" class="btn kakao" id="kakaoBtn">カカオで相談</a>
-  </div>
+<!-- 価格画像 -->
+<div id="priceImageContainer" style="display: none; text-align: center; margin-bottom: 40px;">
+  <img src="images/price.png" alt="施術価格表" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);" />
+</div>
 
-  <script>
-    const checkbox = document.getElementById('agree');
-    const naverBtn = document.getElementById('naverBtn');
-    const kakaoBtn = document.getElementById('kakaoBtn');
+<!-- 注意事項 -->
+<div class="section">
+  <h2>📌 予約前の注意事項</h2>
+  <ul>
+    <li>施術当日はメイク・日焼け止めなしでご来店ください。</li>
+    <li>遅刻の場合、施術時間が短縮される場合があります。</li>
+    <li>予約変更は前日までにお願いします。</li>
+    <li>無断キャンセルは次回以降の予約が制限されます。</li>
+    <li>敏感肌・妊婦の方は相談後に施術可否が決まります。</li>
+    <li>施術後3時間は洗顔・サウナ・プールを避けてください。</li>
+  </ul>
+</div>
 
-    checkbox.addEventListener('change', () => {
-      const isChecked = checkbox.checked;
-      naverBtn.classList.toggle('active', isChecked);
-      kakaoBtn.classList.toggle('active', isChecked);
+<!-- カレンダー -->
+<div class="section">
+  <h2>📆 予約可能日程</h2>
+  <p style="text-align:center; color:#666; font-size:0.9em;">※ 以下のカレンダーは参考用です。予約はNaverからお願いします。</p>
+  <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
+</div>
+
+<!-- 同意確認 -->
+<div class="check-confirm">
+  <input type="checkbox" id="agree" />
+  <label for="agree">上記内容をすべて確認し、同意します。</label>
+</div>
+
+<!-- 予約ボタン -->
+<div class="btn-wrap">
+  <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">Naverで予約</a>
+  <a href="https://pf.kakao.com/_your_channel_id" target="_blank" class="btn kakao" id="kakaoBtn">KakaoTalkで相談</a>
+</div>
+
+<!-- スクリプト -->
+<script>
+  function openPricePopup() {
+    window.open('images/price.png', '_blank', 'width=800,height=600,resizable=yes');
+  }
+
+  const checkbox = document.getElementById('agree');
+  const naverBtn = document.getElementById('naverBtn');
+  const kakaoBtn = document.getElementById('kakaoBtn');
+
+  checkbox.addEventListener('change', () => {
+    const isChecked = checkbox.checked;
+    naverBtn.classList.toggle('active', isChecked);
+    kakaoBtn.classList.toggle('active', isChecked);
+  });
+
+  [naverBtn, kakaoBtn].forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      if (!checkbox.checked) {
+        e.preventDefault();
+        alert("予約前の注意事項に同意してください。");
+      }
     });
+  });
+</script>
 
-    [naverBtn, kakaoBtn].forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        if (!checkbox.checked) {
-          e.preventDefault();
-          alert("予約前に注意事項に合意してください");
-        }
-      });
-    });
-  </script>
+<!-- フッター -->
+<footer style="background-color:#fef0f4; padding: 30px 20px; text-align: center;">
+  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">クリクリビューティーショップ</div>
+  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
+    営業時間: 11:00 ~ 20:00 ｜ 連絡先: 82+0507-1367-6984
+  </div>
+  <div style="margin: 15px 0;">
+    <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="24" />
+    </a>
+    <a href="#" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111491.png" alt="KakaoTalk" width="24" />
+    </a>
+    <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png" alt="Blog" width="24" />
+    </a>
+  </div>
+  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
+    &copy; 2025 Cricri Beauty Shop. All rights reserved.
+  </div>
+</footer>
 
-  <footer style="background-color:#fef0f4; padding: 30px 20px; text-align: center; font-family:'Noto Sans JP', sans-serif;">
-    <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">CriCri Beauty Studio</div>
-    <div style="margin: 10px 0; color:#666; font-size: 0.95em;">営業時間: 11:00 ~ 20:00 ｜ 連絡: 0507-1367-6984
-    </div>
-    <div style="margin: 15px 0;">
-      <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="24" />
-      </a>
-      <a href="#" target="_blank" style="margin: 0 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111491.png" alt="KakaoTalk" width="24" />
-      </a>
-      <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png" alt="Naver Blog" width="24" />
-      </a>
-    </div>
-    <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-      &copy; 2025 Cricri Beauty Shop. All rights reserved.
-    </div>
-  </footer>
 </body>
 </html>
-
