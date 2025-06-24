@@ -8,15 +8,14 @@ body {
 
 /* 언어 선택 영역 */
 .lang-switcher {
-  position: absolute;
-  top: 20px;
+  position: fixed;        /* absolute → fixed 로 변경 추천 */
+  top: 5px;               /* 더 위로 올리기 */
   right: 30px;
-  font-size: 1.3rem;
-  text-align: right;
+  font-size: 1.2rem;
   font-weight: bold;
-  z-index: 10;
-
+  z-index: 9999;          /* nav 보다 더 높은 z-index */
 }
+
 .lang-switcher a {
   color: #333 !important;  /* 어두운 텍스트로 변경 */
   text-decoration: none;
