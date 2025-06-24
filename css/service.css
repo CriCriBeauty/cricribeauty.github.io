@@ -1,0 +1,86 @@
+/* 기본 폰트 및 배경 설정 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #fffdfd;
+  margin: 0;
+  padding-top: 120px;
+}
+
+/* 언어 선택 영역 */
+.lang-switcher {
+  text-align: right;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+.lang-switcher a {
+  text-decoration: none;
+  color: #888;
+  margin: 0 5px;
+}
+
+/* 네비게이션 바 */
+.nav {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  z-index: 1000;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 15px 0;
+  gap: 40px;
+}
+.menu li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.menu li a:hover {
+  color: #d94f7b;
+}
+
+/* 콘텐츠 섹션 */
+.section {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.section h2 {
+  text-align: center;
+  color: #d94f7b;
+  margin-bottom: 20px;
+}
+
+/* 각 시술 블록 */
+.service-block {
+  margin-bottom: 40px;
+}
+.service-block h3 {
+  color: #c0397e;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+.service-block p {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+.service-block ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+.service-block li {
+  font-size: 0.9em;
+  color: #444;
+  margin-bottom: 4px;
+}
