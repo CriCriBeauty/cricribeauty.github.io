@@ -8,9 +8,11 @@ body {
 
 /* 언어 선택 영역 */
 .lang-switcher {
-  text-align: right;
-  padding: 10px 20px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
   font-size: 0.9rem;
+  text-align: right;
 }
 .lang-switcher a {
   text-decoration: none;
@@ -20,25 +22,28 @@ body {
 
 /* 네비게이션 바 */
 .nav {
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background-color: #fff6f8;
+  border-bottom: 1px solid #eee;
+  padding: 16px 0;
+  text-align: center;
   position: fixed;
   top: 30px;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 .menu {
   list-style: none;
   display: flex;
   justify-content: center;
+  gap: 60px;
+  padding: 0;
   margin: 0;
-  padding: 15px 0;
-  gap: 40px;
 }
 .menu li a {
   text-decoration: none;
   color: #111;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 1rem;
 }
 .menu li a:hover {
@@ -84,39 +89,3 @@ body {
   color: #444;
   margin-bottom: 4px;
 }
-
-/* 네비게이션 */
-.lang-switcher {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 0.9em;
-}
-
-.nav {
-  background-color: #fff7f9;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 0;
-  margin: 0;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: #111;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.menu li a:hover {
-  color: #d94f7b;
-}
-
