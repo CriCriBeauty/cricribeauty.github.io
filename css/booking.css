@@ -39,9 +39,10 @@ h1 {
 }
 
 .lang-switcher a {
-  color: #333;
+  color: #333 !important;  /* 어두운 텍스트로 변경 */
   text-decoration: none;
   margin: 0 5px;
+  font-weight: bold;
 }
 
 .lang-switcher a:hover {
