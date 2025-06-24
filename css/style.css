@@ -117,7 +117,7 @@ body, html {
 .lang-switcher a:hover {
   text-decoration: underline;
 }
-/* 버튼 설정(ourservice, booking onlie */
+/* 버튼 설정(ourservice, booking onlie) */
 .cta-buttons {
   margin-top: 40px;
   display: flex;
@@ -141,4 +141,11 @@ body, html {
   color: black;
   transform: scale(1.05);
 }
-
+/* 한줄 메모 */
+.subtitle {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  color: white;
+  opacity: 0.8;
+  font-weight: 300;
+}
