@@ -9,15 +9,22 @@ body {
 /* 언어 선택 영역 */
 .lang-switcher {
   position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 0.9rem;
+  top: 20px;
+  right: 30px;
+  font-size: 1.3rem;
   text-align: right;
+  font-weight: bold;
+  z-index: 10;
+
 }
 .lang-switcher a {
+  color: #333 !important;  /* 어두운 텍스트로 변경 */
   text-decoration: none;
-  color: #888;
   margin: 0 5px;
+  font-weight: bold;
+}
+.lang-switcher a:hover {
+  text-decoration: underline;
 }
 
 /* 네비게이션 바 */
