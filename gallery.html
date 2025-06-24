@@ -18,6 +18,22 @@
       moveSlide(0);
     });
   </script>
+  <script>
+  let slideIndex = 0;
+
+  function moveSlide(n) {
+    const track = document.querySelector('.interior-slider-track');
+    const slides = document.querySelectorAll('.interior-slide');
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    track.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+  }
+
+  // 자동 슬라이드: 2초 간격
+  document.addEventListener('DOMContentLoaded', () => {
+    moveSlide(0);
+    setInterval(() => moveSlide(1), 2000);
+  });
+</script>
 </head>
 <body>
   <div class="lang-switcher">
