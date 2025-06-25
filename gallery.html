@@ -20,6 +20,9 @@
       setInterval(() => moveSlide(1, '.interior-slider-track'), 2000);
       moveSlide(0, '.beforeafter-slider-track');
       setInterval(() => moveSlide(1, '.beforeafter-slider-track'), 3000);
+       // 👇 새로 추가된 classic 스타일 슬라이드
+      moveSlide(0, '.classic-slider-track');
+      setInterval(() => moveSlide(1, '.classic-slider-track'), 2500);
     });
   </script>
 </head>
@@ -44,27 +47,29 @@
   </header>
 
   <main>
-        <section>
-      <h2 class="category-title">Classic 스타일</h2>
-      <div class="gallery-grid">
-        <div class="image-card">
-          <img src="images/natural.png" alt="내츄럴">
-          <p class="caption">자연스러운 데일리 느낌</p>
-        </div>
-        <div class="image-card">
-          <img src="images/dolleye.png" alt="돌 아이">
-          <p class="caption">중앙이길고 동그란 눈 강조</p>
-        </div>
-        <div class="image-card">
-          <img src="images/cateye.png" alt="캣 아이">
-          <p class="caption">눈꼬리가 길고 도도한 느낌</p>
-        </div>
-        <div class="image-card">
-          <img src="images/hybrid.png" alt="하이브리드">
-          <p class="caption">자연스러움 + 풍성함</p>
-        </div>
+<section>
+  <h2 class="category-title">Classic 스타일</h2>
+  <div class="interior-slider">
+    <div class="interior-slider-track classic-slider-track">
+      <div class="interior-slide">
+        <img src="images/natural.png" alt="Natural">
+        <p class="caption">NATURAL<br>자연스러운 데일리 느낌</p>
       </div>
-    </section>
+      <div class="interior-slide">
+        <img src="images/dolleye.png" alt="Doll Eye">
+        <p class="caption">DOLL EYE<br>중앙이길고 동그란 눈 강조</p>
+      </div>
+      <div class="interior-slide">
+        <img src="images/cateye.png" alt="Cat Eye">
+        <p class="caption">CAT EYE<br>눈꼬리가 길고 도도한 느낌</p>
+      </div>
+      <div class="interior-slide">
+        <img src="images/hybrid.png" alt="Hybrid">
+        <p class="caption">HYBRID<br>자연스러움 + 풍성함</p>
+      </div>
+    </div>
+  </div>
+</section>
       <section>
       <h2 class="category-title">샵 인테리어</h2>
       <div class="interior-slider">
