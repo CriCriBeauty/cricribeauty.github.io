@@ -79,7 +79,7 @@
     <section>
       <h2 class="category-title">샵 인테리어</h2>
       <div class="interior-slider">
-        <div class="interior-slider-track interior-slider-track">
+       <div class="interior-slider-track shopinterior-slider-track">
           <div class="interior-slide"><img src="images/inte.jpg" alt="인테리어1"></div>
           <div class="interior-slide"><img src="images/inte1.jpg" alt="인테리어2"></div>
           <div class="interior-slide"><img src="images/inte2.jpg" alt="인테리어3"></div>
@@ -102,8 +102,8 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      moveSlide(0, '.interior-slider-track');
-      setInterval(() => moveSlide(1, '.interior-slider-track'), 4000); // 인테리어
+     moveSlide(0, '.shopinterior-slider-track'); // ← 추가!
+     setInterval(() => moveSlide(1, '.shopinterior-slider-track'), 4000); // ← 인테리어
 
       moveSlide(0, '.beforeafter-slider-track');
       setInterval(() => moveSlide(1, '.beforeafter-slider-track'), 5000); // B/A
