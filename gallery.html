@@ -1,30 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>갤러리 | 크리크리 뷰티</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/gallery.css">
-  <script>
-    let slideIndex = 0;
-    function moveSlide(n, trackSelector) {
-      const track = document.querySelector(trackSelector);
-      const slides = track.children;
-      if (!slides.length) return;
-      slideIndex = (slideIndex + n + slides.length) % slides.length;
-      track.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
-    }
-    document.addEventListener('DOMContentLoaded', () => {
-      moveSlide(0, '.interior-slider-track');
-      setInterval(() => moveSlide(1, '.interior-slider-track'), 2000);
-      moveSlide(0, '.beforeafter-slider-track');
-      setInterval(() => moveSlide(1, '.beforeafter-slider-track'), 3000);
-       // 👇 새로 추가된 classic 스타일 슬라이드
-      moveSlide(0, '.classic-slider-track');
-      setInterval(() => moveSlide(1, '.classic-slider-track'), 2500);
-    });
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>갤러리 | CriCri Beauty</title>
+  <link rel="stylesheet" href="css/gallery.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"/>
 </head>
 <body>
   <div class="lang-switcher">
@@ -38,7 +19,7 @@
     <nav>
       <ul>
         <li><a href="index.html">홈</a></li>
-        <li><a href="service.html">시술</a></li>
+        <li><a href="service.html">서비스(시술)</a></li>
         <li><a href="예약.html">예약</a></li>
         <li><a href="map.html">오시는 길</a></li>
         <li><a href="gallery.html">갤러리</a></li>
@@ -47,65 +28,92 @@
   </header>
 
   <main>
-<section>
-  <h2 class="category-title">Classic 스타일</h2>
-  <div class="interior-slider">
-    <div class="interior-slider-track classic-slider-track">
-      <div class="interior-slide">
-        <img src="images/natural.png" alt="Natural">
-        <p class="caption">NATURAL<br>자연스러운 데일리 느낌</p>
-      </div>
-      <div class="interior-slide">
-        <img src="images/dolleye.png" alt="Doll Eye">
-        <p class="caption">DOLL EYE<br>중앙이길고 동그란 눈 강조</p>
-      </div>
-      <div class="interior-slide">
-        <img src="images/cateye.png" alt="Cat Eye">
-        <p class="caption">CAT EYE<br>눈꼬리가 길고 도도한 느낌</p>
-      </div>
-      <div class="interior-slide">
-        <img src="images/hybrid.png" alt="Hybrid">
-        <p class="caption">HYBRID<br>자연스러움 + 풍성함</p>
-      </div>
-    </div>
-  </div>
-</section>
-      <section>
-      <h2 class="category-title">샵 인테리어</h2>
+
+    <!-- Classic 스타일 섹션 (슬라이드 + 버튼 포함) -->
+    <section>
+      <h2 class="category-title">Classic 스타일</h2>
       <div class="interior-slider">
-        <div class="interior-slider-track">
-          <div class="interior-slide"><img src="images/inte.jpg" alt="인테리어 0"></div>
-          <div class="interior-slide"><img src="images/inte1.jpg" alt="인테리어 1"></div>
-          <div class="interior-slide"><img src="images/inte2.jpg" alt="인테리어 2"></div>
-          <div class="interior-slide"><img src="images/inte4.jpg" alt="인테리어 4"></div>
+        <div class="interior-slider-track classic-slider-track">
+          <div class="interior-slide">
+            <img src="images/natural.png" alt="Natural">
+            <p class="caption">NATURAL<br>자연스러운 데일리 느낌</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/dolleye.png" alt="Doll Eye">
+            <p class="caption">DOLL EYE<br>중앙이 길고 동그란 눈 강조</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/cateye.png" alt="Cat Eye">
+            <p class="caption">CAT EYE<br>눈꼬리가 길고 도도한 느낌</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/hybrid.png" alt="Hybrid">
+            <p class="caption">HYBRID<br>자연스러움 + 풍성함</p>
+          </div>
         </div>
-      </div>
-      <div class="slider-buttons">
-        <button onclick="moveSlide(-1, '.interior-slider-track')">&laquo; 이전</button>
-        <button onclick="moveSlide(1, '.interior-slider-track')">다음 &raquo;</button>
+        <div class="slider-buttons">
+          <button onclick="moveSlide(-1, '.classic-slider-track')">« 이전</button>
+          <button onclick="moveSlide(1, '.classic-slider-track')">다음 »</button>
+        </div>
       </div>
     </section>
 
+    <!-- Before & After 섹션 (슬라이드) -->
     <section>
       <h2 class="category-title">Before & After</h2>
       <div class="interior-slider">
         <div class="interior-slider-track beforeafter-slider-track">
           <div class="interior-slide">
             <img src="images/B_F1.jpg" alt="시술 전후 1">
-            <p class="caption">왼쪽: 시술 완료 / 오른쪽: 시술 상세</p>
+            <p class="caption">왼쪽: 시술완료 / 오른쪽: 시술상세</p>
           </div>
           <div class="interior-slide">
-            <img src="images/B_F2.png" alt="시술 전후 2">
+            <img src="images/B_F2.jpg" alt="시술 전후 2">
             <p class="caption">왼쪽: 시술 전 / 오른쪽: 시술 후</p>
           </div>
         </div>
       </div>
     </section>
 
-  
-    <div class="cta">
+    <!-- 인테리어 섹션 (자동 슬라이드) -->
+    <section>
+      <h2 class="category-title">샵 인테리어</h2>
+      <div class="interior-slider">
+        <div class="interior-slider-track interior-slider-track">
+          <div class="interior-slide"><img src="images/inte.jpg" alt="인테리어1"></div>
+          <div class="interior-slide"><img src="images/inte1.jpg" alt="인테리어2"></div>
+          <div class="interior-slide"><img src="images/inte2.jpg" alt="인테리어3"></div>
+          <div class="interior-slide"><img src="images/inte4.jpg" alt="인테리어4"></div>
+          <div class="interior-slide"><img src="images/inte5.jpg" alt="인테리어5"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    let slideIndex = 0;
+    function moveSlide(n, trackSelector) {
+      const track = document.querySelector(trackSelector);
+      const slides = track.children;
+      if (!slides.length) return;
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      track.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      moveSlide(0, '.interior-slider-track');
+      setInterval(() => moveSlide(1, '.interior-slider-track'), 4000); // 인테리어
+
+      moveSlide(0, '.beforeafter-slider-track');
+      setInterval(() => moveSlide(1, '.beforeafter-slider-track'), 5000); // B/A
+
+      moveSlide(0, '.classic-slider-track');
+      setInterval(() => moveSlide(1, '.classic-slider-track'), 5000); // Classic 스타일
+    });
+  </script>
+   <div class="cta">
       <a href="예약.html" class="button">이 스타일로 예약하기</a>
     </div>
-  </main>
 </body>
 </html>
