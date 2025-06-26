@@ -107,21 +107,21 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     padding: 5px 10px;
     flex-direction: row;
   }
 
   .menu li a {
-    font-size: 0.9rem;
+    font-size: 0.85rem !important; /* 모바일에서 강제로 줄임 */
     white-space: nowrap;
   }
 
   .lang-switcher {
     position: absolute;
-    top: 8px;
+    top: 6px;
     right: 10px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 
   .nav {
