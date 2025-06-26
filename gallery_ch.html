@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>画廊 | CriCri Beauty</title>
+  <link rel="stylesheet" href="css/gallery.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="lang-switcher">
+    <a href="index.html">KR</a> |
+    <a href="index_en.html">EN</a> |
+    <a href="index_jp.html">JP</a> |
+    <a href="index_ch.html">CH</a>
+  </div>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index_ch.html">主页</a></li>
+        <li><a href="service_ch.html">服务</a></li>
+        <li><a href="예약_ch.html">预约</a></li>
+        <li><a href="map_ch.html">来访路线</a></li>
+        <li><a href="gallery_ch.html">画廊</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Classic 样式 -->
+    <section>
+      <h2 class="category-title">经典款式</h2>
+      <div class="interior-slider">
+        <div class="interior-slider-track classic-slider-track">
+          <div class="interior-slide">
+            <img src="images/natural.png" alt="自然款">
+            <p class="caption">NATURAL<br>自然日常妆感</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/dolleye.png" alt="娃娃眼">
+            <p class="caption">DOLL EYE<br>中间加长突出圆润大眼</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/cateye.png" alt="猫眼">
+            <p class="caption">CAT EYE<br>眼尾拉长，展现冷艳魅力</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/hybrid.png" alt="混合款">
+            <p class="caption">HYBRID<br>自然感与浓密感兼备</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/volume lash.png" alt="浓密款">
+            <p class="caption">VOLUME LASH<br>浓密立体，眼神更有神</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/wispy.png" alt="羽毛款">
+            <p class="caption">WISPY<br>错落有致，增强立体感</p>
+          </div>
+        </div>
+        <div class="slider-buttons">
+          <button onclick="moveSlide(-1, '.classic-slider-track')">« 上一张</button>
+          <button onclick="moveSlide(1, '.classic-slider-track')">下一张 »</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before & After -->
+    <section>
+      <h2 class="category-title">前后对比</h2>
+      <div class="interior-slider">
+        <div class="interior-slider-track beforeafter-slider-track">
+          <div class="interior-slide">
+            <img src="images/B_F1.jpg" alt="前后对比 1">
+            <p class="caption">左：完成后 / 右：详细效果</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/B_F2.png" alt="前后对比 2">
+            <p class="caption">左：施术前 / 右：施术后</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 店内环境 -->
+    <section>
+      <h2 class="category-title">店内环境</h2>
+      <div class="interior-slider">
+        <div class="interior-slider-track shopinterior-slider-track">
+          <div class="interior-slide"><img src="images/inte.jpg" alt="环境1"></div>
+          <div class="interior-slide"><img src="images/inte1.jpg" alt="环境2"></div>
+          <div class="interior-slide"><img src="images/inte2.jpg" alt="环境3"></div>
+          <div class="interior-slide"><img src="images/inte4.jpg" alt="环境4"></div>
+          <div class="interior-slide"><img src="images/inte5.jpg" alt="环境5"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    let slideIndex = 0;
+    function moveSlide(n, trackSelector) {
+      const track = document.querySelector(trackSelector);
+      const slides = track.children;
+      if (!slides.length) return;
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      track.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      moveSlide(0, '.shopinterior-slider-track');
+      setInterval(() => moveSlide(1, '.shopinterior-slider-track'), 4000);
+
+      moveSlide(0, '.beforeafter-slider-track');
+      setInterval(() => moveSlide(1, '.beforeafter-slider-track'), 5000);
+
+      moveSlide(0, '.classic-slider-track');
+      setInterval(() => moveSlide(1, '.classic-slider-track'), 5000);
+    });
+  </script>
+
+  <div class="cta">
+    <a href="예약.html" class="button">立即预约该款式</a>
+  </div>
+</body>
+</html>
