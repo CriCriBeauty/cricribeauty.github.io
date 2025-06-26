@@ -227,3 +227,51 @@ body, html {
   }
 }
 
+/* 챗봇 */
+#chatbot-toggle { 
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #d94f7b;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#chatbot-box {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 280px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 9999;
+  font-size: 0.95rem;
+}
+
+.chat-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #d94f7b;
+}
+
+.chat-content button {
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+  padding: 8px;
+  background: #f4f4f4;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+}
+
