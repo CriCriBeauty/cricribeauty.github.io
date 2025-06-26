@@ -273,5 +273,16 @@ body, html {
   border-radius: 6px;
   cursor: pointer;
   text-align: left;
+  color: #333;
+  font-weight: 500;
+}
+#chatbot-box {
+  color: #333;  /* ✅ 챗봇 텍스트를 어둡게 보여줌 */
+}
+
+#chatbot-box p {
+  margin-top: 10px;
+  line-height: 1.5;
+  color: #333;  /* 혹시라도 p 태그 따로 들어오면 대비 */
 }
 
