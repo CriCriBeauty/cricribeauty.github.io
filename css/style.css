@@ -222,5 +222,33 @@ body, html {
   .background {
     background-position: center top;
   }
+  .nav {
+    top: 100px;
+    left: 20px;
+    transform: none;
+    text-align: left;
+  }
+/* 메뉴한줄로 만들  */
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .menu li a {
+    font-size: 1.1rem;
+  }
+
+  .lang-switcher {
+    font-size: 0.9rem;
+    top: 15px;
+    right: 15px;
+  }
+  /* 언어폰트 수정*/
+  .lang-switcher {
+    font-size: 0.9rem;
+    top: 15px;
+    right: 15px;
+  }
 }
 
