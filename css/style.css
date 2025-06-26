@@ -167,3 +167,59 @@ body, html {
   font-weight: 300;
 }
 
+@media (max-width: 768px) {
+  .logo-slide h1 {
+    font-size: 2rem;
+    white-space: normal; /* 줄바꿈 허용 */
+    line-height: 1.4;
+    padding: 0 20px;
+  }
+
+  .slide {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .tagline-slide {
+    font-size: 0.95rem;
+    padding: 0 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu li a {
+    font-size: 1.1rem;
+  }
+
+  .lang-switcher {
+    font-size: 1rem;
+    right: 10px;
+    top: 8px;
+  }
+
+ .nav {
+    top: 100px;
+    left: 20px;
+    transform: none;
+    text-align: left;
+  }
+  .background {
+    background-position: center top;
+  }
+}
+
