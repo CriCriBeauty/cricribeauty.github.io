@@ -96,34 +96,36 @@ body {
   color: #444;
   margin-bottom: 4px;
 }
-/* 반응형 모바 */
+/* 반응형 모바일 */
 @media screen and (max-width: 600px) {
   h1 { font-size: 1.6em; }
   .section h2 { font-size: 1.2em; }
   table, th, td { font-size: 0.85em; }
   .btn { width: 90%; display: block; margin: 10px auto; }
 
- .menu {
-    flex-wrap: wrap; /* 가로 한 줄에서 넘치면 자동 줄바꿈 */
-    gap: 16px;
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 10px 0;
+    gap: 10px;
+    padding: 5px 10px;
+    flex-direction: row;
   }
 
   .menu li a {
-    font-size: 1rem;
-    white-space: nowrap; /* 단어 줄바꿈 방지 */
+    font-size: 0.9rem;
+    white-space: nowrap;
   }
 
   .lang-switcher {
     position: absolute;
-    top: 10px;
-    right: 12px;
-    font-size: 0.9rem;
+    top: 8px;
+    right: 10px;
+    font-size: 0.8rem;
   }
 
   .nav {
-    top: 50px; /* 언어 선택 아래로 약간 내려오도록 조정 */
+    top: 40px;
     left: 0;
     transform: none;
     width: 100%;
