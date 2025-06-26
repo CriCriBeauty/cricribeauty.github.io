@@ -187,19 +187,23 @@ body, html {
     padding: 0 20px;
   }
 
-  .cta-buttons {
-    flex-direction: row;  /* 버튼을 가로로 유지 */
-    flex-wrap: wrap;      /* 공간이 부족하면 줄바꿈 */
-    gap: 10px;            /* 버튼 사이 간격 줄임 */
+   .cta-buttons {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    padding: 0 10px;      /* 양쪽 여백 약간 줌 */
+    flex-wrap: nowrap;        /* ❗ 줄바꿈 방지 */
+    gap: 10px;
+    padding: 0 10px;
+    overflow-x: auto;         /* 공간 부족 시 가로 스크롤 허용 */
   }
 
   .btn {
-    font-size: 0.9rem;    /* 글자 크기 살짝 줄임 */
-    padding: 10px 16px;   /* 버튼 크기 줄임 */
-    white-space: nowrap;  /* 텍스트 줄바꿈 방지 */
+    font-size: 0.9rem;
+    padding: 10px 16px;
+    white-space: nowrap;      /* 텍스트 줄바꿈 방지 */
+    flex-shrink: 0;           /* ❗ 공간 줄어도 버튼 크기 유지 */
   }
+}
 
   .menu {
     flex-direction: column;
