@@ -207,9 +207,9 @@ body, html {
   }
 
   .lang-switcher {
-    font-size: 1rem;
-    right: 10px;
-    top: 8px;
+    font-size: 0.9rem;
+    right: 15px;
+    top: 15px;
   }
 
  .nav {
