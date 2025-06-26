@@ -188,15 +188,17 @@ body, html {
   }
 
   .cta-buttons {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-    align-items: center;
+    flex-direction: row;  /* 버튼을 가로로 유지 */
+    flex-wrap: wrap;      /* 공간이 부족하면 줄바꿈 */
+    gap: 10px;            /* 버튼 사이 간격 줄임 */
+    justify-content: center;
+    padding: 0 10px;      /* 양쪽 여백 약간 줌 */
   }
 
   .btn {
-    font-size: 1rem;
-    padding: 12px 20px;
+    font-size: 0.9rem;    /* 글자 크기 살짝 줄임 */
+    padding: 10px 16px;   /* 버튼 크기 줄임 */
+    white-space: nowrap;  /* 텍스트 줄바꿈 방지 */
   }
 
   .menu {
