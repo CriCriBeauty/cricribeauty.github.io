@@ -173,8 +173,14 @@ main {
 .slider-buttons button:hover {
   background: #444;
 }
-@media (max-width: 768px) {
-  .menu {
+/* 반응형 모바 */
+@media screen and (max-width: 600px) {
+  h1 { font-size: 1.6em; }
+  .section h2 { font-size: 1.2em; }
+  table, th, td { font-size: 0.85em; }
+  .btn { width: 90%; display: block; margin: 10px auto; }
+
+ .menu {
     flex-wrap: wrap; /* 가로 한 줄에서 넘치면 자동 줄바꿈 */
     gap: 16px;
     justify-content: center;
