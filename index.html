@@ -73,45 +73,43 @@
   }
 
   function setLang(lang) {
-  currentLang = lang;
+    currentLang = lang;
+    const chat = document.getElementById('chat-content');
+    chat.innerHTML = `
+      <p>무엇을 도와드릴까요?</p>
+      <button onclick="showInfo('hours')">운영시간</button>
+      <button onclick="showInfo('location')">오시는 길</button>
+      <button onclick="showInfo('booking')">예약 방법</button>
+      <div id="chat-answer" style="margin-top: 10px;"></div>
+    `;
+  }
 
-  const chat = document.getElementById('chat-content');
-  chat.innerHTML = `
-    <p>무엇을 도와드릴까요?</p>
-    <button onclick="showInfo('hours')">운영시간</button>
-    <button onclick="showInfo('location')">오시는 길</button>
-    <button onclick="showInfo('booking')">예약 방법</button>
-    <div id="chat-answer" style="margin-top: 10px;"></div> <!-- ✅ 답변 영역 재삽입 -->
-  `;
-}
+  function showInfo(topic) {
+    const messages = {
+      kr: {
+        hours: '🕒 운영시간은 오전 11시 ~ 오후 8시입니다. (예약제 운영)',
+        location: '📍 대전광역시 서구 둔산중로 54 (시청역 4번 출구 도보 5분)',
+        booking: '📞 예약은 예약 메뉴 또는 전화 / 인스타 DM으로 가능합니다.',
+      },
+      en: {
+        hours: '🕒 We’re open from 11 AM to 8 PM (Reservation only).',
+        location: '📍 54, Dunsanjung-ro, Seo-gu, Daejeon (5 min from City Hall Station Exit 4)',
+        booking: '📞 Book via the reservation menu, phone call, or Instagram DM.',
+      },
+      jp: {
+        hours: '🕒 営業時間は午前11時〜午後8時です（予約制）',
+        location: '📍 大田広域市 西区 ドゥンサン中央路54（市庁駅4番出口 徒歩5分）',
+        booking: '📞 ご予約はメニュー、電話、またはInstagramのDMでお願いします。',
+      },
+      ch: {
+        hours: '🕒 营业时间为上午11点至下午8点（需预约）',
+        location: '📍 大田市西区Dunsanjung-ro 54（市政厅地铁站4号出口 步行5分钟）',
+        booking: '📞 可通过预约菜单、电话或Instagram私信进行预约。',
+      }
+    };
 
-function showInfo(topic) {
-  const messages = {
-    kr: {
-      hours: '🕒 운영시간은 오전 11시 ~ 오후 8시입니다. (예약제 운영)',
-      location: '📍 대전광역시 서구 둔산중로 54 (시청역 4번 출구 도보 5분)',
-      booking: '📞 예약은 예약 메뉴 또는 전화 / 인스타 DM으로 가능합니다.',
-    },
-    en: {
-      hours: '🕒 We’re open from 11 AM to 8 PM (Reservation only).',
-      location: '📍 54, Dunsanjung-ro, Seo-gu, Daejeon (5 min from City Hall Station Exit 4)',
-      booking: '📞 Book via the reservation menu, phone call, or Instagram DM.',
-    },
-    jp: {
-      hours: '🕒 営業時間は午前11時〜午後8時です（予約制）',
-      location: '📍 大田広域市 西区 ドゥンサン中央路54（市庁駅4番出口 徒歩5分）',
-      booking: '📞 ご予約はメニュー、電話、またはInstagramのDMでお願いします。',
-    },
-    ch: {
-      hours: '🕒 营业时间为上午11点至下午8点（需预约）',
-      location: '📍 大田市西区Dunsanjung-ro 54（市政厅地铁站4号出口 步行5分钟）',
-      booking: '📞 可通过预约菜单、电话或Instagram私信进行预约。',
-    }
-  };
-
-  const answerBox = document.getElementById('chat-answer');
-  answerBox.innerHTML = `<p>${messages[currentLang]?.[topic] || '선택된 언어가 없습니다.'}</p>`;
-}
+    const answerBox = document.getElementById('chat-answer');
+    answerBox.innerHTML = `<p>${messages[currentLang]?.[topic] || '선택된 언어가 없습니다.'}</p>`;
   }
 </script>
 </body>
