@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thư Viện | CriCri Beauty</title>
+  <link rel="stylesheet" href="css/gallery.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="lang-switcher">
+    <a href="index.html">KR</a> |
+    <a href="index_en.html">EN</a> |
+    <a href="index_jp.html">JP</a> |
+    <a href="index_ch.html">CH</a> |
+    <a href="index_vn.html">VN</a>
+  </div>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index_vn.html">Trang Chủ</a></li>
+        <li><a href="service_vn.html">Dịch Vụ</a></li>
+        <li><a href="예약_vn.html">Đặt Lịch</a></li>
+        <li><a href="map_vn.html">Địa Chỉ</a></li>
+        <li><a href="gallery_vn.html">Thư Viện</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Classic Style Section -->
+    <section>
+      <h2 class="category-title">Phong Cách Cơ Bản</h2>
+      <div class="interior-slider">
+        <div class="interior-slider-track classic-slider-track">
+          <div class="interior-slide">
+            <img src="images/natural.png" alt="Natural">
+            <p class="caption">NATURAL<br>Nhẹ nhàng và tự nhiên hằng ngày</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/dolleye.png" alt="Doll Eye">
+            <p class="caption">DOLL EYE<br>Tạo đôi mắt to tròn ở trung tâm</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/cateye.png" alt="Cat Eye">
+            <p class="caption">CAT EYE<br>Đuôi mắt dài và sắc nét</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/hybrid.png" alt="Hybrid">
+            <p class="caption">HYBRID<br>Kết hợp giữa tự nhiên và dày đậm</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/volume lash.png" alt="Volume Lash">
+            <p class="caption">VOLUME LASH<br>Hiệu ứng 3D nổi bật và quyến rũ</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/wispy.png" alt="Wispy">
+            <p class="caption">WISPY<br>Kiểu mi dài ngắn xen kẽ đầy cá tính</p>
+          </div>
+        </div>
+        <div class="slider-buttons">
+          <button onclick="moveSlide(-1, '.classic-slider-track')">« Trước</button>
+          <button onclick="moveSlide(1, '.classic-slider-track')">Tiếp »</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before & After Section -->
+    <section>
+      <h2 class="category-title">Trước & Sau Khi Làm</h2>
+      <div class="interior-slider">
+        <div class="interior-slider-track beforeafter-slider-track">
+          <div class="interior-slide">
+            <img src="images/B_F1.jpg" alt="Before After 1">
+            <p class="caption">Trái: Sau / Phải: Cận cảnh</p>
+          </div>
+          <div class="interior-slide">
+            <img src="images/B_F2.png" alt="Before After 2">
+            <p class="caption">Trái: Trước / Phải: Sau</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interior Section -->
+    <section>
+      <h2 class="category-title">Không Gian Tiệm</h2>
+      <div class="interior-slider">
+        <div class="interior-slider-track shopinterior-slider-track">
+          <div class="interior-slide"><img src="images/inte.jpg" alt="Interior 1"></div>
+          <div class="interior-slide"><img src="images/inte1.jpg" alt="Interior 2"></div>
+          <div class="interior-slide"><img src="images/inte2.jpg" alt="Interior 3"></div>
+          <div class="interior-slide"><img src="images/inte4.jpg" alt="Interior 4"></div>
+          <div class="interior-slide"><img src="images/inte5.jpg" alt="Interior 5"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    let slideIndex = 0;
+    function moveSlide(n, trackSelector) {
+      const track = document.querySelector(trackSelector);
+      const slides = track.children;
+      if (!slides.length) return;
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      track.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      moveSlide(0, '.shopinterior-slider-track');
+      setInterval(() => moveSlide(1, '.shopinterior-slider-track'), 4000);
+
+      moveSlide(0, '.beforeafter-slide
