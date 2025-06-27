@@ -73,17 +73,53 @@
     bot.style.display = bot.style.display === 'block' ? 'none' : 'block';
   }
 
-  function setLang(lang) {
-    currentLang = lang;
-    const chat = document.getElementById('chat-content');
-    chat.innerHTML = `
-      <p>무엇을 도와드릴까요?</p>
-      <button onclick="showInfo('hours')">운영시간</button>
-      <button onclick="showInfo('location')">오시는 길</button>
-      <button onclick="showInfo('booking')">예약 방법</button>
-      <div id="chat-answer" style="margin-top: 10px;"></div>
-    `;
-  }
+function setLang(lang) {
+  currentLang = lang;
+
+  const labels = {
+    kr: {
+      ask: '무엇을 도와드릴까요?',
+      hours: '운영시간',
+      location: '오시는 길',
+      booking: '예약 방법'
+    },
+    en: {
+      ask: 'How can I help you?',
+      hours: 'Business Hours',
+      location: 'Location',
+      booking: 'Booking Info'
+    },
+    jp: {
+      ask: '何をお手伝いしましょうか？',
+      hours: '営業時間',
+      location: 'アクセス',
+      booking: '予約方法'
+    },
+    ch: {
+      ask: '我能为您做什么？',
+      hours: '营业时间',
+      location: '来访路线',
+      booking: '预约方式'
+    },
+    vn: {
+      ask: 'Tôi có thể giúp gì cho bạn?',
+      hours: 'Giờ mở cửa',
+      location: 'Địa chỉ',
+      booking: 'Cách đặt lịch'
+    }
+  };
+
+  const t = labels[lang];
+
+  const chat = document.getElementById('chat-content');
+  chat.innerHTML = `
+    <p>${t.ask}</p>
+    <button onclick="showInfo('hours')">${t.hours}</button>
+    <button onclick="showInfo('location')">${t.location}</button>
+    <button onclick="showInfo('booking')">${t.booking}</button>
+    <div id="chat-answer" style="margin-top: 10px;"></div>
+  `;
+}
 
   function showInfo(topic) {
     const messages = {
