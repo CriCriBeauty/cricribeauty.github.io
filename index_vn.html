@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CriCri Beauty Studio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Nút mở chatbot -->
+<div id="chatbot-toggle" onclick="toggleChatbot()">💬 Hỏi đáp</div>
+
+<!-- Hộp thoại chatbot -->
+<div id="chatbot-box">
+  <div class="chat-header">Trợ lý CriCri</div>
+  <div class="chat-content" id="chat-content">
+    <p>Vui lòng chọn ngôn ngữ:</p>
+    <button onclick="setLang('vn')">🇻🇳 Tiếng Việt</button>
+    <button onclick="setLang('kr')">🇰🇷 한국어</button>
+    <button onclick="setLang('en')">🇺🇸 English</button>
+    <button onclick="setLang('jp')">🇯🇵 日本語</button>
+    <button onclick="setLang('ch')">🇨🇳 中文</button>
+    <div id="chat-answer" style="margin-top: 10px;"></div>
+  </div>
+</div>
+
+<!-- Hình nền -->
+<div class="background"></div>
+
+<!-- Logo -->
+<div class="logo-slide">
+  <h1>
+    <span class="slide">CriCri</span>
+    <span class="slide">BEAUTY</span>
+    <span class="slide">STUDIO</span>
+  </h1>
+
+  <div class="tagline-slide">
+    <span class="tagline">Ấn tượng đầu tiên bắt đầu từ lông mày của bạn. Hãy đến với CriCri Beauty.</span>
+  </div>
+
+  <div class="cta-buttons">
+    <a href="service_vn.html" class="btn">Dịch vụ</a>
+    <a href="예약_vn.html" class="btn">Đặt lịch</a>
+  </div>
+</div>
+
+<!-- Chuyển đổi ngôn ngữ -->
+<div class="lang-switcher">
+  <a href="index.html">KR</a> |
+  <a href="index_en.html">EN</a> |
+  <a href="index_jp.html">JP</a> |
+  <a href="index_ch.html">CH</a> |
+  <a href="index_vn.html" class="active">VN</a>
+</div>
+
+<!-- Menu điều hướng -->
+<nav class="nav">
+  <ul class="menu">
+    <li><a href="예약_vn.html">Đặt lịch</a></li>
+    <li><a href="service_vn.html">Dịch vụ</a></li>
+    <li><a href="map_vn.html">Địa chỉ</a></li>
+    <li><a href="gallery_vn.html">Thư viện ảnh</a></li>
+  </ul>
+</nav>
+
+<script>
+  let currentLang = 'vn';
+
+  function toggleChatbot() {
+    const bot = document.getElementById('chatbot-box');
+    bot.style.display = bot.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function setLang(lang) {
+    currentLang = lang;
+
+    const labels = {
+      vn: {
+        ask: 'Bạn cần hỗ trợ gì?',
+        hours: 'Giờ mở cửa',
+        location: 'Địa chỉ',
+        booking: 'Cách đặt lịch'
+      },
+      // 추가 언어 번역이 필요한 경우 여기에 넣기
+    };
+
+    const t = labels[lang] || labels.vn;
+
+    const chat = document.getElementById('chat-content');
+    chat.innerHTML = `
+      <p>${t.ask}</p>
+      <button onclick="showInfo('hours')">${t.hours}</button>
+      <button onclick="showInfo('location')">${t.location}</button>
+      <button onclick="showInfo('booking')">${t.booking}</button>
+      <div id="chat-answer" style="margin-top: 10px;"></div>
+    `;
+  }
+
+  function showInfo(topic) {
+    const messages = {
+      vn: {
+        hours: '🕒 Giờ mở cửa từ 11 giờ sáng đến 8 giờ tối (chỉ nhận đặt lịch trước).',
+        location: '📍 54, Dunsanjung-ro, quận Seo, Daejeon (5 phút đi bộ từ ga City Hall, cổng số 4)',
+        booking: '📞 Đặt lịch qua mục Đặt Lịch (https://cricribeauty.github.io/%EC%98%88%EC%95%BD.html) hoặc gọi điện thoại (0507-1367-6984).',
+      }
+    };
+
+    const answerBox = document.getElementById('chat-answer');
+    answerBox.innerHTML = `<p>${messages[currentLang]?.[topic] || 'Chưa có dữ liệu cho mục này.'}</p>`;
+  }
+</script>
+
+</body>
+</html>
 
