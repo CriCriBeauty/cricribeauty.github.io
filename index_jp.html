@@ -9,41 +9,132 @@
 </head>
 <body>
 
-  <div class="background"></div>
+<!-- チャットボット切替ボタン -->
+<div id="chatbot-toggle" onclick="toggleChatbot()">💬 問い合わせ</div>
 
-  <div class="logo-slide">
-    <h1>
-      <span class="slide">CriCri</span>
-      <span class="slide">BEAUTY</span>
-      <span class="slide">STUDIO</span>
-    </h1>
+<!-- チャットボット本体 -->
+<div id="chatbot-box">
+  <div class="chat-header">CriCri チャットボット</div>
+  <div class="chat-content" id="chat-content">
+    <p>言語を選択してください:</p>
+    <button onclick="setLang('kr')">🇰🇷 韓国語</button>
+    <button onclick="setLang('en')">🇺🇸 英語</button>
+    <button onclick="setLang('jp')">🇯🇵 日本語</button>
+    <button onclick="setLang('ch')">🇨🇳 中国語</button>
+    <button onclick="setLang('vn')">🇻🇳 ベトナム語</button>
+    <div id="chat-answer" style="margin-top: 10px;"></div>
+  </div>
+</div>
 
-    <div class="tagline-slide">
-      <span class="tagline">第一印象は眉毛で決まる。CriCri Beautyで始めましょう。</span>
-    </div>
+<!-- 背景画像 -->
+<div class="background"></div>
 
-    <div class="cta-buttons">
-      <a href="service_jp.html" class="btn">サービス内容</a>
-      <a href="예약_jp.html" class="btn">予約する</a>
-    </div>
+<!-- ロゴアニメーションテキスト -->
+<div class="logo-slide">
+  <h1>
+    <span class="slide">CriCri</span>
+    <span class="slide">BEAUTY</span>
+    <span class="slide">STUDIO</span>
+  </h1>
+  <div class="tagline-slide">
+    <span class="tagline">あなたの最初の印象は目の周りから始まります。クリクリビューティで始めましょう。</span>
   </div>
 
-  <div class="lang-switcher">
-    <a href="index.html">KR</a> |
-    <a href="index_en.html">EN</a> |
-    <a href="index_jp.html" class="active">JP</a> |
-    <a href="index_ch.html">CH</a> |
-    <a href="index_vn.html">VN</a>
-  </div> 
+  <!-- CTAボタン -->
+  <div class="cta-buttons">
+    <a href="service_en.html" class="btn">サービス</a>
+    <a href="예약_en.html" class="btn">オンライン予約</a>
+  </div>
+</div>
 
-  <nav class="nav">
-    <ul class="menu">
-      <li><a href="예약_jp.html">予約</a></li>
-      <li><a href="service_jp.html">サービス</a></li>
-      <li><a href="map_jp.html">アクセス</a></li>
-      <li><a href="gallery_jp.html">ギャラリー</a></li>
-    </ul>
-  </nav>
+<!-- 言語切替 -->
+<div class="lang-switcher">
+  <a href="index.html">KR</a> |
+  <a href="index_en.html">EN</a> |
+  <a href="index_jp.html">JP</a> |
+  <a href="index_ch.html">CH</a> |
+  <a href="index_vn.html">VN</a>
+</div> 
+
+<!-- ナビゲーション -->
+<nav class="nav">
+  <ul class="menu">
+    <li><a href="예약_jp.html">予約</a></li>
+    <li><a href="service_jp.html">サービス</a></li>
+    <li><a href="map_jp.html">アクセス</a></li>
+    <li><a href="gallery_jp.html">ギャラリー</a></li>
+  </ul>
+</nav>
+
+<script>
+  let currentLang = null;
+
+  function toggleChatbot() {
+    const bot = document.getElementById('chatbot-box');
+    bot.style.display = bot.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function setLang(lang) {
+    currentLang = lang;
+
+    const labels = {
+      kr: {
+        ask: '何を帯いましょうか？',
+        hours: '営業時間',
+        location: 'アクセス',
+        booking: '予約方法'
+      },
+      en: {
+        ask: 'How can I help you?',
+        hours: 'Business Hours',
+        location: 'Location',
+        booking: 'Booking Info'
+      },
+      jp: {
+        ask: '何をお手伝いしましょうか？',
+        hours: '営業時間',
+        location: 'アクセス',
+        booking: '予約方法'
+      },
+      ch: {
+        ask: '我能为您做什么？',
+        hours: '营业时间',
+        location: '来访路线',
+        booking: '预约方式'
+      },
+      vn: {
+        ask: 'Tôi có thể giúc gì cho bạn?',
+        hours: 'Giờ mở cửa',
+        location: 'Địa chỉ',
+        booking: 'Cách đặt lịch'
+      }
+    };
+
+    const t = labels[lang];
+
+    const chat = document.getElementById('chat-content');
+    chat.innerHTML = `
+      <p>${t.ask}</p>
+      <button onclick="showInfo('hours')">${t.hours}</button>
+      <button onclick="showInfo('location')">${t.location}</button>
+      <button onclick="showInfo('booking')">${t.booking}</button>
+      <div id="chat-answer" style="margin-top: 10px;"></div>
+    `;
+  }
+
+  function showInfo(topic) {
+    const messages = {
+      jp: {
+        hours: '🕒 当店は午前11時から午後8時まで営業しております（完全予約制です）',
+        location: '📍 大田広域市 西区 ドゥンサン中央路54（市庁駅 4番出口 徒歩5分）',
+        booking: '📞 ご予約は予約ページ、お電話（0507-1367-6984）で承っております。'
+      }
+    };
+
+    const answerBox = document.getElementById('chat-answer');
+    answerBox.innerHTML = `<p>${messages[currentLang]?.[topic] || '言語が選択されていません。'}</p>`;
+  }
+</script>
 
 </body>
 </html>
