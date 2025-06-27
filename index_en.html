@@ -9,42 +9,152 @@
 </head>
 <body>
 
+<!-- Chatbot toggle button -->
+<div id="chatbot-toggle" onclick="toggleChatbot()">💬 Ask Us</div>
 
+<!-- Chatbot interface -->
+<div id="chatbot-box">
+  <div class="chat-header">CriCri Chatbot</div>
+  <div class="chat-content" id="chat-content">
+    <p>Please select a language:</p>
+    <button onclick="setLang('kr')">🇰🇷 Korean</button>
+    <button onclick="setLang('en')">🇺🇸 English</button>
+    <button onclick="setLang('jp')">🇯🇵 Japanese</button>
+    <button onclick="setLang('ch')">🇨🇳 Chinese</button>
+    <button onclick="setLang('vn')">🇻🇳 Vietnamese</button>
+    <div id="chat-answer" style="margin-top: 10px;"></div>
+  </div>
+</div>
   
-  <div class="background"></div>
-  <div class="logo-slide">
-    <h1>
-      <span class="slide">CriCri</span>
-      <span class="slide">BEAUTY</span>
-      <span class="slide">STUDIO</span>
-    </h1>
+<!-- Background image -->
+<div class="background"></div>
 
-    <div class="tagline-slide">
-      <span class="tagline">Your first impression begins with your eyebrows. Start at CriCri Beauty.</span>
-    </div>
-
-    <div class="cta-buttons">
-      <a href="service_en.html" class="btn">Our Services</a>
-      <a href="예약_en.html" class="btn">Booking Online</a>
-    </div>
+<!-- Logo animation text -->
+<div class="logo-slide">
+  <h1>
+    <span class="slide">CriCri</span>
+    <span class="slide">BEAUTY</span>
+    <span class="slide">STUDIO</span>
+  </h1>
+  <div class="tagline-slide">
+    <span class="tagline">Your first impression starts with your brows. Begin at CriCri Beauty.</span>
   </div>
 
-  <div class="lang-switcher">
-    <a href="index.html">KR</a> |
-    <a href="index_en.html" class="active">EN</a> |
-    <a href="index_jp.html">JP</a> |
-    <a href="index_ch.html">CH</a> |
-    a href="index_vn.html">VN</a> 
-  </div> 
+  <!-- CTA Buttons -->
+  <div class="cta-buttons">
+    <a href="service.html" class="btn">Our Service</a>
+    <a href="예약.html" class="btn">Booking Online</a>
+  </div>
+</div>
 
-  <nav class="nav">
-    <ul class="menu">
-      <li><a href="예약_en.html">Reservation</a></li>
-      <li><a href="service_en.html">Services</a></li>
-      <li><a href="map_en.html">Location</a></li>
-      <li><a href="gallery_en.html">Gallery</a></li>
-    </ul>
-  </nav>
+<!-- Language Switcher -->
+<div class="lang-switcher">
+  <a href="index.html">KR</a> |
+  <a href="index_en.html">EN</a> |
+  <a href="index_jp.html">JP</a> |
+  <a href="index_ch.html">CH</a> |
+  <a href="index_vn.html">VN</a>
+</div> 
+
+<!-- Navigation -->
+<nav class="nav">
+  <ul class="menu">
+    <li><a href="예약_en.html">Booking</a></li>
+    <li><a href="service_en.html">Services</a></li>
+    <li><a href="map_en.html">Location</a></li>
+    <li><a href="gallery_en.html">Gallery</a></li>
+  </ul>
+</nav>
+
+<script>
+  let currentLang = null;
+
+  function toggleChatbot() {
+    const bot = document.getElementById('chatbot-box');
+    bot.style.display = bot.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function setLang(lang) {
+    currentLang = lang;
+
+    const labels = {
+      kr: {
+        ask: '무엇을 도움드릴까요?',
+        hours: '운영시간',
+        location: '오시는 길',
+        booking: '예약 방법'
+      },
+      en: {
+        ask: 'How can I help you?',
+        hours: 'Business Hours',
+        location: 'Location',
+        booking: 'Booking Info'
+      },
+      jp: {
+        ask: '何をお手伝いしましょうか？',
+        hours: '営業時間',
+        location: 'アクセス',
+        booking: '予約方法'
+      },
+      ch: {
+        ask: '我能为您做什么？',
+        hours: '营业时间',
+        location: '来访路线',
+        booking: '预约方式'
+      },
+      vn: {
+        ask: 'Tôi có thể giúc gì cho bạn?',
+        hours: 'Giờ mở cửa',
+        location: 'Địa chỉ',
+        booking: 'Cách đặt lịch'
+      }
+    };
+
+    const t = labels[lang];
+
+    const chat = document.getElementById('chat-content');
+    chat.innerHTML = `
+      <p>${t.ask}</p>
+      <button onclick="showInfo('hours')">${t.hours}</button>
+      <button onclick="showInfo('location')">${t.location}</button>
+      <button onclick="showInfo('booking')">${t.booking}</button>
+      <div id="chat-answer" style="margin-top: 10px;"></div>
+    `;
+  }
+
+  function showInfo(topic) {
+    const messages = {
+      kr: {
+        hours: '🕒 운영시간은 오전 11시 ~ 오후 8시입니다. (예약제 운영)',
+        location: '📍 대전광역시 서구 둔산중로 54 (시청역 4번 출구 도보 5분)',
+        booking: '📞 예약은 예약 메뉴(https://cricribeauty.github.io/%EC%98%88%EC%95%BD.html) 또는 전화(0507-1367-6984) / 가능합니다.'
+      },
+      en: {
+        hours: '🕒 We’re open from 11 AM to 8 PM (Reservation only).',
+        location: '📍 54, Dunsanjung-ro, Seo-gu, Daejeon (5 min from City Hall Station Exit 4)',
+        booking: '📞 Book via the reservation menu(https://cricribeauty.github.io/%EC%98%88%EC%95%BD.html), phone call(0507-1367-6984).'
+      },
+      jp: {
+        hours: '🕒 当店は午前11時から午後8時まで営業しております（完全予約制です）',
+        location: '📍 大田広域市 西区 ドゥンサン中央路54（市庁駅4番出口 徒歩5分）',
+        booking: '📞 ご予約は予約ページ、お電話（0507-1367-6984）で承っております。'
+      },
+      ch: {
+        hours: '🕒 营业时间为上午11点至下午8点（需预约）',
+        location: '📍 大田市西区Dunsanjung-ro 54（市政厅地铁站4号出口 步行5分钟）',
+        booking: '📞 可通过预约页面或拨打电话 (0507-1367-6984) 进行预约。'
+      },
+      vn: {
+        hours: '🕒 Giờ mở cửa từ 11 giờ sáng đến 8 giờ tối (chỉ nhận đặt lịch trước).',
+        location: '📍 54, Dunsanjung-ro, quận Seo, Daejeon (cách ga City Hall, lối ra số 4, 5 phút đi bộ)',
+        booking: '📞 Đặt lịch qua mục Đặt Lịch (https://cricribeauty.github.io/%EC%98%88%EC%95%BD.html) hoặc gọi điện thoại (0507-1367-6984).'
+      }
+    };
+
+    const answerBox = document.getElementById('chat-answer');
+    answerBox.innerHTML = `<p>${messages[currentLang]?.[topic] || 'No language selected.'}</p>`;
+  }
+</script>
 
 </body>
 </html>
