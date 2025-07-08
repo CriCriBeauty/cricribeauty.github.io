@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[CriCri Beauty]]></title>
+    <link>https://cricribeauty.github.io/</link>
+    <atom:link href="https://cricribeauty.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <description><![CDATA[크리크리뷰티 소식과 업데이트]]></description>
+    <language>ko</language>
+    <lastBuildDate>Tue, 08 Jul 2025 09:00:00 +0900</lastBuildDate>
+    <generator>Manual RSS for GitHub Pages</generator>
+
+    <item>
+      <title><![CDATA[서비스 안내 페이지 오픈]]></title>
+      <link>https://cricribeauty.github.io/service.html</link>
+      <guid isPermaLink="true">https://cricribeauty.github.io/service.html</guid>
+      <description><![CDATA[크리크리 뷰티의 다양한 서비스 소개 페이지가 열렸습니다.]]></description>
+      <pubDate>Tue, 25 Jun 2025 12:00:00 +0900</pubDate>
+    </item>
+
+    <item>
+      <title><![CDATA[예약 페이지 업데이트]]></title>
+      <link>https://cricribeauty.github.io/예약.html</link>
+      <guid isPermaLink="true">https://cricribeauty.github.io/예약.html</guid>
+      <description><![CDATA[모바일 예약이 가능하도록 새롭게 업데이트 되었습니다.]]></description>
+      <pubDate>Wed, 26 Jun 2025 10:00:00 +0900</pubDate>
+    </item>
+
+  </channel>
+</rss>
+ 
