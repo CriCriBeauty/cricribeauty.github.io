@@ -286,3 +286,13 @@ body, html {
   color: #333;  /* 혹시라도 p 태그 따로 들어오면 대비 */
 }
 
+.seo-text-hidden {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
