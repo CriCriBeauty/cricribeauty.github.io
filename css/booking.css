@@ -212,28 +212,29 @@ iframe {
   }
 }
 
-/* 왼쪽 하단 정보 박스 스타일 */
+/* 왼쪽 글자크기  */
 .info-box {
   position: fixed;
   bottom: 40px;
   left: 40px;
-  background-color: rgba(0, 0, 0, 0.15); /* 부드러운 회색 반투명 */
-  color: #333;
-  padding: 16px 24px;
-  border-radius: 10px;
-  font-size: 14px;
-  line-height: 1.7;
+  background-color: rgba(0, 0, 0, 0.15); /* 연한 반투명 회색 */
+  color: #222; /* ✅ 더 진한 회색 */
+  padding: 20px 28px;
+  border-radius: 12px;
+  font-size: 15.5px; /* ✅ 글자 크기 ↑ */
+  line-height: 1.8;
+  font-weight: 600; /* ✅ 글자 굵기 ↑ */
   font-family: 'Noto Sans KR', sans-serif;
-  max-width: 280px;
+  max-width: 300px;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* 모바일 반응형 조정 */
+/* 모바일 반응형 */
 @media (max-width: 768px) {
   .info-box {
-    font-size: 12.5px;
-    padding: 12px 18px;
+    font-size: 14px;
+    padding: 16px 20px;
     bottom: 20px;
     left: 10px;
     max-width: 90%;
