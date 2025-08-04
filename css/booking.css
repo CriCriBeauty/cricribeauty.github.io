@@ -217,8 +217,8 @@ iframe {
   position: fixed;
   bottom: 40px;
   left: 40px;
-  color: rgba(255, 255, 255, 0.95);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.15); /* 부드러운 회색 반투명 */
+  color: #333;
   padding: 16px 24px;
   border-radius: 10px;
   font-size: 14px;
@@ -226,6 +226,7 @@ iframe {
   font-family: 'Noto Sans KR', sans-serif;
   max-width: 280px;
   z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* 모바일 반응형 조정 */
