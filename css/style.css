@@ -296,3 +296,29 @@ body, html {
   visibility: hidden;
 }
 
+/* 왼쪽 하단 정보 박스 */
+.info-box {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.4); /* 반투명 배경 */
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  z-index: 10;
+  max-width: 260px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .info-box {
+    bottom: 20px;
+    left: 10px;
+    font-size: 12px;
+    padding: 10px 14px;
+    max-width: 90%;
+  }
+}
