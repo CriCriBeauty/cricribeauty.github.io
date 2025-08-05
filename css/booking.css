@@ -345,3 +345,44 @@ iframe {
     font-size: 0.9rem;
   }
 }
+
+.center-logo {
+  text-align: center;
+  margin: 20px auto 40px;
+}
+
+.center-logo .logo-text-row {
+  display: inline-flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.center-logo .cricri {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #000;
+}
+
+.center-logo .studio-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.4rem;
+  line-height: 1.5;
+  color: #000;
+  text-align: left;
+}
+
+.center-logo .logo-tagline {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 400;
+}
+
+/* 버튼 아래 여백 */
+.button-wrap {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
