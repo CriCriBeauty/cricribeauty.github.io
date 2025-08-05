@@ -38,6 +38,14 @@
   </div>
 </div>
 
+  <!-- 시술 상세 안내 영역 위쪽에 버튼 추가 -->
+<div class="section">
+  <button class="price-toggle-btn" onclick="togglePrice()">🧾 시술 가격표 보기</button>
+  <div id="priceImageContainer" class="price-image" style="display: none;">
+    <img src="images/price.png" alt="시술 가격표" />
+  </div>
+</div>
+  
 <!-- 시술 상세 안내 -->
 <div class="section">
   <h2>💅 시술 상세 안내</h2>
@@ -168,6 +176,15 @@
     </ul>
   </div>
 </div>
-
+<script>
+  function togglePrice() {
+    const imgContainer = document.getElementById('priceImageContainer');
+    if (imgContainer.style.display === 'none') {
+      imgContainer.style.display = 'block';
+    } else {
+      imgContainer.style.display = 'none';
+    }
+  }
+</script>
 </body>
 </html>
