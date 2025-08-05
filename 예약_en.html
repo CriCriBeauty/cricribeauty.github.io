@@ -3,110 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reservation | Cricri Beauty Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <title>Booking | Cricri Beauty Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/booking.css" />
 </head>
 <body>
+<!-- Header -->
+<div class="header-container">
+  <div class="logo-area centered">
+    <div class="logo-text-row">
+      <span class="cricri">CriCri</span>
+      <div class="studio-text">
+        <div>BEAUTY</div>
+        <div>STUDIO</div>
+      </div>
+    </div>
+    <p class="logo-tagline">Cricri Beauty Studio</p>
+  </div>
 
-<!-- Language Switcher -->
-<div class="lang-switcher">
-  <a href="index.html">KR</a> |
-  <a href="index_en.html">EN</a> |
-  <a href="index_jp.html">JP</a> |
-  <a href="index_ch.html">CH</a> |
-  <a href="index_vn.html">VN</a>
-</div>
-
-<!-- Navigation -->
-<header class="nav">
-  <ul class="menu">
-    <li><a href="예약_en.html">Reservation</a></li>
-    <li><a href="service_en.html">Treatment (Service)</a></li>
+  <ul class="menu centered">
+    <li><a href="booking_en.html">Booking</a></li>
+    <li><a href="service_en.html">Menu</a></li>
     <li><a href="map_en.html">Directions</a></li>
     <li><a href="gallery_en.html">Gallery</a></li>
   </ul>
-</header>
 
-<h1>🗓 Cricri Beauty Studio Reservation</h1>
-<p class="desc">Customized treatment for you. Please check the guidelines before booking 💖</p>
+  <!-- Buttons -->
+  <div class="btn-wrap">
+    <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">Naver Booking</a>
+    <a href="http://pf.kakao.com/_SGZrn/chat" target="_blank" class="btn kakao" id="kakaoBtn">KakaoTalk Chat</a>
+  </div>
 
-<!-- Treatment List -->
+  <div class="lang-switcher">
+    <a href="index.html">KR</a> |
+    <a href="index_en.html">EN</a> |
+    <a href="index_jp.html">JP</a> |
+    <a href="index_ch.html">CH</a> |
+    <a href="index_vn.html">VN</a>
+  </div>
+</div>
+
+<p class="desc">Tailored treatments just for you. Please review the following information before making a booking.</p>
+
+<!-- Checkbox -->
+<div class="check-confirm">
+  <input type="checkbox" id="agree" />
+  <label for="agree">I have reviewed and agree to the information below.</label>
+</div>
+
+<!-- Booking Info -->
 <div class="section">
-  <h2>💅 Treatment List & Prices</h2>
-  <table>
-    <tr><th>Treatment</th><th>Price</th></tr>
-    <tr><td>Tightly Lifted Basic Perm</td><td>35,000 KRW</td></tr>
-    <tr><td>Nourishing Clinic Perm</td><td>45,000 KRW</td></tr>
-    <tr><td>Defined Look Black Tinting Perm</td><td>50,000 KRW</td></tr>
-    <tr><td>Dual Perm</td><td>65,000 KRW</td></tr>
-    <tr><td>Additional (Clinic Nutrition/Black Tinting)</td><td>10,000 KRW / 15,000 KRW</td></tr>
-    <tr><td>Eyebrow Lift Perm</td><td>30,000 KRW</td></tr>
-    <tr><td>Natural Eyebrow Design</td><td>Contact Us</td></tr>
-    <tr><td>One Day Makeup</td><td>Contact Us</td></tr>
-  </table>
-</div>
-
-<!-- View Price Image -->
-<div style="text-align: center; margin: 30px 0;">
-  <button onclick="openPricePopup()" style="
-    padding: 14px 32px;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    background-color: #d94f7b;
-    color: white;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  ">
-    📋 View Price List
-  </button>
-</div>
-
-<!-- Price Image Hidden -->
-<div id="priceImageContainer" style="display: none; text-align: center; margin-bottom: 40px;">
-  <img src="images/price.png" alt="Treatment Price List" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);" />
-</div>
-
-<!-- Important Notes -->
-<div class="section">
-  <h2>📌 Important Notes Before Reservation</h2>
+  <h2>📌 Important Booking Notes</h2>
   <ul>
-    <li>Please visit without makeup/sunscreen on the day of treatment.</li>
-    <li>Late arrivals may result in shorter treatment time.</li>
-    <li>Please change your reservation at least one day in advance.</li>
-    <li>No-shows will limit your ability to make future reservations.</li>
-    <li>For sensitive skin or pregnancy, consultation is required.</li>
-    <li>Please avoid washing your face/using a sauna/pool for 3 hours after treatment.</li>
+    <li>Service time may be adjusted if you arrive late.</li>
+    <li>Please make any changes at least one day in advance.</li>
+    <li>Future bookings may be restricted in case of no-shows.</li>
+    <li>For sensitive skin or pregnancy, treatment will be provided after consultation.</li>
   </ul>
 </div>
 
-<!-- Calendar -->
+<!-- Booking Calendar -->
 <div class="section">
   <h2>📆 Available Booking Dates</h2>
-  <p style="text-align:center; color:#666; font-size:0.9em;">※ This calendar is for reference only. Please reserve via Naver.</p>
+  <p style="text-align:center; color:#666; font-size:0.9em;">※ This calendar is for reference only. Please proceed with booking through Naver.</p>
   <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
 </div>
 
-<!-- Agreement -->
-<div class="check-confirm">
-  <input type="checkbox" id="agree" />
-  <label for="agree">I have read and agree to all the above.</label>
+<!-- Info Box -->
+<div class="info-box">
+  <p><strong>Cricri Beauty Studio</strong></p>
+  <p>Hours: 10:00 AM – 8:00 PM</p>
+  <p>Phone: 010-3263-6984</p>
+  <p>54 Dunsan Middle-ro, Seo-gu, Daejeon</p>
 </div>
 
-<!-- Buttons -->
-<div class="btn-wrap">
-  <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">Reserve via Naver</a>
-  <a href="http://pf.kakao.com/_SGZrn/chat" target="_blank" class="btn kakao" id="kakaoBtn">Consult via KakaoTalk</a>
-</div>
+<!-- Footer -->
+<footer style="background-color: #fef0f4; padding: 30px 20px; text-align: center;">
+  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">Cricri Beauty Studio</div>
+  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
+    Business Hours: 10:00 ~ 20:00 ｜ Contact: 0507-1367-6984
+  </div>
+  <div style="margin: 15px 0;">
+    <a href="http://pf.kakao.com/_SGZrn" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/3991/3991999.png" alt="KakaoTalk" width="26" />
+    </a>
+    <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="26" />
+    </a>
+    <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/11423/11423248.png" alt="Blog" width="26" />
+    </a>
+    <a href="#" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968850.png" alt="Band" width="26" />
+    </a>
+  </div>
+  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
+    &copy; 2025 Cricri Beauty Studio. All rights reserved.
+  </div>
+</footer>
 
 <!-- Script -->
 <script>
-  function openPricePopup() {
-    window.open('images/price.png', '_blank', 'width=800,height=600,resizable=yes');
-  }
-
   const checkbox = document.getElementById('agree');
   const naverBtn = document.getElementById('naverBtn');
   const kakaoBtn = document.getElementById('kakaoBtn');
@@ -121,33 +118,10 @@
     btn.addEventListener('click', (e) => {
       if (!checkbox.checked) {
         e.preventDefault();
-        alert("Please agree to the terms before proceeding.");
+        alert("Please agree to the notice before booking.");
       }
     });
   });
 </script>
-
-<!-- Footer -->
-<footer style="background-color:#fef0f4; padding: 30px 20px; text-align: center;">
-  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">Cricri Beauty Shop</div>
-  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
-    Business Hours: 11:00 ~ 20:00 ｜ Contact: 82+0507-1367-6984
-  </div>
-  <div style="margin: 15px 0;">
-   <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="24" />
-    </a>
-    <a href="#" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/3991/3991999.png" alt="KakaoTalk" width="24" />
-    </a>
-    <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/11423/11423248.png" alt="Blog" width="24" />
-    </a>
-  </div>
-  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-    &copy; 2025 Cricri Beauty Shop. All rights reserved.
-  </div>
-</footer>
-
 </body>
 </html>
