@@ -4,109 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>预约 | CriCri 美容店</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/booking.css" />
 </head>
 <body>
+<!-- 顶部栏 -->
+<div class="header-container">
+  <div class="logo-area centered">
+    <div class="logo-text-row">
+      <span class="cricri">CriCri</span>
+      <div class="studio-text">
+        <div>BEAUTY</div>
+        <div>STUDIO</div>
+      </div>
+    </div>
+    <p class="logo-tagline">CriCri 美容站</p>
+  </div>
 
-<!-- 语言切换 -->
-<div class="lang-switcher">
-  <a href="예약.html">KR</a> |
-  <a href="예약_en.html">EN</a> |
-  <a href="예약_jp.html">JP</a> |
-  <a href="예약_ch.html">CH</a> |
-    <a href="예약_VN.html">VN</a> 
-</div>
-
-<!-- 导航栏 -->
-<header class="nav">
-  <ul class="menu">
-    <li><a href="예약_ch.html">预约</a></li>
-    <li><a href="service_ch.html">护理服务</a></li>
-    <li><a href="map_ch.html">来店路线</a></li>
-    <li><a href="gallery_ch.html">相册</a></li>
+  <ul class="menu centered">
+    <li><a href="预约_ch.html">预约</a></li>
+    <li><a href="service_ch.html">服务项目</a></li>
+    <li><a href="map_ch.html">定位和路线</a></li>
+    <li><a href="gallery_ch.html">美图馆</a></li>
   </ul>
-</header>
+  <!-- 预约按钮 -->
+  <div class="btn-wrap">
+    <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">纽约预约</a>
+    <a href="http://pf.kakao.com/_SGZrn/chat" target="_blank" class="btn kakao" id="kakaoBtn">老师咨询</a>
+  </div>
 
-<h1>🗓 CriCri 美容店 预约</h1>
-<p class="desc">为珍贵的您量身定制的护理服务，请在预约前务必确认相关须知 💖</p>
+  <div class="lang-switcher">
+    <a href="index.html">KR</a> |
+    <a href="index_en.html">EN</a> |
+    <a href="index_jp.html">JP</a> |
+    <a href="index_ch.html">CH</a> |
+    <a href="index_vn.html">VN</a>
+  </div>
+</div>
 
-<!-- 服务列表 -->
+<p class="desc">为珍贵的您提供专属护理服务，预约前请务必确认下面内容</p>
+
+<!-- 同意勾选框 -->
+<div class="check-confirm">
+  <input type="checkbox" id="agree" />
+  <label for="agree">我已阅读并同意下面的所有事项</label>
+</div>
+
+<!-- 预约前须知事项 -->
 <div class="section">
-  <h2>💅 护理项目与价格</h2>
-  <table>
-    <tr><th>护理项目</th><th>价格</th></tr>
-    <tr><td>高翘基础烫</td><td>35,000韩元</td></tr>
-    <tr><td>营养护理烫</td><td>45,000韩元</td></tr>
-    <tr><td>鲜明眼神黑色染烫</td><td>50,000韩元</td></tr>
-    <tr><td>双重烫</td><td>65,000韩元</td></tr>
-    <tr><td>追加项目（营养/黑色染）</td><td>10,000 / 15,000韩元</td></tr>
-    <tr><td>眉毛提升烫</td><td>30,000韩元</td></tr>
-    <tr><td>自然眉毛设计</td><td>咨询</td></tr>
-    <tr><td>一日妆容服务</td><td>咨询</td></tr>
-  </table>
-</div>
-
-<!-- 查看价格表按钮 -->
-<div style="text-align: center; margin: 30px 0;">
-  <button onclick="openPricePopup()" style="
-    padding: 14px 32px;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    background-color: #d94f7b;
-    color: white;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  ">
-    📋 查看价格表
-  </button>
-</div>
-
-<!-- 图片预览 -->
-<div id="priceImageContainer" style="display: none; text-align: center; margin-bottom: 40px;">
-  <img src="images/price.png" alt="护理价格表" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);" />
-</div>
-
-<!-- 注意事项 -->
-<div class="section">
-  <h2>📌 预约前须知</h2>
+  <h2>📌 预约前须知事项</h2>
   <ul>
-    <li>当日请勿化妆或使用防晒霜。</li>
-    <li>迟到可能会影响护理时间。</li>
-    <li>如需更改预约，请至少提前一天通知。</li>
-    <li>无故缺席将限制今后的预约。</li>
-    <li>敏感肌肤或孕妇请先咨询。</li>
-    <li>护理后3小时内请勿洗脸、泡澡或游泳。</li>
+    <li>如遇迟到，护理时间可能会进行调整。</li>
+    <li>请至少在护理前一天进行修改或取消预约。</li>
+    <li>如有无故缺席，未来将无法再次预约。</li>
+    <li>皮肤敏感/怀孕者需经过咨询后确定是否可进行护理。</li>
   </ul>
 </div>
 
-<!-- 日历 -->
+<!-- 预约时间表 -->
 <div class="section">
-  <h2>📆 可预约时间</h2>
-  <p style="text-align:center; color:#666; font-size:0.9em;">※ 以下日历仅供参考，预约请使用 Naver。</p>
+  <h2>📆 预约可用时间</h2>
+  <p style="text-align:center; color:#666; font-size:0.9em;">（以下日历只供参考，预约请通过Naver进行）</p>
   <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
 </div>
 
-<!-- 同意确认 -->
-<div class="check-confirm">
-  <input type="checkbox" id="agree" />
-  <label for="agree">我已阅读并同意以上内容。</label>
+<!-- 左下角信息框 -->
+<div class="info-box">
+  <p><strong>CriCri 美容站</strong></p>
+  <p>营业时间：10:00 ~ 20:00</p>
+  <p>联系电话：010-3263-6984</p>
+  <p>大田市西区敦山中路54号</p>
 </div>
 
-<!-- 预约按钮 -->
-<div class="btn-wrap">
-  <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">Naver 预约</a>
-  <a href="http://pf.kakao.com/_SGZrn/chat" target="_blank" class="btn kakao" id="kakaoBtn" target="_blank" class="btn kakao" id="kakaoBtn">KakaoTalk 咨询</a>
+<!-- 页脚 -->
+<footer style="background-color: #fef0f4; padding: 30px 20px; text-align: center;">
+  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">CriCri 美容店</div>
+  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
+    营业时间: 10:00 ~ 20:00 ｜ 联系电话: 0507-1367-6984
+  </div>
+ <div style="margin: 15px 0;">
+<a href="http://pf.kakao.com/_SGZrn" target="_blank" style="margin: 0 10px;">
+  <img src="https://cdn-icons-png.flaticon.com/512/3991/3991999.png" alt="KakaoTalk" width="26" />
+</a>
+<a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
+  <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="26" />
+</a>
+<a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
+  <img src="https://cdn-icons-png.flaticon.com/512/11423/11423248.png" alt="Blog" width="26" />
+</a>
+<a href="#" target="_blank" style="margin: 0 10px;">
+  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968850.png" alt="Band" width="26" />
+</a>
 </div>
+  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
+    &copy; 2025 Cricri Beauty Studio. All rights reserved.
+  </div>
+</footer>
 
-<!-- 脚本：按钮激活 & 弹窗 -->
+<!-- 脚部脚本 -->
 <script>
-  function openPricePopup() {
-    window.open('images/price.png', '_blank', 'width=800,height=600,resizable=yes');
-  }
-
   const checkbox = document.getElementById('agree');
   const naverBtn = document.getElementById('naverBtn');
   const kakaoBtn = document.getElementById('kakaoBtn');
@@ -121,33 +117,10 @@
     btn.addEventListener('click', (e) => {
       if (!checkbox.checked) {
         e.preventDefault();
-        alert("请先同意预约须知。");
+        alert("请先同意预约须知事项。");
       }
     });
   });
 </script>
-
-<!-- 页脚 -->
-<footer style="background-color:#fef0f4; padding: 30px 20px; text-align: center;">
-  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">CriCri 美容店</div>
-  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
-    营业时间：11:00 ~ 20:00 ｜ 联系电话：0507-1367-6984
-  </div>
-  <div style="margin: 15px 0;">
-    <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="24" />
-    </a>
-    <a href="#" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/3991/3991999.png" alt="KakaoTalk" width="24" />
-    </a>
-    <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/11423/11423248.png" alt="Blog" width="24" />
-    </a>
-  </div>
-  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-    &copy; 2025 Cricri Beauty Shop. 版权所有。
-  </div>
-</footer>
-
 </body>
 </html>
