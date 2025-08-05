@@ -1,4 +1,3 @@
-
 /* 예약 페이지 전용 스타일 */
 
 /* 기본 초기화 */
@@ -8,7 +7,7 @@
   box-sizing: border-box;
 }
 
-/* 버튼추가효과 */
+/* 버튼 추가 효과 */
 button:hover {
   background-color: #c83b6f;
   transform: scale(1.02);
@@ -56,32 +55,25 @@ h1 {
   text-decoration: underline;
 }
 
-/* 네비게이션 */
-.nav {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
-.menu {
+/* 예약 메뉴 */
+.menu.centered {
   list-style: none;
   display: flex;
-  gap: 40px;
   justify-content: center;
-  margin-bottom: 10px;
+  align-items: center;
+  gap: 40px;
+  margin: 20px 0;
+  padding: 0;
 }
 
-.menu li a {
+.menu.centered li a {
   color: #333;
   font-weight: bold;
   text-decoration: none;
   font-size: 1.3rem;
-  transition: color 0.3s;
 }
 
-.menu li a:hover {
+.menu.centered li a:hover {
   color: #d94f7b;
 }
 
@@ -129,7 +121,7 @@ th {
   color: #333;
 }
 
-/* 버튼 */
+/* 예약 버튼 */
 .btn {
   display: inline-block;
   padding: 14px 24px;
@@ -161,7 +153,8 @@ th {
 
 .btn-wrap {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+  margin-top: 10px;
 }
 
 /* 캘린더 */
@@ -173,47 +166,13 @@ iframe {
   margin-top: 10px;
 }
 
-/* 확인 체크박스 */
+/* 체크박스 */
 .check-confirm {
   text-align: center;
   margin: 30px 0;
 }
 
-/* 반응형 모바 */
-@media screen and (max-width: 600px) {
-  h1 { font-size: 1.6em; }
-  .section h2 { font-size: 1.2em; }
-  table, th, td { font-size: 0.85em; }
-  .btn { width: 90%; display: block; margin: 10px auto; }
-
- .menu {
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-    padding: 10px 0;
-  }
-
-  .menu li a {
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-
-  .lang-switcher {
-    position: absolute;
-    top: 10px;
-    right: 12px;
-    font-size: 0.9rem;
-  }
-
-  .nav {
-    top: 50px;
-    left: 0;
-    transform: none;
-    width: 100%;
-  }
-}
-
-/* 왼쪽 글자크기  */
+/* 하단 정보 */
 .info-box {
   position: fixed;
   bottom: 40px;
@@ -231,6 +190,7 @@ iframe {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* 반응형 */
 @media (max-width: 768px) {
   .info-box {
     font-size: 14px;
@@ -239,26 +199,49 @@ iframe {
     left: 10px;
     max-width: 90%;
   }
+
+  .menu.centered {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .menu.centered li a {
+    font-size: 1rem;
+  }
+
+  .lang-switcher {
+    top: 10px;
+    right: 12px;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+  }
 }
 
-/* 새 통합 헤더 스타일 */
-.top-header {
+/* 로고 중앙 정렬 전용 */
+.header-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: 20px 20px 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 100;
+  margin-top: 20px;
+  position: relative;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .logo-area {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .logo-text-row {
@@ -289,23 +272,3 @@ iframe {
   font-weight: 400;
   letter-spacing: 0.03em;
 }
-
-.nav-menu {
-  margin-top: 16px;
-}
-
-.nav-menu .menu {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-  justify-content: center;
-}
-
-.lang-switcher {
-  position: absolute;
-  top: 16px;
-  right: 30px;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
