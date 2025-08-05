@@ -8,15 +8,15 @@ body {
 
 /* 언어 선택 영역 */
 .lang-switcher {
-  position: fixed;
-  top: 5px;
+  position: fixed;        /* absolute → fixed 로 변경 추천 */
+  top: 5px;               /* 더 위로 올리기 */
   right: 30px;
   font-size: 1.2rem;
   font-weight: bold;
-  z-index: 9999;
+  z-index: 9999;          /* nav 보다 더 높은 z-index */
 }
 .lang-switcher a {
-  color: #333 !important;
+  color: #333 !important;  /* 어두운 텍스트로 변경 */
   text-decoration: none;
   margin: 0 5px;
   font-weight: bold;
@@ -26,6 +26,17 @@ body {
 }
 
 /* 네비게이션 바 */
+.nav {
+  background-color: #fff6f8;
+  border-bottom: 1px solid #eee;
+  padding: 16px 0;
+  text-align: center;
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 .menu {
   list-style: none;
   display: flex;
@@ -84,84 +95,36 @@ body {
   margin-bottom: 4px;
 }
 
-/* 가격표 토글 버튼 */
-.price-toggle-btn {
-  display: block;
-  margin: 0 auto 20px auto;
-  padding: 12px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #f8e9ef;
-  color: #a83e5d;
-  border: 2px solid #dca3b6;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.price-toggle-btn:hover {
-  background-color: #f0d9e0;
-}
-
-/* 가격표 이미지 */
-.price-image {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.price-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* info-box 고정 */
-.info-box {
-  position: fixed;
-  bottom: 40px;
-  left: 40px;
-  background-color: rgba(0, 0, 0, 0.15);
-  color: #222;
-  padding: 20px 28px;
-  border-radius: 12px;
-  font-size: 15.5px;
-  line-height: 1.8;
-  font-weight: 600;
-  font-family: 'Noto Sans KR', sans-serif;
-  max-width: 300px;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* 반응형 */
+/* 반응형 모바 */
 @media screen and (max-width: 600px) {
   h1 { font-size: 1.6em; }
   .section h2 { font-size: 1.2em; }
-  .menu {
-    flex-wrap: wrap;
+  table, th, td { font-size: 0.85em; }
+  .btn { width: 90%; display: block; margin: 10px auto; }
+
+ .menu {
+    flex-wrap: wrap; /* 가로 한 줄에서 넘치면 자동 줄바꿈 */
     gap: 16px;
     justify-content: center;
     padding: 10px 0;
   }
+
   .menu li a {
     font-size: 1rem;
-    white-space: nowrap;
+    white-space: nowrap; /* 단어 줄바꿈 방지 */
   }
+
   .lang-switcher {
     position: absolute;
     top: 10px;
     right: 12px;
     font-size: 0.9rem;
   }
-  .price-toggle-btn {
-    width: 90%;
-  }
-  .info-box {
-    font-size: 14px;
-    padding: 16px 20px;
-    bottom: 20px;
-    left: 10px;
-    max-width: 90%;
+
+  .nav {
+    top: 50px; /* 언어 선택 아래로 약간 내려오도록 조정 */
+    left: 0;
+    transform: none;
+    width: 100%;
   }
 }
