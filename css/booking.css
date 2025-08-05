@@ -259,22 +259,25 @@ iframe {
 }
 
 
+/* CriCri + 두 줄 텍스트 한 행 정렬 */
+.logo-text-row {
+  display: inline-flex; /* ✅ 핵심! inline-flex로 중앙 정렬 유지 */
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* BEAUTY STUDIO 두 줄 텍스트 */
 .logo-block .studio-text {
+  display: flex;
+  flex-direction: column;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
-  letter-spacing: 0.5rem;
-  line-height: 1.6;
+  letter-spacing: 0.45rem;
+  line-height: 1.5;
   color: #000;
   text-align: left;
-  /* ✅ display: inline-block 은 제거해주세요 */
 }
 
-/* 하단 한글 설명 */
-.logo-block .logo-tagline {
-  font-size: 1.1rem;
-  margin-top: 12px;
-  color: #444;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-}
