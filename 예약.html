@@ -4,166 +4,127 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>예약 | 크리크리 뷰티샵</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/booking.css" />
 </head>
 <body>
-<!-- 헤더 영역 통합 -->
-<header class="top-header">
-  <div class="logo-area">
-    <div class="logo-text-row">
-      <span class="cricri">CriCri</span>
-      <div class="studio-text">
-        <div>BEAUTY</div>
-        <div>STUDIO</div>
+  <!-- 통합 상단 헤더 -->
+  <div class="top-header">
+    <div class="logo-area">
+      <div class="logo-text-row">
+        <span class="cricri">CriCri</span>
+        <div class="studio-text">
+          <div>BEAUTY</div>
+          <div>STUDIO</div>
+        </div>
       </div>
+      <p class="logo-tagline">크리크리 뷰티 스튜디오</p>
     </div>
-    <p class="logo-tagline">크리크리 뷰티 스튜디오</p>
+
+    <div class="nav-menu">
+      <ul class="menu">
+        <li><a href="예약.html">예약</a></li>
+        <li><a href="service.html">메뉴</a></li>
+        <li><a href="map.html">찾아오시는 길</a></li>
+        <li><a href="gallery.html">갤러리</a></li>
+      </ul>
+    </div>
+
+    <div class="lang-switcher">
+      <a href="index.html">KR</a> |
+      <a href="index_en.html">EN</a> |
+      <a href="index_jp.html">JP</a> |
+      <a href="index_ch.html">CH</a> |
+      <a href="index_vn.html">VN</a>
+    </div>
   </div>
 
-  <nav class="nav-menu">
-    <ul class="menu">
-      <li><a href="예약.html">예약</a></li>
-      <li><a href="service.html">시술(서비스)</a></li>
-      <li><a href="map.html">찾아오시는 길</a></li>
-      <li><a href="gallery.html">갤러리</a></li>
+  <!-- 예약 버튼 -->
+  <div class="btn-wrap">
+    <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">네이버 예약</a>
+    <a href="http://pf.kakao.com/_SGZrn/chat" target="_blank" class="btn kakao" id="kakaoBtn">카카오톡 상담</a>
+  </div>
+
+  <p class="desc">소중한 당신을 위한 맞춤 시술, 예약 전 안내사항을 꼭 확인해주세요</p>
+
+  <!-- 동의 체크박스 -->
+  <div class="check-confirm">
+    <input type="checkbox" id="agree" />
+    <label for="agree">아래 내용을 모두 확인하였으며, 동의합니다</label>
+  </div>
+
+  <!-- 예약 전 안내사항 -->
+  <div class="section">
+    <h2>📌 예약 전 안내 사항</h2>
+    <ul>
+      <li>지각 시 시술 시간이 조정될 수 있습니다.</li>
+      <li>예약 변경은 최소 하루 전까지 부탁드립니다.</li>
+      <li>노쇼 발생 시 이후 예약이 제한됩니다.</li>
+      <li>민감성 피부/임산부는 상담 후 시술 여부가 결정됩니다.</li>
     </ul>
-  </nav>
-
-  <div class="lang-switcher">
-    <a href="index.html">KR</a> |
-    <a href="index_en.html">EN</a> |
-    <a href="index_jp.html">JP</a> |
-    <a href="index_ch.html">CH</a> |
-    <a href="index_vn.html">VN</a>
   </div>
-</header>
 
-<h1>🗓 크리크리 뷰티샵 예약</h1>
-<p class="desc">소중한 당신을 위한 맞춤 시술, 예약 전 안내사항을 꼭 확인해주세요 💖</p>
+  <!-- 예약 가능 일정 -->
+  <div class="section">
+    <h2>📆 예약 가능 일정</h2>
+    <p style="text-align:center; color:#666; font-size:0.9em;">※ 아래 달력은 참고용이며, 예약은 네이버로 진행해주세요.</p>
+    <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
+  </div>
 
-<!-- 시술 리스트 -->
-<div class="section">
-  <h2>💅 시술 리스트 및 가격</h2>
-  <table>
-    <tr><th>시술 항목</th><th>가격</th></tr>
-    <tr><td>바짝올린 베이직펌</td><td>35,000원</td></tr>
-    <tr><td>영양가득 클리닉펌</td><td>45,000원</td></tr>
-    <tr><td>선명한 눈매 블랙틴팅펌</td><td>50,000원</td></tr>
-    <tr><td>듀얼펌</td><td>65,000원</td></tr>
-    <tr><td>추가시술(클리닉영양/블랙틴팅)</td><td>10,000/15,000원</td></tr>
-    <tr><td>눈썹리프트펌</td><td>30,000원</td></tr>
-    <tr><td>자연스러운 눈썹디자인</td><td>문의</td></tr>
-    <tr><td>원데이 메이크업 </td><td>문의</td></tr>
-  </table>
-</div>
+  <!-- 왼쪽 하단 정보 박스 -->
+  <div class="info-box">
+    <p><strong>크리크리 뷰티 스튜디오</strong></p>
+    <p>영업 시간 : 10:00 ~ 20:00</p>
+    <p>대표번호 : 010-3263-6984</p>
+    <p>대전광역시 서구 둔산중로 54</p>
+    <p>사업자등록번호 : 641-22-02169</p>
+  </div>
 
-<!-- 가격표 팝업 보기 버튼 -->
-<div style="text-align: center; margin: 30px 0;">
-  <button onclick="openPricePopup()" style="
-    padding: 14px 32px;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    background-color: #d94f7b;
-    color: white;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  ">
-    📋 가격표 보기
-  </button>
-</div>
+  <!-- 푸터 -->
+  <footer style="background-color: #fef0f4; padding: 30px 20px; text-align: center;">
+    <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">크리크리 뷰티샵</div>
+    <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
+      영업시간: 11:00 ~ 20:00 ｜ 연락처: 0507-1367-6984
+    </div>
+    <div style="margin: 15px 0;">
+      <a href="http://pf.kakao.com/_SGZrn" target="_blank" style="margin: 0 10px;">
+        <img src="images/icon_kakao.png" alt="KakaoTalk" width="26" />
+      </a>
+      <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
+        <img src="images/icon_instagram.png" alt="Instagram" width="26" />
+      </a>
+      <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
+        <img src="images/icon_blog.png" alt="Blog" width="26" />
+      </a>
+      <a href="#" target="_blank" style="margin: 0 10px;">
+        <img src="images/icon_band.png" alt="Band" width="26" />
+      </a>
+    </div>
+    <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
+      &copy; 2025 Cricri Beauty Studio. All rights reserved.
+    </div>
+  </footer>
 
-<!-- 시술 상세 이미지 토글 영역 -->
-<div id="priceImageContainer" style="display: none; text-align: center; margin-bottom: 40px;">
-  <img src="images/price.png" alt="시술 가격표" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);" />
-</div>
+  <!-- 스크립트 -->
+  <script>
+    const checkbox = document.getElementById('agree');
+    const naverBtn = document.getElementById('naverBtn');
+    const kakaoBtn = document.getElementById('kakaoBtn');
 
-<!-- 주의사항 -->
-<div class="section">
-  <h2>📌 예약 전 안내사항</h2>
-  <ul>
-    <li>시술 당일엔 메이크업/선크림 없이 방문해주세요.</li>
-    <li>지각 시 시술 시간이 조정될 수 있습니다.</li>
-    <li>예약 변경은 최소 하루 전까지 부탁드립니다.</li>
-    <li>노쇼 발생 시 이후 예약이 제한됩니다.</li>
-    <li>민감성 피부/임산부는 상담 후 시술 여부가 결정됩니다.</li>
-    <li>시술 후 3시간정 세안/사우나/수영장 이용은 피해주세요.</li>
-  </ul>
-</div>
-
-<!-- 예약 일정 -->
-<div class="section">
-  <h2>📆 예약 가능 일정</h2>
-  <p style="text-align:center; color:#666; font-size:0.9em;">※ 아래 달력은 참고용이며, 예약은 네이버로 진행해주세요.</p>
-  <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
-</div>
-
-<!-- 동의 확인 -->
-<div class="check-confirm">
-  <input type="checkbox" id="agree" />
-  <label for="agree">위 내용을 모두 확인하였으며, 동의합니다.</label>
-</div>
-
-<!-- 예약 버튼 -->
-<div class="btn-wrap">
-  <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">네이버 예약</a>
-  <a href="http://pf.kakao.com/_SGZrn/chat" target="_blank" class="btn kakao" id="kakaoBtn">카카오톡 상담</a>
-</div>
-
-<!-- 스크립트: 버튼 활성화 + 가격표 보기 -->
-<script>
-  function openPricePopup() {
-    window.open('images/price.png', '_blank', 'width=800,height=600,resizable=yes');
-  }
-
-  // 기존 예약 버튼 스크립트 유지
-  const checkbox = document.getElementById('agree');
-  const naverBtn = document.getElementById('naverBtn');
-  const kakaoBtn = document.getElementById('kakaoBtn');
-
-  checkbox.addEventListener('change', () => {
-    const isChecked = checkbox.checked;
-    naverBtn.classList.toggle('active', isChecked);
-    kakaoBtn.classList.toggle('active', isChecked);
-  });
-
-  [naverBtn, kakaoBtn].forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      if (!checkbox.checked) {
-        e.preventDefault();
-        alert("예약 전 안내사항에 동의해 주세요.");
-      }
+    checkbox.addEventListener('change', () => {
+      const isChecked = checkbox.checked;
+      naverBtn.classList.toggle('active', isChecked);
+      kakaoBtn.classList.toggle('active', isChecked);
     });
-  });
-</script>
 
-<!-- 푸터 -->
-<footer style="background-color:#fef0f4; padding: 30px 20px; text-align: center;">
-  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">크리크리 뷰티샵</div>
-  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
-    영업시간: 11:00 ~ 20:00 ｜ 연락처: 0507-1367-6984
-  </div>
-  <div style="margin: 15px 0;">
-   <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="24" />
-    </a>
-    <a href="#" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/3991/3991999.png" alt="KakaoTalk" width="24" />
-    </a>
-    <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/11423/11423248.png" alt="Blog" width="24" />
-    </a>
-  </div>
-  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-    &copy; 2025 Cricri Beauty Shop. All rights reserved.
-  </div>
-</footer>
-
+    [naverBtn, kakaoBtn].forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (!checkbox.checked) {
+          e.preventDefault();
+          alert("예약 전 안내사항에 동의해 주세요.");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
-
