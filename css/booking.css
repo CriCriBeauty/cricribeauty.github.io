@@ -1,3 +1,4 @@
+
 /* 예약 페이지 전용 스타일 */
 
 /* 기본 초기화 */
@@ -45,7 +46,7 @@ h1 {
 }
 
 .lang-switcher a {
-  color: #333 !important;  /* 어두운 텍스트로 변경 */
+  color: #333 !important;
   text-decoration: none;
   margin: 0 5px;
   font-weight: bold;
@@ -186,7 +187,7 @@ iframe {
   .btn { width: 90%; display: block; margin: 10px auto; }
 
  .menu {
-    flex-wrap: wrap; /* 가로 한 줄에서 넘치면 자동 줄바꿈 */
+    flex-wrap: wrap;
     gap: 16px;
     justify-content: center;
     padding: 10px 0;
@@ -194,7 +195,7 @@ iframe {
 
   .menu li a {
     font-size: 1rem;
-    white-space: nowrap; /* 단어 줄바꿈 방지 */
+    white-space: nowrap;
   }
 
   .lang-switcher {
@@ -205,7 +206,7 @@ iframe {
   }
 
   .nav {
-    top: 50px; /* 언어 선택 아래로 약간 내려오도록 조정 */
+    top: 50px;
     left: 0;
     transform: none;
     width: 100%;
@@ -217,20 +218,19 @@ iframe {
   position: fixed;
   bottom: 40px;
   left: 40px;
-  background-color: rgba(0, 0, 0, 0.15); /* 연한 반투명 회색 */
-  color: #222; /* ✅ 더 진한 회색 */
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #222;
   padding: 20px 28px;
   border-radius: 12px;
-  font-size: 15.5px; /* ✅ 글자 크기 ↑ */
+  font-size: 15.5px;
   line-height: 1.8;
-  font-weight: 600; /* ✅ 글자 굵기 ↑ */
+  font-weight: 600;
   font-family: 'Noto Sans KR', sans-serif;
   max-width: 300px;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* 모바일 반응형 */
 @media (max-width: 768px) {
   .info-box {
     font-size: 14px;
@@ -241,43 +241,107 @@ iframe {
   }
 }
 
-/* 로고 전체 블록 */
-.logo-block {
-  text-align: center;
-  margin-top: 60px;
-  margin-bottom: 40px;
-}
-
-/* CriCri 손글씨 */
-.logo-block .cricri {
-  font-family: 'Dancing Script', cursive;
-  font-size: 3.5rem;
-  color: #000;
-  vertical-align: top;
-  display: inline-block;
-  margin-right: 20px;
-}
-
-
-/* CriCri + 두 줄 텍스트 한 행 정렬 */
-.logo-text-row {
-  display: inline-flex; /* ✅ 핵심! inline-flex로 중앙 정렬 유지 */
-  flex-direction: row;
-  justify-content: center;
+/* 새 통합 헤더 스타일 */
+.top-header {
+  display: flex;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 24px;
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
-/* BEAUTY STUDIO 두 줄 텍스트 */
-.logo-block .studio-text {
+.logo-area {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.logo-text-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.logo-area .cricri {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  color: #000;
+}
+
+.logo-area .studio-text {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   letter-spacing: 0.45rem;
   line-height: 1.5;
   color: #000;
-  text-align: left;
 }
 
+.logo-area .logo-tagline {
+  margin-top: 4px;
+  font-size: 0.95rem;
+  color: #444;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.nav-menu {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.nav-menu .menu {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-menu .menu li a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-menu .menu li a:hover {
+  color: #d94f7b;
+}
+
+@media screen and (max-width: 768px) {
+  .top-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+  }
+
+  .logo-area {
+    align-items: center;
+  }
+
+  .logo-text-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-menu {
+    margin-top: 20px;
+  }
+
+  .nav-menu .menu {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .lang-switcher {
+    margin-top: 12px;
+    font-size: 0.9rem;
+  }
+}
