@@ -244,9 +244,10 @@ iframe {
 /* 새 통합 헤더 스타일 */
 .top-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 20px 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -256,8 +257,8 @@ iframe {
 .logo-area {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-top: 10px;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .logo-text-row {
@@ -290,58 +291,21 @@ iframe {
 }
 
 .nav-menu {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 .nav-menu .menu {
   display: flex;
   gap: 40px;
   list-style: none;
+  justify-content: center;
 }
 
-.nav-menu .menu li a {
-  color: #333;
+.lang-switcher {
+  position: absolute;
+  top: 16px;
+  right: 30px;
+  font-size: 1.3rem;
   font-weight: bold;
-  text-decoration: none;
-  font-size: 1.2rem;
 }
 
-.nav-menu .menu li a:hover {
-  color: #d94f7b;
-}
-
-@media screen and (max-width: 768px) {
-  .top-header {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 20px;
-  }
-
-  .logo-area {
-    align-items: center;
-  }
-
-  .logo-text-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .nav-menu {
-    margin-top: 20px;
-  }
-
-  .nav-menu .menu {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .lang-switcher {
-    margin-top: 12px;
-    font-size: 0.9rem;
-  }
-}
