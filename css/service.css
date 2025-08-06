@@ -1,5 +1,3 @@
-/* service.css - booking.html 스타일 기반 통일본 */
-
 /* 기본 초기화 */
 * {
   margin: 0;
@@ -7,14 +5,8 @@
   box-sizing: border-box;
 }
 
-/* 공통 버튼 효과 */
-button:hover {
-  background-color: #c83b6f;
-  transform: scale(1.02);
-}
-
 body {
-  background: linear-gradient(to bottom, #fefbf9 0%, #f7eee9 40%);
+  background-color: #fef0f4;
   font-family: 'Noto Sans KR', sans-serif;
   color: #333;
   padding-top: 120px;
@@ -105,13 +97,13 @@ body {
   background-color: #c0397e;
 }
 
-/* 우측 시술 설명 박스 */
+/* 시술 설명 */
 .section {
   flex: 2 1 400px;
-  background: transparent; /* ✅ 배경 제거 */
+  background: transparent;
   padding: 30px 24px;
-  border-radius: 16px;
-  box-shadow: none; /* ✅ 그림자 제거 (선택) */
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .section h2 {
@@ -121,7 +113,6 @@ body {
   margin-bottom: 24px;
 }
 
-/* 시술 블록 */
 .service-block {
   margin-bottom: 40px;
 }
@@ -146,7 +137,7 @@ body {
   margin-bottom: 4px;
 }
 
-/* 확대 이미지 모달 */
+/* 모달 확대 이미지 */
 #modal {
   display: none;
   position: fixed;
@@ -203,21 +194,4 @@ body {
     width: 90%;
     margin: 10px auto;
   }
-}
-/* 하단 정보 */
-.info-box {
-  position: fixed;
-  bottom: 40px;
-  left: 40px;
-  background-color: rgba(0, 0, 0, 0.15);
-  color: #222;
-  padding: 20px 28px;
-  border-radius: 12px;
-  font-size: 15.5px;
-  line-height: 1.8;
-  font-weight: 600;
-  font-family: 'Noto Sans KR', sans-serif;
-  max-width: 300px;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
