@@ -3,168 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>예약 | 크리크리 뷰티샵</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/booking.css" />
+  <title>시술 안내 | 크리크리 뷰티샵</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/service.css" />
 </head>
 <body>
-<!-- 상단 헤더 -->
-<div class="header-container">
-  <div class="logo-area centered">
-    <div class="logo-text-row">
-      <span class="cricri">CriCri</span>
-      <div class="studio-text">
-        <div>BEAUTY</div>
-        <div>STUDIO</div>
-      </div>
-    </div>
-    <p class="logo-tagline">크리크리 뷰티 스튜디오</p>
-  </div>
 
-  <ul class="menu centered">
+<!-- 언어 선택 -->
+<div class="lang-switcher">
+  <a href="index.html">KR</a> |
+  <a href="index_en.html">EN</a> |
+  <a href="index_jp.html">JP</a> |
+  <a href="index_ch.html">CH</a> |
+  <a href="index_vn.html">VN</a>
+</div>
+
+<!-- 네비게이션 -->
+<header class="nav">
+  <ul class="menu">
     <li><a href="예약.html">예약</a></li>
     <li><a href="service.html">시술(서비스)</a></li>
     <li><a href="map.html">찾아오시는 길</a></li>
     <li><a href="gallery.html">갤러리</a></li>
   </ul>
-  <div class="lang-switcher">
-    <a href="index.html">KR</a> |
-    <a href="index_en.html">EN</a> |
-    <a href="index_jp.html">JP</a> |
-    <a href="index_ch.html">CH</a> |
-    <a href="index_vn.html">VN</a>
+</header>
+
+<!-- 본문 콘텐츠 -->
+<div class="service-container">
+  <!-- 왼쪽 가격표 이미지 -->
+  <div class="price-box">
+    <img src="images/price.png" alt="시술 가격표" class="price-img" />
+    <button onclick="openModal()">🔍 이미지 크게 보기</button>
+  </div>
+
+  <!-- 오른쪽 시술 상세 설명 -->
+  <div class="section">
+    <h2>💅 시술 상세 안내</h2>
+
+    <div class="service-block">
+      <h3>💖 영양가득 클리닉펌</h3>
+      <p>속눈썹에 컬을 주면서 동시에 단백질과 케라틴 같은 영양 성분을 흡수시켜 손상 없이 건강하고 윤기나는 컬을 만들어주는 펌입니다.</p>
+      <ul>
+        <li>속눈썹 손상 방지</li>
+        <li>자연스러운 컬 + 윤기 효과</li>
+      </ul>
+    </div>
+
+    <!-- 더 많은 시술은 동일 구조로 추가 -->
   </div>
 </div>
-<!-- 시술 상세 안내 -->
-<div class="section">
-  <h2>💅 시술 상세 안내</h2>
 
-  <div class="service-block">
-    <h3>💖 영양가득 클리닉펌</h3>
-    <p>속눈썹에 컬을 주면서 동시에 단백질과 케라틴 같은 영양 성분을 흡수시켜 손상 없이 건강하고 윤기나는 컬을 만들어주는 펌입니다.</p>
-    <p><strong>주요 특징:</strong></p>
-    <ul>
-      <li>속눈썹 손상 방지</li>
-      <li>자연스러운 컬 + 윤기 효과</li>
-    </ul>
-    <p><strong>이런 분께 추천:</strong></p>
-    <ul>
-      <li>속눈썹이 얇고 손상되기 쉬운 분</li>
-      <li>컬과 영양을 동시에 원하시는 분</li>
-    </ul>
-  </div>
+<!-- 이미지 확대용 모달 -->
+<div id="modal" onclick="closeModal()">
+  <img src="images/price.png" alt="확대된 시술 가격표" />
+</div>
 
-  <div class="service-block">
-    <h3>✨ 바짝올린 베이직펌</h3>
-    <p>뿌리부터 강하게 컬을 주어 뷰러 없이도 또렷한 눈매를 만들어주는 기본 펌 시술입니다.</p>
-    <p><strong>주요 특징:</strong></p>
-    <ul>
-      <li>강한 컬링력</li>
-      <li>눈매 또렷한 인상 연출</li>
-    </ul>
-    <p><strong>이런 분께 추천:</strong></p>
-    <ul>
-      <li>속눈썹이 아래로 처지는 분</li>
-      <li>매일 뷰러 사용이 번거로운 분</li>
-    </ul>
-  </div>
-
-  <div class="service-block">
-    <h3>🐼 선명한눈매 블랙틴팅펌</h3>
-    <p>속눈썹을 위로 컬링하면서 동시에 블랙 컬러로 틴팅해 마스카라 없이도 눈매가 선명해 보이는 시술입니다.</p>
-    <p><strong>주요 특징:</strong></p>
-    <ul>
-      <li>컬 + 블랙 컬러 틴팅 동시 진행</li>
-      <li>마스카라 효과</li>
-    </ul>
-    <p><strong>이런 분께 추천:</strong></p>
-    <ul>
-      <li>속눈썹이 연하거나 존재감이 약한 분</li>
-      <li>메이크업을 간소화하고 싶은 분</li>
-    </ul>
-  </div>
-
-  <div class="service-block">
-    <h3>👀 듀얼펌</h3>
-    <p>뿌리는 바짝 리프팅하고 끝은 자연스럽게 컬을 줘서 또렷하면서도 부드러운 인상을 연출하는 프리미엄 펌입니다.</p>
-    <p><strong>주요 특징:</strong></p>
-    <ul>
-      <li>리프팅 + 자연 컬의 이중 효과</li>
-      <li>풍성하고 길어 보이는 효과</li>
-    </ul>
-    <p><strong>이런 분께 추천:</strong></p>
-    <ul>
-      <li>인상은 또렷하게, 눈매는 부드럽게 연출하고 싶은 분</li>
-      <li>펌 효과를 확실히 원하시는 분</li>
-    </ul>
-  </div>
-
-  <div class="service-block">
-    <h3>🌿 눈썹 리프트펌</h3>
-    <p>눈썹결을 위로 세우고 고정해 숱 많고 정돈된 인상을 만들어주는 시술입니다.</p>
-    <p><strong>주요 특징:</strong></p>
-    <ul>
-      <li>눈썹 결 방향 정돈 및 유지</li>
-      <li>눈썹 숱 많아 보이는 효과</li>
-    </ul>
-    <p><strong>이런 분께 추천:</strong></p>
-    <ul>
-      <li>눈썹이 옆으로 눕거나 흐트러지는 분</li>
-      <li>눈썹 숱이 없어 보여 고민인 분</li>
-    </ul>
-  </div>
-
-  <div class="service-block">
-    <h3>💎 눈썹 디자인</h3>
-    <p>얼굴형과 분위기에 맞춘 자연스러운 눈썹 형태를 디자인합니다. (문의)</p>
-    <p><strong>주요 특징:</strong></p>
-    <ul>
-      <li>맞춤형 눈썹 라인 설계</li>
-      <li>자연스럽고 조화로운 인상</li>
-    </ul>
-    <p><strong>이런 분께 추천:</strong></p>
-    <ul>
-      <li>눈썹 모양이 마음에 들지 않는 분</li>
-      <li>처음 눈썹 디자인을 받아보고 싶은 분</li>
-    </ul>
-  </div>
-  
-   <!-- 왼쪽 하단 정보 박스 -->
-  <div class="info-box">
-    <p><strong>크리크리 뷰티 스튜디오</strong></p>
-    <p>영업 시간 : 10:00 ~ 20:00</p>
-    <p>대표번호 : 010-3263-6984</p>
-    <p>대전광역시 서구 둔산중로 54</p>
-     <p>사업자등록번호 : 641-22-02169</p>
-  </div>
-  
 <!-- 푸터 -->
- <footer style="background-color: transparent; padding: 30px 20px; text-align: center;">
-    <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">크리크리 뷰티샵</div>
-    <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
-      영업시간: 10:00 ~ 20:00 ｜ 연락처: 0507-1367-6984
-    </div>
-   <div style="margin: 15px 0;">
-  <a href="http://pf.kakao.com/_SGZrn" target="_blank" style="margin: 0 10px;">
-    <img src="https://cdn-icons-png.flaticon.com/512/3991/3991999.png" alt="KakaoTalk" width="26" />
-  </a>
-  <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="26" />
-  </a>
-  <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
-    <img src="https://cdn-icons-png.flaticon.com/512/11423/11423248.png" alt="Blog" width="26" />
-  </a>
-  <a href="#" target="_blank" style="margin: 0 10px;">
-    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968850.png" alt="Band" width="26" />
-  </a>
-</div>
-    <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-      &copy; 2025 Cricri Beauty Studio. All rights reserved.
-    </div>
-  </footer>
+<footer style="padding: 30px 20px; text-align: center; background-color: transparent;">
+  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">크리크리 뷰티샵</div>
+  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
+    영업시간: 10:00 ~ 20:00 ｜ 연락처: 0507-1367-6984
+  </div>
+  <div style="margin: 15px 0;">
+    <a href="http://pf.kakao.com/_SGZrn" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/3991/3991999.png" alt="KakaoTalk" width="26" />
+    </a>
+    <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="26" />
+    </a>
+    <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/11423/11423248.png" alt="Blog" width="26" />
+    </a>
+    <a href="#" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968850.png" alt="Band" width="26" />
+    </a>
+  </div>
+  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
+    &copy; 2025 Cricri Beauty Studio. All rights reserved.
+  </div>
+</footer>
 
-  
-</div>
+<script>
+  function openModal() {
+    document.getElementById('modal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
+</script>
 
 </body>
 </html>
