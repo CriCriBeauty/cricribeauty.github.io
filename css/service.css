@@ -108,10 +108,10 @@ body {
 /* 우측 시술 설명 박스 */
 .section {
   flex: 2 1 400px;
-  background: white;
+  background: transparent; /* ✅ 배경 제거 */
   padding: 30px 24px;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: none; /* ✅ 그림자 제거 (선택) */
 }
 
 .section h2 {
