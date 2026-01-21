@@ -372,3 +372,35 @@ body, html {
   }
 }
 
+/*  모바일 info-box 아래로 정렬 방문자 맨위로 추가 */
+/* ===== Mobile overlap fix ===== */
+@media (max-width: 480px){
+
+  /* info-box를 너무 아래에 붙이지 말고 위로 올리고 폭 줄이기 */
+  .info-box{
+    left: 12px;
+    right: 12px;     /* 모바일에서는 좌우로 꽉 */
+    bottom: 110px;   /* ✅ 아래 고정 버튼들(문의하기/예약) 공간 확보 */
+    width: auto;
+    max-width: 420px;
+  }
+
+  /* CTA 버튼 영역이 겹치면 여백 확보(사이트 구조에 따라 필요) */
+  .cta-buttons{
+    margin-bottom: 120px; /* ✅ info-box와 챗봇 버튼이 겹치지 않게 */
+  }
+
+  /* 챗봇 버튼은 더 아래/오른쪽으로 확실히 */
+  #chatbot-toggle{
+    right: 14px;
+    bottom: 22px;
+    z-index: 9999;
+  }
+
+  /* 방문자 배지는 한 줄에 다 못 들어가면 자동 줄바꿈(이미 flex-wrap 있음) */
+  .visitor-badges{
+    gap: 6px;
+  }
+}
+
+
