@@ -9,6 +9,8 @@ body, html {
   height: 100%;
   font-family: 'Noto Sans KR', sans-serif;
   color: white;
+  /* ✅ 하단 고정 info-box 공간 확보 (겹침 방지 핵심) */
+  padding-bottom: 180px;
 }
 
 /* 배경 이미지 */
@@ -30,6 +32,7 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 5; /* ✅ info-box와 겹침 정리 */
 }
 
 .logo-slide h1 {
@@ -39,6 +42,7 @@ body, html {
   overflow: hidden;
   animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
 }
+
 /* CriCri - 손글씨 느낌 */
 .logo-slide .slide:nth-child(1) {
   font-family: 'Dancing Script', cursive;
@@ -46,7 +50,6 @@ body, html {
   font-size: 3.5rem;
   animation-delay: 0s;
 }
-
 
 /* BEAUTY & STUDIO - 고정폭 산세리프체 */
 .logo-slide .slide:nth-child(2),
@@ -62,6 +65,7 @@ body, html {
   animation: fadeIn 2s ease-in-out forwards;
   opacity: 0;
 }
+
 .tagline-slide {
   margin-top: 20px;
   text-align: center;
@@ -81,9 +85,7 @@ body, html {
 .tagline-slide .tagline:nth-child(3) { animation-delay: 4s; }
 
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+  to { opacity: 1; }
 }
 
 /* 네비게이션 */
@@ -93,6 +95,7 @@ body, html {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  z-index: 20; /* ✅ 상단 요소가 항상 위에 */
 }
 
 .menu {
@@ -107,7 +110,7 @@ body, html {
   color: white;
   font-weight: bold;
   text-decoration: none;
-  font-size: 1.3rem; /* 또는 1.25rem 등으로 변경 가능 1rem ≒ 16px */
+  font-size: 1.3rem;
   transition: color 0.3s;
 }
 
@@ -120,9 +123,9 @@ body, html {
   position: absolute;
   top: 20px;
   right: 30px;
-  font-size: 1.3rem;      /* 글자 크기 조절 */
+  font-size: 1.3rem;
   font-weight: bold;
-  z-index: 10;
+  z-index: 30;
 }
 
 .lang-switcher a {
@@ -134,12 +137,15 @@ body, html {
 .lang-switcher a:hover {
   text-decoration: underline;
 }
-/* 버튼 설정(ourservice, booking onlie) */
+
+/* 버튼 설정(ourservice, booking online) */
 .cta-buttons {
   margin-top: 40px;
   display: flex;
   gap: 20px;
   justify-content: center;
+  z-index: 8;
+  position: relative;
 }
 
 .btn {
@@ -158,6 +164,7 @@ body, html {
   color: black;
   transform: scale(1.05);
 }
+
 /* 한줄 메모 */
 .subtitle {
   font-size: 1.1rem;
@@ -167,10 +174,15 @@ body, html {
   font-weight: 300;
 }
 
+/* ✅ 모바일 */
 @media (max-width: 768px) {
+  body, html {
+    padding-bottom: 210px; /* ✅ 모바일은 info-box가 더 커질 수 있어 넉넉히 */
+  }
+
   .logo-slide h1 {
     font-size: 2rem;
-    white-space: normal; /* 줄바꿈 허용 */
+    white-space: normal;
     line-height: 1.4;
     padding: 0 20px;
   }
@@ -189,18 +201,21 @@ body, html {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: nowrap;        /* ❗ 줄바꿈 방지 */
+    flex-wrap: nowrap;
     gap: 10px;
     padding: 0 10px;
-    overflow-x: auto;         /* 공간 부족 시 가로 스크롤 허용 */
+    overflow-x: auto;
+    /* ✅ 하단 info-box와 확실히 분리 */
+    margin-bottom: 14px;
   }
 
   .btn {
     font-size: 0.9rem;
     padding: 10px 16px;
-    white-space: nowrap;      /* 텍스트 줄바꿈 방지 */
-    flex-shrink: 0;           /* ❗ 공간 줄어도 버튼 크기 유지 */
+    white-space: nowrap;
+    flex-shrink: 0;
   }
+
   .menu {
     flex-direction: column;
     gap: 10px;
@@ -216,12 +231,13 @@ body, html {
     top: 15px;
   }
 
- .nav {
+  .nav {
     top: 100px;
     left: 20px;
     transform: none;
     text-align: left;
   }
+
   .background {
     background-position: center top;
   }
@@ -276,14 +292,15 @@ body, html {
   color: #333;
   font-weight: 500;
 }
+
 #chatbot-box {
-  color: #333;  /* ✅ 챗봇 텍스트를 어둡게 보여줌 */
+  color: #333;
 }
 
 #chatbot-box p {
   margin-top: 10px;
   line-height: 1.5;
-  color: #333;  /* 혹시라도 p 태그 따로 들어오면 대비 */
+  color: #333;
 }
 
 .seo-text-hidden {
@@ -296,35 +313,36 @@ body, html {
   visibility: hidden;
 }
 
-/* 왼쪽 하단 정보 박스 */
+/* ==============================
+   ✅ 왼쪽 하단 정보 박스 (핵심 수정)
+   - absolute → fixed
+   - 모바일 bottom 땜질 제거
+   - 가독성/크기/겹침 정리
+   ============================== */
 .info-box {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  color: rgba(255, 255, 255, 0.95);
-  background-color: rgba(0, 0, 0, 0.45); /* 반투명 배경 */
-  padding: 20px 28px;
-  border-radius: 12px;
-  font-size: 15px;
-  line-height: 1.8;
-  z-index: 10;
-  max-width: 320px;
+  position: fixed;
+  bottom: 26px;
+  left: 26px;
+
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  padding: 18px 22px;
+  border-radius: 14px;
+
+  font-size: 14px;
+  line-height: 1.75;
+
+  z-index: 60;
+  max-width: 340px;
+
   font-family: 'Noto Sans KR', sans-serif;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
 }
 
-/* 모바일 반응형 */
-@media (max-width: 768px) {
-  .info-box {
-    bottom: 20px;
-    left: 10px;
-    font-size: 14px;
-    padding: 16px 20px;
-    max-width: 90%;
-  }
-}
-
-/* ===== Visitor Counter (Luxury Minimal) ===== 방문자수 카운트 통계*/
+/* ✅ (선택) 방문자 뱃지: 원하면 숨김 처리해도 됨 */
 .visitor-badges{
   margin-top: 12px;
   display: flex;
@@ -342,6 +360,7 @@ body, html {
 
   border: 1px solid rgba(255,255,255,0.22);
   background: rgba(0,0,0,0.28);
+
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 
@@ -362,8 +381,49 @@ body, html {
   letter-spacing: 0.02em;
 }
 
-/* 모바일에서 info-box가 작아질 때도 깔끔하게 */
-@media (max-width: 480px){
+/* 모바일 반응형: info-box를 하단 중앙으로 이동 + 폭 제한 */
+@media (max-width: 768px) {
+  .info-box {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 18px;
+
+    width: calc(100% - 28px);
+    max-width: 460px;
+
+    padding: 14px 16px;
+    border-radius: 16px;
+    font-size: 13.5px;
+  }
+}
+
+/* 아주 작은 화면(폰)에서는 버튼/챗봇과 겹치지 않게 */
+@media (max-width: 480px) {
+  body, html {
+    padding-bottom: 230px; /* ✅ 겹침 완전 방지 */
+  }
+
+  /* ✅ 기존에 있던 bottom:110px 땜질 제거 */
+  .info-box {
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    width: calc(100% - 24px);
+    max-width: 460px;
+  }
+
+  /* 챗봇 버튼 위치는 유지하되, info-box가 더 위로 올라가지 않게 */
+  #chatbot-toggle{
+    right: 14px;
+    bottom: 22px;
+    z-index: 9999;
+  }
+
+  .visitor-badges{
+    gap: 6px;
+  }
+
   .visitor-badges .badge{
     padding: 7px 10px;
   }
@@ -372,35 +432,10 @@ body, html {
   }
 }
 
-/*  모바일 info-box 아래로 정렬 방문자 맨위로 추가 */
-/* ===== Mobile overlap fix ===== */
-@media (max-width: 480px){
-
-  /* info-box를 너무 아래에 붙이지 말고 위로 올리고 폭 줄이기 */
-  .info-box{
-    left: 12px;
-    right: 12px;     /* 모바일에서는 좌우로 꽉 */
-    bottom: 110px;   /* ✅ 아래 고정 버튼들(문의하기/예약) 공간 확보 */
-    width: auto;
-    max-width: 420px;
-  }
-
-  /* CTA 버튼 영역이 겹치면 여백 확보(사이트 구조에 따라 필요) */
-  .cta-buttons{
-    margin-bottom: 120px; /* ✅ info-box와 챗봇 버튼이 겹치지 않게 */
-  }
-
-  /* 챗봇 버튼은 더 아래/오른쪽으로 확실히 */
-  #chatbot-toggle{
-    right: 14px;
-    bottom: 22px;
-    z-index: 9999;
-  }
-
-  /* 방문자 배지는 한 줄에 다 못 들어가면 자동 줄바꿈(이미 flex-wrap 있음) */
-  .visitor-badges{
-    gap: 6px;
-  }
-}
-
-
+/* ==============================
+   ✅ 방문자 카운터를 "완전 숨김" 하고 싶으면
+   아래 주석을 풀어 사용하세요.
+   ============================== */
+/*
+.visitor-badges { display: none !important; }
+*/
