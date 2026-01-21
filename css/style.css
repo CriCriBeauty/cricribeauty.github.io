@@ -323,3 +323,52 @@ body, html {
     max-width: 90%;
   }
 }
+
+/* ===== Visitor Counter (Luxury Minimal) ===== 방문자수 카운트 통계*/
+.visitor-badges{
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.visitor-badges .badge{
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+
+  padding: 8px 10px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.28);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.visitor-badges .badge-label{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.visitor-badges .badge-value{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+/* 모바일에서 info-box가 작아질 때도 깔끔하게 */
+@media (max-width: 480px){
+  .visitor-badges .badge{
+    padding: 7px 10px;
+  }
+  .visitor-badges .badge-value{
+    font-size: 13px;
+  }
+}
+
