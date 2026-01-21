@@ -200,12 +200,11 @@ function setLang(lang) {
   }
 </script>
 <script>
-  // ... (기존 챗봇 코드 그대로)
+  // 페이지 로드 완료 후 실행
+  document.addEventListener("DOMContentLoaded", function () {
 
-  // ✅ 방문자 카운터 (CountAPI)
-  (function updateVisitorCount() {
-    const siteKey = "cricribeauty-github-io"; // 사이트 고유키(원하면 더 바꿔도 됨)
-    const pageKey = "index";                 // 페이지 키 (index용)
+    const siteKey = "cricribeauty-github-io";
+    const pageKey = "index";
 
     const today = new Date();
     const yyyy = today.getFullYear();
@@ -213,34 +212,33 @@ function setLang(lang) {
     const dd = String(today.getDate()).padStart(2, "0");
     const todayKey = `${siteKey}-${pageKey}-${yyyy}${mm}${dd}`;
 
-    // Total (누적) 카운트 증가 + 가져오기
+    // TOTAL
     fetch(`https://api.countapi.xyz/hit/${siteKey}/${pageKey}`)
-      .then(r => r.json())
+      .then(res => res.json())
       .then(data => {
-        const el = document.getElementById("visit-total");
-        if (el) el.textContent = data.value;
+        document.getElementById("visit-total").textContent = data.value;
       })
-      .catch(() => {
-        const el = document.getElementById("visit-total");
-        if (el) el.textContent = "N/A";
+      .catch(err => {
+        console.error("Total counter error", err);
+        document.getElementById("visit-total").textContent = "0";
       });
 
-    // Today (오늘) 카운트 증가 + 가져오기
+    // TODAY
     fetch(`https://api.countapi.xyz/hit/${siteKey}/${todayKey}`)
-      .then(r => r.json())
+      .then(res => res.json())
       .then(data => {
-        const el = document.getElementById("visit-today");
-        if (el) el.textContent = data.value;
+        document.getElementById("visit-today").textContent = data.value;
       })
-      .catch(() => {
-        const el = document.getElementById("visit-today");
-        if (el) el.textContent = "N/A";
+      .catch(err => {
+        console.error("Today counter error", err);
+        document.getElementById("visit-today").textContent = "0";
       });
-  })();
-</script>
 
+  });
+</script>
 </body>
 </html>
+
 
 
 
