@@ -120,7 +120,10 @@
         <div class="sf-rbody">질문을 선택하면 추천이 표시됩니다.</div>
         <div class="sf-actions">
           <a class="btn" href="service.html">시술 자세히 보기</a>
-          <a class="btn" href="예약.html">예약하기</a>
+          <a class="btn kakao" href="http://pf.kakao.com/_SGZrn/chat" 
+             target="_blank" id="sfKakaoBtn">
+             카카오톡 상담하기
+          </a>
         </div>
       </div>
     </div>
@@ -348,11 +351,36 @@ document.addEventListener("click", (e) => {
 
 // 기본 탭: 속눈썹
 setActivePane("lash");
+
+// 카카오 상담 버튼 클릭 시 추천 내용 자동 복사
+document.addEventListener("click", function(e) {
+  const kakaoBtn = e.target.closest("#sfKakaoBtn");
+  if (!kakaoBtn) return;
+
+  // 현재 활성화된 추천 결과 가져오기
+  const activePane = document.querySelector(".sf-pane.active");
+  const resultText = activePane.querySelector(".sf-rbody").innerText;
+
+  if (!resultText || resultText.includes("질문을 선택하면")) {
+    alert("먼저 스타일을 선택해주세요 😊");
+    e.preventDefault();
+    return;
+  }
+
+  const message = "안녕하세요 😊\n홈페이지 추천 결과는 아래와 같아요:\n\n" + resultText + "\n\n상담 요청드립니다.";
+
+  navigator.clipboard.writeText(message).then(() => {
+    alert("추천 내용이 복사되었습니다!\n카카오톡에 붙여넣기 해주세요 💕");
+  }).catch(() => {
+    alert("복사에 실패했습니다. 직접 복사해주세요.");
+  });
+});
   
 </script>
 
 </body>
 </html>
+
 
 
 
