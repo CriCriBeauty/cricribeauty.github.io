@@ -513,24 +513,33 @@ body {
   height: 100vh;
 }
 
-/* Tagline Animation */
-.tagline-line {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: taglineFadeUp 0.9s ease forwards;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
-  font-size: clamp(14px, 2.8vw, 18px);
-  color: rgba(255,255,255,0.92);
-  line-height: 1.45;
+.tagline {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: rgba(255,255,255,0.9);
+  overflow: hidden;
 }
 
-.tagline-line.t1 { animation-delay: 0.25s; }
-.tagline-line.t2 { animation-delay: 0.55s; }
-
-@keyframes taglineFadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* 빛이 지나가는 효과 */
+.tagline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  animation: shimmer 3.5s infinite;
 }
 
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 150%; }
+}
