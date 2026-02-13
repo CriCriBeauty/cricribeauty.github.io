@@ -1,343 +1,429 @@
-/* 기본 스타일 초기화 */
-* {
+/* =========================================================
+   Cricri Beauty Studio - style.css (FULL)
+   - Desktop: 기존 디자인 유지
+   - Mobile: 전용 헤더(햄버거) + 겹침 제거
+========================================================= */
+
+/* -------------------------
+   Base / Reset
+-------------------------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-body, html {
-  height: 100%;
-  font-family: 'Noto Sans KR', sans-serif;
-  color: white;
-  /* ✅ 하단 고정 info-box 공간 확보 (겹침 방지 핵심) */
-  padding-bottom: 180px;
-}
-
-/* 배경 이미지 */
+/* -------------------------
+   Background
+-------------------------- */
 .background {
-  background-image: url('../images/main.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: fixed;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  background: url("../images/intro.png") center/cover no-repeat;
+  z-index: -2;
+}
+
+/* 배경 위에 살짝 어둡게(글자 가독성) */
+.background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
   z-index: -1;
 }
 
-/* 로고 슬라이드 애니메이션 */
+/* -------------------------
+   Logo / Main Center Block
+-------------------------- */
 .logo-slide {
-  position: absolute;
-  top: 66%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 110px 18px 80px; /* 상단 요소(언어/메뉴) 공간 확보 */
   text-align: center;
-  z-index: 5; /* ✅ info-box와 겹침 정리 */
 }
 
 .logo-slide h1 {
-  font-size: 3rem;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+  margin: 0;
+  line-height: 1.05;
 }
 
-/* CriCri - 손글씨 느낌 */
 .logo-slide .slide:nth-child(1) {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(54px, 8vw, 86px);
   font-weight: 400;
-  font-size: 3.5rem;
-  animation-delay: 0s;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  animation: fadeUp 0.9s ease both;
 }
 
-/* BEAUTY & STUDIO - 고정폭 산세리프체 */
 .logo-slide .slide:nth-child(2),
 .logo-slide .slide:nth-child(3) {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(28px, 6vw, 58px);
   font-weight: 600;
-  letter-spacing: 0.2em;
-}
-
-.logo-slide .slide {
-  display: inline-block;
-  padding: 0 0.2em;
-  animation: fadeIn 2s ease-in-out forwards;
-  opacity: 0;
-}
-
-.tagline-slide {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 1.2rem;
-  color: white;
-  font-weight: 300;
-}
-
-.tagline-slide .tagline {
+  letter-spacing: 10px;
   display: block;
-  opacity: 0;
-  animation: fadeIn 1.2s ease-in-out forwards;
+  animation: fadeUp 0.9s ease both;
 }
 
-.tagline-slide .tagline:nth-child(1) { animation-delay: 0s; }
-.tagline-slide .tagline:nth-child(2) { animation-delay: 2s; }
-.tagline-slide .tagline:nth-child(3) { animation-delay: 4s; }
+.logo-slide .slide:nth-child(2) { animation-delay: 0.15s; }
+.logo-slide .slide:nth-child(3) { animation-delay: 0.3s; }
 
-@keyframes fadeIn {
-  to { opacity: 1; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-/* 네비게이션 */
-.nav {
+/* Tagline */
+.tagline-slide {
+  margin-top: 18px;
+  max-width: 720px;
+}
+.tagline {
+  display: inline-block;
+  font-size: clamp(14px, 2.8vw, 18px);
+  color: rgba(255,255,255,0.92);
+  line-height: 1.5;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+
+/* SEO hidden text */
+.seo-text-hidden {
   position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  z-index: 20; /* ✅ 상단 요소가 항상 위에 */
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.65);
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  min-width: 180px;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  background: rgba(0,0,0,0.35);
+  border-color: rgba(255,255,255,0.9);
+}
+
+/* -------------------------
+   Language Switcher (Top Right)
+-------------------------- */
+.lang-switcher {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 3000;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  color: rgba(255,255,255,0.85);
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 999px;
+  padding: 8px 12px;
+  backdrop-filter: blur(6px);
+}
+
+.lang-switcher a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+.lang-switcher a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* -------------------------
+   Desktop Navigation (Top Left/Center)
+   - PC에서는 기존 메뉴를 보여주고, 모바일에선 숨김
+-------------------------- */
+.nav {
+  position: fixed;
+  top: 14px;
+  left: 18px;
+  z-index: 2500;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 14px;
+  padding: 10px 12px;
+  backdrop-filter: blur(6px);
 }
 
 .menu {
   list-style: none;
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  margin-bottom: 10px;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
 }
 
 .menu li a {
-  color: white;
-  font-weight: bold;
+  color: rgba(255,255,255,0.92);
   text-decoration: none;
-  font-size: 1.3rem;
-  transition: color 0.3s;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .menu li a:hover {
-  color: #f4c2c2;
-}
-
-/* 언어 선택 */
-.lang-switcher {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 1.3rem;
-  font-weight: bold;
-  z-index: 30;
-}
-
-.lang-switcher a {
-  color: white;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-.lang-switcher a:hover {
+  color: #fff;
   text-decoration: underline;
 }
 
-/* 버튼 설정(ourservice, booking online) */
-.cta-buttons {
-  margin-top: 40px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  z-index: 8;
-  position: relative;
-}
-
-.btn {
-  padding: 12px 24px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid white;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn:hover {
-  background-color: white;
-  color: black;
-  transform: scale(1.05);
-}
-
-/* 한줄 메모 */
-.subtitle {
-  font-size: 1.1rem;
-  margin-top: 20px;
-  color: white;
-  opacity: 0.8;
-  font-weight: 300;
-}
-
-/* ✅ 모바일 */
-@media (max-width: 768px) {
-  body, html {
-    padding-bottom: 210px; /* ✅ 모바일은 info-box가 더 커질 수 있어 넉넉히 */
-  }
-
-  .logo-slide h1 {
-    font-size: 2rem;
-    white-space: normal;
-    line-height: 1.4;
-    padding: 0 20px;
-  }
-
-  .slide {
-    display: block;
-    margin-bottom: 8px;
-  }
-
-  .tagline-slide {
-    font-size: 0.95rem;
-    padding: 0 20px;
-  }
-
-  .cta-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 10px;
-    padding: 0 10px;
-    overflow-x: auto;
-    /* ✅ 하단 info-box와 확실히 분리 */
-    margin-bottom: 14px;
-  }
-
-  .btn {
-    font-size: 0.9rem;
-    padding: 10px 16px;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  .menu {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .menu li a {
-    font-size: 1.1rem;
-  }
-
-  .lang-switcher {
-    font-size: 0.9rem;
-    right: 15px;
-    top: 15px;
-  }
-
-  .nav {
-    top: 100px;
-    left: 20px;
-    transform: none;
-    text-align: left;
-  }
-
-  .background {
-    background-position: center top;
-  }
-}
-
-/* 챗봇 */
-#chatbot-toggle { 
+/* -------------------------
+   Info Box (Desktop fixed bottom-left)
+-------------------------- */
+.info-box {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2200;
+  width: 300px;
+  max-width: calc(100vw - 32px);
+  padding: 16px 16px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.info-box p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: rgba(255,255,255,0.9);
+}
+
+.info-box strong {
+  font-size: 15px;
+  color: #fff;
+}
+
+/* -------------------------
+   Chatbot Button + Box
+-------------------------- */
+#chatbot-toggle {
+  position: fixed;
+  right: 16px;
+  bottom: 18px;
+  z-index: 2600;
   background: #d94f7b;
-  color: white;
+  color: #fff;
   padding: 12px 16px;
-  border-radius: 50px;
+  border-radius: 999px;
+  font-weight: 800;
   cursor: pointer;
-  font-weight: bold;
-  z-index: 9999;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
 }
 
 #chatbot-box {
   display: none;
   position: fixed;
-  bottom: 80px;
-  right: 20px;
-  width: 280px;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  z-index: 9999;
-  font-size: 0.95rem;
+  right: 16px;
+  bottom: 74px;
+  z-index: 2600;
+  width: 310px;
+  max-width: calc(100vw - 32px);
+  background: #fff;
+  color: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+  border: 1px solid rgba(0,0,0,0.08);
 }
 
 .chat-header {
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #d94f7b;
+  background: #111;
+  color: #fff;
+  padding: 12px 14px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.chat-content {
+  padding: 12px 14px;
+  font-size: 14px;
 }
 
 .chat-content button {
-  display: block;
   width: 100%;
   margin: 6px 0;
-  padding: 8px;
-  background: #f4f4f4;
-  border: none;
-  border-radius: 6px;
+  padding: 10px 10px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
   cursor: pointer;
-  text-align: left;
-  color: #333;
-  font-weight: 500;
+  font-weight: 700;
 }
 
-#chatbot-box {
-  color: #333;
+.chat-content button:hover {
+  background: #eef2ff;
 }
 
-#chatbot-box p {
-  margin-top: 10px;
-  line-height: 1.5;
-  color: #333;
+/* -------------------------
+   Mobile Header / Hamburger Menu (NEW)
+   - index.html에 아래 구조가 있어야 함:
+     <div class="mobile-header">...</div>
+     <div class="mobile-menu" id="mobileMenu">...</div>
+-------------------------- */
+.mobile-header { display: none; }
+.mobile-menu   { display: none; }
+
+/* =========================================================
+   📱 MOBILE LAYOUT (NEW)
+========================================================= */
+@media (max-width: 768px) {
+
+  /* PC 고정 메뉴는 숨기기 (겹침 방지) */
+  .nav { display: none; }
+
+  /* 언어 스위처는 상단 오른쪽 유지, 크기 조금 줄임 */
+  .lang-switcher {
+    top: 12px;
+    right: 12px;
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+
+  /* 모바일 상단 헤더 */
+  .mobile-header {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 4000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 14px;
+    background: rgba(0,0,0,0.55);
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+    backdrop-filter: blur(8px);
+  }
+
+  .mobile-logo {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #fff;
+    font-size: 15px;
+  }
+
+  .hamburger {
+    font-size: 26px;
+    line-height: 1;
+    color: #fff;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 10px;
+  }
+
+  .hamburger:active {
+    background: rgba(255,255,255,0.12);
+  }
+
+  /* 오른쪽 슬라이드 메뉴 */
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 78%;
+    height: 100%;
+    z-index: 4100;
+    background: rgba(10,10,10,0.98);
+    transition: right 0.35s ease;
+    padding-top: 76px;
+    border-left: 1px solid rgba(255,255,255,0.10);
+  }
+
+  .mobile-menu.active { right: 0; }
+
+  .mobile-menu a {
+    display: block;
+    padding: 16px 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .mobile-menu a:hover {
+    background: rgba(217,79,123,0.22);
+  }
+
+  /* 메인 영역 상단 공간(모바일 헤더 때문에) */
+  .logo-slide {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  /* CTA 버튼은 모바일에서 세로 정렬 */
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn {
+    width: min(360px, 92vw);
+    min-width: auto;
+  }
+
+  /* info-box는 모바일에서 footer처럼 내려가게(겹침 제거) */
+  .info-box {
+    position: static;
+    width: min(420px, 92vw);
+    margin: 24px auto 24px;
+  }
+
+  /* 챗봇 버튼/박스는 약간 위로 올려서 손가락 터치 편하게 */
+  #chatbot-toggle {
+    right: 14px;
+    bottom: 16px;
+  }
+
+  #chatbot-box {
+    right: 14px;
+    bottom: 70px;
+  }
 }
 
-.seo-text-hidden {
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-/* ==============================
-   ✅ 왼쪽 하단 정보 박스 (핵심 수정)
-   - absolute → fixed
-   - 모바일 bottom 땜질 제거
-   - 가독성/크기/겹침 정리
-   ============================== */
-.info-box {
-  position: fixed;
-  bottom: 26px;
-  left: 26px;
-
-  color: rgba(255, 255, 255, 0.92);
-  background: rgba(0, 0, 0, 0.58);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
-  padding: 18px 22px;
-  border-radius: 14px;
-
-  font-size: 14px;
-  line-height: 1.75;
-
-  z-index: 60;
-  max-width: 340px;
-
-  font-family: 'Noto Sans KR', sans-serif;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
+/* 아주 작은 화면(아이폰 SE급) */
+@media (max-width: 380px) {
+  .logo-slide .slide:nth-child(2),
+  .logo-slide .slide:nth-child(3) {
+    letter-spacing: 6px;
+  }
+  .tagline { font-size: 13px; }
 }
