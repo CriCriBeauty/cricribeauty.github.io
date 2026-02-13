@@ -243,10 +243,117 @@ function toggleChatbot() {
   const isOpen = box.style.display === "block";
   box.style.display = isOpen ? "none" : "block";
 }
+
+// ===== Style Finder (Tabs + Recommender) =====
+const sfState = {
+  lash: { mood: null, makeup: null, goal: null },
+  brow: { look: null, state: null, goal: null }
+};
+
+function setActivePane(tab) {
+  document.querySelectorAll(".sf-tab").forEach(t => {
+    const isOn = t.dataset.tab === tab;
+    t.classList.toggle("active", isOn);
+    t.setAttribute("aria-selected", isOn ? "true" : "false");
+  });
+  document.querySelectorAll(".sf-pane").forEach(p => {
+    p.classList.toggle("active", p.dataset.pane === tab);
+  });
+}
+
+function updateLash() {
+  const r = document.getElementById("sfResultLash");
+  const body = r.querySelector(".sf-rbody");
+  const s = sfState.lash;
+
+  if (!s.mood || !s.makeup || !s.goal) {
+    body.textContent = "질문을 선택하면 추천이 표시됩니다.";
+    return;
+  }
+
+  let rec = "🌸 바짝올림 베이직펌";
+  let reason = "데일리로 자연스럽고 또렷한 기본 추천이에요.";
+
+  if (s.goal === "mascara") {
+    rec = "🌿 선명한눈매 블랙틴팅펌";
+    reason = "마스카라 효과처럼 더 진하고 선명한 눈매를 원할 때 좋아요.";
+  } else if (s.goal === "bigger") {
+    rec = "✨ 듀얼펌";
+    reason = "윗/언더를 함께 진행해 눈매가 더 커 보이는 효과를 원할 때 좋아요.";
+  } else if (s.mood === "natural" && s.makeup === "light") {
+    rec = "🌸 바짝올림 베이직펌";
+    reason = "꾸안꾸로 자연스럽게 컬만 살리는 스타일이 잘 맞아요.";
+  }
+
+  body.innerHTML = `<b>${rec}</b><br>${reason}`;
+}
+
+function updateBrow() {
+  const r = document.getElementById("sfResultBrow");
+  const body = r.querySelector(".sf-rbody");
+  const s = sfState.brow;
+
+  if (!s.look || !s.state || !s.goal) {
+    body.textContent = "질문을 선택하면 추천이 표시됩니다.";
+    return;
+  }
+
+  let rec = "🍃 자연스러운 눈썹 디자인";
+  let reason = "결을 살려 자연스럽게 정리하고 인상을 부드럽게 만드는 추천이에요.";
+
+  // 상태 기반
+  if (s.state === "messy" || s.goal === "lift") {
+    rec = "🌈 Brow Lamination (눈썹 리프팅)";
+    reason = "결을 정돈하고 리프팅 느낌으로 또렷하고 깔끔한 인상을 원할 때 좋아요.";
+  }
+  if (s.state === "oldpmu") {
+    rec = "🌈 Brow Lamination (눈썹 리프팅)";
+    reason = "기존 반영구가 흐릿하거나 결이 무너졌을 때 정돈 효과가 좋아요.";
+  }
+  if (s.state === "sparse" && s.goal === "shape") {
+    rec = "🍃 자연스러운 눈썹 디자인";
+    reason = "비어 보이는 부분을 자연스럽게 커버하면서 라인/대칭을 정리하는 방향이 좋아요.";
+  }
+
+  body.innerHTML = `<b>${rec}</b><br>${reason}`;
+}
+
+document.addEventListener("click", (e) => {
+  // 탭
+  const tabBtn = e.target.closest(".sf-tab");
+  if (tabBtn) {
+    setActivePane(tabBtn.dataset.tab);
+    return;
+  }
+
+  // 옵션 버튼
+  const btn = e.target.closest(".sf-btn");
+  if (!btn) return;
+
+  const group = btn.dataset.group; // lash | brow
+  const q = btn.dataset.q;
+  const v = btn.dataset.v;
+
+  sfState[group][q] = v;
+
+  // 같은 질문 그룹 active 처리
+  document
+    .querySelectorAll(`.sf-btn[data-group="${group}"][data-q="${q}"]`)
+    .forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+
+  if (group === "lash") updateLash();
+  if (group === "brow") updateBrow();
+});
+
+// 기본 탭: 속눈썹
+setActivePane("lash");
+  
 </script>
 
 </body>
 </html>
+
 
 
 
