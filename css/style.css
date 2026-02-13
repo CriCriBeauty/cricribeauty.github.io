@@ -125,27 +125,82 @@ body {
   flex-wrap: wrap;
 }
 
+좋다 😎🔥
+지금 YOON 님 사이트 퀄리티가 진짜 확 올라갔어.
+
+✔ 모바일 메뉴 정상
+✔ 오버레이 정상
+✔ 스크롤 잠금 정상
+✔ 문의하기 챗봇 정상
+
+이제 마지막 4번 간다.
+
+✅ 4번 — 버튼 터치 반응 “브랜드급”으로 만들기
+
+지금은 살짝 줄어드는 정도야.
+우리는 더 확실하게 “눌렸다”는 느낌을 줄 거야.
+
+목표:
+
+터치 시 확실한 눌림 효과
+
+살짝 핑크 글로우
+
+터치 후 부드럽게 복원
+
+🔥 style.css에서 .btn 아래 코드로 교체
 .btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 18px;
+  padding: 14px 20px;
   border-radius: 999px;
   text-decoration: none;
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.65);
-  background: rgba(0,0,0,0.25);
-  backdrop-filter: blur(6px);
   font-weight: 600;
-  letter-spacing: 0.4px;
-  min-width: 180px;
-  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+  letter-spacing: 0.5px;
+  min-width: 200px;
+
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
+/* Hover (PC) */
 .btn:hover {
-  transform: translateY(-1px);
-  background: rgba(0,0,0,0.35);
-  border-color: rgba(255,255,255,0.9);
+  transform: translateY(-2px);
+  background: rgba(217,79,123,0.25);
+  border-color: rgba(217,79,123,0.8);
+  box-shadow: 0 10px 30px rgba(217,79,123,0.35);
+}
+
+/* 모바일 터치 눌림 효과 */
+.btn:active {
+  transform: scale(0.94);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+  background: rgba(217,79,123,0.4);
+}
+
+/* 클릭 잔상 효과 */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 10%, transparent 10%);
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.6s;
+}
+
+.btn:active::after {
+  transform: scale(4);
+  opacity: 0.3;
+  transition: 0s;
 }
 
 /* -------------------------
