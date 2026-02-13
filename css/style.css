@@ -31,7 +31,15 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  /* ✅ 고급 그라데이션 오버레이 (상단 더 어둡게, 중앙 자연스럽게, 하단 살짝 밝게) */
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.72) 0%,
+      rgba(0,0,0,0.45) 35%,
+      rgba(0,0,0,0.35) 60%,
+      rgba(0,0,0,0.55) 100%
+    );
   z-index: -1;
 }
 
@@ -46,6 +54,7 @@ body {
   align-items: center;
   padding: 110px 18px 80px; /* 상단 요소(언어/메뉴) 공간 확보 */
   text-align: center;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.35);
 }
 
 .logo-slide h1 {
