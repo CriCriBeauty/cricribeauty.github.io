@@ -74,7 +74,99 @@
 
 <!-- ================= MAIN CONTENT ================= -->
 <div class="logo-slide">
+<section class="style-finder" id="styleFinder">
+  <h2 class="sf-title">내게 맞는 시술 찾기</h2>
+  <p class="sf-sub">속눈썹 / 눈썹, 3문항으로 추천해드려요.</p>
 
+  <!-- 탭 -->
+  <div class="sf-tabs" role="tablist" aria-label="Style finder tabs">
+    <button type="button" class="sf-tab active" data-tab="lash" role="tab" aria-selected="true">속눈썹</button>
+    <button type="button" class="sf-tab" data-tab="brow" role="tab" aria-selected="false">눈썹</button>
+  </div>
+
+  <div class="sf-card">
+
+    <!-- ===== LASH (속눈썹) ===== -->
+    <div class="sf-pane active" data-pane="lash">
+      <div class="sf-q">
+        <div class="sf-qtitle">1) 원하는 분위기는?</div>
+        <div class="sf-opts">
+          <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="natural">자연스럽게</button>
+          <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="clear">또렷하게</button>
+          <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="glam">화려하게</button>
+        </div>
+      </div>
+
+      <div class="sf-q">
+        <div class="sf-qtitle">2) 평소 메이크업은?</div>
+        <div class="sf-opts">
+          <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="light">연하게</button>
+          <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="normal">보통</button>
+          <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="heavy">진하게</button>
+        </div>
+      </div>
+
+      <div class="sf-q">
+        <div class="sf-qtitle">3) 원하는 효과는?</div>
+        <div class="sf-opts">
+          <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="curl">컬 강조</button>
+          <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="mascara">마스카라 효과</button>
+          <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="bigger">눈매 확장</button>
+        </div>
+      </div>
+
+      <div class="sf-result" id="sfResultLash" aria-live="polite">
+        <div class="sf-rtitle">추천 결과 (속눈썹)</div>
+        <div class="sf-rbody">질문을 선택하면 추천이 표시됩니다.</div>
+        <div class="sf-actions">
+          <a class="btn" href="service.html">시술 자세히 보기</a>
+          <a class="btn" href="예약.html">예약하기</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== BROW (눈썹) ===== -->
+    <div class="sf-pane" data-pane="brow">
+      <div class="sf-q">
+        <div class="sf-qtitle">1) 원하는 느낌은?</div>
+        <div class="sf-opts">
+          <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="soft">부드럽게</button>
+          <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="sharp">또렷하게</button>
+          <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="clean">정갈하게</button>
+        </div>
+      </div>
+
+      <div class="sf-q">
+        <div class="sf-qtitle">2) 현재 눈썹 상태는?</div>
+        <div class="sf-opts">
+          <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="sparse">숱이 적음/비어 보임</button>
+          <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="messy">결이 들쑥날쑥</button>
+          <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="oldpmu">기존 반영구 있음</button>
+        </div>
+      </div>
+
+      <div class="sf-q">
+        <div class="sf-qtitle">3) 원하는 포인트는?</div>
+        <div class="sf-opts">
+          <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="shape">라인/대칭 정리</button>
+          <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="natural">결 살린 자연스러움</button>
+          <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="lift">리프팅 느낌</button>
+        </div>
+      </div>
+
+      <div class="sf-result" id="sfResultBrow" aria-live="polite">
+        <div class="sf-rtitle">추천 결과 (눈썹)</div>
+        <div class="sf-rbody">질문을 선택하면 추천이 표시됩니다.</div>
+        <div class="sf-actions">
+          <a class="btn" href="service.html">시술 자세히 보기</a>
+          <a class="btn" href="예약.html">예약하기</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  
   <h1>
     <span class="slide">CriCri</span>
     <span class="slide">BEAUTY</span>
@@ -155,6 +247,7 @@ function toggleChatbot() {
 
 </body>
 </html>
+
 
 
 
