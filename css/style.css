@@ -26,12 +26,17 @@ body {
   z-index: -2;
 }
 
+/* ✅ 추가: 배경이 클릭/터치를 가로채지 못하게 */
+.background,
+.background::after {
+  pointer-events: none;
+}
+
 /* 배경 위에 살짝 어둡게(글자 가독성) */
 .background::after {
   content: "";
   position: absolute;
   inset: 0;
-  /* ✅ 고급 그라데이션 오버레이 (상단 더 어둡게, 중앙 자연스럽게, 하단 살짝 밝게) */
   background:
     linear-gradient(
       to bottom,
@@ -42,7 +47,6 @@ body {
     );
   z-index: -1;
 }
-
 /* -------------------------
    Logo / Main Center Block
 -------------------------- */
