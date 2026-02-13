@@ -513,3 +513,24 @@ body {
   height: 100vh;
 }
 
+/* Tagline Animation */
+.tagline-line {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: taglineFadeUp 0.9s ease forwards;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  font-size: clamp(14px, 2.8vw, 18px);
+  color: rgba(255,255,255,0.92);
+  line-height: 1.45;
+}
+
+.tagline-line.t1 { animation-delay: 0.25s; }
+.tagline-line.t2 { animation-delay: 0.55s; }
+
+@keyframes taglineFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
