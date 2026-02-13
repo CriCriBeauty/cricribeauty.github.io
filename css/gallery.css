@@ -1,4 +1,7 @@
 /* 기본 설정 */
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Noto Sans KR', sans-serif;
   margin: 0;
@@ -203,3 +206,14 @@ main {
     padding: 12px 20px;
   }
 }
+
+section:target {
+  animation: highlight 1.2s ease;
+}
+
+@keyframes highlight {
+  0% { box-shadow: 0 0 0px rgba(217,79,123,0); }
+  50% { box-shadow: 0 0 30px rgba(217,79,123,0.4); }
+  100% { box-shadow: 0 0 0px rgba(217,79,123,0); }
+}
+
