@@ -375,11 +375,46 @@ document.addEventListener("click", function(e) {
     alert("복사에 실패했습니다. 직접 복사해주세요.");
   });
 });
+// 추천 결과 → 갤러리 자동 스크롤
+document.addEventListener("click", function(e) {
+  const galleryBtn = e.target.closest("#sfGalleryBtn");
+  if (!galleryBtn) return;
+
+  const activePane = document.querySelector(".sf-pane.active");
+  const resultText = activePane.querySelector(".sf-rbody").innerText;
+
+  if (!resultText || resultText.includes("질문을 선택하면")) {
+    alert("먼저 스타일을 선택해주세요 😊");
+    return;
+  }
+
+  let target = "classic"; // 기본값
+
+  // 속눈썹 계열
+  if (
+    resultText.includes("베이직") ||
+    resultText.includes("블랙틴팅") ||
+    resultText.includes("듀얼")
+  ) {
+    target = "classic";
+  }
+
+  // 눈썹 계열
+  if (
+    resultText.includes("Lamination") ||
+    resultText.includes("눈썹")
+  ) {
+    target = "beforeafter";
+  }
+
+  window.location.href = "gallery.html#" + target;
+});
   
 </script>
 
 </body>
 </html>
+
 
 
 
