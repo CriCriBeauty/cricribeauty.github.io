@@ -120,15 +120,23 @@
 <!-- ================= SCRIPT ================= -->
 <script>
 function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("active");
+  const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("menuOverlay");
+
+  menu.classList.toggle("active");
+  overlay.classList.toggle("active");
 }
 
-function toggleChatbot() {
-  const bot = document.getElementById("chatbot-box");
-  bot.style.display = bot.style.display === "block" ? "none" : "block";
+function closeMenu() {
+  const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("menuOverlay");
+
+  menu.classList.remove("active");
+  overlay.classList.remove("active");
 }
 </script>
 
 </body>
 </html>
+
 
