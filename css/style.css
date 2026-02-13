@@ -24,6 +24,7 @@ body {
   inset: 0;
   background: url("../images/intro.png") center/cover no-repeat;
   z-index: -2;
+  filter: brightness(0.85) contrast(0.9) saturate(0.85);
 }
 
 /* ✅ 추가: 배경이 클릭/터치를 가로채지 못하게 */
@@ -40,10 +41,10 @@ body {
   background:
     linear-gradient(
       to bottom,
-      rgba(0,0,0,0.72) 0%,
-      rgba(0,0,0,0.45) 35%,
-      rgba(0,0,0,0.35) 60%,
-      rgba(0,0,0,0.55) 100%
+      rgba(0,0,0,0.6) 0%,
+      rgba(0,0,0,0.35) 40%,
+      rgba(0,0,0,0.3) 65%,
+      rgba(0,0,0,0.5) 100%
     );
   z-index: -1;
 }
