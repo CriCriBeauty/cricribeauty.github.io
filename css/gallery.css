@@ -1,13 +1,33 @@
+/* =========================================================
+   CriCri Beauty - gallery.css (REFAC v20260219)
+   - Mobile safe top area (nav + lang no overlap)
+   - Cleaner spacing & consistent cards
+   - Slider stays same (cover), only text images use contain
+========================================================= */
+
 :root{
   --bg1:#FBF7F5;
   --bg2:#F5E9ED;
+
   --card: rgba(255,255,255,0.72);
+  --card2: rgba(255,255,255,0.55);
+
   --border: rgba(0,0,0,0.06);
   --text:#111;
   --muted:#666;
+
   --rose:#E6A4B4;
   --rose2:#ff6fa3;
+
   --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --shadow2: 0 14px 44px rgba(0,0,0,.10);
+
+  --radius: 18px;
+  --radius2: 14px;
+
+  /* ✅ 상단 안전 영역(겹침 방지용) */
+  --top-safe: 64px;         /* nav 높이 기본값 */
+  --top-safe-m: 78px;       /* 모바일에서 nav 높이 조금 더 */
 }
 
 html{ scroll-behavior:smooth; }
@@ -20,73 +40,103 @@ body{
   background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
 }
 
-/* lang */
-.lang-switcher{
-  position: fixed;
-  top: 10px;
-  right: 16px;
-  z-index: 1200;
-  font-size: 13px;
-  padding: 8px 10px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.65);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(10px);
-}
-.lang-switcher a{
-  text-decoration:none;
-  color:#444;
-  margin:0 4px;
-}
-
-/* nav */
+/* =========================================================
+   TOP BAR (Sticky) : nav + lang together (no overlap)
+========================================================= */
 .nav{
   position: sticky;
-  top:0;
-  z-index:1100;
-  background: rgba(255,255,255,.72);
+  top: 0;
+  z-index: 1100;
+  background: rgba(255,255,255,.78);
   border-bottom:1px solid var(--border);
   backdrop-filter: blur(12px);
+
+  /* ✅ 메뉴가 줄바꿈되어도 상단이 숨지 않게 */
+  padding: 10px 12px;
 }
+
+/* ✅ nav 내부 레이아웃: 가운데 메뉴 + 오른쪽 언어 */
+.nav-inner{
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 10px;
+}
+
+/* menu */
 .menu{
   margin:0;
-  padding: 14px 14px;
+  padding: 0;
   list-style:none;
   display:flex;
-  gap:16px;
+  gap:14px;
   justify-content:center;
   flex-wrap:wrap;
 }
 .menu a{
   text-decoration:none;
   color:#222;
-  font-weight:700;
+  font-weight:800;
   font-size: 14px;
+  padding: 10px 10px;
+  border-radius: 999px;
 }
-.menu a[aria-current="page"]{ color: var(--rose2); }
+.menu a[aria-current="page"]{
+  color: var(--rose2);
+  background: rgba(255,111,163,0.10);
+}
 
-/* hero */
+/* lang (✅ fixed 제거, nav 안에서만 동작) */
+.lang-switcher{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1200;
+
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.70);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
+}
+.lang-switcher a{
+  text-decoration:none;
+  color:#444;
+  margin:0 4px;
+}
+.lang-switcher a:hover{ text-decoration: underline; }
+
+/* =========================================================
+   HERO
+========================================================= */
 .hero{
-  padding: 26px 16px 10px;
+  padding: 22px 16px 8px;
 }
 .hero-inner{
   max-width: 980px;
   margin: 0 auto;
   padding: 18px 18px;
-  border-radius: 18px;
-  background: rgba(255,255,255,.55);
+  border-radius: var(--radius);
+  background: var(--card2);
   border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow2);
 }
 .hero-title{
   margin:0;
   font-size: 26px;
-  letter-spacing: .5px;
+  letter-spacing: .2px;
 }
 .hero-sub{
   margin:8px 0 14px;
   color: var(--muted);
   font-size: 14px;
+  line-height: 1.45;
 }
 
 .quick-nav{
@@ -95,26 +145,39 @@ body{
   flex-wrap:wrap;
 }
 .chip{
-  display:inline-block;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   padding: 10px 12px;
   border-radius: 999px;
   border:1px solid rgba(230,164,180,.35);
-  background: rgba(255,255,255,.55);
+  background: rgba(255,255,255,.70);
   text-decoration:none;
   color:#333;
-  font-weight:700;
+  font-weight:800;
   font-size: 13px;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
 }
+.chip:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.85);
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+.chip:active{ transform: scale(.98); }
 
-/* main sections */
+/* =========================================================
+   MAIN SECTIONS
+========================================================= */
 .main{
   max-width: 980px;
   margin: 0 auto;
-  padding: 10px 16px 40px;
+  padding: 10px 16px 44px;
 }
+
+/* ✅ 앵커 이동 시 sticky nav 높이만큼 보정 */
 .section{
   margin-top: 18px;
-  scroll-margin-top: 90px; /* sticky nav offset */
+  scroll-margin-top: var(--top-safe);
 }
 .section-head{
   padding: 6px 4px 10px;
@@ -122,22 +185,27 @@ body{
 .section-title{
   margin:0;
   font-size: 18px;
+  letter-spacing: .1px;
 }
 .section-desc{
   margin:6px 0 0;
   color: var(--muted);
   font-size: 13px;
+  line-height: 1.5;
 }
 
+/* card */
 .slider-card{
-  border-radius: 18px;
+  border-radius: var(--radius);
   background: var(--card);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   overflow:hidden;
 }
 
-/* slider base */
+/* =========================================================
+   SLIDER
+========================================================= */
 .interior-slider{
   position: relative;
   padding: 14px 14px 18px;
@@ -151,18 +219,28 @@ body{
   min-width: 100%;
   text-align:center;
 }
+
 .interior-slide img{
   width: 100%;
   height: 320px;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: var(--radius2);
   box-shadow: 0 8px 24px rgba(0,0,0,.10);
+  background: #fff; /* contain 때 여백도 자연스럽게 */
 }
+
 .caption{
   margin: 10px 0 0;
   font-size: 13px;
   color:#333;
   line-height: 1.35;
+}
+
+/* ✅ 텍스트가 있는 이미지(자르지 말고 전체 보이게) */
+.interior-slide img[src$="natural.png"],
+.interior-slide img[src$="dolleye.png"]{
+  object-fit: contain;
+  object-position: center top;
 }
 
 /* buttons */
@@ -174,21 +252,24 @@ body{
 }
 .sbtn{
   border:1px solid rgba(230,164,180,.45);
-  background: rgba(255,255,255,.65);
+  background: rgba(255,255,255,.72);
   padding: 10px 14px;
   border-radius: 999px;
-  font-weight:700;
+  font-weight:800;
   cursor:pointer;
+  transition: transform .12s ease, background .12s ease;
 }
+.sbtn:hover{ background: rgba(255,255,255,.88); }
 .sbtn:active{ transform: scale(.98); }
 
-/* CTA */
-.cta-wrap{
-  margin-top: 22px;
-}
+/* =========================================================
+   CTA
+========================================================= */
+.cta-wrap{ margin-top: 22px; }
+
 .cta-card{
   padding: 18px 16px;
-  border-radius: 18px;
+  border-radius: var(--radius);
   background: rgba(255,255,255,.72);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -196,11 +277,13 @@ body{
 .cta-card h3{
   margin:0;
   font-size: 16px;
+  letter-spacing: .1px;
 }
 .cta-card p{
   margin:8px 0 14px;
   color: var(--muted);
   font-size: 13px;
+  line-height: 1.45;
 }
 .cta-actions{
   display:flex;
@@ -214,10 +297,17 @@ body{
   padding: 12px 14px;
   border-radius: 999px;
   border:1px solid rgba(0,0,0,.08);
-  background: rgba(255,255,255,.8);
+  background: rgba(255,255,255,.86);
   color:#222;
-  font-weight:800;
+  font-weight:900;
+  transition: transform .12s ease, box-shadow .12s ease;
 }
+.cta-btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+}
+.cta-btn:active{ transform: scale(.98); }
+
 .cta-kakao{
   background: linear-gradient(135deg, #ff6fa3, #ff4f8a);
   border: none;
@@ -225,16 +315,24 @@ body{
   box-shadow: 0 10px 24px rgba(255,79,138,.25);
 }
 
-/* mobile tweak */
+/* =========================================================
+   MOBILE
+========================================================= */
 @media (max-width: 768px){
-  .interior-slide img{ height: 260px; }
-  .menu{ gap:12px; }
-}
 
-/* ✅ 텍스트가 있는 이미지(자르지 말고 전체 보이게) */
-.interior-slide img[src$="natural.png"],
-.interior-slide img[src$="dolleye.png"]{
-  object-fit: contain;
-  background: #fff;              /* 여백 생기면 흰 배경 */
-  object-position: center top;   /* 글자가 위에 있으면 위쪽 우선 */
-}
+  :root{
+    --top-safe: var(--top-safe-m);
+  }
+
+  /* nav: 메뉴가 2줄이 되어도 안전하게 */
+  .nav{ padding: 10px 10px; }
+
+  .menu{
+    gap: 10px;
+  }
+  .menu a{
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+
+  /* ✅ 언어 스
