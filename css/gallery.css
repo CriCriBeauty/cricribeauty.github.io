@@ -59,12 +59,12 @@ body{
 .nav-inner{
   max-width: 980px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 /* menu */
 .menu{
@@ -92,18 +92,14 @@ body{
 /* lang (✅ fixed 제거, nav 안에서만 동작) */
 .lang-switcher{
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1200;
-
+  right: 12px;
+  top: 8px;
   font-size: 12px;
-  padding: 8px 10px;
+  padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(255,255,255,.70);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(10px);
-  white-space: nowrap;
+  background: rgba(255,255,255,.75);
+  border: 1px solid rgba(0,0,0,.06);
+  backdrop-filter: blur(8px);
 }
 .lang-switcher a{
   text-decoration:none;
