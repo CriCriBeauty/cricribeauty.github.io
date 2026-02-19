@@ -217,3 +217,5 @@ section:target {
   100% { box-shadow: 0 0 0px rgba(217,79,123,0); }
 }
 
+html { scroll-behavior: smooth; }
+
