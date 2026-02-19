@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>갤러리 | CriCri Beauty</title>
-  <link rel="stylesheet" href="css/gallery.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/gallery.css?v=20260219_1"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
@@ -25,73 +25,146 @@
       <li><a href="service.html">서비스(시술)</a></li>
       <li><a href="예약.html">예약</a></li>
       <li><a href="map.html">오시는 길</a></li>
-      <li><a href="gallery.html">갤러리</a></li>
+      <li><a href="gallery.html" aria-current="page">갤러리</a></li>
     </ul>
   </header>
 
-  <main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">Gallery</h1>
+      <p class="hero-sub">파스텔 무드로 보는 CriCri Beauty 시술 스타일</p>
 
-    <!-- Classic 스타일 -->
-    <section>
-    <section id="classic">
-      <h2 class="category-title">Classic 스타일</h2>
-      <div class="interior-slider">
-        <div class="interior-slider-track classic-slider-track">
-          <div class="interior-slide"><img src="images/natural.png" alt="Natural"><p class="caption">NATURAL<br>자연스러운 데일리 느낌</p></div>
-          <div class="interior-slide"><img src="images/dolleye.png" alt="Doll Eye"><p class="caption">DOLL EYE<br>중앙이 길고 동그란 눈 강조</p></div>
-          <div class="interior-slide"><img src="images/cateye.png" alt="Cat Eye"><p class="caption">CAT EYE<br>눈꼬리가 길고 도도한 느낌</p></div>
-          <div class="interior-slide"><img src="images/hybrid.png" alt="Hybrid"><p class="caption">HYBRID<br>자연스러움 && 풍성함</p></div>
-          <div class="interior-slide"><img src="images/volume lash.png" alt="volume"><p class="caption">볼륨LASH<br>매우 풍성하고 또렷한 연출</p></div>
-          <div class="interior-slide"><img src="images/wispy.png" alt="Wispy"><p class="caption">Wispy<br>길이 차를 주어 텍스트감 강조</p></div>
-        </div>
-        <div class="slider-buttons">
-          <button onclick="moveSlide(-1, '.classic-slider-track')">« 이전</button>
-          <button onclick="moveSlide(1, '.classic-slider-track')">다음 »</button>
+      <!-- ✅ 앵커(기존 id 유지) -->
+      <div class="quick-nav">
+        <a class="chip" href="#classic">속눈썹 스타일</a>
+        <a class="chip" href="#beforeafter">Before & After</a>
+        <a class="chip" href="#interior">샵 인테리어</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+
+    <!-- Classic 스타일 (✅ id 유지: classic) -->
+    <section class="section" id="classic">
+      <div class="section-head">
+        <h2 class="section-title">속눈썹 스타일</h2>
+        <p class="section-desc">원하는 분위기에 맞춰 추천받고, 스타일을 골라보세요.</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track classic-slider-track">
+            <div class="interior-slide">
+              <img src="images/natural.png" alt="Natural">
+              <p class="caption">NATURAL<br>자연스러운 데일리 느낌</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/dolleye.png" alt="Doll Eye">
+              <p class="caption">DOLL EYE<br>중앙이 길고 동그란 눈 강조</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/cateye.png" alt="Cat Eye">
+              <p class="caption">CAT EYE<br>눈꼬리가 길고 도도한 느낌</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/hybrid.png" alt="Hybrid">
+              <p class="caption">HYBRID<br>자연스러움 && 풍성함</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/volume lash.png" alt="Volume Lash">
+              <p class="caption">볼륨LASH<br>매우 풍성하고 또렷한 연출</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/wispy.png" alt="Wispy">
+              <p class="caption">WISPY<br>길이 차로 텍스처감 강조</p>
+            </div>
+          </div>
+
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.classic-slider-track')">« 이전</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.classic-slider-track')">다음 »</button>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Before & After -->
-    <section>
-    <section id="beforeafter">
-      <h2 class="category-title">Before & After</h2>
-      <div class="interior-slider">
-        <div class="interior-slider-track beforeafter-slider-track">
-          <div class="interior-slide"><img src="images/B_F1.jpg" alt="시술 전후 1"><p class="caption">왼쪽: 시술완료 / 오른쪽: 시술상세</p></div>
-          <div class="interior-slide"><img src="images/B_F2.png" alt="시술 전후 2"><p class="caption">왼쪽: 시술 전 / 오른쪽: 시술 후</p></div>
+    <!-- Before & After (✅ id 유지: beforeafter) -->
+    <section class="section" id="beforeafter">
+      <div class="section-head">
+        <h2 class="section-title">Before & After</h2>
+        <p class="section-desc">시술 전/후 분위기 변화를 한눈에 확인해보세요.</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track beforeafter-slider-track">
+            <div class="interior-slide">
+              <img src="images/B_F1.jpg" alt="시술 전후 1">
+              <p class="caption">왼쪽: 시술완료 / 오른쪽: 시술상세</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/B_F2.png" alt="시술 전후 2">
+              <p class="caption">왼쪽: 시술 전 / 오른쪽: 시술 후</p>
+            </div>
+          </div>
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.beforeafter-slider-track')">« 이전</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.beforeafter-slider-track')">다음 »</button>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 샵 인테리어 -->
-    <section>
-    <section id="interior">
-      <h2 class="category-title">샵 인테리어</h2>
-      <div class="interior-slider">
-        <div class="interior-slider-track shopinterior-slider-track">
-          <div class="interior-slide"><img src="images/inte.jpg" alt="인테리어1"></div>
-          <div class="interior-slide"><img src="images/inte1.jpg" alt="인테리어2"></div>
-          <div class="interior-slide"><img src="images/inte2.jpg" alt="인테리어3"></div>
-          <div class="interior-slide"><img src="images/inte4.jpg" alt="인테리어4"></div>
+    <!-- 샵 인테리어 (✅ id 유지: interior) -->
+    <section class="section" id="interior">
+      <div class="section-head">
+        <h2 class="section-title">샵 인테리어</h2>
+        <p class="section-desc">프라이빗하고 편안한 무드의 공간입니다.</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track shopinterior-slider-track">
+            <div class="interior-slide"><img src="images/inte.jpg" alt="인테리어1"></div>
+            <div class="interior-slide"><img src="images/inte1.jpg" alt="인테리어2"></div>
+            <div class="interior-slide"><img src="images/inte2.jpg" alt="인테리어3"></div>
+            <div class="interior-slide"><img src="images/inte4.jpg" alt="인테리어4"></div>
+          </div>
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.shopinterior-slider-track')">« 이전</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.shopinterior-slider-track')">다음 »</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-wrap">
+      <div class="cta-card">
+        <h3>원하는 스타일로 예약/상담하기</h3>
+        <p>추천 결과를 바탕으로 편하게 상담받아보세요.</p>
+        <div class="cta-actions">
+          <a class="cta-btn" href="예약.html">예약하기</a>
+          <a class="cta-btn cta-kakao" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">카카오톡 상담</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- 예약 버튼 -->
-  <div class="cta">
-    <a href="https://map.naver.com/p/entry/place/2023374701?placePath=/ticket?entry=plt&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202506261605&locale=ko&svcName=map_pcv5&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202506261605&locale=ko&svcName=map_pcv5&searchType=place&lng=127.3871167&lat=36.3515941&c=15.00,0,0,0,dh" class="button">이 스타일로 예약하기</a>
-  </div>
-
-  <!-- 슬라이드 스크립트 -->
   <script>
     function moveSlide(n, trackSelector) {
       const track = document.querySelector(trackSelector);
+      if (!track) return;
+
       const slides = track.children;
       if (!slides.length) return;
-      let current = parseInt(track.getAttribute("data-index") || 0);
+
+      let current = parseInt(track.getAttribute("data-index") || 0, 10);
       current = (current + n + slides.length) % slides.length;
+
       track.style.transform = 'translateX(' + (-current * 100) + '%)';
       track.setAttribute("data-index", current);
     }
@@ -110,4 +183,3 @@
 
 </body>
 </html>
-
