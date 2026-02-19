@@ -665,3 +665,57 @@ body {
   .sf-btn { flex: 1 1 120px; }
 }
 
+/* ================= 시술하기 및 상담하기 버튼 화면  ================= */
+.sf-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.sf-actions .btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+/* 갤러리 버튼 */
+.sf-actions .sfGalleryBtn {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+}
+
+.sf-actions .sfGalleryBtn:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+/* 카카오 버튼 (분홍 강조) */
+.sf-actions .sfKakaoBtn {
+  background: linear-gradient(135deg, #ff6fa3, #ff4f8a);
+  border: none;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 79, 138, 0.35);
+}
+
+.sf-actions .sfKakaoBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255, 79, 138, 0.45);
+}
+
+@media (max-width: 768px) {
+  .sf-actions .btn {
+    font-size: 16px;
+    padding: 16px 0;
+  }
+}
+
+
