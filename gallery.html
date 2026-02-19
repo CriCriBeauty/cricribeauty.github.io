@@ -38,6 +38,7 @@
       <!-- ✅ 앵커(기존 id 유지) -->
       <div class="quick-nav">
         <a class="chip" href="#classic">속눈썹 스타일</a>
+          <a class="chip" href="#browstyle">눈썹 디자인(반영구)</a> </div>
         <a class="chip" href="#beforeafter">Before & After</a>
         <a class="chip" href="#interior">샵 인테리어</a>
       </div>
@@ -117,6 +118,43 @@
       </div>
     </section>
 
+<!-- 눈썹 스타일 (반영구 시술 과정) -->
+<section class="section" id="browstyle">
+  <div class="section-head">
+    <h2 class="section-title">눈썹 디자인</h2>
+    <p class="section-desc">반영구 눈썹 시술 디자인 과정을 직접 확인해보세요.</p>
+  </div>
+
+  <div class="slider-card">
+    <div class="interior-slider">
+      <div class="interior-slider-track brow-slider-track">
+
+        <div class="interior-slide">
+          <img src="images/brow1.jpg" alt="눈썹 시술 과정 1">
+          <p class="caption">디자인 상담 및 눈썹 라인 잡기</p>
+        </div>
+
+        <div class="interior-slide">
+          <img src="images/brow2.jpg" alt="눈썹 시술 과정 2">
+          <p class="caption">섬세한 반영구 시술 진행</p>
+        </div>
+
+        <div class="interior-slide">
+          <img src="images/brow3.jpg" alt="눈썹 시술 과정 3">
+          <p class="caption">자연스러운 결과 완성</p>
+        </div>
+
+      </div>
+
+      <div class="slider-buttons">
+        <button type="button" class="sbtn" onclick="moveSlide(-1, '.brow-slider-track')">« 이전</button>
+        <button type="button" class="sbtn" onclick="moveSlide(1, '.brow-slider-track')">다음 »</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+    
     <!-- 샵 인테리어 (✅ id 유지: interior) -->
     <section class="section" id="interior">
       <div class="section-head">
@@ -178,9 +216,12 @@
 
       moveSlide(0, '.shopinterior-slider-track');
       setInterval(() => moveSlide(1, '.shopinterior-slider-track'), 5000);
+      moveSlide(0, '.brow-slider-track');
+      setInterval(() => moveSlide(1, '.brow-slider-track'), 5000);
     });
   </script>
 
 </body>
 </html>
+
 
