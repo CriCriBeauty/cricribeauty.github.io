@@ -4,96 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>시술 안내 | 크리크리 뷰티샵</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/service.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/service.css?v=20260219_1" />
 </head>
 <body>
 
-<!-- 언어 선택 -->
-<div class="lang-switcher">
-  <a href="index.html">KR</a> |
-  <a href="index_en.html">EN</a> |
-  <a href="index_jp.html">JP</a> |
-  <a href="index_ch.html">CH</a> |
-  <a href="index_vn.html">VN</a>
-</div>
-
-<!-- 네비게이션 -->
+<!-- ================= TOP BAR (nav + lang) ================= -->
 <header class="nav">
-  <ul class="menu">
-    <li><a href="예약.html">예약</a></li>
-    <li><a href="service.html">시술(서비스)</a></li>
-    <li><a href="map.html">찾아오시는 길</a></li>
-    <li><a href="gallery.html">갤러리</a></li>
-  </ul>
+  <div class="nav-inner">
+    <ul class="menu">
+      <li><a href="index.html">홈</a></li>
+      <li><a href="service.html" aria-current="page">시술(서비스)</a></li>
+      <li><a href="예약.html">예약</a></li>
+      <li><a href="map.html">오시는 길</a></li>
+      <li><a href="gallery.html">갤러리</a></li>
+    </ul>
+
+    <!-- 언어 선택 (nav 안에 고정) -->
+    <div class="lang-switcher">
+      <a href="index.html">KR</a> |
+      <a href="index_en.html">EN</a> |
+      <a href="index_jp.html">JP</a> |
+      <a href="index_ch.html">CH</a> |
+      <a href="index_vn.html">VN</a>
+    </div>
+  </div>
 </header>
 
-<!-- 본문 콘텐츠 -->
-<div class="service-container">
+<!-- ================= MAIN ================= -->
+<main class="service-container">
+
   <!-- 왼쪽 가격표 이미지 -->
-  <div class="price-box">
+  <aside class="price-box">
     <img src="images/price.png" alt="시술 가격표" class="price-img" />
-    <button onclick="openModal()">🔍 이미지 크게 보기</button>
-  </div>
+    <button type="button" onclick="openModal()">🔍 이미지 크게 보기</button>
+  </aside>
 
   <!-- 오른쪽 시술 상세 설명 -->
-  <div class="section">
+  <section class="section">
     <h2>💅 시술 상세 안내</h2>
 
     <div class="service-block">
-    <div class="service-block">
-  <h3>🌸 바짝올림 베이직펌</h3>
-  <p>순한 펌제로 어디서나 꾸안꾸 자신 있는 예쁜 눈매를 연출해주는 기본 펌입니다.</p>
-  <ul>
-    <li>강한 컬링력</li>
-    <li>눈매 또렷한 인상 연출</li>
-  </ul>
-</div>
-
-<div class="service-block">
-  <h3>🌿 선명한눈매 블랙틴팅펌</h3>
-  <p>베이직펌에 블랙틴팅을 함께 진행해 더 진하고 선명한 눈매를 표현합니다.</p>
-  <ul>
-    <li>컬 + 컬러링 틴팅 동시 진행</li>
-    <li>마스카라 효과</li>
-  </ul>
-</div>
-
-<div class="service-block">
-  <h3>✨ 듀얼펌</h3>
-  <p>베이직펌과 언더래쉬펌을 동시에 진행하여 풍성한 눈매를 완성합니다.</p>
-  <ul>
-    <li>언더 래쉬와 윗속눈썹 동시 진행</li>
-    <li>더 크고 또렷한 눈매 효과</li>
-  </ul>
-</div>
-
-<div class="service-block">
-  <h3>🌈 Brow Lamination (눈썹 리프팅)</h3>
-  <p>눈썹의 결을 살려 또렷하고 정돈된 눈썹을 연출합니다.</p>
-  <ul>
-    <li>오래된 반영구 수정 효과</li>
-    <li>시원한 인상</li>
-    <li>눈썹 결 정리</li>
-  </ul>
-</div>
-
-<div class="service-block">
-  <h3>🍃 자연스러운 눈썹 디자인</h3>
-  <p>본인의 눈썹 결을 최대한 살려 자연스럽게 디자인합니다.</p>
-</div>
+      <h3>🌸 바짝올림 베이직펌</h3>
+      <p>순한 펌제로 어디서나 꾸안꾸 자신 있는 예쁜 눈매를 연출해주는 기본 펌입니다.</p>
+      <ul>
+        <li>강한 컬링력</li>
+        <li>눈매 또렷한 인상 연출</li>
+      </ul>
     </div>
 
-    <!-- 더 많은 시술은 동일 구조로 추가 -->
-  </div>
-</div>
+    <div class="service-block">
+      <h3>🌿 선명한눈매 블랙틴팅펌</h3>
+      <p>베이직펌에 블랙틴팅을 함께 진행해 더 진하고 선명한 눈매를 표현합니다.</p>
+      <ul>
+        <li>컬 + 컬러링 틴팅 동시 진행</li>
+        <li>마스카라 효과</li>
+      </ul>
+    </div>
 
-<!-- 이미지 확대용 모달 -->
-<div id="modal" onclick="closeModal()">
+    <div class="service-block">
+      <h3>✨ 듀얼펌</h3>
+      <p>베이직펌과 언더래쉬펌을 동시에 진행하여 풍성한 눈매를 완성합니다.</p>
+      <ul>
+        <li>언더 래쉬와 윗속눈썹 동시 진행</li>
+        <li>더 크고 또렷한 눈매 효과</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3>🌈 Brow Lamination (눈썹 리프팅)</h3>
+      <p>눈썹의 결을 살려 또렷하고 정돈된 눈썹을 연출합니다.</p>
+      <ul>
+        <li>오래된 반영구 수정 효과</li>
+        <li>시원한 인상</li>
+        <li>눈썹 결 정리</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3>🍃 자연스러운 눈썹 디자인</h3>
+      <p>본인의 눈썹 결을 최대한 살려 자연스럽게 디자인합니다.</p>
+    </div>
+
+  </section>
+</main>
+
+<!-- ================= MODAL ================= -->
+<div id="modal" onclick="closeModal()" role="dialog" aria-modal="true" aria-label="시술 가격표 크게 보기">
   <img src="images/price.png" alt="확대된 시술 가격표" />
 </div>
 
-<!-- 푸터 -->
+<!-- ================= FOOTER ================= -->
 <footer style="padding: 30px 20px; text-align: center; background-color: transparent;">
   <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">크리크리 뷰티샵</div>
   <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
@@ -120,11 +121,15 @@
 
 <script>
   function openModal() {
-    document.getElementById('modal').style.display = 'flex';
+    const modal = document.getElementById('modal');
+    if (!modal) return;
+    modal.style.display = 'flex';
   }
 
   function closeModal() {
-    document.getElementById('modal').style.display = 'none';
+    const modal = document.getElementById('modal');
+    if (!modal) return;
+    modal.style.display = 'none';
   }
 </script>
 
