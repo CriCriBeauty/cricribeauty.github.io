@@ -1,197 +1,274 @@
-/* 기본 초기화 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* =========================================================
+   Cricri Beauty - service.css (REFAC v20260219)
+   - Gallery와 통일된 상단바
+   - 카드형 레이아웃
+   - 모바일 완전 안정
+========================================================= */
+
+:root{
+  --bg1:#FBF7F5;
+  --bg2:#F5E9ED;
+
+  --card: rgba(255,255,255,.75);
+  --border: rgba(0,0,0,.06);
+
+  --text:#111;
+  --muted:#666;
+
+  --rose:#E6A4B4;
+  --rose2:#ff6fa3;
+
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --radius:18px;
 }
 
-body {
-  background-color: white;
-  font-family: 'Noto Sans KR', sans-serif;
-  color: #333;
-  padding-top: 120px;
+/* 기본 */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* 언어 선택 */
-.lang-switcher {
-  position: fixed;
-  top: 5px;
-  right: 30px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  z-index: 9999;
-}
-.lang-switcher a {
-  color: #333 !important;
-  text-decoration: none;
-  margin: 0 5px;
-  font-weight: bold;
-}
-.lang-switcher a:hover {
-  text-decoration: underline;
+body{
+  font-family:'Noto Sans KR',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background: linear-gradient(180deg,var(--bg1),var(--bg2));
+  color:var(--text);
 }
 
-/* 네비게이션 */
-.nav {
-  background-color: #fff6f8;
-  border-bottom: 1px solid #eee;
-  padding: 16px 0;
-  text-align: center;
-  position: fixed;
-  top: 30px;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-.menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  padding: 0;
-  margin: 0;
-}
-.menu li a {
-  text-decoration: none;
-  color: #111;
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-.menu li a:hover {
-  color: #d94f7b;
+/* =========================================================
+   NAV (Gallery 동일 스타일)
+========================================================= */
+.nav{
+  position: sticky;
+  top:0;
+  z-index:1100;
+  background: rgba(255,255,255,.80);
+  border-bottom:1px solid var(--border);
+  backdrop-filter: blur(12px);
+  padding:12px 16px;
 }
 
-/* 시술 전체 컨테이너 */
-.service-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 40px 20px;
-  box-sizing: border-box;
+.nav-inner{
+  max-width:980px;
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
 }
 
-/* 왼쪽 가격표 */
-.price-box {
-  flex: 1 1 300px;
-  text-align: center;
-}
-.price-img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.price-box button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #d94f7b;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.price-box button:hover {
-  background-color: #c0397e;
+.menu{
+  list-style:none;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
-/* 시술 설명 */
-.section {
-  flex: 2 1 400px;
-  background: transparent;
-  padding: 30px 24px;
-  border-radius: 0;
-  box-shadow: none;
+.menu a{
+  text-decoration:none;
+  font-weight:800;
+  font-size:14px;
+  color:#222;
+  padding:10px 12px;
+  border-radius:999px;
+  transition: .2s;
 }
 
-.section h2 {
-  color: #d94f7b;
-  text-align: center;
-  font-size: 1.5em;
-  margin-bottom: 24px;
+.menu a:hover{
+  background: rgba(255,111,163,.08);
 }
 
-.service-block {
-  margin-bottom: 40px;
-}
-.service-block h3 {
-  color: #c0397e;
-  font-size: 1.2em;
-  margin-bottom: 8px;
-}
-.service-block p {
-  font-size: 0.95em;
-  color: #555;
-  line-height: 1.6;
-  margin: 5px 0;
-}
-.service-block ul {
-  padding-left: 20px;
-  margin: 8px 0;
-}
-.service-block li {
-  font-size: 0.9em;
-  color: #444;
-  margin-bottom: 4px;
+.menu a[aria-current="page"]{
+  color:var(--rose2);
+  background: rgba(255,111,163,.12);
 }
 
-/* 모달 확대 이미지 */
-#modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-}
-#modal img {
-  max-width: 90%;
-  max-height: 90%;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  padding: 10px;
+/* lang */
+.lang-switcher{
+  position:absolute;
+  right:0;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.75);
+  border:1px solid var(--border);
+  backdrop-filter:blur(8px);
+  white-space:nowrap;
 }
 
-/* 반응형 */
-@media screen and (max-width: 768px) {
-  .service-container {
-    flex-direction: column;
-    align-items: center;
+.lang-switcher a{
+  text-decoration:none;
+  color:#444;
+  margin:0 4px;
+}
+
+.lang-switcher a:hover{
+  text-decoration:underline;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+.service-container{
+  max-width:980px;
+  margin:40px auto 60px;
+  padding:0 20px;
+  display:flex;
+  gap:40px;
+  flex-wrap:wrap;
+  align-items:flex-start;
+}
+
+/* 가격표 카드 */
+.price-box{
+  flex:1 1 300px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:20px;
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+
+.price-img{
+  width:100%;
+  max-width:320px;
+  border-radius:12px;
+  box-shadow:0 8px 24px rgba(0,0,0,.1);
+}
+
+.price-box button{
+  margin-top:16px;
+  padding:10px 18px;
+  background:linear-gradient(135deg,#ff6fa3,#ff4f8a);
+  border:none;
+  border-radius:999px;
+  color:#fff;
+  font-weight:800;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.price-box button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 22px rgba(255,79,138,.35);
+}
+
+.price-box button:active{
+  transform:scale(.96);
+}
+
+/* 설명 카드 */
+.section{
+  flex:2 1 420px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:30px 28px;
+  box-shadow:var(--shadow);
+}
+
+.section h2{
+  text-align:center;
+  color:var(--rose2);
+  margin-bottom:28px;
+  font-size:20px;
+}
+
+/* 서비스 블록 */
+.service-block{
+  margin-bottom:36px;
+}
+
+.service-block h3{
+  font-size:16px;
+  margin-bottom:8px;
+  color:#c0397e;
+}
+
+.service-block p{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.6;
+  margin-bottom:6px;
+}
+
+.service-block ul{
+  padding-left:18px;
+  margin-top:6px;
+}
+
+.service-block li{
+  font-size:13px;
+  color:#444;
+  margin-bottom:4px;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+#modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
+}
+
+#modal img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:14px;
+  background:#fff;
+  padding:12px;
+  box-shadow:0 20px 50px rgba(0,0,0,.4);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width:768px){
+
+  .menu{
+    gap:10px;
   }
 
-  .menu {
-    flex-wrap: wrap;
-    gap: 20px;
+  .menu a{
+    font-size:13px;
+    padding:8px 10px;
   }
 
-  .menu li a {
-    font-size: 1rem;
+  .lang-switcher{
+    top:6px;
+    right:8px;
+    transform:none;
+    font-size:11px;
   }
 
-  .lang-switcher {
-    top: 10px;
-    right: 12px;
-    font-size: 0.9rem;
+  .service-container{
+    flex-direction:column;
+    gap:24px;
+    margin-top:30px;
   }
 
-  .price-box {
-    order: 1;
+  .section{
+    padding:22px 18px;
   }
 
-  .section {
-    order: 2;
-    padding: 20px 16px;
+  .price-box{
+    order:1;
   }
 
-  .price-box button {
-    width: 90%;
-    margin: 10px auto;
+  .section{
+    order:2;
+  }
+
+  .price-box button{
+    width:100%;
   }
 }
