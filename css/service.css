@@ -232,22 +232,32 @@ body{
 /* =========================================================
    MOBILE
 ========================================================= */
-@media (max-width:768px){
+@media (max-width: 768px){
+  .nav-inner{
+    justify-content: flex-start;  /* 중앙정렬 X, 왼쪽부터 */
+  }
 
   .menu{
-    gap:10px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;           /* ✅ 줄바꿈 금지 */
+    overflow-x: auto;            /* ✅ 가로 스크롤 */
+    -webkit-overflow-scrolling: touch;
+    gap: 8px;
+    padding-right: 120px;        /* ✅ 오른쪽 lang-switcher 공간 확보 */
+  }
+
+  .menu::-webkit-scrollbar{
+    display:none;                /* 스크롤바 숨김 */
   }
 
   .menu a{
-    font-size:13px;
-    padding:8px 10px;
+    white-space: nowrap;         /* '오시는 길' 같은 글자 안 깨지게 */
   }
 
   .lang-switcher{
-    top:6px;
-    right:8px;
-    transform:none;
-    font-size:11px;
+    top: 6px;
+    right: 8px;
+    transform: none;
   }
 
   .service-container{
