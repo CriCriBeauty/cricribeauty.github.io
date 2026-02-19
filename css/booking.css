@@ -1,6 +1,6 @@
-/* =========================
+/* ================================
    RESET
-========================= */
+================================ */
 *{
   margin:0;
   padding:0;
@@ -13,27 +13,54 @@ html{
 
 body{
   font-family:'Noto Sans KR', sans-serif;
-  background: linear-gradient(180deg,#fefbf9 0%,#f5e9ed 100%);
+  background: linear-gradient(180deg,#FBF7F5 0%, #F5E9ED 100%);
   color:#222;
-  padding-top:100px;   /* nav + lang 공간 확보 */
 }
 
 
-/* =========================
-   LANG SWITCHER (상단 고정)
-========================= */
-.lang-switcher{
-  position:fixed;
-  top:8px;
-  right:10px;
-  z-index:3000;
+/* ================================
+   NAVIGATION
+================================ */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
 
-  font-size:11px;
-  padding:6px 10px;
-  border-radius:999px;
-  background:rgba(255,255,255,.9);
-  border:1px solid rgba(0,0,0,.06);
-  backdrop-filter:blur(10px);
+.nav-inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:14px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* 메뉴 */
+.menu{
+  list-style:none;
+  display:flex;
+  gap:22px;
+}
+
+.menu li a{
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  color:#222;
+  transition:.2s;
+}
+
+.menu li a:hover{
+  color:#ff6fa3;
+}
+
+/* 언어 */
+.lang-switcher{
+  font-size:13px;
   white-space:nowrap;
 }
 
@@ -41,92 +68,80 @@ body{
   text-decoration:none;
   color:#444;
   margin:0 4px;
-  font-weight:600;
-}
-
-
-/* =========================
-   NAVIGATION
-========================= */
-.nav{
-  position:fixed;
-  top:40px;   /* lang-switch 아래 */
-  left:0;
-  width:100%;
-  z-index:2000;
-
-  background:rgba(255,255,255,.75);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(0,0,0,.05);
-}
-
-.menu{
-  list-style:none;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:26px;
-  padding:14px 12px;
-}
-
-.menu a{
-  text-decoration:none;
-  color:#222;
-  font-weight:700;
-  font-size:14px;
-  white-space:nowrap;
   transition:.2s;
 }
 
-.menu a:hover{
+.lang-switcher a:hover{
   color:#ff6fa3;
 }
 
 
-/* =========================
-   HERO TITLE
-========================= */
-h1{
-  text-align:center;
-  font-size:26px;
-  margin-top:20px;
+/* ================================
+   MAIN WRAP
+================================ */
+.main{
+  max-width:900px;
+  margin:0 auto;
+  padding:40px 20px 80px;
 }
 
-.desc{
+
+/* ================================
+   HEADER SECTION
+================================ */
+.booking-hero{
+  background:rgba(255,255,255,.7);
+  padding:40px 20px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
   text-align:center;
+  margin-bottom:30px;
+}
+
+.booking-hero h1{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.booking-hero p{
   color:#666;
   font-size:14px;
-  margin:12px 0 24px;
-  padding:0 16px;
 }
 
 
-/* =========================
+/* ================================
    CHECKBOX
-========================= */
+================================ */
 .check-confirm{
-  text-align:center;
-  margin:20px 0;
-  font-size:15px;
+  margin:30px 0;
+  background:rgba(255,255,255,.6);
+  padding:20px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:600;
+}
+
+.check-confirm input{
+  width:20px;
+  height:20px;
 }
 
 
-/* =========================
-   CARD SECTION
-========================= */
+/* ================================
+   SECTION CARD
+================================ */
 .section{
-  max-width:880px;
-  margin:20px auto;
-  padding:26px 20px;
-  border-radius:18px;
   background:rgba(255,255,255,.75);
-  backdrop-filter:blur(14px);
-  box-shadow:0 10px 30px rgba(0,0,0,.06);
+  padding:28px 24px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.05);
+  margin-bottom:28px;
 }
 
 .section h2{
-  text-align:center;
-  font-size:18px;
+  font-size:20px;
   margin-bottom:16px;
   color:#ff6fa3;
 }
@@ -135,25 +150,29 @@ h1{
   padding-left:20px;
   line-height:1.8;
   font-size:14px;
+  color:#444;
 }
 
 
-/* =========================
+/* ================================
    BUTTONS
-========================= */
+================================ */
 .btn-wrap{
-  text-align:center;
-  margin:30px 0;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-top:20px;
 }
 
 .btn{
-  display:inline-block;
-  padding:14px 28px;
+  display:block;
+  text-align:center;
+  padding:16px;
   border-radius:999px;
   font-weight:700;
   text-decoration:none;
-  margin:8px;
-  opacity:.5;
+  font-size:16px;
+  opacity:.4;
   pointer-events:none;
   transition:.25s;
 }
@@ -161,6 +180,7 @@ h1{
 .btn.active{
   opacity:1;
   pointer-events:auto;
+  transform:scale(1);
 }
 
 .naver{
@@ -170,80 +190,75 @@ h1{
 
 .kakao{
   background:#FEE500;
-  color:#000;
+  color:#222;
+}
+
+.btn.active:hover{
+  transform:scale(1.03);
 }
 
 
-/* =========================
+/* ================================
    CALENDAR
-========================= */
+================================ */
 iframe{
   width:100%;
-  height:400px;
+  height:420px;
   border:none;
-  border-radius:12px;
-  margin-top:12px;
+  border-radius:16px;
+  margin-top:16px;
 }
 
 
-/* =========================
-   INFO BOX
-========================= */
+/* ================================
+   INFO BOX (하단 고정)
+================================ */
 .info-box{
   position:fixed;
   bottom:30px;
   left:30px;
-  background:rgba(0,0,0,.15);
-  color:#222;
-  padding:18px 24px;
-  border-radius:12px;
+  background:rgba(0,0,0,.08);
+  backdrop-filter:blur(10px);
+  padding:20px;
+  border-radius:16px;
   font-size:14px;
-  line-height:1.7;
-  max-width:260px;
-  backdrop-filter:blur(8px);
+  line-height:1.6;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
 }
 
 
-/* =========================
+/* ================================
    MOBILE
-========================= */
+================================ */
 @media (max-width:768px){
 
-  body{
-    padding-top:110px;
+  .nav-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
   }
 
-  /* 메뉴 한줄 유지 + 스크롤 */
   .menu{
-    flex-wrap:nowrap !important;
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-    justify-content:flex-start;
-    gap:18px;
+    flex-wrap:wrap;
+    gap:14px;
   }
 
-  .menu::-webkit-scrollbar{
-    display:none;
+  .lang-switcher{
+    align-self:flex-end;
   }
 
-  .menu a{
-    flex:0 0 auto;
+  .booking-hero h1{
+    font-size:22px;
   }
 
-  .nav{
-    top:44px;
+  .section{
+    padding:22px 18px;
   }
 
   .info-box{
-    left:12px;
-    right:12px;
-    bottom:20px;
-    max-width:100%;
+    left:10px;
+    bottom:15px;
+    width:90%;
   }
 
-  .btn{
-    width:90%;
-    display:block;
-    margin:12px auto;
-  }
 }
