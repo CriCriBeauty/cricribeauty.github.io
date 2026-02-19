@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <!-- ✅ Search Console -->
   <meta name="google-site-verification" content="qnuIKB5IxqsUSj3U_9biSjNpaRY3AkN_ELw2S2xRQKs" />
   <meta name="naver-site-verification" content="3371eda7e8882c7d645a420b116c75fa4681eab8" />
+
   <!-- SEO -->
   <title>대전시청역 속눈썹 및 반영구 눈썹 문신 | CriCri Beauty</title>
   <meta name="description" content="대전시청역 5번 출구에 위치한 속눈썹 및 반영구 눈썹문신 전문 PRIVATE 뷰티샵. 예약제 운영으로 맞춤 시술을 제공합니다.">
   <meta name="keywords" content="대전시청역 속눈썹, 대전시청역 눈썹문신, 대전시청 반영구 눈썹, 크리크리뷰티, 반영구 눈썹, 프라이빗 뷰티샵, 대전시청 속눈썹">
   <meta name="robots" content="index, follow">
   <meta name="author" content="CriCri Beauty Studio">
+
   <!-- Open Graph -->
   <meta property="og:title" content="Cricri Beauty Studio">
   <meta property="og:description" content="대전시청역 속눈썹 & 반영구 전문샵. 예약제 프라이빗 운영.">
@@ -30,8 +33,8 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- CSS (✅ 캐시방지) -->
+  <link rel="stylesheet" href="css/style.css?v=20260219_1">
 </head>
 <body>
 
@@ -42,13 +45,13 @@
 </div>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="예약.html">예약</a>
-  <a href="service.html">시술</a>
-  <a href="map.html">오시는 길</a>
-  <a href="gallery.html">갤러리</a>
+  <a href="예약.html" onclick="closeMenu()">예약</a>
+  <a href="service.html" onclick="closeMenu()">시술</a>
+  <a href="map.html" onclick="closeMenu()">오시는 길</a>
+  <a href="gallery.html" onclick="closeMenu()">갤러리</a>
 </div>
 <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
-  
+
 
 <!-- ================= LANGUAGE ================= -->
 <div class="lang-switcher">
@@ -74,117 +77,121 @@
 
 <!-- ================= MAIN CONTENT ================= -->
 <div class="logo-slide">
-<section class="style-finder" id="styleFinder">
-  <h2 class="sf-title">내게 맞는 시술 찾기</h2>
-  <p class="sf-sub">속눈썹 / 눈썹, 3문항으로 추천해드려요.</p>
 
-  <!-- 탭 -->
-  <div class="sf-tabs" role="tablist" aria-label="Style finder tabs">
-    <button type="button" class="sf-tab active" data-tab="lash" role="tab" aria-selected="true">속눈썹</button>
-    <button type="button" class="sf-tab" data-tab="brow" role="tab" aria-selected="false">눈썹</button>
-  </div>
+  <!-- ✅ 스타일 추천 (속눈썹/눈썹) -->
+  <section class="style-finder" id="styleFinder">
+    <h2 class="sf-title">내게 맞는 시술 찾기</h2>
+    <p class="sf-sub">속눈썹 / 눈썹, 3문항으로 추천해드려요.</p>
 
-  <div class="sf-card">
-
-    <!-- ===== LASH (속눈썹) ===== -->
-    <div class="sf-pane active" data-pane="lash">
-      <div class="sf-q">
-        <div class="sf-qtitle">1) 원하는 분위기는?</div>
-        <div class="sf-opts">
-          <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="natural">자연스럽게</button>
-          <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="clear">또렷하게</button>
-          <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="glam">화려하게</button>
-        </div>
-      </div>
-
-      <div class="sf-q">
-        <div class="sf-qtitle">2) 평소 메이크업은?</div>
-        <div class="sf-opts">
-          <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="light">연하게</button>
-          <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="normal">보통</button>
-          <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="heavy">진하게</button>
-        </div>
-      </div>
-
-      <div class="sf-q">
-        <div class="sf-qtitle">3) 원하는 효과는?</div>
-        <div class="sf-opts">
-          <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="curl">컬 강조</button>
-          <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="mascara">마스카라 효과</button>
-          <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="bigger">눈매 확장</button>
-        </div>
-      </div>
-
-      <div class="sf-result" id="sfResultLash" aria-live="polite">
-        <div class="sf-rtitle">추천 결과 (속눈썹)</div>
-        <div class="sf-rbody">질문을 선택하면 추천이 표시됩니다.</div>
-        
-        <div class="sf-actions">
-          <a class="btn" href="service.html">시술(종류) 자세히 보기</a>
-          <a class="btn kakao" href="http://pf.kakao.com/_SGZrn/chat" 
-             target="_blank" id="sfKakaoBtn">
-             카카오톡 상담하기
-          </a>
-        </div>
-      </div>
+    <!-- 탭 -->
+    <div class="sf-tabs" role="tablist" aria-label="Style finder tabs">
+      <button type="button" class="sf-tab active" data-tab="lash" role="tab" aria-selected="true">속눈썹</button>
+      <button type="button" class="sf-tab" data-tab="brow" role="tab" aria-selected="false">눈썹</button>
     </div>
 
-    <!-- ===== BROW (눈썹) ===== -->
-    <div class="sf-pane" data-pane="brow">
-      <div class="sf-q">
-        <div class="sf-qtitle">1) 원하는 느낌은?</div>
-        <div class="sf-opts">
-          <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="soft">부드럽게</button>
-          <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="sharp">또렷하게</button>
-          <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="clean">정갈하게</button>
+    <div class="sf-card">
+
+      <!-- ===== LASH (속눈썹) ===== -->
+      <div class="sf-pane active" data-pane="lash">
+        <div class="sf-q">
+          <div class="sf-qtitle">1) 원하는 분위기는?</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="natural">자연스럽게</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="clear">또렷하게</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="glam">화려하게</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">2) 평소 메이크업은?</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="light">연하게</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="normal">보통</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="heavy">진하게</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">3) 원하는 효과는?</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="curl">컬 강조</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="mascara">마스카라 효과</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="bigger">눈매 확장</button>
+          </div>
+        </div>
+
+        <div class="sf-result" id="sfResultLash" aria-live="polite">
+          <div class="sf-rtitle">추천 결과 (속눈썹)</div>
+          <div class="sf-rbody">질문을 선택하면 추천이 표시됩니다.</div>
+
+          <!-- ✅ 버튼 2개로 단순화 -->
+          <div class="sf-actions">
+            <a class="btn sfGalleryBtn" href="javascript:void(0)">갤러리에서 보기</a>
+            <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">카카오톡 상담하기</a>
+          </div>
         </div>
       </div>
 
-      <div class="sf-q">
-        <div class="sf-qtitle">2) 현재 눈썹 상태는?</div>
-        <div class="sf-opts">
-          <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="sparse">숱이 적음/비어 보임</button>
-          <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="messy">결이 들쑥날쑥</button>
-          <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="oldpmu">기존 반영구 있음</button>
+      <!-- ===== BROW (눈썹) ===== -->
+      <div class="sf-pane" data-pane="brow">
+        <div class="sf-q">
+          <div class="sf-qtitle">1) 원하는 느낌은?</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="soft">부드럽게</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="sharp">또렷하게</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="clean">정갈하게</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">2) 현재 눈썹 상태는?</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="sparse">숱이 적음/비어 보임</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="messy">결이 들쑥날쑥</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="oldpmu">기존 반영구 있음</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">3) 원하는 포인트는?</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="shape">라인/대칭 정리</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="natural">결 살린 자연스러움</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="lift">리프팅 느낌</button>
+          </div>
+        </div>
+
+        <div class="sf-result" id="sfResultBrow" aria-live="polite">
+          <div class="sf-rtitle">추천 결과 (눈썹)</div>
+          <div class="sf-rbody">질문을 선택하면 추천이 표시됩니다.</div>
+
+          <!-- ✅ 버튼 2개로 단순화 -->
+          <div class="sf-actions">
+            <a class="btn sfGalleryBtn" href="javascript:void(0)">갤러리에서 보기</a>
+            <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">카카오톡 상담하기</a>
+          </div>
         </div>
       </div>
 
-      <div class="sf-q">
-        <div class="sf-qtitle">3) 원하는 포인트는?</div>
-        <div class="sf-opts">
-          <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="shape">라인/대칭 정리</button>
-          <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="natural">결 살린 자연스러움</button>
-          <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="lift">리프팅 느낌</button>
-        </div>
-      </div>
-
-      <div class="sf-result" id="sfResultBrow" aria-live="polite">
-        <div class="sf-rtitle">추천 결과 (눈썹)</div>
-        <div class="sf-rbody">질문을 선택하면 추천이 표시됩니다.</div>
-        <div class="sf-actions">
-          <a class="btn" href="service.html">시술(종류) 자세히 보기</a>
-          <a class="btn" href="예약.html">예약하기</a>
-        </div>
-      </div>
     </div>
+  </section>
 
-  </div>
-</section>
-  
+  <!-- 로고 -->
   <h1>
     <span class="slide">CriCri</span>
     <span class="slide">BEAUTY</span>
     <span class="slide">STUDIO</span>
   </h1>
 
-<div class="tagline-slide">
-  <span class="tagline">
-    당신의 첫인상, 눈썹에서 완성됩니다.<br>
-    크리크리뷰티에서 시작하세요.
-  </span>
-</div>
+  <!-- 태그라인 -->
+  <div class="tagline-slide">
+    <span class="tagline">
+      당신의 첫인상, 눈썹에서 완성됩니다.<br>
+      크리크리뷰티에서 시작하세요.
+    </span>
+  </div>
 
-
+  <!-- CTA -->
   <div class="cta-buttons">
     <a href="service.html" class="btn">Our Service</a>
     <a href="예약.html" class="btn">Booking</a>
@@ -220,7 +227,6 @@
 function toggleMenu() {
   const menu = document.getElementById("mobileMenu");
   const overlay = document.getElementById("menuOverlay");
-
   if (!menu || !overlay) return;
 
   menu.classList.toggle("active");
@@ -231,7 +237,6 @@ function toggleMenu() {
 function closeMenu() {
   const menu = document.getElementById("mobileMenu");
   const overlay = document.getElementById("menuOverlay");
-
   if (!menu || !overlay) return;
 
   menu.classList.remove("active");
@@ -248,7 +253,7 @@ function toggleChatbot() {
   box.style.display = isOpen ? "none" : "block";
 }
 
-// ===== Style Finder (Tabs + Recommender) =====
+/* ===== Style Finder (Tabs + Recommender) ===== */
 const sfState = {
   lash: { mood: null, makeup: null, goal: null },
   brow: { look: null, state: null, goal: null }
@@ -305,7 +310,6 @@ function updateBrow() {
   let rec = "🍃 자연스러운 눈썹 디자인";
   let reason = "결을 살려 자연스럽게 정리하고 인상을 부드럽게 만드는 추천이에요.";
 
-  // 상태 기반
   if (s.state === "messy" || s.goal === "lift") {
     rec = "🌈 Brow Lamination (눈썹 리프팅)";
     reason = "결을 정돈하고 리프팅 느낌으로 또렷하고 깔끔한 인상을 원할 때 좋아요.";
@@ -334,13 +338,12 @@ document.addEventListener("click", (e) => {
   const btn = e.target.closest(".sf-btn");
   if (!btn) return;
 
-  const group = btn.dataset.group; // lash | brow
+  const group = btn.dataset.group;
   const q = btn.dataset.q;
   const v = btn.dataset.v;
 
   sfState[group][q] = v;
 
-  // 같은 질문 그룹 active 처리
   document
     .querySelectorAll(`.sf-btn[data-group="${group}"][data-q="${q}"]`)
     .forEach(b => b.classList.remove("active"));
@@ -353,14 +356,13 @@ document.addEventListener("click", (e) => {
 // 기본 탭: 속눈썹
 setActivePane("lash");
 
-// 카카오 상담 버튼 클릭 시 추천 내용 자동 복사
+/* ===== 카카오 상담: 추천 내용 자동 복사 (class 방식) ===== */
 document.addEventListener("click", function(e) {
-  const kakaoBtn = e.target.closest("#sfKakaoBtn");
+  const kakaoBtn = e.target.closest(".sfKakaoBtn");
   if (!kakaoBtn) return;
 
-  // 현재 활성화된 추천 결과 가져오기
   const activePane = document.querySelector(".sf-pane.active");
-  const resultText = activePane.querySelector(".sf-rbody").innerText;
+  const resultText = activePane?.querySelector(".sf-rbody")?.innerText || "";
 
   if (!resultText || resultText.includes("질문을 선택하면")) {
     alert("먼저 스타일을 선택해주세요 😊");
@@ -368,7 +370,10 @@ document.addEventListener("click", function(e) {
     return;
   }
 
-  const message = "안녕하세요 😊\n홈페이지 추천 결과는 아래와 같아요:\n\n" + resultText + "\n\n상담 요청드립니다.";
+  const message =
+    "안녕하세요 😊\n홈페이지 추천 결과는 아래와 같아요:\n\n" +
+    resultText +
+    "\n\n상담 요청드립니다.";
 
   navigator.clipboard.writeText(message).then(() => {
     alert("추천 내용이 복사되었습니다!\n카카오톡에 붙여넣기 해주세요 💕");
@@ -376,53 +381,30 @@ document.addEventListener("click", function(e) {
     alert("복사에 실패했습니다. 직접 복사해주세요.");
   });
 });
-// 추천 결과 → 갤러리 자동 스크롤
+
+/* ===== 추천 결과 → 갤러리 자동 이동 (1단계: 카테고리 이동) ===== */
 document.addEventListener("click", function(e) {
-  const galleryBtn = e.target.closest("#sfGalleryBtn");
+  const galleryBtn = e.target.closest(".sfGalleryBtn");
   if (!galleryBtn) return;
 
   const activePane = document.querySelector(".sf-pane.active");
-  const resultText = activePane.querySelector(".sf-rbody").innerText;
+  const resultText = activePane?.querySelector(".sf-rbody")?.innerText || "";
 
   if (!resultText || resultText.includes("질문을 선택하면")) {
     alert("먼저 스타일을 선택해주세요 😊");
     return;
   }
 
-  let target = "classic"; // 기본값
+  let target = "classic"; // 기본: 속눈썹 → Classic
 
-  // 속눈썹 계열
-  if (
-    resultText.includes("베이직") ||
-    resultText.includes("블랙틴팅") ||
-    resultText.includes("듀얼")
-  ) {
-    target = "classic";
-  }
-
-  // 눈썹 계열
-  if (
-    resultText.includes("Lamination") ||
-    resultText.includes("눈썹")
-  ) {
+  // 눈썹 계열 → Before & After
+  if (resultText.includes("Lamination") || resultText.includes("눈썹")) {
     target = "beforeafter";
   }
 
   window.location.href = "gallery.html#" + target;
 });
-  
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
