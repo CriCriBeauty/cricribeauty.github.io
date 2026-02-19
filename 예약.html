@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>예약 | Cricri Beauty Studio</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/booking.css?v=20260219_1" />
+  <link rel="stylesheet" href="css/booking.css?v=20260219_3" />
 </head>
 <body>
 
-<!-- ================= TOP BAR ================= -->
+<!-- ================= NAV (service.html style) ================= -->
 <header class="nav">
   <div class="nav-inner">
     <ul class="menu">
@@ -30,24 +31,25 @@
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="hero-inner">
-    <h1 class="hero-title">예약 안내</h1>
-    <p class="hero-sub">소중한 당신을 위한 맞춤 시술, 예약 전 안내사항을 꼭 확인해주세요.</p>
-  </div>
-</section>
+<!-- ================= MAIN ================= -->
+<main class="page">
 
-<main class="main">
+  <!-- HERO -->
+  <section class="hero-card">
+    <h1 class="hero-title">예약 안내</h1>
+    <p class="hero-desc">소중한 당신을 위한 맞춤 시술, 예약 전 안내사항을 꼭 확인해주세요.</p>
+  </section>
 
   <!-- 동의 체크 -->
-  <div class="agree-card">
-    <input type="checkbox" id="agree" />
-    <label for="agree">아래 내용을 모두 확인하였으며, 동의합니다.</label>
+  <div class="check-confirm">
+    <div class="check-card">
+      <input type="checkbox" id="agree" />
+      <label for="agree">아래 내용을 모두 확인하였으며, 동의합니다.</label>
+    </div>
   </div>
 
   <!-- 안내사항 -->
-  <section class="card">
+  <section class="section">
     <h2>📌 예약 전 안내 사항</h2>
     <ul>
       <li>지각 시 시술 시간이 조정될 수 있습니다.</li>
@@ -58,9 +60,9 @@
   </section>
 
   <!-- 예약 버튼 -->
-  <section class="card center">
+  <section class="section">
     <h2>📲 예약 진행</h2>
-    <div class="btn-group">
+    <div class="btn-wrap">
       <a href="https://map.naver.com/p/entry/place/2023374701"
          target="_blank"
          class="btn naver"
@@ -74,12 +76,21 @@
   </section>
 
   <!-- 달력 -->
-  <section class="card">
+  <section class="section">
     <h2>📆 예약 가능 일정</h2>
-    <p class="calendar-desc">※ 아래 달력은 참고용이며, 예약은 네이버로 진행해주세요.</p>
-    <div class="calendar-wrap">
-      <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
-    </div>
+    <p class="hint">※ 아래 달력은 참고용이며, 예약은 네이버로 진행해주세요.</p>
+    <iframe
+      src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul">
+    </iframe>
+  </section>
+
+  <!-- 정보 -->
+  <section class="info-box">
+    <p><strong>크리크리 뷰티 스튜디오</strong></p>
+    <p>영업 시간 : 10:00 ~ 20:00</p>
+    <p>대표번호 : 010-3263-6984</p>
+    <p>대전광역시 서구 둔산중로 54</p>
+    <p>사업자등록번호 : 641-22-02169</p>
   </section>
 
 </main>
@@ -87,12 +98,8 @@
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="footer-title">크리크리 뷰티 스튜디오</div>
-  <div class="footer-info">
-    영업시간: 10:00 ~ 20:00 ｜ 연락처: 0507-1367-6984
-  </div>
-  <div class="footer-copy">
-    &copy; 2025 Cricri Beauty Studio. All rights reserved.
-  </div>
+  <div class="footer-info">영업시간: 10:00 ~ 20:00 ｜ 연락처: 0507-1367-6984</div>
+  <div class="footer-copy">&copy; 2025 Cricri Beauty Studio. All rights reserved.</div>
 </footer>
 
 <script>
@@ -118,4 +125,3 @@
 
 </body>
 </html>
-
