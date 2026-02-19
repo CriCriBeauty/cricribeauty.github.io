@@ -1,33 +1,22 @@
 /* =========================================================
-   Cricri Beauty - booking.css (REFAC v20260219)
-   - Gallery 스타일 통일
-   - 카드형 레이아웃
-   - 모바일 안정
+   Cricri Beauty - booking.css (REFAC + NAV FIX)
+   - 모바일 nav 잘림 해결(오시는 길 포함)
+   - lang-switcher 겹침 해결
 ========================================================= */
 
 :root{
   --bg1:#FBF7F5;
   --bg2:#F5E9ED;
-
   --card: rgba(255,255,255,.75);
   --border: rgba(0,0,0,.06);
-
   --text:#111;
   --muted:#666;
-
-  --rose:#E6A4B4;
   --rose2:#ff6fa3;
-
   --shadow: 0 10px 30px rgba(0,0,0,.08);
   --radius:18px;
 }
 
-/* 기본 */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{ margin:0; padding:0; box-sizing:border-box; }
 
 body{
   font-family:'Noto Sans KR',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
@@ -35,9 +24,7 @@ body{
   color:var(--text);
 }
 
-/* =========================================================
-   NAV (Gallery 동일)
-========================================================= */
+/* ================= NAV ================= */
 .nav{
   position: sticky;
   top:0;
@@ -52,8 +39,8 @@ body{
   max-width:980px;
   margin:0 auto;
   display:flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   position:relative;
 }
 
@@ -73,18 +60,16 @@ body{
   padding:10px 12px;
   border-radius:999px;
   transition:.2s;
+  white-space:nowrap;
 }
 
-.menu a:hover{
-  background: rgba(255,111,163,.08);
-}
+.menu a:hover{ background: rgba(255,111,163,.08); }
 
 .menu a[aria-current="page"]{
   color:var(--rose2);
   background: rgba(255,111,163,.12);
 }
 
-/* lang */
 .lang-switcher{
   position:absolute;
   right:0;
@@ -105,12 +90,8 @@ body{
   margin:0 4px;
 }
 
-/* =========================================================
-   HERO
-========================================================= */
-.hero{
-  padding: 28px 16px 12px;
-}
+/* ================= HERO ================= */
+.hero{ padding: 28px 16px 12px; }
 
 .hero-inner{
   max-width:980px;
@@ -123,26 +104,16 @@ body{
   text-align:center;
 }
 
-.hero-title{
-  font-size:22px;
-  margin-bottom:8px;
-}
+.hero-title{ font-size:22px; margin-bottom:8px; }
+.hero-sub{ font-size:14px; color:var(--muted); }
 
-.hero-sub{
-  font-size:14px;
-  color:var(--muted);
-}
-
-/* =========================================================
-   MAIN
-========================================================= */
+/* ================= MAIN ================= */
 .main{
   max-width:980px;
   margin:20px auto 60px;
   padding:0 20px;
 }
 
-/* 카드 */
 .card{
   background:var(--card);
   border:1px solid var(--border);
@@ -152,9 +123,7 @@ body{
   margin-bottom:24px;
 }
 
-.card.center{
-  text-align:center;
-}
+.card.center{ text-align:center; }
 
 .card h2{
   color:var(--rose2);
@@ -169,7 +138,7 @@ body{
   color:#444;
 }
 
-/* 동의 카드 */
+/* agree */
 .agree-card{
   background:rgba(255,255,255,.65);
   border:1px solid var(--border);
@@ -177,14 +146,12 @@ body{
   padding:18px;
   text-align:center;
   margin-bottom:24px;
-  font-weight:600;
+  font-weight:700;
 }
 
-.agree-card input{
-  margin-right:8px;
-}
+.agree-card input{ margin-right:8px; }
 
-/* 버튼 그룹 */
+/* buttons */
 .btn-group{
   display:flex;
   justify-content:center;
@@ -197,7 +164,7 @@ body{
   align-items:center;
   justify-content:center;
   padding:14px 22px;
-  font-weight:800;
+  font-weight:900;
   border-radius:999px;
   text-decoration:none;
   cursor:pointer;
@@ -211,25 +178,13 @@ body{
   pointer-events:auto;
 }
 
-.btn:hover{
-  transform:translateY(-2px);
-}
+.btn:hover{ transform:translateY(-2px); }
+.btn:active{ transform:scale(.96); }
 
-.btn:active{
-  transform:scale(.96);
-}
+.naver{ background:#03C75A; color:#fff; }
+.kakao{ background:linear-gradient(135deg,#ff6fa3,#ff4f8a); color:#fff; }
 
-.naver{
-  background:#03C75A;
-  color:#fff;
-}
-
-.kakao{
-  background:linear-gradient(135deg,#ff6fa3,#ff4f8a);
-  color:#fff;
-}
-
-/* 캘린더 */
+/* calendar */
 .calendar-wrap iframe{
   width:100%;
   height:400px;
@@ -238,9 +193,7 @@ body{
   margin-top:10px;
 }
 
-/* =========================================================
-   FOOTER
-========================================================= */
+/* footer */
 .footer{
   text-align:center;
   padding:40px 20px;
@@ -249,7 +202,7 @@ body{
 }
 
 .footer-title{
-  font-weight:800;
+  font-weight:900;
   color:var(--rose2);
   margin-bottom:10px;
 }
@@ -265,47 +218,42 @@ body{
   color:#aaa;
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
-@media (max-width: 768px){
+/* ================= MOBILE NAV FIX ================= */
+@media (max-width:768px){
+
+  .nav{
+    padding-top:44px; /* lang 공간 */
+  }
+
+  .lang-switcher{
+    top:8px;
+    right:12px;
+    transform:none;
+    font-size:11px;
+    padding:6px 8px;
+  }
+
   .nav-inner{
-    justify-content: flex-start;  /* 중앙정렬 X, 왼쪽부터 */
+    justify-content:flex-start;
   }
 
   .menu{
-    justify-content: flex-start;
-    flex-wrap: nowrap;           /* ✅ 줄바꿈 금지 */
-    overflow-x: auto;            /* ✅ 가로 스크롤 */
-    -webkit-overflow-scrolling: touch;
-    gap: 8px;
-    padding-right: 120px;        /* ✅ 오른쪽 lang-switcher 공간 확보 */
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    gap:10px;
+    padding-right:8px;
   }
 
-  .menu::-webkit-scrollbar{
-    display:none;                /* 스크롤바 숨김 */
-  }
+  .menu::-webkit-scrollbar{ display:none; }
 
   .menu a{
-    white-space: nowrap;         /* '오시는 길' 같은 글자 안 깨지게 */
-  }
- 
-
- .lang-switcher{
-    top: 6px;
-    right: 8px;
-    transform: none;
+    font-size:13px;
+    padding:9px 10px;
   }
 
-  .btn{
-    width:100%;
-  }
-
-  .card{
-    padding:20px 16px;
-  }
-
-  .calendar-wrap iframe{
-    height:300px;
-  }
+  .btn{ width:100%; }
+  .card{ padding:20px 16px; }
+  .calendar-wrap iframe{ height:300px; }
 }
