@@ -230,3 +230,11 @@ body{
   .interior-slide img{ height: 260px; }
   .menu{ gap:12px; }
 }
+
+/* ✅ 텍스트가 있는 이미지(자르지 말고 전체 보이게) */
+.interior-slide img[src$="natural.png"],
+.interior-slide img[src$="dolleye.png"]{
+  object-fit: contain;
+  background: #fff;              /* 여백 생기면 흰 배경 */
+  object-position: center top;   /* 글자가 위에 있으면 위쪽 우선 */
+}
