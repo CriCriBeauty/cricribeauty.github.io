@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gallery | CriCri Beauty</title>
-  <link rel="stylesheet" href="css/gallery.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/gallery.css?v=20260219_1"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
+
+  <!-- Language Switch -->
   <div class="lang-switcher">
     <a href="index.html">KR</a> |
     <a href="index_en.html">EN</a> |
@@ -16,83 +18,171 @@
     <a href="index_vn.html">VN</a>
   </div>
 
-  <header>
-     <nav class="nav"> <!-- ✅ class="nav" 추가! -->
+  <!-- Navigation -->
+  <header class="nav">
     <ul class="menu">
-        <li><a href="index_en.html">Home</a></li>
-        <li><a href="service_en.html">Services</a></li>
-        <li><a href="예약_en.html">Booking</a></li>
-        <li><a href="map_en.html">Map</a></li>
-        <li><a href="gallery_en.html">Gallery</a></li>
-      </ul>
-    </nav>
+      <li><a href="index_en.html">Home</a></li>
+      <li><a href="service_en.html">Services</a></li>
+      <li><a href="예약_en.html">Booking</a></li>
+      <li><a href="map_en.html">Location</a></li>
+      <li><a href="gallery_en.html" aria-current="page">Gallery</a></li>
+    </ul>
   </header>
 
-  <main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">CriCri Style Book</h1>
+      <p class="hero-sub">
+        We help you find the eyelash and brow style that suits your face best.  
+        “CriCri Beauty Studio”
+      </p>
 
-    <!-- Classic Style Section -->
-    <section>
-      <h2 class="category-title">Classic Style</h2>
-      <div class="interior-slider">
-        <div class="interior-slider-track classic-slider-track">
-          <div class="interior-slide">
-            <img src="images/natural.png" alt="Natural">
-            <p class="caption">NATURAL<br>Natural and Daily Look</p>
+      <div class="quick-nav">
+        <a class="chip" href="#classic">Eyelash Styles</a>
+        <a class="chip" href="#browstyle">Brow Design (Semi-permanent)</a>
+        <a class="chip" href="#beforeafter">Before & After</a>
+        <a class="chip" href="#interior">Studio Interior</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+
+    <!-- Eyelash Styles -->
+    <section class="section" id="classic">
+      <div class="section-head">
+        <h2 class="section-title">Eyelash Styles</h2>
+        <p class="section-desc">Choose a style that matches your desired look.</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track classic-slider-track">
+            <div class="interior-slide">
+              <img src="images/natural.png" alt="Natural">
+              <p class="caption">NATURAL<br>Soft and natural daily look</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/dolleye.png" alt="Doll Eye">
+              <p class="caption">DOLL EYE<br>Round and open eye effect</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/cateye.png" alt="Cat Eye">
+              <p class="caption">CAT EYE<br>Elongated and chic look</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/hybrid.png" alt="Hybrid">
+              <p class="caption">HYBRID<br>Natural yet voluminous</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/volume lash.png" alt="Volume Lash">
+              <p class="caption">VOLUME LASH<br>Full and dramatic style</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/wispy.png" alt="Wispy">
+              <p class="caption">WISPY<br>Textured and airy finish</p>
+            </div>
           </div>
-          <div class="interior-slide">
-            <img src="images/dolleye.png" alt="Doll Eye">
-            <p class="caption">DOLL EYE<br>Emphasizes Round, Centered Eyes</p>
+
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.classic-slider-track')">« Prev</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.classic-slider-track')">Next »</button>
           </div>
-          <div class="interior-slide">
-            <img src="images/cateye.png" alt="Cat Eye">
-            <p class="caption">CAT EYE<br>Sharp and Elongated Outer Corners</p>
-          </div>
-          <div class="interior-slide">
-            <img src="images/hybrid.png" alt="Hybrid">
-            <p class="caption">HYBRID<br>Natural + Full Volume</p>
-          </div>
-          <div class="interior-slide">
-            <img src="images/volume lash.png" alt="Volume Lash">
-            <p class="caption">VOLUME LASH<br>Bold and Dramatic 3D Effect</p>
-          </div>
-          <div class="interior-slide">
-            <img src="images/wispy.png" alt="Wispy">
-            <p class="caption">WISPY<br>Textured Look with Varying Lengths</p>
-          </div>
-        </div>
-        <div class="slider-buttons">
-          <button onclick="moveSlide(-1, '.classic-slider-track')">« Prev</button>
-          <button onclick="moveSlide(1, '.classic-slider-track')">Next »</button>
         </div>
       </div>
     </section>
 
-    <!-- Before & After Section -->
-    <section>
-      <h2 class="category-title">Before & After</h2>
-      <div class="interior-slider">
-        <div class="interior-slider-track beforeafter-slider-track">
-          <div class="interior-slide">
-            <img src="images/B_F1.jpg" alt="Before After 1">
-            <p class="caption">Left: After / Right: Details</p>
+    <!-- Before & After -->
+    <section class="section" id="beforeafter">
+      <div class="section-head">
+        <h2 class="section-title">Before & After</h2>
+        <p class="section-desc">See the transformation at a glance.</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track beforeafter-slider-track">
+            <div class="interior-slide">
+              <img src="images/B_F1.jpg" alt="Before After 1">
+              <p class="caption">Left: After / Right: Detail View</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/B_F2.png" alt="Before After 2">
+              <p class="caption">Left: Before / Right: After</p>
+            </div>
           </div>
-          <div class="interior-slide">
-            <img src="images/B_F2.png" alt="Before After 2">
-            <p class="caption">Left: Before / Right: After</p>
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.beforeafter-slider-track')">« Prev</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.beforeafter-slider-track')">Next »</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Interior Section -->
-    <section>
-      <h2 class="category-title">Shop Interior</h2>
-      <div class="interior-slider">
-        <div class="interior-slider-track shopinterior-slider-track">
-          <div class="interior-slide"><img src="images/inte.jpg" alt="Interior 1"></div>
-          <div class="interior-slide"><img src="images/inte1.jpg" alt="Interior 2"></div>
-          <div class="interior-slide"><img src="images/inte2.jpg" alt="Interior 3"></div>
-          <div class="interior-slide"><img src="images/inte4.jpg" alt="Interior 4"></div>
+    <!-- Brow Design -->
+    <section class="section" id="browstyle">
+      <div class="section-head">
+        <h2 class="section-title">Brow Design</h2>
+        <p class="section-desc">Discover our semi-permanent brow design process.</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track brow-slider-track">
+            <div class="interior-slide">
+              <img src="images/brow1.jpg" alt="Brow Process 1">
+              <p class="caption">Consultation & Brow Mapping</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/brow2.jpg" alt="Brow Process 2">
+              <p class="caption">Precise Semi-permanent Procedure</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/brow3.jpg" alt="Brow Process 3">
+              <p class="caption">Natural & Refined Result</p>
+            </div>
+          </div>
+
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.brow-slider-track')">« Prev</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.brow-slider-track')">Next »</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Studio Interior -->
+    <section class="section" id="interior">
+      <div class="section-head">
+        <h2 class="section-title">Studio Interior</h2>
+        <p class="section-desc">A private and comfortable space designed just for you.</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track shopinterior-slider-track">
+            <div class="interior-slide"><img src="images/inte.jpg" alt="Interior 1"></div>
+            <div class="interior-slide"><img src="images/inte1.jpg" alt="Interior 2"></div>
+            <div class="interior-slide"><img src="images/inte2.jpg" alt="Interior 3"></div>
+            <div class="interior-slide"><img src="images/inte4.jpg" alt="Interior 4"></div>
+          </div>
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.shopinterior-slider-track')">« Prev</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.shopinterior-slider-track')">Next »</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-wrap">
+      <div class="cta-card">
+        <h3>Book or Consult for Your Desired Style</h3>
+        <p>Feel free to contact us based on your preferred style.</p>
+        <div class="cta-actions">
+          <a class="cta-btn" href="booking_en.html">Book Now</a>
+          <a class="cta-btn cta-kakao" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">KakaoTalk Consultation</a>
         </div>
       </div>
     </section>
@@ -100,29 +190,34 @@
   </main>
 
   <script>
-    let slideIndex = 0;
     function moveSlide(n, trackSelector) {
       const track = document.querySelector(trackSelector);
+      if (!track) return;
+
       const slides = track.children;
       if (!slides.length) return;
-      slideIndex = (slideIndex + n + slides.length) % slides.length;
-      track.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+
+      let current = parseInt(track.getAttribute("data-index") || 0, 10);
+      current = (current + n + slides.length) % slides.length;
+
+      track.style.transform = 'translateX(' + (-current * 100) + '%)';
+      track.setAttribute("data-index", current);
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      moveSlide(0, '.shopinterior-slider-track');
-      setInterval(() => moveSlide(1, '.shopinterior-slider-track'), 4000);
+      moveSlide(0, '.classic-slider-track');
+      setInterval(() => moveSlide(1, '.classic-slider-track'), 5000);
 
       moveSlide(0, '.beforeafter-slider-track');
       setInterval(() => moveSlide(1, '.beforeafter-slider-track'), 5000);
 
-      moveSlide(0, '.classic-slider-track');
-      setInterval(() => moveSlide(1, '.classic-slider-track'), 5000);
+      moveSlide(0, '.shopinterior-slider-track');
+      setInterval(() => moveSlide(1, '.shopinterior-slider-track'), 5000);
+
+      moveSlide(0, '.brow-slider-track');
+      setInterval(() => moveSlide(1, '.brow-slider-track'), 5000);
     });
   </script>
 
-  <div class="cta">
-    <a href=""https://map.naver.com/p/entry/place/2023374701?placePath=/ticket?entry=plt&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202506261605&locale=ko&svcName=map_pcv5&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202506261605&locale=ko&svcName=map_pcv5&searchType=place&lng=127.3871167&lat=36.3515941&c=15.00,0,0,0,dh"" class="button">Book This Style</a>
-  </div>
 </body>
 </html>
