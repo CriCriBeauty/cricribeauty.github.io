@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ギャラリー | CriCri Beauty</title>
-  <link rel="stylesheet" href="css/gallery.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/gallery.css?v=20260219_1"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
+
+  <!-- 言語切替 -->
   <div class="lang-switcher">
     <a href="index.html">KR</a> |
     <a href="index_en.html">EN</a> |
@@ -16,113 +18,189 @@
     <a href="index_vn.html">VN</a>
   </div>
 
-  <header>
-     <nav class="nav"> <!-- ✅ class="nav" 추가! -->
+  <!-- ナビゲーション -->
+  <header class="nav">
     <ul class="menu">
-        <li><a href="index_jp.html">ホーム</a></li>
-        <li><a href="service_jp.html">サービス</a></li>
-        <li><a href="예약_jp.html">予約</a></li>
-        <li><a href="map_jp.html">アクセス</a></li>
-        <li><a href="gallery_jp.html">ギャラリー</a></li>
-      </ul>
-    </nav>
+      <li><a href="index_jp.html">ホーム</a></li>
+      <li><a href="service_jp.html">施術メニュー</a></li>
+      <li><a href="booking_jp.html">ご予約</a></li>
+      <li><a href="map_jp.html">アクセス</a></li>
+      <li><a href="gallery_jp.html" aria-current="page">ギャラリー</a></li>
+    </ul>
   </header>
 
-  <main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">CriCri Style Book</h1>
+      <p class="hero-sub">
+        お顔に最も似合うまつげ・眉スタイルをご提案いたします。  
+        “CriCri Beauty Studio”
+      </p>
 
-    <!-- Classic スタイル -->
-    <section>
-      <h2 class="category-title">クラシックスタイル</h2>
-      <div class="interior-slider">
-        <div class="interior-slider-track classic-slider-track">
-          <div class="interior-slide">
-            <img src="images/natural.png" alt="ナチュラル">
-            <p class="caption">NATURAL<br>自然で毎日使えるスタイル</p>
+      <div class="quick-nav">
+        <a class="chip" href="#classic">まつげスタイル</a>
+        <a class="chip" href="#browstyle">眉デザイン（半永久）</a>
+        <a class="chip" href="#beforeafter">Before & After</a>
+        <a class="chip" href="#interior">サロン内観</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+
+    <!-- まつげスタイル -->
+    <section class="section" id="classic">
+      <div class="section-head">
+        <h2 class="section-title">まつげスタイル</h2>
+        <p class="section-desc">なりたい雰囲気に合わせてお選びください。</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track classic-slider-track">
+
+            <div class="interior-slide">
+              <img src="images/natural.png" alt="Natural">
+              <p class="caption">ナチュラル<br>自然で上品なデイリースタイル</p>
+            </div>
+
+            <div class="interior-slide">
+              <img src="images/dolleye.png" alt="Doll Eye">
+              <p class="caption">ドールアイ<br>中央長めで丸く可愛らしい印象</p>
+            </div>
+
+            <div class="interior-slide">
+              <img src="images/cateye.png" alt="Cat Eye">
+              <p class="caption">キャットアイ<br>目尻長めでクールな印象</p>
+            </div>
+
+            <div class="interior-slide">
+              <img src="images/hybrid.png" alt="Hybrid">
+              <p class="caption">ハイブリッド<br>ナチュラル＋ボリューム感</p>
+            </div>
+
+            <div class="interior-slide">
+              <img src="images/volume lash.png" alt="Volume Lash">
+              <p class="caption">ボリュームラッシュ<br>より濃く華やかな仕上がり</p>
+            </div>
+
+            <div class="interior-slide">
+              <img src="images/wispy.png" alt="Wispy">
+              <p class="caption">ウィスピー<br>長さの差で立体感を演出</p>
+            </div>
+
           </div>
-          <div class="interior-slide">
-            <img src="images/dolleye.png" alt="ドールアイ">
-            <p class="caption">DOLL EYE<br>中央が長く丸い目を強調</p>
+
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.classic-slider-track')">« 前へ</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.classic-slider-track')">次へ »</button>
           </div>
-          <div class="interior-slide">
-            <img src="images/cateye.png" alt="キャットアイ">
-            <p class="caption">CAT EYE<br>目尻が長くシャープな印象</p>
-          </div>
-          <div class="interior-slide">
-            <img src="images/hybrid.png" alt="ハイブリッド">
-            <p class="caption">HYBRID<br>自然さとボリューム感の両立</p>
-          </div>
-          <div class="interior-slide">
-            <img src="images/volume lash.png" alt="ボリュームラッシュ">
-            <p class="caption">VOLUME LASH<br>濃密ではっきりした印象</p>
-          </div>
-          <div class="interior-slide">
-            <img src="images/wispy.png" alt="ウィスピー">
-            <p class="caption">WISPY<br>長さの違いで立体感を演出</p>
-          </div>
-        </div>
-        <div class="slider-buttons">
-          <button onclick="moveSlide(-1, '.classic-slider-track')">« 前へ</button>
-          <button onclick="moveSlide(1, '.classic-slider-track')">次へ »</button>
         </div>
       </div>
     </section>
 
     <!-- Before & After -->
-    <section>
-      <h2 class="category-title">ビフォー＆アフター</h2>
-      <div class="interior-slider">
-        <div class="interior-slider-track beforeafter-slider-track">
-          <div class="interior-slide">
-            <img src="images/B_F1.jpg" alt="ビフォーアフター 1">
-            <p class="caption">左：施術後 / 右：施術詳細</p>
+    <section class="section" id="beforeafter">
+      <div class="section-head">
+        <h2 class="section-title">Before & After</h2>
+        <p class="section-desc">施術前後の変化をご覧ください。</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track beforeafter-slider-track">
+            <div class="interior-slide">
+              <img src="images/B_F1.jpg" alt="Before After 1">
+              <p class="caption">左：施術後 / 右：仕上がり詳細</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/B_F2.png" alt="Before After 2">
+              <p class="caption">左：施術前 / 右：施術後</p>
+            </div>
           </div>
-          <div class="interior-slide">
-            <img src="images/B_F2.png" alt="ビフォーアフター 2">
-            <p class="caption">左：施術前 / 右：施術後</p>
+
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.beforeafter-slider-track')">« 前へ</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.beforeafter-slider-track')">次へ »</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 店内インテリア -->
-    <section>
-      <h2 class="category-title">店内インテリア</h2>
-      <div class="interior-slider">
-        <div class="interior-slider-track shopinterior-slider-track">
-          <div class="interior-slide"><img src="images/inte.jpg" alt="インテリア1"></div>
-          <div class="interior-slide"><img src="images/inte1.jpg" alt="インテリア2"></div>
-          <div class="interior-slide"><img src="images/inte2.jpg" alt="インテリア3"></div>
-          <div class="interior-slide"><img src="images/inte4.jpg" alt="インテリア4"></div>
+    <!-- 眉デザイン -->
+    <section class="section" id="browstyle">
+      <div class="section-head">
+        <h2 class="section-title">眉デザイン</h2>
+        <p class="section-desc">半永久眉デザインの施術工程をご紹介します。</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track brow-slider-track">
+
+            <div class="interior-slide">
+              <img src="images/brow1.jpg" alt="Brow Process 1">
+              <p class="caption">カウンセリング＆デザイン設計</p>
+            </div>
+
+            <div class="interior-slide">
+              <img src="images/brow2.jpg" alt="Brow Process 2">
+              <p class="caption">丁寧な半永久施術</p>
+            </div>
+
+            <div class="interior-slide">
+              <img src="images/brow3.jpg" alt="Brow Process 3">
+              <p class="caption">自然で洗練された仕上がり</p>
+            </div>
+
+          </div>
+
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.brow-slider-track')">« 前へ</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.brow-slider-track')">次へ »</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- サロン内観 -->
+    <section class="section" id="interior">
+      <div class="section-head">
+        <h2 class="section-title">サロン内観</h2>
+        <p class="section-desc">プライベートで落ち着いた空間をご提供します。</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track shopinterior-slider-track">
+            <div class="interior-slide"><img src="images/inte.jpg" alt="Interior 1"></div>
+            <div class="interior-slide"><img src="images/inte1.jpg" alt="Interior 2"></div>
+            <div class="interior-slide"><img src="images/inte2.jpg" alt="Interior 3"></div>
+            <div class="interior-slide"><img src="images/inte4.jpg" alt="Interior 4"></div>
+          </div>
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.shopinterior-slider-track')">« 前へ</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.shopinterior-slider-track')">次へ »</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-wrap">
+      <div class="cta-card">
+        <h3>ご希望のスタイルで予約・ご相談</h3>
+        <p>お好みのスタイルをもとにお気軽にお問い合わせください。</p>
+        <div class="cta-actions">
+          <a class="cta-btn" href="booking_jp.html">ご予約はこちら</a>
+          <a class="cta-btn cta-kakao" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Kakao相談</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <script>
-    let slideIndex = 0;
-    function moveSlide(n, trackSelector) {
-      const track = document.querySelector(trackSelector);
-      const slides = track.children;
-      if (!slides.length) return;
-      slideIndex = (slideIndex + n + slides.length) % slides.length;
-      track.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      moveSlide(0, '.shopinterior-slider-track');
-      setInterval(() => moveSlide(1, '.shopinterior-slider-track'), 4000);
-
-      moveSlide(0, '.beforeafter-slider-track');
-      setInterval(() => moveSlide(1, '.beforeafter-slider-track'), 5000);
-
-      moveSlide(0, '.classic-slider-track');
-      setInterval(() => moveSlide(1, '.classic-slider-track'), 5000);
-    });
-  </script>
-
-  <div class="cta">
-    <a href=""https://map.naver.com/p/entry/place/2023374701?placePath=/ticket?entry=plt&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202506261605&locale=ko&svcName=map_pcv5&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202506261605&locale=ko&svcName=map_pcv5&searchType=place&lng=127.3871167&lat=36.3515941&c=15.00,0,0,0,dh"" class="button">このスタイルで予約する</a>
-  </div>
 </body>
 </html>
