@@ -1,87 +1,112 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>预约 | CriCri 美容工作室</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/booking.css" />
+  <title>项目介绍 | Cricri Beauty Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/service.css?v=20260219_1" />
 </head>
 <body>
-<!-- 头部 -->
-<div class="header-container">
-  <div class="logo-area centered">
-    <div class="logo-text-row">
-      <span class="cricri">CriCri</span>
-      <div class="studio-text">
-        <div>BEAUTY</div>
-        <div>STUDIO</div>
-      </div>
-    </div>
-    <p class="logo-tagline">CriCri 美容工作室</p>
-  </div>
 
-  <ul class="menu centered">
+<!-- ================= LANGUAGE ================= -->
+<div class="lang-switcher">
+  <a href="index.html">KR</a> |
+  <a href="index_en.html">EN</a> |
+  <a href="index_jp.html">JP</a> |
+  <a href="index_ch.html">CH</a> |
+  <a href="index_vn.html">VN</a>
+</div>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <ul class="menu">
+    <li><a href="index_ch.html">首页</a></li>
+    <li><a href="service_ch.html">项目介绍</a></li>
     <li><a href="예약_ch.html">预约</a></li>
-    <li><a href="service_ch.html">菜单</a></li>
-    <li><a href="map_ch.html">地址</a></li>
-    <li><a href="gallery_ch.html">画廊</a></li>
+    <li><a href="map_ch.html">路线</a></li>
+    <li><a href="gallery_ch.html" aria-current="page">作品展示</a></li>
   </ul>
+</header>
 
-  <!-- 按钮 -->
-  <div class="btn-wrap">
-    <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">Naver 预约</a>
-    <a href="http://pf.kakao.com/_SGZrn/chat" target="_blank" class="btn kakao" id="kakaoBtn">Kakao 咨询</a>
-  </div>
+<!-- ================= MAIN ================= -->
+<main class="service-container">
 
-  <div class="lang-switcher">
-    <a href="index.html">KR</a> |
-    <a href="index_en.html">EN</a> |
-    <a href="index_jp.html">JP</a> |
-    <a href="index_ch.html">CH</a> |
-    <a href="index_vn.html">VN</a>
-  </div>
+  <!-- 左侧价格图片 -->
+  <aside class="price-box">
+    <img src="images/price.png" alt="项目价格表" class="price-img" />
+    <button type="button" onclick="openModal()">🔍 查看大图</button>
+  </aside>
+
+  <!-- 右侧项目说明 -->
+  <section class="section">
+    <h2>💅 项目详细介绍</h2>
+
+    <div class="service-block">
+      <h3>🌸 基础睫毛提升（Basic Lash Lift）</h3>
+      <p>
+        采用温和药水打造自然卷翘效果，让双眼更有神，适合日常妆容。
+      </p>
+      <ul>
+        <li>卷翘效果明显</li>
+        <li>打造清晰立体眼神</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3>🌿 黑色睫毛染色提升（Black Tint Lash Lift）</h3>
+      <p>
+        在基础睫毛提升的基础上加入黑色染色，使眼神更加深邃迷人。
+      </p>
+      <ul>
+        <li>卷翘 + 染色同步进行</li>
+        <li>自然睫毛膏效果</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3>✨ 双重睫毛提升（Dual Lash Lift）</h3>
+      <p>
+        同时进行上睫毛与下睫毛提升，让眼睛更加饱满立体。
+      </p>
+      <ul>
+        <li>上下睫毛同时处理</li>
+        <li>放大双眼效果更明显</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3>🌈 眉毛定型（Brow Lamination）</h3>
+      <p>
+        通过调整眉毛毛流，打造整齐自然又立体的眉型。
+      </p>
+      <ul>
+        <li>改善旧半永久眉效果</li>
+        <li>提升整体精神气质</li>
+        <li>整理眉毛毛流</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3>🍃 自然眉设计</h3>
+      <p>
+        根据个人眉毛生长方向与脸型进行设计，呈现自然柔和的效果。
+      </p>
+    </div>
+
+  </section>
+</main>
+
+<!-- ================= MODAL ================= -->
+<div id="modal" onclick="closeModal()" role="dialog" aria-modal="true" aria-label="查看项目价格表大图">
+  <img src="images/price.png" alt="放大后的项目价格表" />
 </div>
 
-<p class="desc">为了您的专属护理服务，请务必在预约前确认以下注意事项。</p>
-
-<!-- 同意框 -->
-<div class="check-confirm">
-  <input type="checkbox" id="agree" />
-  <label for="agree">我已确认并同意以下所有内容。</label>
-</div>
-
-<!-- 注意事项 -->
-<div class="section">
-  <h2>📌 预约前须知</h2>
-  <ul>
-    <li>迟到可能会影响施术时间。</li>
-    <li>如需更改预约，请至少提前一天告知。</li>
-    <li>无故缺席可能会限制今后的预约。</li>
-    <li>敏感肌肤/孕妇须与我们沟通后决定是否可以施术。</li>
-  </ul>
-</div>
-
-<!-- 可预约日历 -->
-<div class="section">
-  <h2>📆 可预约日期</h2>
-  <p style="text-align:center; color:#666; font-size:0.9em;">※ 以下日历仅供参考，实际预约请通过 Naver 进行。</p>
-  <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
-</div>
-
-<!-- 店铺信息 -->
-<div class="info-box">
-  <p><strong>CriCri 美容工作室</strong></p>
-  <p>营业时间：10:00 ~ 20:00</p>
-  <p>联系电话：010-3263-6984</p>
-  <p>地址：大田广域市 西区 屯山中路 54</p>
-</div>
-
-<!-- 页脚 -->
-<footer style="background-color: #fef0f4; padding: 30px 20px; text-align: center;">
-  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">CriCri 美容店</div>
+<!-- ================= FOOTER ================= -->
+<footer style="padding: 30px 20px; text-align: center; background-color: transparent;">
+  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">Cricri Beauty Studio</div>
   <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
-    营业时间：10:00 ~ 20:00 ｜ 联系电话：0507-1367-6984
+    营业时间：10:00 – 20:00 ｜ 联系电话：0507-1367-6984
   </div>
   <div style="margin: 15px 0;">
     <a href="http://pf.kakao.com/_SGZrn" target="_blank" style="margin: 0 10px;">
@@ -98,30 +123,23 @@
     </a>
   </div>
   <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-    &copy; 2025 Cricri Beauty Studio. 版权所有。
+    &copy; 2025 Cricri Beauty Studio. All rights reserved.
   </div>
 </footer>
 
-<!-- 脚本 -->
 <script>
-  const checkbox = document.getElementById('agree');
-  const naverBtn = document.getElementById('naverBtn');
-  const kakaoBtn = document.getElementById('kakaoBtn');
+  function openModal() {
+    const modal = document.getElementById('modal');
+    if (!modal) return;
+    modal.style.display = 'flex';
+  }
 
-  checkbox.addEventListener('change', () => {
-    const isChecked = checkbox.checked;
-    naverBtn.classList.toggle('active', isChecked);
-    kakaoBtn.classList.toggle('active', isChecked);
-  });
-
-  [naverBtn, kakaoBtn].forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      if (!checkbox.checked) {
-        e.preventDefault();
-        alert("请先确认并同意预约前须知。");
-      }
-    });
-  });
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    if (!modal) return;
+    modal.style.display = 'none';
+  }
 </script>
+
 </body>
 </html>
