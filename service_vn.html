@@ -3,85 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Đặt lịch | CriCri Beauty Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/booking.css" />
+  <title>Dịch Vụ | Cricri Beauty Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/service.css?v=20260219_1" />
 </head>
 <body>
-<!-- Phần đầu -->
-<div class="header-container">
-  <div class="logo-area centered">
-    <div class="logo-text-row">
-      <span class="cricri">CriCri</span>
-      <div class="studio-text">
-        <div>BEAUTY</div>
-        <div>STUDIO</div>
-      </div>
+
+<!-- ================= LANGUAGE ================= -->
+<div class="lang-switcher">
+  <a href="index.html">KR</a> |
+  <a href="index_en.html">EN</a> |
+  <a href="index_jp.html">JP</a> |
+  <a href="index_ch.html">CH</a> |
+  <a href="index_vn.html">VN</a>
+</div>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <ul class="menu">
+    <li><a href="index_vn.html">Trang Chủ</a></li>
+    <li><a href="service_vn.html">Dịch Vụ</a></li>
+    <li><a href="예약_vn.html">Đặt Lịch</a></li>
+    <li><a href="map_vn.html">Bản Đồ</a></li>
+    <li><a href="gallery_vn.html" aria-current="page">Thư Viện Ảnh</a></li>
+  </ul>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main class="service-container">
+
+  <!-- Bảng giá bên trái -->
+  <aside class="price-box">
+    <img src="images/price.png" alt="Bảng giá dịch vụ" class="price-img" />
+    <button type="button" onclick="openModal()">🔍 Xem ảnh lớn</button>
+  </aside>
+
+  <!-- Nội dung dịch vụ bên phải -->
+  <section class="section">
+    <h2>💅 Thông Tin Chi Tiết Dịch Vụ</h2>
+
+    <div class="service-block">
+      <h3>🌸 Uốn Mi Cơ Bản</h3>
+      <p>
+        Sử dụng dung dịch dịu nhẹ giúp tạo độ cong tự nhiên, mang lại ánh nhìn tươi tắn và cuốn hút mỗi ngày.
+      </p>
+      <ul>
+        <li>Độ cong rõ nét</li>
+        <li>Giúp đôi mắt trông sắc nét hơn</li>
+      </ul>
     </div>
-    <p class="logo-tagline">CriCri Beauty Studio</p>
-  </div>
 
-  <ul class="menu centered">
-    <li><a href="예약_vn.html">Đặt lịch</a></li>
-    <li><a href="service_vn.html">Dịch vụ</a></li>
-    <li><a href="map_vn.html">Bản đồ</a></li>
-    <li><a href="gallery_vn.html">Bộ sưu tập</a></li>
-  </ul>
+    <div class="service-block">
+      <h3>🌿 Uốn Mi Phủ Đen (Black Tint)</h3>
+      <p>
+        Kết hợp uốn mi cơ bản cùng phủ đen, giúp mi trông dày và đậm màu hơn như hiệu ứng mascara.
+      </p>
+      <ul>
+        <li>Uốn + phủ màu cùng lúc</li>
+        <li>Hiệu ứng giống chuốt mascara</li>
+      </ul>
+    </div>
 
-  <!-- Nút đặt lịch -->
-  <div class="btn-wrap">
-    <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">Đặt lịch qua Naver</a>
-    <a href="http://pf.kakao.com/_SGZrn/chat" target="_blank" class="btn kakao" id="kakaoBtn">Tư vấn Kakao</a>
-  </div>
+    <div class="service-block">
+      <h3>✨ Uốn Mi Dual (Trên & Dưới)</h3>
+      <p>
+        Thực hiện đồng thời mi trên và mi dưới để tạo hiệu ứng đôi mắt to và nổi bật hơn.
+      </p>
+      <ul>
+        <li>Uốn mi trên và dưới cùng lúc</li>
+        <li>Tăng hiệu ứng mở rộng đôi mắt</li>
+      </ul>
+    </div>
 
-  <div class="lang-switcher">
-    <a href="index.html">KR</a> |
-    <a href="index_en.html">EN</a> |
-    <a href="index_jp.html">JP</a> |
-    <a href="index_ch.html">CH</a> |
-    <a href="index_vn.html">VN</a>
-  </div>
+    <div class="service-block">
+      <h3>🌈 Brow Lamination (Nâng & Định Hình Chân Mày)</h3>
+      <p>
+        Điều chỉnh hướng sợi mày, tạo dáng gọn gàng và sắc nét tự nhiên.
+      </p>
+      <ul>
+        <li>Hỗ trợ chỉnh sửa chân mày phun xăm cũ</li>
+        <li>Tạo cảm giác tươi sáng, thanh thoát</li>
+        <li>Chỉnh lại form và sợi mày</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3>🍃 Thiết Kế Chân Mày Tự Nhiên</h3>
+      <p>
+        Thiết kế dáng mày dựa trên đường nét và sợi mày tự nhiên của khách hàng, mang lại vẻ đẹp hài hòa và mềm mại.
+      </p>
+    </div>
+
+  </section>
+</main>
+
+<!-- ================= MODAL ================= -->
+<div id="modal" onclick="closeModal()" role="dialog" aria-modal="true" aria-label="Phóng to bảng giá">
+  <img src="images/price.png" alt="Bảng giá phóng to" />
 </div>
 
-<p class="desc">Hãy chắc chắn rằng bạn đã đọc kỹ các lưu ý trước khi đặt lịch chăm sóc cá nhân.</p>
-
-<!-- Hộp xác nhận -->
-<div class="check-confirm">
-  <input type="checkbox" id="agree" />
-  <label for="agree">Tôi đã đọc và đồng ý với tất cả các nội dung bên dưới.</label>
-</div>
-
-<!-- Hướng dẫn đặt lịch -->
-<div class="section">
-  <h2>📌 Lưu ý trước khi đặt lịch</h2>
-  <ul>
-    <li>Việc đến trễ có thể làm giảm thời gian thực hiện dịch vụ.</li>
-    <li>Vui lòng thông báo thay đổi lịch hẹn ít nhất 1 ngày trước.</li>
-    <li>Không đến mà không báo trước sẽ bị hạn chế đặt lịch trong tương lai.</li>
-    <li>Da nhạy cảm/phụ nữ mang thai cần được tư vấn trước khi thực hiện dịch vụ.</li>
-  </ul>
-</div>
-
-<!-- Lịch đặt -->
-<div class="section">
-  <h2>📆 Lịch khả dụng</h2>
-  <p style="text-align:center; color:#666; font-size:0.9em;">※ Lịch dưới đây chỉ mang tính chất tham khảo, vui lòng đặt lịch chính thức qua Naver.</p>
-  <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
-</div>
-
-<!-- Thông tin cửa hàng -->
-<div class="info-box">
-  <p><strong>CriCri Beauty Studio</strong></p>
-  <p>Giờ mở cửa: 10:00 ~ 20:00</p>
-  <p>Điện thoại: 010-3263-6984</p>
-  <p>54, Dunsanjung-ro, Seo-gu, Daejeon</p>
-</div>
-
-<!-- Chân trang -->
-<footer style="background-color: #fef0f4; padding: 30px 20px; text-align: center;">
-  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">CriCri Beauty Shop</div>
+<!-- ================= FOOTER ================= -->
+<footer style="padding: 30px 20px; text-align: center; background-color: transparent;">
+  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">Cricri Beauty Studio</div>
   <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
-    Giờ mở cửa: 10:00 ~ 20:00 ｜ Liên hệ: 0507-1367-6984
+    Giờ mở cửa: 10:00 – 20:00 ｜ Liên hệ: 0507-1367-6984
   </div>
   <div style="margin: 15px 0;">
     <a href="http://pf.kakao.com/_SGZrn" target="_blank" style="margin: 0 10px;">
@@ -98,30 +123,23 @@
     </a>
   </div>
   <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-    &copy; 2025 Cricri Beauty Studio. Tất cả các quyền được bảo lưu.
+    &copy; 2025 Cricri Beauty Studio. All rights reserved.
   </div>
 </footer>
 
-<!-- Script -->
 <script>
-  const checkbox = document.getElementById('agree');
-  const naverBtn = document.getElementById('naverBtn');
-  const kakaoBtn = document.getElementById('kakaoBtn');
+  function openModal() {
+    const modal = document.getElementById('modal');
+    if (!modal) return;
+    modal.style.display = 'flex';
+  }
 
-  checkbox.addEventListener('change', () => {
-    const isChecked = checkbox.checked;
-    naverBtn.classList.toggle('active', isChecked);
-    kakaoBtn.classList.toggle('active', isChecked);
-  });
-
-  [naverBtn, kakaoBtn].forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      if (!checkbox.checked) {
-        e.preventDefault();
-        alert("Vui lòng xác nhận và đồng ý với hướng dẫn trước khi đặt lịch.");
-      }
-    });
-  });
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    if (!modal) return;
+    modal.style.display = 'none';
+  }
 </script>
+
 </body>
 </html>
