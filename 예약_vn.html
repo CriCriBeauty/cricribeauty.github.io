@@ -3,104 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Đặt lịch | CriCri Beauty Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/booking.css" />
+  <title>Đặt lịch | Cricri Beauty Studio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/booking.css?v=20260219_3" />
 </head>
 <body>
-<!-- Header -->
-<div class="header-container">
-  <div class="logo-area centered">
-    <div class="logo-text-row">
-      <span class="cricri">CriCri</span>
-      <div class="studio-text">
-        <div>BEAUTY</div>
-        <div>STUDIO</div>
-      </div>
-    </div>
-    <p class="logo-tagline">CriCri Beauty Studio</p>
-  </div>
 
-  <ul class="menu centered">
+<!-- ================= LANGUAGE ================= -->
+<div class="lang-switcher">
+  <a href="index.html">KR</a> |
+  <a href="index_en.html">EN</a> |
+  <a href="index_jp.html">JP</a> |
+  <a href="index_ch.html">CH</a> |
+  <a href="index_vn.html">VN</a>
+</div>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <ul class="menu">
+    <li><a href="index_vn.html">Trang chủ</a></li>
+    <li><a href="service_vn.html">Dịch vụ</a></li>
     <li><a href="예약_vn.html">Đặt lịch</a></li>
-    <li><a href="service_vn.html">Dịch vụ làm đẹp</a></li>
-    <li><a href="map_vn.html">Bản đồ</a></li>
+    <li><a href="map_vn.html">Vị trí</a></li>
     <li><a href="gallery_vn.html">Thư viện ảnh</a></li>
   </ul>
+</header>
 
-  <!-- Booking Buttons -->
-  <div class="btn-wrap">
-    <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">Đặt lịch Naver</a>
-    <a href="http://pf.kakao.com/_SGZrn/chat" target="_blank" class="btn kakao" id="kakaoBtn">Tư vấn KakaoTalk</a>
+<!-- ================= MAIN ================= -->
+<main class="page">
+
+  <!-- HERO -->
+  <section class="hero-card">
+    <h1 class="hero-title">Thông tin đặt lịch</h1>
+    <p class="hero-desc">
+      Chúng tôi mang đến dịch vụ làm đẹp được thiết kế riêng cho từng khách hàng.  
+      Vui lòng đọc kỹ các thông tin dưới đây trước khi đặt lịch.
+    </p>
+  </section>
+
+  <!-- Đồng ý -->
+  <div class="check-confirm">
+    <div class="check-card">
+      <input type="checkbox" id="agree" />
+      <label for="agree">Tôi đã đọc và đồng ý với các nội dung trên.</label>
+    </div>
   </div>
 
-  <!-- Language Switcher -->
-  <div class="lang-switcher">
-    <a href="index.html">KR</a> |
-    <a href="index_en.html">EN</a> |
-    <a href="index_jp.html">JP</a> |
-    <a href="index_ch.html">CH</a> |
-    <a href="index_vn.html">VN</a>
-  </div>
-</div>
+  <!-- Lưu ý -->
+  <section class="section">
+    <h2>📌 Lưu ý trước khi đặt lịch</h2>
+    <ul>
+      <li>Nếu đến trễ, thời gian thực hiện dịch vụ có thể được điều chỉnh.</li>
+      <li>Vui lòng thay đổi hoặc hủy lịch trước ít nhất 1 ngày.</li>
+      <li>Việc không đến mà không báo trước có thể ảnh hưởng đến các lần đặt lịch sau.</li>
+      <li>Khách có da nhạy cảm hoặc đang mang thai sẽ được tư vấn trước khi thực hiện dịch vụ.</li>
+    </ul>
+  </section>
 
-<p class="desc">Dịch vụ điều trị riêng biệt dành cho bạn. Vui lòng kiểm tra kỹ các lưu ý trước khi đặt lịch.</p>
+  <!-- Nút đặt lịch -->
+  <section class="section">
+    <h2>📲 Tiến hành đặt lịch</h2>
+    <div class="btn-wrap">
+      <a href="https://map.naver.com/p/entry/place/2023374701"
+         target="_blank"
+         class="btn naver"
+         id="naverBtn">Đặt lịch qua Naver</a>
 
-<!-- Checkbox -->
-<div class="check-confirm">
-  <input type="checkbox" id="agree" />
-  <label for="agree">Tôi đã đọc và đồng ý với những lưu ý dưới đây</label>
-</div>
+      <a href="http://pf.kakao.com/_SGZrn/chat"
+         target="_blank"
+         class="btn kakao"
+         id="kakaoBtn">Tư vấn qua KakaoTalk</a>
+    </div>
+  </section>
 
-<!-- Reservation Notice -->
-<div class="section">
-  <h2>📌 Lưu ý trước khi đặt lịch</h2>
-  <ul>
-    <li>Thời gian điều trị có thể thay đổi nếu đến muộn.</li>
-    <li>Vui lòng thay đổi lịch hẹn ít nhất một ngày trước đó.</li>
-    <li>Sau khi "không đến mà không báo", việc đặt hẹn sẽ bị hạn chế.</li>
-    <li>Khách có làn da nhạy cảm / mang thai sẽ được tư vấn trước khi quyết định.</li>
-  </ul>
-</div>
+  <!-- Lịch -->
+  <section class="section">
+    <h2>📆 Lịch khả dụng</h2>
+    <p class="hint">
+      ※ Lịch bên dưới chỉ mang tính tham khảo.  
+      Vui lòng hoàn tất đặt lịch thông qua Naver.
+    </p>
+    <iframe
+      src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul">
+    </iframe>
+  </section>
 
-<!-- Calendar -->
-<div class="section">
-  <h2>📆 Lịch đặt hẹn</h2>
-  <p style="text-align:center; color:#666; font-size:0.9em;">※ Lịch dưới đây chỉ mang tính tham khảo. Vui lòng đặt lịch thông qua Naver.</p>
-  <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
-</div>
+  <!-- Thông tin -->
+  <section class="info-box">
+    <p><strong>Cricri Beauty Studio</strong></p>
+    <p>Giờ hoạt động: 10:00 – 20:00</p>
+    <p>Điện thoại: +82)010-3263-6984</p>
+    <p>Địa chỉ: 54 Dunsanjung-ro, Seo-gu, Daejeon, Hàn Quốc</p>
+    <p>Mã đăng ký kinh doanh: 641-22-02169</p>
+  </section>
 
-<!-- Info Box -->
-<div class="info-box">
-  <p><strong>CriCri Beauty Studio</strong></p>
-  <p>Giờ mở cửa: 10:00 ~ 20:00</p>
-  <p>Số điện thoại: 010-3263-6984</p>
-  <p>54, Dunsan-jung-ro, Seo-gu, Daejeon</p>
-</div>
+</main>
 
-<!-- Footer -->
-<footer style="background-color: #fef0f4; padding: 30px 20px; text-align: center;">
-  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">CriCri Beauty Studio</div>
-  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
-    Giờ mở cửa: 10:00 ~ 20:00 ｜ Liên hệ: 0507-1367-6984
-  </div>
-  <div style="margin: 15px 0;">
-    <a href="http://pf.kakao.com/_SGZrn" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/3991/3991999.png" alt="KakaoTalk" width="26" />
-    </a>
-    <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="26" />
-    </a>
-    <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/11423/11423248.png" alt="Blog" width="26" />
-    </a>
-    <a href="#" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968850.png" alt="Band" width="26" />
-    </a>
-  </div>
-  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-    &copy; 2025 CriCri Beauty Studio. All rights reserved.
-  </div>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-title">Cricri Beauty Studio</div>
+  <div class="footer-info">Giờ hoạt động: 10:00 – 20:00 ｜ Liên hệ: +82)0507-1367-6984</div>
+  <div class="footer-copy">&copy; 2025 Cricri Beauty Studio. All rights reserved.</div>
 </footer>
 
 <script>
@@ -118,10 +122,11 @@
     btn.addEventListener('click', (e) => {
       if (!checkbox.checked) {
         e.preventDefault();
-        alert("Vui lòng đồng ý với các lưu ý trước khi đặt lịch.");
+        alert("Vui lòng đồng ý với thông tin đặt lịch trước khi tiếp tục.");
       }
     });
   });
 </script>
+
 </body>
 </html>
