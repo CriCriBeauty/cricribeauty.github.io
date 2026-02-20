@@ -37,7 +37,7 @@ body{
   background: rgba(255,255,255,.80);
   border-bottom:1px solid var(--border);
   backdrop-filter: blur(12px);
-  padding:12px 16px;
+  padding: 44px 16px 12px;  /* 🔥 위 공간 확보 */
 }
 
 .nav-inner{
@@ -52,9 +52,15 @@ body{
 .menu{
   list-style:none;
   display:flex;
-  gap:18px;
-  flex-wrap:wrap;
+  gap:14px;
   justify-content:center;
+  flex-wrap: nowrap;          /* 🔥 줄바꿈 금지 */
+  overflow-x: auto;           /* 🔥 공간 부족하면 스크롤 */
+  scrollbar-width: none;
+}
+
+.menu::-webkit-scrollbar{
+  display:none;
 }
 
 .menu a{
@@ -77,19 +83,19 @@ body{
 
 /* lang (PC: nav 안 오른쪽) */
 .lang-switcher{
-  position:absolute;
-  right:0;
-  top:50%;
-  transform:translateY(-50%);
-  font-size:12px;
-  padding:6px 10px;
-  border-radius:999px;
-  background:rgba(255,255,255,.75);
-  border:1px solid var(--border);
-  backdrop-filter:blur(8px);
-  white-space:nowrap;
-}
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  z-index: 2000;
 
+  font-size: 12px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.90);
+  border: 1px solid rgba(0,0,0,.06);
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
+}
 .lang-switcher a{
   text-decoration:none;
   color:#444;
@@ -264,3 +270,11 @@ iframe{
 }
 
 /* Info box (고정 X, 카드로 통일)
+
+@media (max-width:768px){
+  .menu a{
+    font-size:13px;
+    padding:8px 8px;
+  }
+}
+
