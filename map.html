@@ -2,167 +2,83 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>오시는 길 | 크리크리 뷰티샵</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/map.css" />
-  <style>
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-      background-color: #fffafc;
-      margin: 0;
-      padding-top: 120px;
-    }
+  <title>오시는 길 | Cricri Beauty Studio</title>
 
-    .lang-switcher {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      font-size: 0.9em;
-    }
-    .lang-switcher a {
-      text-decoration: none;
-      color: #888;
-      margin: 0 5px;
-    }
-
-    .nav {
-      background-color: #fff7f9;
-      padding: 20px 0;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      position: fixed;
-      top: 30px;
-      width: 100%;
-      z-index: 1000;
-    }
-
-    .menu {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 0;
-      margin: 0;
-    }
-
-    .menu li a {
-      text-decoration: none;
-      color: #111;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    .menu li a:hover {
-      color: #d94f7b;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 2.2em;
-      margin: 40px 0 20px;
-      color: #d94f7b;
-    }
-
-    .address-box {
-      text-align: center;
-      font-size: 1.1em;
-      color: #444;
-      margin-bottom: 30px;
-    }
-
-    .map-container {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    }
-
-    .transport-box {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-      padding: 30px;
-      margin-bottom: 60px;
-    }
-
-    .transport-box h2 {
-      font-size: 1.4em;
-      color: #d94f7b;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .transport-box ul {
-      font-size: 1em;
-      color: #444;
-      line-height: 1.8;
-      padding-left: 20px;
-    }
-
-    .transport-box li {
-      margin-bottom: 10px;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/map.css?v=20260219_2" />
 </head>
 <body>
 
-  <div class="lang-switcher">
-    <a href="index.html">KR</a> |
-    <a href="index_en.html">EN</a> |
-    <a href="index_jp.html">JP</a> |
-    <a href="index_ch.html">CH</a> |
-    <a href="index_vn.html">VN</a>
-  </div>
+<!-- ================= TOP BAR (service.html style) ================= -->
+<header class="nav">
+  <div class="nav-inner">
 
-  <header class="nav">
     <ul class="menu">
-      <li><a href="예약.html">예약</a></li>
+      <li><a href="index.html">홈</a></li>
       <li><a href="service.html">시술(서비스)</a></li>
-      <li><a href="map.html">찾아오시는 길</a></li>
+      <li><a href="예약.html">예약</a></li>
+      <li><a href="map.html" aria-current="page">오시는 길</a></li>
       <li><a href="gallery.html">갤러리</a></li>
     </ul>
-  </header>
 
-  <div class="container">
-    <h1>📍 오시는 길</h1>
-
-    <div class="address-box">
-      <p>대전광역시 서구 둔산중로 54</p>
-      <p>영업시간: 오전 11시 ~ 오후 8시 (예약제 운영)</p>
+    <div class="lang-switcher">
+      <a href="index.html">KR</a> |
+      <a href="index_en.html">EN</a> |
+      <a href="index_jp.html">JP</a> |
+      <a href="index_ch.html">CH</a> |
+      <a href="index_vn.html">VN</a>
     </div>
 
-    <div class="map-container">
+  </div>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main class="page">
+
+  <section class="hero-card">
+    <h1 class="hero-title">📍 오시는 길</h1>
+    <p class="hero-desc">대전광역시 서구 둔산중로 54 · 시청역 4번 출구 도보 5분</p>
+  </section>
+
+  <section class="section">
+    <h2>주소</h2>
+    <div class="address-box">
+      <p><strong>대전광역시 서구 둔산중로 54</strong></p>
+      <p>영업시간: 10:00 ~ 20:00 (예약제)</p>
+    </div>
+
+    <div class="map-frame">
       <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.2762287553874!2d127.38567631556441!3d36.35142148004525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356548f9460ff0e1%3A0x55ffaad41de7d066!2z64yA7ZWZ7JuQIOyEseu2gOyLnCDshKzslYTsuZQgNTQ!5e0!3m2!1sko!2skr!4v1711863934123!5m2!1sko!2skr" 
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.2762287553874!2d127.38567631556441!3d36.35142148004525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356548f9460ff0e1%3A0x55ffaad41de7d066!2z64yA7ZWZ7JuQIOyEseu2gOyLnCDshKzslYTsuZQgNTQ!5e0!3m2!1sko!2skr!4v1711863934123!5m2!1sko!2skr"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Cricri Beauty 위치">
       </iframe>
     </div>
+  </section>
 
-    <div class="transport-box">
-      <h2>🚎 대중교통 안내</h2>
-      <ul>
-        <li><strong>지하철:</strong> 1호선 <strong>시청역 4번 출구</strong> 도보 5분</li>
-        <li><strong>버스:</strong> 시청 정류장 하차<br>
-          - 일반: 103, 211, 301, 705<br>
-          - 급행: 1001, 2002
-        </li>
-        <li><strong>자가용:</strong> 샵 앞 또는 인근 공영주차장 이용 가능</li>
-      </ul>
-    </div>
-  </div>
+  <section class="section">
+    <h2>🚎 대중교통 안내</h2>
+    <ul class="transport">
+      <li><strong>지하철:</strong> 1호선 <strong>시청역 4번 출구</strong> 도보 5분</li>
+      <li><strong>버스:</strong> 시청 정류장 하차<br>
+        - 일반: 103, 211, 301, 705<br>
+        - 급행: 1001, 2002
+      </li>
+      <li><strong>자가용:</strong> 샵 앞 또는 인근 공영주차장 이용 가능</li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER (service/booking과 톤 맞춤) ================= -->
+<footer class="footer">
+  <div class="footer-title">크리크리 뷰티 스튜디오</div>
+  <div class="footer-info">영업시간: 10:00 ~ 20:00 ｜ 연락처: 0507-1367-6984</div>
+  <div class="footer-copy">&copy; 2025 Cricri Beauty Studio. All rights reserved.</div>
+</footer>
 
 </body>
 </html>
