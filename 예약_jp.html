@@ -3,106 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>予約 | クリクリ ビューティースタジオ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/booking.css" />
+  <title>ご予約 | Cricri Beauty Studio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/booking.css?v=20260219_3" />
 </head>
 <body>
-<!-- ヘッダー -->
-<div class="header-container">
-  <div class="logo-area centered">
-    <div class="logo-text-row">
-      <span class="cricri">CriCri</span>
-      <div class="studio-text">
-        <div>BEAUTY</div>
-        <div>STUDIO</div>
-      </div>
-    </div>
-    <p class="logo-tagline">クリクリ ビューティースタジオ</p>
-  </div>
 
-  <ul class="menu centered">
-    <li><a href="예약_jp.html">予約</a></li>
+<!-- ================= LANGUAGE ================= -->
+<div class="lang-switcher">
+  <a href="index.html">KR</a> |
+  <a href="index_en.html">EN</a> |
+  <a href="index_jp.html">JP</a> |
+  <a href="index_ch.html">CH</a> |
+  <a href="index_vn.html">VN</a>
+</div>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <ul class="menu">
+    <li><a href="index_jp.html">ホーム</a></li>
     <li><a href="service_jp.html">施術メニュー</a></li>
+    <li><a href="예약_jp.html">ご予約</a></li>
     <li><a href="map_jp.html">アクセス</a></li>
     <li><a href="gallery_jp.html">ギャラリー</a></li>
   </ul>
+</header>
 
-  <!-- ボタン -->
-  <div class="btn-wrap">
-    <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">ネイバー予約</a>
-    <a href="http://pf.kakao.com/_SGZrn/chat" target="_blank" class="btn kakao" id="kakaoBtn">カカオトーク相談</a>
+<!-- ================= MAIN ================= -->
+<main class="page">
+
+  <!-- HERO -->
+  <section class="hero-card">
+    <h1 class="hero-title">ご予約について</h1>
+    <p class="hero-desc">
+      お客様一人ひとりに合わせた施術をご提供いたします。  
+      ご予約前に以下の内容をご確認ください。
+    </p>
+  </section>
+
+  <!-- 同意 -->
+  <div class="check-confirm">
+    <div class="check-card">
+      <input type="checkbox" id="agree" />
+      <label for="agree">上記の内容を確認し、同意します。</label>
+    </div>
   </div>
 
-  <div class="lang-switcher">
-    <a href="index.html">KR</a> |
-    <a href="index_en.html">EN</a> |
-    <a href="index_jp.html">JP</a> |
-    <a href="index_ch.html">CH</a> |
-    <a href="index_vn.html">VN</a>
-  </div>
-</div>
+  <!-- 注意事項 -->
+  <section class="section">
+    <h2>📌 ご予約前のご案内</h2>
+    <ul>
+      <li>ご来店が遅れた場合、施術時間が短縮されることがあります。</li>
+      <li>予約変更・キャンセルは前日までにお願いいたします。</li>
+      <li>無断キャンセルの場合、次回以降のご予約をお断りする場合がございます。</li>
+      <li>敏感肌の方・妊娠中の方は事前カウンセリングの上、施術可否を判断いたします。</li>
+    </ul>
+  </section>
 
-<p class="desc">大切なお客様のための施術です。予約前に以下の注意事項をご確認ください。</p>
+  <!-- 予約ボタン -->
+  <section class="section">
+    <h2>📲 ご予約方法</h2>
+    <div class="btn-wrap">
+      <a href="https://map.naver.com/p/entry/place/2023374701"
+         target="_blank"
+         class="btn naver"
+         id="naverBtn">Naverで予約する</a>
 
-<!-- 同意チェック -->
-<div class="check-confirm">
-  <input type="checkbox" id="agree" />
-  <label for="agree">以下の内容をすべて確認し、同意します。</label>
-</div>
+      <a href="http://pf.kakao.com/_SGZrn/chat"
+         target="_blank"
+         class="btn kakao"
+         id="kakaoBtn">Kakaoで相談する</a>
+    </div>
+  </section>
 
-<!-- 注意事項 -->
-<div class="section">
-  <h2>📌 ご予約前のご案内</h2>
-  <ul>
-    <li>遅刻された場合、施術時間が調整されることがあります。</li>
-    <li>予約変更は最低1日前までにお願いします。</li>
-    <li>無断キャンセルが発生した場合、今後のご予約は制限されます。</li>
-    <li>敏感肌・妊娠中のお客様は、相談の上で施術可否を決定いたします。</li>
-  </ul>
-</div>
+  <!-- カレンダー -->
+  <section class="section">
+    <h2>📆 予約可能日程</h2>
+    <p class="hint">
+      ※ 下記カレンダーは参考用です。実際のご予約はNaverよりお願いいたします。
+    </p>
+    <iframe
+      src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul">
+    </iframe>
+  </section>
 
-<!-- カレンダー -->
-<div class="section">
-  <h2>📆 予約可能日程</h2>
-  <p style="text-align:center; color:#666; font-size:0.9em;">※ 以下のカレンダーは参考用です。予約はネイバーから行ってください。</p>
-  <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
-</div>
+  <!-- 情報 -->
+  <section class="info-box">
+    <p><strong>Cricri Beauty Studio</strong></p>
+    <p>営業時間：10:00 ～ 20:00</p>
+    <p>電話番号：+82)010-3263-6984</p>
+    <p>住所：韓国 大田広域市 西区 屯山中路54</p>
+    <p>事業者登録番号：641-22-02169</p>
+  </section>
 
-<!-- 店舗情報 -->
-<div class="info-box">
-  <p><strong>クリクリ ビューティースタジオ</strong></p>
-  <p>営業時間：10:00 ～ 20:00</p>
-  <p>電話番号：010-3263-6984</p>
-  <p>大田広域市 西区 トゥンサン中路 54</p>
-</div>
+</main>
 
-<!-- フッター -->
-<footer style="background-color: #fef0f4; padding: 30px 20px; text-align: center;">
-  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">クリクリ ビューティーショップ</div>
-  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
-    営業時間：10:00 ~ 20:00 ｜ お問い合わせ：0507-1367-6984
-  </div>
-  <div style="margin: 15px 0;">
-    <a href="http://pf.kakao.com/_SGZrn" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/3991/3991999.png" alt="KakaoTalk" width="26" />
-    </a>
-    <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="26" />
-    </a>
-    <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/11423/11423248.png" alt="Blog" width="26" />
-    </a>
-    <a href="#" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968850.png" alt="Band" width="26" />
-    </a>
-  </div>
-  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-    &copy; 2025 Cricri Beauty Studio. All rights reserved.
-  </div>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-title">Cricri Beauty Studio</div>
+  <div class="footer-info">営業時間：10:00 ～ 20:00 ｜ お問い合わせ：+82)0507-1367-6984</div>
+  <div class="footer-copy">&copy; 2025 Cricri Beauty Studio. All rights reserved.</div>
 </footer>
 
-<!-- スクリプト -->
 <script>
   const checkbox = document.getElementById('agree');
   const naverBtn = document.getElementById('naverBtn');
@@ -118,10 +121,11 @@
     btn.addEventListener('click', (e) => {
       if (!checkbox.checked) {
         e.preventDefault();
-        alert("ご予約前の注意事項に同意してください。");
+        alert("ご予約前に内容へ同意してください。");
       }
     });
   });
 </script>
+
 </body>
 </html>
