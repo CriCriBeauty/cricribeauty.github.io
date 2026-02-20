@@ -1,62 +1,54 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="qnuIKB5IxqsUSj3U_9biSjNpaRY3AkN_ELw2S2xRQKs" />
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CriCri 美容工作室</title>
-  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- SEO -->
+  <title>大田市厅站睫毛 & 半永久眉毛 | CriCri Beauty</title>
+  <meta name="description" content="位于大田市厅站附近的私人睫毛与半永久眉毛工作室。预约制一对一专属定制服务。">
+  <meta name="keywords" content="大田睫毛, 大田半永久眉毛, 大田眉毛纹绣, CriCri Beauty, 私人美容工作室">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CriCri Beauty Studio">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cricri Beauty Studio">
+  <meta property="og:description" content="大田睫毛与半永久眉毛专门店。预约制私人定制服务。">
+  <meta property="og:url" content="https://cricribeauty.github.io/index_ch.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://cricribeauty.github.io/images/intro.png">
+
+  <!-- Multilingual -->
+  <link rel="canonical" href="https://cricribeauty.github.io/index_ch.html">
+  <link rel="alternate" hreflang="ko" href="https://cricribeauty.github.io/index.html">
+  <link rel="alternate" hreflang="en" href="https://cricribeauty.github.io/index_en.html">
+  <link rel="alternate" hreflang="ja" href="https://cricribeauty.github.io/index_jp.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://cricribeauty.github.io/index_ch.html">
+  <link rel="alternate" hreflang="vi" href="https://cricribeauty.github.io/index_vn.html">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css?v=20260219_1">
 </head>
 <body>
-<!-- 左下角信息框（中文） -->
-<div class="info-box">
-  <p><strong>CriCri 美妆工作室</strong></p>
-  <p>营业时间：10:00 – 20:00</p>
-  <p>联系电话：010-3263-6984</p>
-  <p>大田广域市 西区 Dunsanjung-ro 54号</p>
-  <p>营业执照号码：641-22-02169</p>
-</div>
-  
-<!-- 聊天机器人按钮 -->
-<div id="chatbot-toggle" onclick="toggleChatbot()">💬 咨询我们</div>
 
-<!-- 聊天机器人界面 -->
-<div id="chatbot-box">
-  <div class="chat-header">CriCri 聊天机器人</div>
-  <div class="chat-content" id="chat-content">
-    <p>请选择语言：</p>
-    <button onclick="setLang('kr')">🇰🇷 韩语</button>
-    <button onclick="setLang('en')">🇺🇸 英语</button>
-    <button onclick="setLang('jp')">🇯🇵 日语</button>
-    <button onclick="setLang('ch')">🇨🇳 中文</button>
-    <button onclick="setLang('vn')">🇻🇳 越南语</button>
-    <div id="chat-answer" style="margin-top: 10px;"></div>
-  </div>
+<!-- ================= MOBILE HEADER ================= -->
+<div class="mobile-header"> 
+  <div class="mobile-logo">CriCri Beauty</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
 </div>
 
-<!-- 背景图 -->
-<div class="background"></div>
-
-<!-- 标志动画文字 -->
-<div class="logo-slide">
-  <h1>
-    <span class="slide">CriCri</span>
-    <span class="slide">BEAUTY</span>
-    <span class="slide">STUDIO</span>
-  </h1>
-  <div class="tagline-slide">
-    <span class="tagline">第一印象始于眉毛。来 CriCri Beauty 开始改变吧。</span>
-  </div>
-
-  <!-- 行动按钮 -->
-  <div class="cta-buttons">
-    <a href="service_ch.html" class="btn">我们的服务</a>
-    <a href="예약_ch.html" class="btn">在线预约</a>
-  </div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="booking_ch.html" onclick="closeMenu()">预约</a>
+  <a href="service_ch.html" onclick="closeMenu()">项目介绍</a>
+  <a href="map_ch.html" onclick="closeMenu()">路线</a>
+  <a href="gallery_ch.html" onclick="closeMenu()">作品展示</a>
 </div>
 
-<!-- 语言切换 -->
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+<!-- ================= LANGUAGE ================= -->
 <div class="lang-switcher">
   <a href="index.html">KR</a> |
   <a href="index_en.html">EN</a> |
@@ -65,80 +57,146 @@
   <a href="index_vn.html">VN</a>
 </div>
 
-<!-- 导航栏 -->
+<!-- ================= DESKTOP NAV ================= -->
 <nav class="nav">
   <ul class="menu">
-    <li><a href="예약_ch.html">预约</a></li>
-    <li><a href="service_ch.html">服务项目</a></li>
-    <li><a href="map_ch.html">到达方式</a></li>
+    <li><a href="booking_ch.html">预约</a></li>
+    <li><a href="service_ch.html">项目介绍</a></li>
+    <li><a href="map_ch.html">路线</a></li>
     <li><a href="gallery_ch.html">作品展示</a></li>
   </ul>
 </nav>
 
-<script>
-  let currentLang = null;
+<div class="background"></div>
 
-  function toggleChatbot() {
-    const bot = document.getElementById('chatbot-box');
-    bot.style.display = bot.style.display === 'block' ? 'none' : 'block';
-  }
+<div class="logo-slide">
 
-  function setLang(lang) {
-    currentLang = lang;
+  <!-- STYLE FINDER -->
+  <section class="style-finder">
+    <h2 class="sf-title">找到适合您的美丽风格</h2>
+    <p class="sf-sub">睫毛 / 眉毛，只需回答3个问题即可获得推荐。</p>
 
-    const labels = {
-      kr: { ask: '무엇을 도움드릴까요?', hours: '운영시간', location: '오시는 길', booking: '예약 방법' },
-      en: { ask: 'How can I help you?', hours: 'Business Hours', location: 'Location', booking: 'Booking Info' },
-      jp: { ask: '何をお手伝いしましょうか？', hours: '営業時間', location: 'アクセス', booking: '予約方法' },
-      ch: { ask: '我能为您做什么？', hours: '营业时间', location: '来访路线', booking: '预约方式' },
-      vn: { ask: 'Tôi có thể giúp gì cho bạn?', hours: 'Giờ mở cửa', location: 'Địa chỉ', booking: 'Cách đặt lịch' }
-    };
+    <div class="sf-tabs">
+      <button type="button" class="sf-tab active" data-tab="lash">睫毛</button>
+      <button type="button" class="sf-tab" data-tab="brow">眉毛</button>
+    </div>
 
-    const t = labels[lang];
+    <div class="sf-card">
 
-    const chat = document.getElementById('chat-content');
-    chat.innerHTML = `
-      <p>${t.ask}</p>
-      <button onclick="showInfo('hours')">${t.hours}</button>
-      <button onclick="showInfo('location')">${t.location}</button>
-      <button onclick="showInfo('booking')">${t.booking}</button>
-      <div id="chat-answer" style="margin-top: 10px;"></div>
-    `;
-  }
+      <!-- LASH -->
+      <div class="sf-pane active" data-pane="lash">
 
-  function showInfo(topic) {
-    const messages = {
-      kr: {
-        hours: '🕒 운영시간은 오전 11시 ~ 오후 8시입니다. (예약제 운영)',
-        location: '📍 대전광역시 서구 둔산중로 54 (시청역 4번 출구 도보 5분)',
-        booking: '📞 예약은 예약 메뉴 또는 전화(0507-1367-6984)로 가능합니다。'
-      },
-      en: {
-        hours: '🕒 We’re open from 11 AM to 8 PM (Reservation only).',
-        location: '📍 54, Dunsanjung-ro, Seo-gu, Daejeon (5 min from City Hall Station Exit 4)',
-        booking: '📞 Book via the reservation menu or call (0507-1367-6984).'
-      },
-      jp: {
-        hours: '🕒 当店は午前11時から午後8時まで営業しております（完全予約制です）',
-        location: '📍 大田広域市 西区 ドゥンサン中央路54（市庁駅4番出口 徒歩5分）',
-        booking: '📞 ご予約は予約ページ、お電話（0507-1367-6984）で承っております。'
-      },
-      ch: {
-        hours: '🕒 营业时间为上午11点至下午8点（需预约）',
-        location: '📍 大田市西区Dunsanjung-ro 54（市政厅地铁站4号出口 步行5分钟）',
-        booking: '📞 可通过预约页面或拨打电话 (0507-1367-6984) 进行预约。'
-      },
-      vn: {
-        hours: '🕒 Giờ mở cửa từ 11 giờ sáng đến 8 giờ tối (chỉ nhận đặt lịch trước).',
-        location: '📍 54, Dunsanjung-ro, quận Seo, Daejeon (cách ga City Hall, lối ra số 4, 5 phút đi bộ)',
-        booking: '📞 Đặt lịch qua mục Đặt Lịch hoặc gọi điện thoại (0507-1367-6984).'
-      }
-    };
+        <div class="sf-q">
+          <div class="sf-qtitle">1) 您想要什么风格？</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="natural">自然风</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="clear">清晰立体</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="glam">华丽感</button>
+          </div>
+        </div>
 
-    const answerBox = document.getElementById('chat-answer');
-    answerBox.innerHTML = `<p>${messages[currentLang]?.[topic] || '未选择语言。'}</p>`;
-  }
-</script>
+        <div class="sf-q">
+          <div class="sf-qtitle">2) 平时妆容风格？</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="light">淡妆</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="normal">日常妆</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="heavy">浓妆</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">3) 希望达到什么效果？</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="curl">卷翘效果</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="mascara">睫毛膏效果</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="bigger">放大眼睛</button>
+          </div>
+        </div>
+
+        <div class="sf-result">
+          <div class="sf-rtitle">推荐结果（睫毛）</div>
+          <div class="sf-rbody">请选择以上问题以查看推荐结果。</div>
+
+          <div class="sf-actions">
+            <a class="btn sfGalleryBtn" href="javascript:void(0)">查看作品</a>
+            <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Kakao咨询</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BROW -->
+      <div class="sf-pane" data-pane="brow">
+
+        <div class="sf-q">
+          <div class="sf-qtitle">1) 想要什么感觉？</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="soft">柔和自然</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="sharp">立体分明</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="clean">干净利落</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">2) 当前眉毛状态？</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="sparse">眉毛稀疏</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="messy">眉毛凌乱</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="oldpmu">已有纹绣</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">3) 希望重点改善？</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="shape">线条与对称</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="natural">自然毛流感</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="lift">提升立体感</button>
+          </div>
+        </div>
+
+        <div class="sf-result">
+          <div class="sf-rtitle">推荐结果（眉毛）</div>
+          <div class="sf-rbody">请选择以上问题以查看推荐结果。</div>
+
+          <div class="sf-actions">
+            <a class="btn sfGalleryBtn" href="javascript:void(0)">查看作品</a>
+            <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Kakao咨询</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <h1>
+    <span class="slide">CriCri</span>
+    <span class="slide">BEAUTY</span>
+    <span class="slide">STUDIO</span>
+  </h1>
+
+  <div class="tagline-slide">
+    <span class="tagline">
+      您的第一印象，从眉毛开始。<br>
+      在 CriCri 开启您的美丽之旅。
+    </span>
+  </div>
+
+  <div class="cta-buttons">
+    <a href="service_ch.html" class="btn">查看项目</a>
+    <a href="booking_ch.html" class="btn">立即预约</a>
+  </div>
+
+</div>
+
+<div class="info-box">
+  <p><strong>CriCri Beauty Studio</strong></p>
+  <p>营业时间: 10:00 – 20:00</p>
+  <p>联系电话: +82)010-3263-6984</p>
+  <p>地址: 韩国大田广域市西区屯山中路54</p>
+  <p>营业执照号码: 641-22-02169</p>
+</div>
 
 </body>
 </html>
