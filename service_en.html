@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Treatment Guide | CriCri Beauty Shop</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Dancing+Script&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/service.css" />
+  <title>Our Services | Cricri Beauty Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/service.css?v=20260219_1" />
 </head>
 <body>
 
-<!-- Language Switcher -->
+<!-- ================= LANGUAGE ================= -->
 <div class="lang-switcher">
   <a href="index.html">KR</a> |
   <a href="index_en.html">EN</a> |
@@ -18,110 +18,128 @@
   <a href="index_vn.html">VN</a>
 </div>
 
-<!-- Navigation -->
+<!-- ================= NAV ================= -->
 <header class="nav">
   <ul class="menu">
-    <li><a href="예약_en.html">Reservation</a></li>
-    <li><a href="service_en.html">Treatments</a></li>
-    <li><a href="map_en.html">Directions</a></li>
-    <li><a href="gallery_en.html">Gallery</a></li>
+    <li><a href="index_en.html">Home</a></li>
+    <li><a href="service_en.html">Service</a></li>
+    <li><a href="예약_en.html">Booking</a></li>
+    <li><a href="map_en.html">Location</a></li>
+    <li><a href="gallery_en.html" aria-current="page">Gallery</a></li>
   </ul>
 </header>
 
-<!-- Service Details -->
-<div class="section">
-  <h2>💅 Detailed Treatment Information</h2>
+<!-- ================= MAIN ================= -->
+<main class="service-container">
 
-  <div class="service-block">
-    <h3>💖 Nourishing Clinic Perm</h3>
-    <p>This perm curls your lashes while infusing them with nutrients like protein and keratin, creating healthy, glossy curls without damage.</p>
-    <p><strong>Main Features:</strong></p>
-    <ul>
-      <li>Prevents lash damage</li>
-      <li>Natural curl with a shiny finish</li>
-    </ul>
-    <p><strong>Recommended for:</strong></p>
-    <ul>
-      <li>Those with thin or easily damaged lashes</li>
-      <li>Those seeking both curl and nourishment</li>
-    </ul>
-  </div>
+  <!-- Left: Price Image -->
+  <aside class="price-box">
+    <img src="images/price.png" alt="Service Price List" class="price-img" />
+    <button type="button" onclick="openModal()">🔍 View Larger Image</button>
+  </aside>
 
-  <div class="service-block">
-    <h3>✨ Basic Strong Curl Perm</h3>
-    <p>Creates dramatic curl from the root to open the eyes beautifully, eliminating the need for an eyelash curler.</p>
-    <p><strong>Main Features:</strong></p>
-    <ul>
-      <li>Strong curling effect</li>
-      <li>Enhances eye definition</li>
-    </ul>
-    <p><strong>Recommended for:</strong></p>
-    <ul>
-      <li>Downward-pointing lashes</li>
-      <li>Those who find daily curling bothersome</li>
-    </ul>
-  </div>
+  <!-- Right: Service Details -->
+  <section class="section">
+    <h2>💅 Service Details</h2>
 
-  <div class="service-block">
-    <h3>🐼 Clear Eyes Black Tint Perm</h3>
-    <p>This treatment lifts and curls your lashes while tinting them black for a mascara-like effect without makeup.</p>
-    <p><strong>Main Features:</strong></p>
-    <ul>
-      <li>Curl and tint applied simultaneously</li>
-      <li>Mascara-like appearance</li>
-    </ul>
-    <p><strong>Recommended for:</strong></p>
-    <ul>
-      <li>Light-colored or barely visible lashes</li>
-      <li>Those seeking a simplified beauty routine</li>
-    </ul>
-  </div>
+    <div class="service-block">
+      <h3>🌸 Basic Lash Lift</h3>
+      <p>
+        A gentle lash lift that creates a naturally beautiful eye look, perfect for everyday elegance.
+      </p>
+      <ul>
+        <li>Strong lifting effect</li>
+        <li>Creates a clearer, more defined eye shape</li>
+      </ul>
+    </div>
 
-  <div class="service-block">
-    <h3>👀 Dual Perm</h3>
-    <p>This premium perm lifts the roots and softly curls the tips for a defined yet gentle eye impression.</p>
-    <p><strong>Main Features:</strong></p>
-    <ul>
-      <li>Dramatic root lift + soft curl combo</li>
-      <li>Makes lashes appear fuller and longer</li>
-    </ul>
-    <p><strong>Recommended for:</strong></p>
-    <ul>
-      <li>Those wanting both definition and softness</li>
-      <li>Those seeking a premium effect</li>
-    </ul>
-  </div>
+    <div class="service-block">
+      <h3>🌿 Black Tint Lash Lift</h3>
+      <p>
+        Combines our basic lash lift with black tinting for a darker, more defined eye look.
+      </p>
+      <ul>
+        <li>Curl + tint treatment</li>
+        <li>Mascara-like effect</li>
+      </ul>
+    </div>
 
-  <div class="service-block">
-    <h3>🌿 Brow Lift Perm</h3>
-    <p>Shapes and sets the brow hairs upward, giving the appearance of fuller, well-groomed brows.</p>
-    <p><strong>Main Features:</strong></p>
-    <ul>
-      <li>Aligns and sets brow hair direction</li>
-      <li>Creates the look of thick brows</li>
-    </ul>
-    <p><strong>Recommended for:</strong></p>
-    <ul>
-      <li>Unruly or drooping brows</li>
-      <li>Concerns about sparse brow appearance</li>
-    </ul>
-  </div>
+    <div class="service-block">
+      <h3>✨ Dual Lash Lift</h3>
+      <p>
+        A combination of upper and lower lash lift treatments for a fuller, more dramatic eye appearance.
+      </p>
+      <ul>
+        <li>Upper & lower lashes treated together</li>
+        <li>Creates larger and more defined eyes</li>
+      </ul>
+    </div>
 
-  <div class="service-block">
-    <h3>💎 Brow Design</h3>
-    <p>Customizes a natural brow shape that suits your face and style. (Contact us for details)</p>
-    <p><strong>Main Features:</strong></p>
-    <ul>
-      <li>Personalized brow line design</li>
-      <li>Creates a harmonious and natural look</li>
-    </ul>
-    <p><strong>Recommended for:</strong></p>
-    <ul>
-      <li>Those unsatisfied with their current brow shape</li>
-      <li>Those new to brow design</li>
-    </ul>
-  </div>
+    <div class="service-block">
+      <h3>🌈 Brow Lamination (Brow Lifting)</h3>
+      <p>
+        Enhances your natural brow texture for a clean and well-groomed look.
+      </p>
+      <ul>
+        <li>Helps refine old semi-permanent makeup</li>
+        <li>Creates a fresher impression</li>
+        <li>Neatly arranges brow texture</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3>🍃 Natural Brow Design</h3>
+      <p>
+        Designed to enhance your natural brow shape while maintaining a soft, realistic finish.
+      </p>
+    </div>
+
+  </section>
+</main>
+
+<!-- ================= MODAL ================= -->
+<div id="modal" onclick="closeModal()" role="dialog" aria-modal="true" aria-label="View Service Price List">
+  <img src="images/price.png" alt="Enlarged Service Price List" />
 </div>
+
+<!-- ================= FOOTER ================= -->
+<footer style="padding: 30px 20px; text-align: center; background-color: transparent;">
+  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">Cricri Beauty Studio</div>
+  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
+    Business Hours: 10:00 AM – 8:00 PM ｜ Contact: 0507-1367-6984
+  </div>
+  <div style="margin: 15px 0;">
+    <a href="http://pf.kakao.com/_SGZrn" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/3991/3991999.png" alt="KakaoTalk" width="26" />
+    </a>
+    <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="26" />
+    </a>
+    <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/11423/11423248.png" alt="Blog" width="26" />
+    </a>
+    <a href="#" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968850.png" alt="Band" width="26" />
+    </a>
+  </div>
+  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
+    &copy; 2025 Cricri Beauty Studio. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  function openModal() {
+    const modal = document.getElementById('modal');
+    if (!modal) return;
+    modal.style.display = 'flex';
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    if (!modal) return;
+    modal.style.display = 'none';
+  }
+</script>
 
 </body>
 </html>
