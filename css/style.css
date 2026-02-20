@@ -687,6 +687,34 @@ body {
   box-shadow: 0 12px 25px rgba(255, 79, 138, 0.45);
 }
 
+/* ✅ Multilingual SEO snippet */
+.seo-multi{
+  max-width: 900px;
+  margin: 18px auto;
+  padding: 14px 16px;
+}
+
+.seo-multi h2{
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.seo-multi p{
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* 화면엔 안 보이게, 크롤러/접근성은 유지 */
+.seo-hidden{
+  position: absolute !important;
+  left: -9999px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
 @media (max-width: 768px) {
   .sf-actions .btn {
     font-size: 16px;
