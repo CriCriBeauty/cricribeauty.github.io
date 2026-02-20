@@ -4,30 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
   <title>Daejeon City Hall Eyelash & Semi-Permanent Brows | CriCri Beauty</title>
-  <meta name="description" content="Private eyelash and semi-permanent eyebrow studio near Daejeon City Hall Station. Reservation-only personalized beauty services.">
-  <meta name="keywords" content="Daejeon eyelash, Daejeon eyebrow tattoo, semi permanent brows, CriCri Beauty, private beauty studio">
+  <meta name="description" content="Private eyelash and semi-permanent eyebrow studio near Daejeon City Hall Station. Personalized treatments by reservation only.">
+  <meta name="keywords" content="Daejeon eyelash, Daejeon eyebrow tattoo, semi permanent brows Korea, Cricri Beauty">
   <meta name="robots" content="index, follow">
   <meta name="author" content="CriCri Beauty Studio">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Cricri Beauty Studio">
-  <meta property="og:description" content="Eyelash & Semi-Permanent Brow Studio in Daejeon. Private reservation-based service.">
-  <meta property="og:url" content="https://cricribeauty.github.io/index_en.html">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://cricribeauty.github.io/images/intro.png">
-
-  <!-- Multilingual -->
-  <link rel="canonical" href="https://cricribeauty.github.io/index_en.html">
-  <link rel="alternate" hreflang="ko" href="https://cricribeauty.github.io/index.html">
-  <link rel="alternate" hreflang="en" href="https://cricribeauty.github.io/index_en.html">
-  <link rel="alternate" hreflang="ja" href="https://cricribeauty.github.io/index_jp.html">
-  <link rel="alternate" hreflang="zh-CN" href="https://cricribeauty.github.io/index_ch.html">
-  <link rel="alternate" hreflang="vi" href="https://cricribeauty.github.io/index_vn.html">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css?v=20260219_1">
 </head>
@@ -40,8 +21,8 @@
 </div>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="예약_en.html" onclick="closeMenu()">Booking</a>
-  <a href="service_en.html" onclick="closeMenu()">Service</a>
+  <a href="booking_en.html" onclick="closeMenu()">Booking</a>
+  <a href="service_en.html" onclick="closeMenu()">Services</a>
   <a href="map_en.html" onclick="closeMenu()">Location</a>
   <a href="gallery_en.html" onclick="closeMenu()">Gallery</a>
 </div>
@@ -57,6 +38,144 @@
   <a href="index_vn.html">VN</a>
 </div>
 
+<!-- ================= DESKTOP NAV ================= -->
+<nav class="nav">
+  <ul class="menu">
+    <li><a href="예약_en.html">Booking</a></li>
+    <li><a href="service_en.html">Services</a></li>
+    <li><a href="map_en.html">Location</a></li>
+    <li><a href="gallery_en.html">Gallery</a></li>
+  </ul>
+</nav>
+
+<div class="background"></div>
+
+<div class="logo-slide">
+
+<!-- ================= STYLE FINDER ================= -->
+<section class="style-finder" id="styleFinder">
+  <h2 class="sf-title">Find Your Perfect Style</h2>
+  <p class="sf-sub">Answer 3 quick questions for a personalized recommendation.</p>
+
+  <div class="sf-tabs">
+    <button type="button" class="sf-tab active" data-tab="lash">Eyelash</button>
+    <button type="button" class="sf-tab" data-tab="brow">Eyebrow</button>
+  </div>
+
+  <div class="sf-card">
+
+    <!-- LASH -->
+    <div class="sf-pane active" data-pane="lash">
+      <div class="sf-q">
+        <div class="sf-qtitle">1) What mood do you prefer?</div>
+        <div class="sf-opts">
+          <button class="sf-btn" data-group="lash" data-q="mood" data-v="natural">Natural</button>
+          <button class="sf-btn" data-group="lash" data-q="mood" data-v="clear">Defined</button>
+          <button class="sf-btn" data-group="lash" data-q="mood" data-v="glam">Glamorous</button>
+        </div>
+      </div>
+
+      <div class="sf-q">
+        <div class="sf-qtitle">2) Your usual makeup style?</div>
+        <div class="sf-opts">
+          <button class="sf-btn" data-group="lash" data-q="makeup" data-v="light">Light</button>
+          <button class="sf-btn" data-group="lash" data-q="makeup" data-v="normal">Normal</button>
+          <button class="sf-btn" data-group="lash" data-q="makeup" data-v="heavy">Heavy</button>
+        </div>
+      </div>
+
+      <div class="sf-q">
+        <div class="sf-qtitle">3) Desired effect?</div>
+        <div class="sf-opts">
+          <button class="sf-btn" data-group="lash" data-q="goal" data-v="curl">Strong Curl</button>
+          <button class="sf-btn" data-group="lash" data-q="goal" data-v="mascara">Mascara Effect</button>
+          <button class="sf-btn" data-group="lash" data-q="goal" data-v="bigger">Bigger Eyes</button>
+        </div>
+      </div>
+
+      <div class="sf-result" id="sfResultLash">
+        <div class="sf-rtitle">Recommended (Eyelash)</div>
+        <div class="sf-rbody">Select options to see your recommendation.</div>
+
+        <div class="sf-actions">
+          <a class="btn sfGalleryBtn" href="javascript:void(0)">View in Gallery</a>
+          <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Consult via KakaoTalk</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BROW -->
+    <div class="sf-pane" data-pane="brow">
+      <div class="sf-q">
+        <div class="sf-qtitle">1) Preferred look?</div>
+        <div class="sf-opts">
+          <button class="sf-btn" data-group="brow" data-q="look" data-v="soft">Soft</button>
+          <button class="sf-btn" data-group="brow" data-q="look" data-v="sharp">Defined</button>
+          <button class="sf-btn" data-group="brow" data-q="look" data-v="clean">Clean</button>
+        </div>
+      </div>
+
+      <div class="sf-q">
+        <div class="sf-qtitle">2) Current brow condition?</div>
+        <div class="sf-opts">
+          <button class="sf-btn" data-group="brow" data-q="state" data-v="sparse">Sparse</button>
+          <button class="sf-btn" data-group="brow" data-q="state" data-v="messy">Uneven</button>
+          <button class="sf-btn" data-group="brow" data-q="state" data-v="oldpmu">Previous PMU</button>
+        </div>
+      </div>
+
+      <div class="sf-q">
+        <div class="sf-qtitle">3) What do you want to improve?</div>
+        <div class="sf-opts">
+          <button class="sf-btn" data-group="brow" data-q="goal" data-v="shape">Shape / Symmetry</button>
+          <button class="sf-btn" data-group="brow" data-q="goal" data-v="natural">Natural Texture</button>
+          <button class="sf-btn" data-group="brow" data-q="goal" data-v="lift">Lifted Look</button>
+        </div>
+      </div>
+
+      <div class="sf-result" id="sfResultBrow">
+        <div class="sf-rtitle">Recommended (Eyebrow)</div>
+        <div class="sf-rbody">Select options to see your recommendation.</div>
+
+        <div class="sf-actions">
+          <a class="btn sfGalleryBtn" href="javascript:void(0)">View in Gallery</a>
+          <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Consult via KakaoTalk</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<h1>
+  <span class="slide">CriCri</span>
+  <span class="slide">BEAUTY</span>
+  <span class="slide">STUDIO</span>
+</h1>
+
+<div class="tagline-slide">
+  <span class="tagline">
+    Your first impression begins with your brows.<br>
+    Start your beauty journey at CriCri.
+  </span>
+</div>
+
+<div class="cta-buttons">
+  <a href="service_en.html" class="btn">Our Services</a>
+  <a href="booking_en.html" class="btn">Book Now</a>
+</div>
+
+</div>
+
+<!-- ================= INFO ================= -->
+<div class="info-box">
+  <p><strong>CriCri Beauty Studio</strong></p>
+  <p>Business Hours : 10:00 ~ 20:00</p>
+  <p>Phone : 010-3263-6984</p>
+  <p>54 Dunsanjung-ro, Seo-gu, Daejeon</p>
+  <p>Business Registration No : 641-22-02169</p>
+</div>
+
 <!-- ================= CHATBOT ================= -->
 <div id="chatbot-toggle" onclick="toggleChatbot()">💬 Contact</div>
 
@@ -70,94 +189,20 @@
   </div>
 </div>
 
-  
-<!-- ================= DESKTOP NAV ================= -->
-<nav class="nav">
-  <ul class="menu">
-    <li><a href="booking_en.html">Booking</a></li>
-    <li><a href="service_en.html">Service</a></li>
-    <li><a href="map_en.html">Location</a></li>
-    <li><a href="gallery_en.html">Gallery</a></li>
-  </ul>
-</nav>
+<script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("active");
+  document.getElementById("menuOverlay").classList.toggle("active");
+}
+function closeMenu() {
+  document.getElementById("mobileMenu").classList.remove("active");
+  document.getElementById("menuOverlay").classList.remove("active");
+}
+function toggleChatbot() {
+  const box = document.getElementById("chatbot-box");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+</script>
 
-<div class="background"></div>
-
-<div class="logo-slide">
-
-  <!-- STYLE FINDER -->
-  <section class="style-finder">
-    <h2 class="sf-title">Find Your Perfect Style</h2>
-    <p class="sf-sub">Eyelash / Brows – Get a recommendation in 3 simple steps.</p>
-
-    <div class="sf-tabs">
-      <button type="button" class="sf-tab active" data-tab="lash">Eyelash</button>
-      <button type="button" class="sf-tab" data-tab="brow">Brows</button>
-    </div>
-
-    <div class="sf-card">
-
-      <!-- LASH -->
-      <div class="sf-pane active" data-pane="lash">
-
-        <div class="sf-q">
-          <div class="sf-qtitle">1) What look do you prefer?</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="natural">Natural</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="clear">Defined</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="glam">Glamorous</button>
-          </div>
-        </div>
-
-        <div class="sf-q">
-          <div class="sf-qtitle">2) Your daily makeup style?</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="light">Light</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="normal">Normal</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="heavy">Heavy</button>
-          </div>
-        </div>
-
-        <div class="sf-q">
-          <div class="sf-qtitle">3) Desired effect?</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="curl">Curl Emphasis</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="mascara">Mascara Effect</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="bigger">Eye Enlargement</button>
-          </div>
-        </div>
-
-        <div class="sf-result">
-          <div class="sf-rtitle">Recommended Result (Eyelash)</div>
-          <div class="sf-rbody">Select options to see your recommendation.</div>
-
-          <div class="sf-actions">
-            <a class="btn sfGalleryBtn" href="javascript:void(0)">View in Gallery</a>
-            <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Consult via KakaoTalk</a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- BROW -->
-      <div class="sf-pane" data-pane="brow">
-
-        <div class="sf-q">
-          <div class="sf-qtitle">1) Preferred impression?</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="soft">Soft</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="sharp">Sharp</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="clean">Clean</button>
-          </div>
-        </div>
-
-        <div class="sf-q">
-          <div class="sf-qtitle">2) Current brow condition?</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="sparse">Sparse / Uneven</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="messy">Unruly Hair</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="oldpmu">Existing PMU</button>
-          </div>
-        </div>
-
-        <div class="sf-q
+</body>
+</html>
