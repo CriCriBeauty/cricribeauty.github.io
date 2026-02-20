@@ -6,8 +6,8 @@
 
   <!-- ✅ Search Console -->
   <meta name="naver-site-verification" content="3371eda7e8882c7d645a420b116c75fa4681eab8" />
-  <meta name="google-site-verification" content="qnuIKB5IxqsUSj3U_9biSjNpaRY3AkN_ELw2S2xRQKs" />
-  
+  <meta name="google-site-verification" content="qnuIKB5IxqsUSjNpaRY3AkN_ELw2S2xRQKs" />
+
   <!-- SEO -->
   <title>대전시청역 속눈썹 및 반영구 눈썹 문신 | CriCri Beauty</title>
   <meta name="description" content="대전시청역 5번 출구에 위치한 속눈썹 및 반영구 눈썹문신 전문 PRIVATE 뷰티샵. 예약제 운영으로 맞춤 시술을 제공합니다.">
@@ -35,11 +35,37 @@
 
   <!-- CSS (✅ 캐시방지) -->
   <link rel="stylesheet" href="css/style.css?v=20260219_1">
+
+  <!-- ✅ Structured Data (Google Local SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "CriCri Beauty Studio",
+    "url": "https://cricribeauty.github.io/",
+    "image": "https://cricribeauty.github.io/images/intro.png",
+    "telephone": "+82-10-3263-6984",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "둔산중로 54",
+      "addressLocality": "서구",
+      "addressRegion": "대전광역시",
+      "addressCountry": "KR"
+    },
+    "openingHours": "Mo-Su 10:00-20:00",
+    "priceRange": "$$",
+    "sameAs": [
+      "http://pf.kakao.com/_SGZrn/chat"
+    ],
+    "description": "Private eyelash and eyebrow (semi-permanent) beauty studio near Daejeon City Hall Station Exit 5 in Daejeon, Korea. Appointment only. English support available."
+  }
+  </script>
 </head>
+
 <body>
 
 <!-- ================= MOBILE HEADER ================= -->
-<div class="mobile-header"> 
+<div class="mobile-header">
   <div class="mobile-logo">CriCri Beauty</div>
   <div class="hamburger" onclick="toggleMenu()">☰</div>
 </div>
@@ -50,18 +76,8 @@
   <a href="map.html" onclick="closeMenu()">오시는 길</a>
   <a href="gallery.html" onclick="closeMenu()">갤러리</a>
 </div>
-    <!-- 언어 선택 (nav 안에 고정) -->
-    <div class="lang-switcher">
-      <a href="index.html">KR</a> |
-      <a href="index_en.html">EN</a> |
-      <a href="index_jp.html">JP</a> |
-      <a href="index_ch.html">CH</a> |
-      <a href="index_vn.html">VN</a>
-    </div>
-<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
 
-
-<!-- ================= LANGUAGE ================= -->
+<!-- ✅ 언어 선택 (한 번만 유지) -->
 <div class="lang-switcher">
   <a href="index.html">KR</a> |
   <a href="index_en.html">EN</a> |
@@ -69,6 +85,8 @@
   <a href="index_ch.html">CH</a> |
   <a href="index_vn.html">VN</a>
 </div>
+
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
 
 <!-- ================= DESKTOP NAV ================= -->
 <nav class="nav">
@@ -207,6 +225,30 @@
 
 </div>
 
+<!-- ✅ Multilingual SEO snippet (for foreign searches) -->
+<section class="seo-multi" aria-label="Multilingual SEO">
+  <!-- EN (visible) -->
+  <div class="seo-row" lang="en">
+    <h2>Eyelash Extension near Daejeon City Hall Station (Exit 5)</h2>
+    <p>
+      CriCri Beauty Studio is a private eyelash &amp; eyebrow salon near Daejeon City Hall Station Exit 5. Appointment only. English available.
+    </p>
+  </div>
+
+  <!-- JA / ZH / VI (hidden, short one-liners) -->
+  <p class="seo-hidden" lang="ja">
+    クリクリビューティースタジオは、大田市庁駅（5番出口）近くのまつげ・眉専門プライベートサロンです。
+  </p>
+
+  <p class="seo-hidden" lang="zh-CN">
+    CriCri Beauty Studio 位于大田市厅站（5号出口）附近，是提供睫毛与眉毛护理的预约制私人美妆店。
+  </p>
+
+  <p class="seo-hidden" lang="vi">
+    CriCri Beauty Studio là tiệm nối mi &amp; chân mày riêng tư gần ga Daejeon City Hall (Cửa ra 5), làm theo lịch hẹn.
+  </p>
+</section>
+
 <!-- ================= INFO BOX ================= -->
 <div class="info-box">
   <p><strong>크리크리 뷰티 스튜디오</strong></p>
@@ -224,7 +266,7 @@
   <div class="chat-content">
     <p>무엇을 도와드릴까요?</p>
     <button onclick="alert('운영시간: 10:00 ~ 20:00')">운영시간</button>
-    <button onclick="alert('대전시청역 4번 출구 도보 5분')">위치</button>
+    <button onclick="alert('대전시청역 5번 출구 도보 5분')">위치</button>
     <button onclick="location.href='예약.html'">예약</button>
   </div>
 </div>
@@ -416,5 +458,3 @@ document.addEventListener("click", function(e) {
 
 </body>
 </html>
-
-
