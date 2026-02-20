@@ -3,183 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="qnuIKB5IxqsUSj3U_9biSjNpaRY3AkN_ELw2S2xRQKs" />
-  <meta name="naver-site-verification" content="3371eda7e8882c7d645a420b116c75fa4681eab8" />
 
-  <!-- ✅ 페이지 제목 : 위치와 서비스를 명확히 표기 -->
-  <title>市庁駅近くのまつげエクステ | CriCri Beauty Studio</title>
-
-  <!-- ✅ 페이지 내용을 요약한 설명 (일본어) -->
-  <meta name="description" content="市庁駅5番出口近くのプライベートまつげエクステ＆まつ毛パーマサロン。完全予約制で、お客様一人ひとりに合わせたデザインを提供します。">
-
-  <!-- ✅ 관련 키워드 (콤마로 구분) -->
-  <meta name="keywords" content="市庁駅 まつげエクステ, 大田 まつげサロン, CriCri Beauty, まつげ パーマ, プライベートサロン, ビューティサロン">
-
-  <!-- ✅ 검색엔진 로봇 지침 -->
+  <!-- SEO -->
+  <title>大田市庁駅 まつげ＆アートメイク眉 | CriCri Beauty</title>
+  <meta name="description" content="大田市庁駅近くのプライベートまつげ＆アートメイク眉サロン。完全予約制で一人ひとりに合わせた施術をご提供します。">
+  <meta name="keywords" content="大田 まつげパーマ, 大田 アートメイク眉, 半永久眉, CriCri Beauty, プライベートサロン">
   <meta name="robots" content="index, follow">
-
-  <!-- ✅ 작성자 정보 -->
   <meta name="author" content="CriCri Beauty Studio">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cricri Beauty Studio">
+  <meta property="og:description" content="大田のまつげ＆アートメイク眉専門サロン。完全予約制のプライベート施術。">
+  <meta property="og:url" content="https://cricribeauty.github.io/index_jp.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://cricribeauty.github.io/images/intro.png">
+
+  <!-- Multilingual -->
+  <link rel="canonical" href="https://cricribeauty.github.io/index_jp.html">
+  <link rel="alternate" hreflang="ko" href="https://cricribeauty.github.io/index.html">
+  <link rel="alternate" hreflang="en" href="https://cricribeauty.github.io/index_en.html">
+  <link rel="alternate" hreflang="ja" href="https://cricribeauty.github.io/index_jp.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://cricribeauty.github.io/index_ch.html">
+  <link rel="alternate" hreflang="vi" href="https://cricribeauty.github.io/index_vn.html">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="css/style.css?v=20260219_1">
 </head>
 <body>
-  <!-- 左下の情報ボックス（日本語バージョン） -->
-<div class="info-box">
-  <p><strong>クリクリビューティースタジオ</strong></p>
-  <p>営業時間：10:00 ～ 20:00</p>
-  <p>電話番号：010-3263-6984</p>
-  <p>大田広域市 西区 ドゥンサン中央路 54番地</p>
-  <p>事業者登録番号：641-22-02169</p>
+
+<!-- ================= MOBILE HEADER ================= -->
+<div class="mobile-header"> 
+  <div class="mobile-logo">CriCri Beauty</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
 </div>
 
-<!-- チャットボット切替ボタン -->
-<div id="chatbot-toggle" onclick="toggleChatbot()">💬 問い合わせ</div>
-
-<!-- チャットボット本体 -->
-<div id="chatbot-box">
-  <div class="chat-header">CriCri チャットボット</div>
-  <div class="chat-content" id="chat-content">
-    <p>言語を選択してください:</p>
-    <button onclick="setLang('kr')">🇰🇷 韓国語</button>
-    <button onclick="setLang('en')">🇺🇸 英語</button>
-    <button onclick="setLang('jp')">🇯🇵 日本語</button>
-    <button onclick="setLang('ch')">🇨🇳 中国語</button>
-    <button onclick="setLang('vn')">🇻🇳 ベトナム語</button>
-    <div id="chat-answer" style="margin-top: 10px;"></div>
-  </div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="booking_jp.html" onclick="closeMenu()">予約</a>
+  <a href="service_jp.html" onclick="closeMenu()">施術メニュー</a>
+  <a href="map_jp.html" onclick="closeMenu()">アクセス</a>
+  <a href="gallery_jp.html" onclick="closeMenu()">ギャラリー</a>
 </div>
 
-<!-- 背景画像 -->
-<div class="background"></div>
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
 
-<!-- ロゴアニメーションテキスト -->
-<div class="logo-slide">
-  <h1>
-    <span class="slide">CriCri</span>
-    <span class="slide">BEAUTY</span>
-    <span class="slide">STUDIO</span>
-  </h1>
-  <div class="tagline-slide">
-    <span class="tagline">あなたの最初の印象は目の周りから始まります。クリクリビューティで始めましょう。</span>
-  </div>
-
-  <!-- CTAボタン -->
-  <div class="cta-buttons">
-    <a href="service_en.html" class="btn">サービス</a>
-    <a href="예약_en.html" class="btn">オンライン予約</a>
-  </div>
-</div>
-
-<!-- 言語切替 -->
+<!-- ================= LANGUAGE ================= -->
 <div class="lang-switcher">
   <a href="index.html">KR</a> |
   <a href="index_en.html">EN</a> |
   <a href="index_jp.html">JP</a> |
   <a href="index_ch.html">CH</a> |
   <a href="index_vn.html">VN</a>
-</div> 
+</div>
 
-<!-- ナビゲーション -->
+<!-- ================= DESKTOP NAV ================= -->
 <nav class="nav">
   <ul class="menu">
-    <li><a href="예약_jp.html">予約</a></li>
-    <li><a href="service_jp.html">サービス</a></li>
+    <li><a href="booking_jp.html">予約</a></li>
+    <li><a href="service_jp.html">施術メニュー</a></li>
     <li><a href="map_jp.html">アクセス</a></li>
     <li><a href="gallery_jp.html">ギャラリー</a></li>
   </ul>
 </nav>
 
-<script>
-  let currentLang = null;
+<div class="background"></div>
 
-  function toggleChatbot() {
-    const bot = document.getElementById('chatbot-box');
-    bot.style.display = bot.style.display === 'block' ? 'none' : 'block';
-  }
+<div class="logo-slide">
 
-  function setLang(lang) {
-    currentLang = lang;
+  <!-- STYLE FINDER -->
+  <section class="style-finder">
+    <h2 class="sf-title">あなたに合った施術を見つける</h2>
+    <p class="sf-sub">まつげ / 眉毛、3つの質問でおすすめをご提案します。</p>
 
-    const labels = {
-      kr: {
-        ask: '何を帯いましょうか？',
-        hours: '営業時間',
-        location: 'アクセス',
-        booking: '予約方法'
-      },
-      en: {
-        ask: 'How can I help you?',
-        hours: 'Business Hours',
-        location: 'Location',
-        booking: 'Booking Info'
-      },
-      jp: {
-        ask: '何をお手伝いしましょうか？',
-        hours: '営業時間',
-        location: 'アクセス',
-        booking: '予約方法'
-      },
-      ch: {
-        ask: '我能为您做什么？',
-        hours: '营业时间',
-        location: '来访路线',
-        booking: '预约方式'
-      },
-      vn: {
-        ask: 'Tôi có thể giúc gì cho bạn?',
-        hours: 'Giờ mở cửa',
-        location: 'Địa chỉ',
-        booking: 'Cách đặt lịch'
-      }
-    };
+    <div class="sf-tabs">
+      <button type="button" class="sf-tab active" data-tab="lash">まつげ</button>
+      <button type="button" class="sf-tab" data-tab="brow">眉毛</button>
+    </div>
 
-    const t = labels[lang];
+    <div class="sf-card">
 
-    const chat = document.getElementById('chat-content');
-    chat.innerHTML = `
-      <p>${t.ask}</p>
-      <button onclick="showInfo('hours')">${t.hours}</button>
-      <button onclick="showInfo('location')">${t.location}</button>
-      <button onclick="showInfo('booking')">${t.booking}</button>
-      <div id="chat-answer" style="margin-top: 10px;"></div>
-    `;
-  }
+      <!-- LASH -->
+      <div class="sf-pane active" data-pane="lash">
 
-  function showInfo(topic) {
-    const messages = {
-      kr: {
-        hours: '🕒 운영시간은 오전 11시 ~ 오후 8시입니다. (예약제 운영)',
-        location: '📍 대전광역시 서구 둔산중로 54 (시청역 4번 출구 도보 5분)',
-        booking: '📞 예약은 예약 메뉴 또는 전화(0507-1367-6984)로 가능합니다。'
-      },
-      en: {
-        hours: '🕒 We’re open from 11 AM to 8 PM (Reservation only).',
-        location: '📍 54, Dunsanjung-ro, Seo-gu, Daejeon (5 min from City Hall Station Exit 4)',
-        booking: '📞 Book via the reservation menu or call (0507-1367-6984).'
-      },
-      jp: {
-        hours: '🕒 当店は午前11時から午後8時まで営業しております（完全予約制です）',
-        location: '📍 大田広域市 西区 ドゥンサン中央路54（市庁駅4番出口 徒歩5分）',
-        booking: '📞 ご予約は予約ページ、お電話（0507-1367-6984）で承っております。'
-      },
-      ch: {
-        hours: '🕒 营业时间为上午11点至下午8点（需预约）',
-        location: '📍 大田市西区Dunsanjung-ro 54（市政厅地铁站4号出口 步行5分钟）',
-        booking: '📞 可通过预约页面或拨打电话 (0507-1367-6984) 进行预约。'
-      },
-      vn: {
-        hours: '🕒 Giờ mở cửa từ 11 giờ sáng đến 8 giờ tối (chỉ nhận đặt lịch trước).',
-        location: '📍 54, Dunsanjung-ro, quận Seo, Daejeon (cách ga City Hall, lối ra số 4, 5 phút đi bộ)',
-        booking: '📞 Đặt lịch qua mục Đặt Lịch hoặc gọi điện thoại (0507-1367-6984).'
-      }
-    };
+        <div class="sf-q">
+          <div class="sf-qtitle">1) どんな雰囲気がお好みですか？</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="natural">ナチュラル</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="clear">はっきり</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="glam">華やか</button>
+          </div>
+        </div>
 
-    const answerBox = document.getElementById('chat-answer');
-    answerBox.innerHTML = `<p>${messages[currentLang]?.[topic] || '言語が選択されていません。'}</p>`;
-  }
-</script>
+        <div class="sf-q">
+          <div class="sf-qtitle">2) 普段のメイクは？</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="light">薄め</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="normal">普通</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="heavy">濃いめ</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">3) どんな効果を求めますか？</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="curl">カール強調</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="mascara">マスカラ効果</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="bigger">目元を大きく</button>
+          </div>
+        </div>
+
+        <div class="sf-result">
+          <div class="sf-rtitle">おすすめ結果（まつげ）</div>
+          <div class="sf-rbody">質問を選択するとおすすめが表示されます。</div>
+
+          <div class="sf-actions">
+            <a class="btn sfGalleryBtn" href="javascript:void(0)">ギャラリーを見る</a>
+            <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Kakaoで相談</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BROW -->
+      <div class="sf-pane" data-pane="brow">
+
+        <div class="sf-q">
+          <div class="sf-qtitle">1) どんな印象にしたいですか？</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="soft">やわらかい</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="sharp">シャープ</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="clean">すっきり</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">2) 現在の眉の状態は？</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="sparse">薄い・まばら</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="messy">毛流れが乱れている</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="oldpmu">既存アートメイクあり</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">3) 重点的に改善したい点は？</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="shape">ライン・左右対称</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="natural">自然な毛流れ</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="lift">リフト感</button>
+          </div>
+        </div>
+
+        <div class="sf-result">
+          <div class="sf-rtitle">おすすめ結果（眉毛）</div>
+          <div class="sf-rbody">質問を選択するとおすすめが表示されます。</div>
+
+          <div class="sf-actions">
+            <a class="btn sfGalleryBtn" href="javascript:void(0)">ギャラリーを見る</a>
+            <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Kakaoで相談</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <h1>
+    <span class="slide">CriCri</span>
+    <span class="slide">BEAUTY</span>
+    <span class="slide">STUDIO</span>
+  </h1>
+
+  <div class="tagline-slide">
+    <span class="tagline">
+      第一印象は、眉から始まる。<br>
+      CriCriで新しい自分へ。
+    </span>
+  </div>
+
+  <div class="cta-buttons">
+    <a href="service_jp.html" class="btn">施術メニュー</a>
+    <a href="booking_jp.html" class="btn">予約する</a>
+  </div>
+
+</div>
+
+<div class="info-box">
+  <p><strong>CriCri Beauty Studio</strong></p>
+  <p>営業時間：10:00 – 20:00</p>
+  <p>電話番号：+82)010-3263-6984</p>
+  <p>住所：韓国 大田広域市 西区 屯山中路54</p>
+  <p>事業者登録番号：641-22-02169</p>
+</div>
 
 </body>
 </html>
