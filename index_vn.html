@@ -3,59 +3,173 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="qnuIKB5IxqsUSj3U_9biSjNpaRY3AkN_ELw2S2xRQKs" />
-  <meta name="naver-site-verification" content="3371eda7e8882c7d645a420b116c75fa4681eab8" />
 
-  <!-- ✅ 페이지 제목 : 위치와 서비스를 포함한 베트남어 제목 -->
-  <title>Nối mi gần ga City Hall Daejeon | CriCri Beauty Studio</title>
-
-  <!-- ✅ 페이지 내용을 요약한 설명 (베트남어) -->
-  <meta name="description" content="Studio làm đẹp riêng tư chuyên nối mi và uốn mi gần ga City Hall (cổng số 5) tại Daejeon. Dịch vụ theo lịch hẹn, thiết kế riêng cho từng khách hàng.">
-
-  <!-- ✅ 관련 키워드 (콤마로 구분) -->
-  <meta name="keywords" content="nối mi Daejeon, nối mi ga City Hall, CriCri Beauty Studio, uốn mi, studio làm đẹp riêng tư, salon làm đẹp Daejeon">
-
-  <!-- ✅ 검색엔진 로봇 지침 -->
+  <!-- SEO -->
+  <title>Nối Mi & Phun Mày Bán Vĩnh Viễn Gần Ga City Hall Daejeon | CriCri Beauty</title>
+  <meta name="description" content="Studio nối mi và phun mày bán vĩnh viễn cao cấp gần ga City Hall Daejeon. Dịch vụ riêng tư, đặt lịch trước, thiết kế phù hợp từng khách hàng.">
+  <meta name="keywords" content="nối mi Daejeon, phun mày Daejeon, bán vĩnh viễn, CriCri Beauty, studio làm đẹp riêng tư">
   <meta name="robots" content="index, follow">
-
-  <!-- ✅ 작성자 정보 -->
   <meta name="author" content="CriCri Beauty Studio">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cricri Beauty Studio">
+  <meta property="og:description" content="Chuyên nối mi & phun mày bán vĩnh viễn tại Daejeon. Dịch vụ riêng tư theo lịch hẹn.">
+  <meta property="og:url" content="https://cricribeauty.github.io/index_vn.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://cricribeauty.github.io/images/intro.png">
+
+  <!-- Multilingual -->
+  <link rel="canonical" href="https://cricribeauty.github.io/index_vn.html">
+  <link rel="alternate" hreflang="ko" href="https://cricribeauty.github.io/index.html">
+  <link rel="alternate" hreflang="en" href="https://cricribeauty.github.io/index_en.html">
+  <link rel="alternate" hreflang="ja" href="https://cricribeauty.github.io/index_jp.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://cricribeauty.github.io/index_ch.html">
+  <link rel="alternate" hreflang="vi" href="https://cricribeauty.github.io/index_vn.html">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="css/style.css?v=20260219_1">
 </head>
 <body>
-  <!-- Hộp thông tin góc trái dưới (Tiếng Việt) -->
-<div class="info-box">
-  <p><strong>CriCri Beauty Studio</strong></p>
-  <p>Giờ mở cửa: 10:00 – 20:00</p>
-  <p>Số điện thoại: 010-3263-6984</p>
-  <p>54, đường Dunsanjung-ro, quận Seo, Daejeon</p>
-  <p>Mã số đăng ký kinh doanh: 641-22-02169</p>
+
+<!-- ================= MOBILE HEADER ================= -->
+<div class="mobile-header"> 
+  <div class="mobile-logo">CriCri Beauty</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
 </div>
 
-<!-- Nút mở chatbot -->
-<div id="chatbot-toggle" onclick="toggleChatbot()">💬 Hỏi đáp</div>
-
-<!-- Hộp thoại chatbot -->
-<div id="chatbot-box">
-  <div class="chat-header">Trợ lý CriCri</div>
-  <div class="chat-content" id="chat-content">
-    <p>Vui lòng chọn ngôn ngữ:</p>
-    <button onclick="setLang('vn')">🇻🇳 Tiếng Việt</button>
-    <button onclick="setLang('kr')">🇰🇷 한국어</button>
-    <button onclick="setLang('en')">🇺🇸 English</button>
-    <button onclick="setLang('jp')">🇯🇵 日本語</button>
-    <button onclick="setLang('ch')">🇨🇳 中文</button>
-    <div id="chat-answer" style="margin-top: 10px;"></div>
-  </div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="booking_vn.html" onclick="closeMenu()">Đặt lịch</a>
+  <a href="service_vn.html" onclick="closeMenu()">Dịch vụ</a>
+  <a href="map_vn.html" onclick="closeMenu()">Vị trí</a>
+  <a href="gallery_vn.html" onclick="closeMenu()">Thư viện ảnh</a>
 </div>
 
-<!-- Hình nền -->
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+<!-- ================= LANGUAGE ================= -->
+<div class="lang-switcher">
+  <a href="index.html">KR</a> |
+  <a href="index_en.html">EN</a> |
+  <a href="index_jp.html">JP</a> |
+  <a href="index_ch.html">CH</a> |
+  <a href="index_vn.html">VN</a>
+</div>
+
+<!-- ================= DESKTOP NAV ================= -->
+<nav class="nav">
+  <ul class="menu">
+    <li><a href="booking_vn.html">Đặt lịch</a></li>
+    <li><a href="service_vn.html">Dịch vụ</a></li>
+    <li><a href="map_vn.html">Vị trí</a></li>
+    <li><a href="gallery_vn.html">Thư viện ảnh</a></li>
+  </ul>
+</nav>
+
 <div class="background"></div>
 
-<!-- Logo -->
 <div class="logo-slide">
+
+  <!-- STYLE FINDER -->
+  <section class="style-finder">
+    <h2 class="sf-title">Tìm phong cách phù hợp với bạn</h2>
+    <p class="sf-sub">Nối mi / Chân mày – Trả lời 3 câu hỏi để nhận gợi ý phù hợp.</p>
+
+    <div class="sf-tabs">
+      <button type="button" class="sf-tab active" data-tab="lash">Nối mi</button>
+      <button type="button" class="sf-tab" data-tab="brow">Chân mày</button>
+    </div>
+
+    <div class="sf-card">
+
+      <!-- LASH -->
+      <div class="sf-pane active" data-pane="lash">
+
+        <div class="sf-q">
+          <div class="sf-qtitle">1) Bạn muốn phong cách nào?</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="natural">Tự nhiên</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="clear">Sắc nét</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="glam">Quyến rũ</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">2) Trang điểm hằng ngày của bạn?</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="light">Nhẹ</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="normal">Bình thường</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="heavy">Đậm</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">3) Hiệu ứng mong muốn?</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="curl">Nhấn mạnh độ cong</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="mascara">Hiệu ứng mascara</button>
+            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="bigger">Mắt to hơn</button>
+          </div>
+        </div>
+
+        <div class="sf-result">
+          <div class="sf-rtitle">Kết quả gợi ý (Nối mi)</div>
+          <div class="sf-rbody">Hãy chọn các câu hỏi để xem gợi ý phù hợp.</div>
+
+          <div class="sf-actions">
+            <a class="btn sfGalleryBtn" href="javascript:void(0)">Xem trong thư viện</a>
+            <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Tư vấn qua Kakao</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BROW -->
+      <div class="sf-pane" data-pane="brow">
+
+        <div class="sf-q">
+          <div class="sf-qtitle">1) Bạn muốn ấn tượng như thế nào?</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="soft">Mềm mại</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="sharp">Sắc sảo</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="clean">Gọn gàng</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">2) Tình trạng chân mày hiện tại?</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="sparse">Thưa / không đều</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="messy">Lông mày rối</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="oldpmu">Đã từng phun xăm</button>
+          </div>
+        </div>
+
+        <div class="sf-q">
+          <div class="sf-qtitle">3) Mong muốn cải thiện điều gì?</div>
+          <div class="sf-opts">
+            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="shape">Tạo dáng & cân đối</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="natural">Hiệu ứng tự nhiên</button>
+            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="lift">Hiệu ứng nâng nhẹ</button>
+          </div>
+        </div>
+
+        <div class="sf-result">
+          <div class="sf-rtitle">Kết quả gợi ý (Chân mày)</div>
+          <div class="sf-rbody">Hãy chọn các câu hỏi để xem gợi ý phù hợp.</div>
+
+          <div class="sf-actions">
+            <a class="btn sfGalleryBtn" href="javascript:void(0)">Xem trong thư viện</a>
+            <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Tư vấn qua Kakao</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <h1>
     <span class="slide">CriCri</span>
     <span class="slide">BEAUTY</span>
@@ -63,101 +177,26 @@
   </h1>
 
   <div class="tagline-slide">
-    <span class="tagline">Ấn tượng đầu tiên bắt đầu từ lông mày của bạn. Hãy đến với CriCri Beauty.</span>
+    <span class="tagline">
+      Ấn tượng đầu tiên bắt đầu từ chân mày.<br>
+      Hãy bắt đầu hành trình làm đẹp cùng CriCri.
+    </span>
   </div>
 
   <div class="cta-buttons">
-    <a href="service_vn.html" class="btn">Dịch vụ</a>
-    <a href="예약_vn.html" class="btn">Đặt lịch</a>
+    <a href="service_vn.html" class="btn">Xem dịch vụ</a>
+    <a href="booking_vn.html" class="btn">Đặt lịch ngay</a>
   </div>
+
 </div>
 
-<!-- Chuyển đổi ngôn ngữ -->
-<div class="lang-switcher">
-  <a href="index.html">KR</a> |
-  <a href="index_en.html">EN</a> |
-  <a href="index_jp.html">JP</a> |
-  <a href="index_ch.html">CH</a> |
-  <a href="index_vn.html" class="active">VN</a>
+<div class="info-box">
+  <p><strong>CriCri Beauty Studio</strong></p>
+  <p>Giờ hoạt động: 10:00 – 20:00</p>
+  <p>Điện thoại: +82)010-3263-6984</p>
+  <p>Địa chỉ: 54 Dunsanjung-ro, Seo-gu, Daejeon, Hàn Quốc</p>
+  <p>Mã đăng ký kinh doanh: 641-22-02169</p>
 </div>
-
-<!-- Menu điều hướng -->
-<nav class="nav">
-  <ul class="menu">
-    <li><a href="예약_vn.html">Đặt lịch</a></li>
-    <li><a href="service_vn.html">Dịch vụ</a></li>
-    <li><a href="map_vn.html">Địa chỉ</a></li>
-    <li><a href="gallery_vn.html">Thư viện ảnh</a></li>
-  </ul>
-</nav>
-
-<script>
-  let currentLang = 'vn';
-
-  function toggleChatbot() {
-    const bot = document.getElementById('chatbot-box');
-    bot.style.display = bot.style.display === 'block' ? 'none' : 'block';
-  }
-
-  function setLang(lang) {
-    currentLang = lang;
-
-    const labels = {
-      vn: {
-        ask: 'Bạn cần hỗ trợ gì?',
-        hours: 'Giờ mở cửa',
-        location: 'Địa chỉ',
-        booking: 'Cách đặt lịch'
-      },
-      // 추가 언어 번역이 필요한 경우 여기에 넣기
-    };
-
-    const t = labels[lang] || labels.vn;
-
-    const chat = document.getElementById('chat-content');
-    chat.innerHTML = `
-      <p>${t.ask}</p>
-      <button onclick="showInfo('hours')">${t.hours}</button>
-      <button onclick="showInfo('location')">${t.location}</button>
-      <button onclick="showInfo('booking')">${t.booking}</button>
-      <div id="chat-answer" style="margin-top: 10px;"></div>
-    `;
-  }
-
-  function showInfo(topic) {
-    const messages = {
-      kr: {
-        hours: '🕒 운영시간은 오전 11시 ~ 오후 8시입니다. (예약제 운영)',
-        location: '📍 대전광역시 서구 둔산중로 54 (시청역 4번 출구 도보 5분)',
-        booking: '📞 예약은 예약 메뉴 또는 전화(0507-1367-6984)로 가능합니다。'
-      },
-      en: {
-        hours: '🕒 We’re open from 11 AM to 8 PM (Reservation only).',
-        location: '📍 54, Dunsanjung-ro, Seo-gu, Daejeon (5 min from City Hall Station Exit 4)',
-        booking: '📞 Book via the reservation menu or call (0507-1367-6984).'
-      },
-      jp: {
-        hours: '🕒 当店は午前11時から午後8時まで営業しております（完全予約制です）',
-        location: '📍 大田広域市 西区 ドゥンサン中央路54（市庁駅4番出口 徒歩5分）',
-        booking: '📞 ご予約は予約ページ、お電話（0507-1367-6984）で承っております。'
-      },
-      ch: {
-        hours: '🕒 营业时间为上午11点至下午8点（需预约）',
-        location: '📍 大田市西区Dunsanjung-ro 54（市政厅地铁站4号出口 步行5分钟）',
-        booking: '📞 可通过预约页面或拨打电话 (0507-1367-6984) 进行预约。'
-      },
-      vn: {
-        hours: '🕒 Giờ mở cửa từ 11 giờ sáng đến 8 giờ tối (chỉ nhận đặt lịch trước).',
-        location: '📍 54, Dunsanjung-ro, quận Seo, Daejeon (cách ga City Hall, lối ra số 4, 5 phút đi bộ)',
-        booking: '📞 Đặt lịch qua mục Đặt Lịch hoặc gọi điện thoại (0507-1367-6984).'
-      }
-    };
-
-    const answerBox = document.getElementById('chat-answer');
-    answerBox.innerHTML = `<p>${messages[currentLang]?.[topic] || 'Chưa có dữ liệu cho mục này.'}</p>`;
-  }
-</script>
 
 </body>
 </html>
-
