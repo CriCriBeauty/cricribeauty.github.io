@@ -47,9 +47,15 @@ body{
 .menu{
   list-style:none;
   display:flex;
-  gap:18px;
-  flex-wrap:wrap;
+  gap:14px;
   justify-content:center;
+  flex-wrap: nowrap;          /* 🔥 줄바꿈 금지 */
+  overflow-x: auto;           /* 🔥 공간 부족하면 스크롤 */
+  scrollbar-width: none;
+}
+
+.menu::-webkit-scrollbar{
+  display:none;
 }
 
 .menu a{
