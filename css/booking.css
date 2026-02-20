@@ -259,6 +259,23 @@ body{
   box-shadow: 0 10px 24px rgba(255,232,122,.35);
 }
 
+.info-box{
+  text-align: center;
+}
+
+.info-box p{
+  text-align: center;
+}
+.footer{
+  text-align: center;
+}
+
+.footer-title,
+.footer-info,
+.footer-copy{
+  text-align: center;
+}
+
 /* Calendar */
 iframe{
   width:100%;
