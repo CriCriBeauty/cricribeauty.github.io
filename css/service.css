@@ -32,7 +32,7 @@ body{
   background: rgba(255,255,255,.80);
   border-bottom:1px solid var(--border);
   backdrop-filter: blur(12px);
-  padding:12px 16px;
+  padding: 44px 16px 12px;  /* 🔥 위 공간 확보 */
 }
 
 .nav-inner{
@@ -72,17 +72,18 @@ body{
 
 /* lang */
 .lang-switcher{
-  position:absolute;
-  right:0;
-  top:50%;
-  transform:translateY(-50%);
-  font-size:12px;
-  padding:6px 10px;
-  border-radius:999px;
-  background:rgba(255,255,255,.75);
-  border:1px solid var(--border);
-  backdrop-filter:blur(8px);
-  white-space:nowrap;
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  z-index: 2000;
+
+  font-size: 12px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.90);
+  border: 1px solid rgba(0,0,0,.06);
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
 }
 
 .lang-switcher a{
