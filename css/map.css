@@ -1,133 +1,232 @@
-/* 기본 폰트 및 배경 설정 */
-body {
-  font-family: 'Noto Sans KR', sans-serif;
-  background-color: #fffdfd;
-  margin: 0;
-  padding-top: 120px;
+/* =========================================================
+   Cricri Beauty - map.css (SERVICE STYLE UNIFIED)
+   - service.css / booking.css 와 동일 톤
+   - nav 1줄(필요 시 가로 스크롤), lang 겹침 방지
+========================================================= */
+
+:root{
+  --bg1:#FBF7F5;
+  --bg2:#F5E9ED;
+  --card: rgba(255,255,255,.78);
+  --border: rgba(0,0,0,.06);
+  --text:#111;
+  --muted:#666;
+  --rose2:#ff6fa3;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --radius:18px;
 }
 
-/* 언어 선택 영역 */
-.lang-switcher {
-  position: fixed;        /* absolute → fixed 로 변경 추천 */
-  top: 5px;               /* 더 위로 올리기 */
-  right: 30px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  z-index: 9999;          /* nav 보다 더 높은 z-index */
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+body{
+  font-family:'Noto Sans KR',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background: linear-gradient(180deg,var(--bg1),var(--bg2));
+  color:#333;
+  line-height:1.8;
+  overflow-x:hidden;
 }
 
-.lang-switcher a {
-  color: #333 !important;  /* 어두운 텍스트로 변경 */
-  text-decoration: none;
-  margin: 0 5px;
-  font-weight: bold;
-}
-.lang-switcher a:hover {
-  text-decoration: underline;
-}
-
-/* 네비게이션 바 */
-.nav {
-  background-color: #fff6f8;
-  border-bottom: 1px solid #eee;
-  padding: 16px 0;
-  text-align: center;
-  position: fixed;
-  top: 30px;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-.menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  padding: 0;
-  margin: 0;
-}
-.menu li a {
-  text-decoration: none;
-  color: #111;
-  font-weight: bold;
-  font-size: 1.4rem !important;
-}
-.menu li a:hover {
-  color: #d94f7b;
+/* ================= NAV (service.css style) ================= */
+.nav{
+  position: sticky;
+  top:0;
+  z-index:1100;
+  background: rgba(255,255,255,.80);
+  border-bottom:1px solid var(--border);
+  backdrop-filter: blur(12px);
+  padding:12px 16px;
 }
 
-
-/* 콘텐츠 섹션 */
-.section {
-  max-width: 800px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-.section h2 {
-  text-align: center;
-  color: #d94f7b;
-  margin-bottom: 20px;
+.nav-inner{
+  max-width:980px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
 }
 
-/* 각 시술 블록 */
-.service-block {
-  margin-bottom: 40px;
+/* ✅ 한 줄 유지 + 부족하면 가로 스크롤 */
+.menu{
+  list-style:none;
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap: nowrap;
+  overflow-x:auto;
+  scrollbar-width:none;
+  padding: 2px 0;
 }
-.service-block h3 {
-  color: #c0397e;
-  font-size: 1.2em;
-  margin-bottom: 8px;
-}
-.service-block p {
-  font-size: 0.95em;
-  color: #555;
-  line-height: 1.6;
-  margin: 5px 0;
-}
-.service-block ul {
-  padding-left: 20px;
-  margin: 8px 0;
-}
-.service-block li {
-  font-size: 0.9em;
-  color: #444;
-  margin-bottom: 4px;
-}
-/* 반응형 모바일 */
-@media screen and (max-width: 600px) {
-  h1 { font-size: 1.6em; }
-  .section h2 { font-size: 1.2em; }
-  table, th, td { font-size: 0.85em; }
-  .btn { width: 90%; display: block; margin: 10px auto; }
+.menu::-webkit-scrollbar{ display:none; }
 
-  .menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    padding: 5px 10px;
-    flex-direction: row;
+.menu a{
+  text-decoration:none;
+  font-weight:800;
+  font-size:14px;
+  color:#222;
+  padding:10px 12px;
+  border-radius:999px;
+  transition:.2s;
+  white-space:nowrap;
+}
+.menu a:hover{ background: rgba(255,111,163,.08); }
+.menu a[aria-current="page"]{
+  color:var(--rose2);
+  background: rgba(255,111,163,.12);
+}
+
+/* lang (PC: nav 안 오른쪽) */
+.lang-switcher{
+  position:absolute;
+  right:0;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.75);
+  border:1px solid var(--border);
+  backdrop-filter:blur(8px);
+  white-space:nowrap;
+}
+.lang-switcher a{
+  text-decoration:none;
+  color:#444;
+  margin:0 4px;
+  font-weight:700;
+}
+.lang-switcher a:hover{ text-decoration:underline; }
+
+/* ================= PAGE WRAP ================= */
+.page{
+  max-width:980px;
+  margin:24px auto 60px;
+  padding:0 20px;
+}
+
+/* HERO */
+.hero-card{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding:28px 22px;
+  text-align:center;
+}
+.hero-title{
+  font-size:28px;
+  color:#111;
+  margin-bottom:10px;
+}
+.hero-desc{
+  color: var(--muted);
+  font-size:15px;
+  max-width:720px;
+  margin:0 auto;
+  line-height:1.85;
+}
+
+/* Sections */
+.section{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding:28px 22px;
+  margin:18px 0;
+  text-align:center;
+}
+.section h2{
+  color:#111;
+  font-size:20px;
+  margin-bottom:14px;
+}
+
+/* Address */
+.address-box{
+  color:#333;
+  line-height:1.85;
+  margin-bottom:14px;
+}
+
+/* Map */
+.map-frame iframe{
+  width:100%;
+  height:420px;
+  border:none;
+  border-radius:14px;
+  background:#fff;
+  box-shadow: 0 8px 22px rgba(0,0,0,.06);
+}
+
+/* Transport list */
+.transport{
+  list-style:none;
+  padding:0;
+  margin:14px auto 0;
+  max-width:740px;
+  text-align:left;
+}
+.transport li{
+  font-size:15px;
+  color:#333;
+  margin:10px 0;
+  line-height:1.85;
+  position:relative;
+  padding-left:18px;
+}
+.transport li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  top:0;
+  color: rgba(255,111,163,.95);
+  font-weight:900;
+}
+
+/* Footer (booking.css와 통일감) */
+.footer{
+  padding: 24px 16px 34px;
+  text-align:center;
+  color:#666;
+}
+.footer-title{
+  font-weight:900;
+  color:#111;
+  margin-bottom:6px;
+}
+.footer-info{
+  font-size:14px;
+}
+.footer-copy{
+  margin-top:10px;
+  font-size:12px;
+  color:#aaa;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width:768px){
+
+  /* ✅ 모바일에서 lang가 menu를 가리지 않게 fixed로 */
+  .nav{
+    padding-top:44px;
+  }
+  .lang-switcher{
+    position: fixed;
+    top: 10px;
+    right: 12px;
+    z-index: 2000;
+    transform:none;
+    background: rgba(255,255,255,.90);
+    box-shadow: 0 8px 20px rgba(0,0,0,.06);
   }
 
-  .menu li a {
-    font-size: 0.85rem !important; /* 모바일에서 강제로 줄임 */
-    white-space: nowrap;
+  .menu a{
+    font-size:13px;
+    padding:8px 10px;
   }
 
-  .lang-switcher {
-    position: absolute;
-    top: 6px;
-    right: 10px;
-    font-size: 0.75rem;
-  }
-
-  .nav {
-    top: 40px;
-    left: 0;
-    transform: none;
-    width: 100%;
-  }
+  .page{ padding:0 14px; }
+  .map-frame iframe{ height: 340px; }
 }
