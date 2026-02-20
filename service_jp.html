@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>施術案内 | クリクリビューティーショップ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/service.css" />
+  <title>施術メニュー | Cricri Beauty Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/service.css?v=20260219_1" />
 </head>
 <body>
 
-<!-- 言語選択 -->
+<!-- ================= LANGUAGE ================= -->
 <div class="lang-switcher">
   <a href="index.html">KR</a> |
   <a href="index_en.html">EN</a> |
@@ -18,111 +18,128 @@
   <a href="index_vn.html">VN</a>
 </div>
 
-<!-- ナビゲーション -->
+<!-- ================= NAV ================= -->
 <header class="nav">
   <ul class="menu">
-    <li><a href="예약_jp.html">予約</a></li>
-    <li><a href="service_jp.html">施術（サービス）</a></li>
+    <li><a href="index_jp.html">ホーム</a></li>
+    <li><a href="service_jp.html">施術メニュー</a></li>
+    <li><a href="예약_jp.html">ご予約</a></li>
     <li><a href="map_jp.html">アクセス</a></li>
-    <li><a href="gallery_jp.html">ギャラリー</a></li>
+    <li><a href="gallery_jp.html" aria-current="page">ギャラリー</a></li>
   </ul>
 </header>
 
-<!-- 施術案内 -->
-<div class="section">
-  <h2>💅 詳細な施術案内</h2>
+<!-- ================= MAIN ================= -->
+<main class="service-container">
 
-  <div class="service-block">
-    <h3>💖 栄養たっぷりクリニックパーマ</h3>
-    <p>まつ毛にカールを与えながら、タンパク質やケラチンなどの栄養成分を吸収させ、ダメージなく健康でツヤのあるカールを作ります。</p>
-    <p><strong>主な特徴：</strong></p>
-    <ul>
-      <li>まつ毛のダメージを防止</li>
-      <li>自然なカールとツヤ効果</li>
-    </ul>
-    <p><strong>こんな方におすすめ：</strong></p>
-    <ul>
-      <li>まつ毛が細くて傷みやすい方</li>
-      <li>カールと栄養を同時に求める方</li>
-    </ul>
-  </div>
+  <!-- 左側：料金表 -->
+  <aside class="price-box">
+    <img src="images/price.png" alt="施術料金表" class="price-img" />
+    <button type="button" onclick="openModal()">🔍 画像を拡大表示</button>
+  </aside>
 
-  <div class="service-block">
-    <h3>✨ 根元からしっかりベーシックパーマ</h3>
-    <p>根元からしっかりカールを与え、ビューラーなしでもはっきりとした目元を演出する基本のパーマ施術です。</p>
-    <p><strong>主な特徴：</strong></p>
-    <ul>
-      <li>強いカール力</li>
-      <li>はっきりとした印象の目元</li>
-    </ul>
-    <p><strong>こんな方におすすめ：</strong></p>
-    <ul>
-      <li>まつ毛が下向きの方</li>
-      <li>毎日のビューラーが面倒な方</li>
-    </ul>
-  </div>
+  <!-- 右側：施術説明 -->
+  <section class="section">
+    <h2>💅 施術のご案内</h2>
 
-  <div class="service-block">
-    <h3>🐼 はっきり目元ブラックティントパーマ</h3>
-    <p>まつ毛を上向きにカールさせながら、同時にブラックカラーでティントし、マスカラなしでもくっきりとした目元を演出します。</p>
-    <p><strong>主な特徴：</strong></p>
-    <ul>
-      <li>カール＋ブラックティントの同時施術</li>
-      <li>マスカラ効果</li>
-    </ul>
-    <p><strong>こんな方におすすめ：</strong></p>
-    <ul>
-      <li>まつ毛が薄く目立たない方</li>
-      <li>メイクを簡略化したい方</li>
-    </ul>
-  </div>
+    <div class="service-block">
+      <h3>🌸 ベーシックまつげパーマ</h3>
+      <p>
+        やさしい薬剤を使用し、自然で上品な目元を演出する基本のまつげパーマです。
+      </p>
+      <ul>
+        <li>しっかりとしたカール力</li>
+        <li>くっきりとした目元に</li>
+      </ul>
+    </div>
 
-  <div class="service-block">
-    <h3>👀 デュアルパーマ</h3>
-    <p>根元はしっかりリフティングし、毛先は自然にカールさせて、はっきりとしたが柔らかい印象を与えるプレミアムパーマです。</p>
-    <p><strong>主な特徴：</strong></p>
-    <ul>
-      <li>リフティング＋自然なカールの二重効果</li>
-      <li>豊かで長く見える仕上がり</li>
-    </ul>
-    <p><strong>こんな方におすすめ：</strong></p>
-    <ul>
-      <li>印象をはっきり、目元を柔らかく演出したい方</li>
-      <li>確実なパーマ効果を望む方</li>
-    </ul>
-  </div>
+    <div class="service-block">
+      <h3>🌿 ブラックティントまつげパーマ</h3>
+      <p>
+        ベーシックパーマにブラックティントを加え、より濃く印象的な目元を演出します。
+      </p>
+      <ul>
+        <li>カール＋ブラックティント同時施術</li>
+        <li>マスカラのような仕上がり</li>
+      </ul>
+    </div>
 
-  <div class="service-block">
-    <h3>🌿 眉リフトパーマ</h3>
-    <p>眉毛の流れを上向きに整え、固定することで、ボリューム感と整った印象を与える施術です。</p>
-    <p><strong>主な特徴：</strong></p>
-    <ul>
-      <li>眉毛の流れを整えてキープ</li>
-      <li>ボリュームのある印象</li>
-    </ul>
-    <p><strong>こんな方におすすめ：</strong></p>
-    <ul>
-      <li>眉毛が横向きに寝たり乱れやすい方</li>
-      <li>眉毛が薄く見えるのが気になる方</li>
-    </ul>
-  </div>
+    <div class="service-block">
+      <h3>✨ デュアルまつげパーマ</h3>
+      <p>
+        上まつげと下まつげを同時に施術し、よりボリューム感のある目元を実現します。
+      </p>
+      <ul>
+        <li>上下同時施術</li>
+        <li>より大きくはっきりした目元に</li>
+      </ul>
+    </div>
 
-  <div class="service-block">
-    <h3>💎 眉デザイン</h3>
-    <p>顔の形や雰囲気に合わせて自然な眉の形をデザインします。（お問い合わせ）</p>
-    <p><strong>主な特徴：</strong></p>
-    <ul>
-      <li>カスタマイズされた眉ライン設計</li>
-      <li>自然で調和のとれた印象</li>
-    </ul>
-    <p><strong>こんな方におすすめ：</strong></p>
-    <ul>
-      <li>眉の形が気に入らない方</li>
-      <li>初めて眉デザインを受けてみたい方</li>
-    </ul>
-  </div>
+    <div class="service-block">
+      <h3>🌈 ブロウラミネーション（眉リフト）</h3>
+      <p>
+        眉の毛流れを整え、ナチュラルで洗練された印象に仕上げます。
+      </p>
+      <ul>
+        <li>古いアートメイクの補正効果</li>
+        <li>すっきりとした印象に</li>
+        <li>眉毛の毛流れを整える</li>
+      </ul>
+    </div>
 
+    <div class="service-block">
+      <h3>🍃 ナチュラル眉デザイン</h3>
+      <p>
+        お客様本来の眉の形や毛流れを活かし、自然で美しい眉にデザインします。
+      </p>
+    </div>
+
+  </section>
+</main>
+
+<!-- ================= MODAL ================= -->
+<div id="modal" onclick="closeModal()" role="dialog" aria-modal="true" aria-label="施術料金表を拡大表示">
+  <img src="images/price.png" alt="拡大された施術料金表" />
 </div>
+
+<!-- ================= FOOTER ================= -->
+<footer style="padding: 30px 20px; text-align: center; background-color: transparent;">
+  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">Cricri Beauty Studio</div>
+  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
+    営業時間：10:00 ～ 20:00 ｜ お問い合わせ：0507-1367-6984
+  </div>
+  <div style="margin: 15px 0;">
+    <a href="http://pf.kakao.com/_SGZrn" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/3991/3991999.png" alt="KakaoTalk" width="26" />
+    </a>
+    <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="26" />
+    </a>
+    <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/11423/11423248.png" alt="Blog" width="26" />
+    </a>
+    <a href="#" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968850.png" alt="Band" width="26" />
+    </a>
+  </div>
+  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
+    &copy; 2025 Cricri Beauty Studio. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  function openModal() {
+    const modal = document.getElementById('modal');
+    if (!modal) return;
+    modal.style.display = 'flex';
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    if (!modal) return;
+    modal.style.display = 'none';
+  }
+</script>
 
 </body>
 </html>
