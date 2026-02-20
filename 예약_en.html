@@ -4,105 +4,109 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Booking | Cricri Beauty Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/booking.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/booking.css?v=20260219_3" />
 </head>
 <body>
-<!-- Header -->
-<div class="header-container">
-  <div class="logo-area centered">
-    <div class="logo-text-row">
-      <span class="cricri">CriCri</span>
-      <div class="studio-text">
-        <div>BEAUTY</div>
-        <div>STUDIO</div>
-      </div>
-    </div>
-    <p class="logo-tagline">Cricri Beauty Studio</p>
-  </div>
 
-  <ul class="menu centered">
+<!-- ================= LANGUAGE ================= -->
+<div class="lang-switcher">
+  <a href="index.html">KR</a> |
+  <a href="index_en.html">EN</a> |
+  <a href="index_jp.html">JP</a> |
+  <a href="index_ch.html">CH</a> |
+  <a href="index_vn.html">VN</a>
+</div>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <ul class="menu">
+    <li><a href="index_en.html">Home</a></li>
+    <li><a href="service_en.html">Service</a></li>
     <li><a href="예약_en.html">Booking</a></li>
-    <li><a href="service_en.html">Beauty Services</a></li>
-    <li><a href="map_en.html">Directions</a></li>
+    <li><a href="map_en.html">Location</a></li>
     <li><a href="gallery_en.html">Gallery</a></li>
   </ul>
+</header>
 
-  <!-- Buttons -->
-  <div class="btn-wrap">
-    <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">Naver Booking</a>
-    <a href="http://pf.kakao.com/_SGZrn/chat" target="_blank" class="btn kakao" id="kakaoBtn">KakaoTalk Chat</a>
+<!-- ================= MAIN ================= -->
+<main class="page">
+
+  <!-- HERO -->
+  <section class="hero-card">
+    <h1 class="hero-title">Booking Information</h1>
+    <p class="hero-desc">
+      Personalized beauty service just for you.  
+      Please read the following information carefully before making a reservation.
+    </p>
+  </section>
+
+  <!-- Agreement -->
+  <div class="check-confirm">
+    <div class="check-card">
+      <input type="checkbox" id="agree" />
+      <label for="agree">I have read and agree to all the information above.</label>
+    </div>
   </div>
 
-  <div class="lang-switcher">
-    <a href="index.html">KR</a> |
-    <a href="index_en.html">EN</a> |
-    <a href="index_jp.html">JP</a> |
-    <a href="index_ch.html">CH</a> |
-    <a href="index_vn.html">VN</a>
-  </div>
-</div>
+  <!-- Notice -->
+  <section class="section">
+    <h2>📌 Before You Book</h2>
+    <ul>
+      <li>If you arrive late, your treatment time may be adjusted.</li>
+      <li>Please request changes or cancellations at least one day in advance.</li>
+      <li>No-shows may result in future booking restrictions.</li>
+      <li>Clients with sensitive skin or who are pregnant will be consulted before treatment.</li>
+    </ul>
+  </section>
 
-<p class="desc">Tailored treatments just for you. Please review the following information before making a booking.</p>
+  <!-- Booking Buttons -->
+  <section class="section">
+    <h2>📲 Make a Reservation</h2>
+    <div class="btn-wrap">
+      <a href="https://map.naver.com/p/entry/place/2023374701"
+         target="_blank"
+         class="btn naver"
+         id="naverBtn">Book via Naver</a>
 
-<!-- Checkbox -->
-<div class="check-confirm">
-  <input type="checkbox" id="agree" />
-  <label for="agree">I have reviewed and agree to the information below.</label>
-</div>
+      <a href="http://pf.kakao.com/_SGZrn/chat"
+         target="_blank"
+         class="btn kakao"
+         id="kakaoBtn">Consult via KakaoTalk</a>
+    </div>
+  </section>
 
-<!-- Booking Info -->
-<div class="section">
-  <h2>📌 Important Booking Notes</h2>
-  <ul>
-    <li>Service time may be adjusted if you arrive late.</li>
-    <li>Please make any changes at least one day in advance.</li>
-    <li>Future bookings may be restricted in case of no-shows.</li>
-    <li>For sensitive skin or pregnancy, treatment will be provided after consultation.</li>
-  </ul>
-</div>
+  <!-- Calendar -->
+  <section class="section">
+    <h2>📆 Available Schedule</h2>
+    <p class="hint">
+      ※ The calendar below is for reference only.  
+      Please complete your reservation through Naver.
+    </p>
+    <iframe
+      src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul">
+    </iframe>
+  </section>
 
-<!-- Booking Calendar -->
-<div class="section">
-  <h2>📆 Available Booking Dates</h2>
-  <p style="text-align:center; color:#666; font-size:0.9em;">※ This calendar is for reference only. Please proceed with booking through Naver.</p>
-  <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
-</div>
+  <!-- Info -->
+  <section class="info-box">
+    <p><strong>Cricri Beauty Studio</strong></p>
+    <p>Business Hours: 10:00 AM – 8:00 PM</p>
+    <p>Phone: 010-3263-6984</p>
+    <p>54 Dunsanjung-ro, Seo-gu, Daejeon, South Korea</p>
+    <p>Business Registration No: 641-22-02169</p>
+  </section>
 
-<!-- Info Box -->
-<div class="info-box">
-  <p><strong>Cricri Beauty Studio</strong></p>
-  <p>Hours: 10:00 AM – 8:00 PM</p>
-  <p>Phone: 010-3263-6984</p>
-  <p>54 Dunsan Middle-ro, Seo-gu, Daejeon</p>
-</div>
+</main>
 
-<!-- Footer -->
-<footer style="background-color: #fef0f4; padding: 30px 20px; text-align: center;">
-  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">Cricri Beauty Studio</div>
-  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
-    Business Hours: 10:00 ~ 20:00 ｜ Contact: 0507-1367-6984
-  </div>
-  <div style="margin: 15px 0;">
-    <a href="http://pf.kakao.com/_SGZrn" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/3991/3991999.png" alt="KakaoTalk" width="26" />
-    </a>
-    <a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="26" />
-    </a>
-    <a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/11423/11423248.png" alt="Blog" width="26" />
-    </a>
-    <a href="#" target="_blank" style="margin: 0 10px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968850.png" alt="Band" width="26" />
-    </a>
-  </div>
-  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-    &copy; 2025 Cricri Beauty Studio. All rights reserved.
-  </div>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-title">Cricri Beauty Studio</div>
+  <div class="footer-info">Business Hours: 10:00 AM – 8:00 PM ｜ Contact: +82)0507-1367-6984</div>
+  <div class="footer-copy">&copy; 2025 Cricri Beauty Studio. All rights reserved.</div>
 </footer>
 
-<!-- Script -->
 <script>
   const checkbox = document.getElementById('agree');
   const naverBtn = document.getElementById('naverBtn');
@@ -118,10 +122,11 @@
     btn.addEventListener('click', (e) => {
       if (!checkbox.checked) {
         e.preventDefault();
-        alert("Please agree to the notice before booking.");
+        alert("Please agree to the booking information before proceeding.");
       }
     });
   });
 </script>
+
 </body>
 </html>
