@@ -1,107 +1,111 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>预约 | CriCri 美容店</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/booking.css" />
+  <title>预约 | Cricri Beauty Studio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/booking.css?v=20260219_3" />
 </head>
 <body>
-<!-- 顶部栏 -->
-<div class="header-container">
-  <div class="logo-area centered">
-    <div class="logo-text-row">
-      <span class="cricri">CriCri</span>
-      <div class="studio-text">
-        <div>BEAUTY</div>
-        <div>STUDIO</div>
-      </div>
+
+<!-- ================= LANGUAGE ================= -->
+<div class="lang-switcher">
+  <a href="index.html">KR</a> |
+  <a href="index_en.html">EN</a> |
+  <a href="index_jp.html">JP</a> |
+  <a href="index_ch.html">CH</a> |
+  <a href="index_vn.html">VN</a>
+</div>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <ul class="menu">
+    <li><a href="index_ch.html">首页</a></li>
+    <li><a href="service_ch.html">项目介绍</a></li>
+    <li><a href="예약_ch.html">预约</a></li>
+    <li><a href="map_ch.html">路线</a></li>
+    <li><a href="gallery_ch.html">作品展示</a></li>
+  </ul>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main class="page">
+
+  <!-- HERO -->
+  <section class="hero-card">
+    <h1 class="hero-title">预约说明</h1>
+    <p class="hero-desc">
+      为您提供专属定制美丽服务。  
+      预约前请务必仔细阅读以下注意事项。
+    </p>
+  </section>
+
+  <!-- 同意 -->
+  <div class="check-confirm">
+    <div class="check-card">
+      <input type="checkbox" id="agree" />
+      <label for="agree">我已阅读并同意以上所有内容。</label>
     </div>
-    <p class="logo-tagline">CriCri 美容站</p>
   </div>
 
-  <ul class="menu centered">
-    <li><a href="预约_ch.html">预约</a></li>
-    <li><a href="service_ch.html">美容服务</a></li>
-    <li><a href="map_ch.html">定位和路线</a></li>
-    <li><a href="gallery_ch.html">美图馆</a></li>
-  </ul>
+  <!-- 注意事项 -->
+  <section class="section">
+    <h2>📌 预约前须知</h2>
+    <ul>
+      <li>如迟到，施术时间可能会相应缩短或调整。</li>
+      <li>更改或取消预约请至少提前一天联系。</li>
+      <li>无故爽约可能会影响今后的预约。</li>
+      <li>敏感肌肤或孕妇需提前咨询后决定是否进行施术。</li>
+    </ul>
+  </section>
+
   <!-- 预约按钮 -->
-  <div class="btn-wrap">
-    <a href="https://map.naver.com/p/entry/place/2023374701" target="_blank" class="btn naver" id="naverBtn">纽约预约</a>
-    <a href="http://pf.kakao.com/_SGZrn/chat" target="_blank" class="btn kakao" id="kakaoBtn">老师咨询</a>
-  </div>
+  <section class="section">
+    <h2>📲 进行预约</h2>
+    <div class="btn-wrap">
+      <a href="https://map.naver.com/p/entry/place/2023374701"
+         target="_blank"
+         class="btn naver"
+         id="naverBtn">通过 Naver 预约</a>
 
-  <div class="lang-switcher">
-    <a href="index.html">KR</a> |
-    <a href="index_en.html">EN</a> |
-    <a href="index_jp.html">JP</a> |
-    <a href="index_ch.html">CH</a> |
-    <a href="index_vn.html">VN</a>
-  </div>
-</div>
+      <a href="http://pf.kakao.com/_SGZrn/chat"
+         target="_blank"
+         class="btn kakao"
+         id="kakaoBtn">Kakao 在线咨询</a>
+    </div>
+  </section>
 
-<p class="desc">为珍贵的您提供专属护理服务，预约前请务必确认下面内容</p>
+  <!-- 日历 -->
+  <section class="section">
+    <h2>📆 可预约时间</h2>
+    <p class="hint">
+      ※ 以下日历仅供参考，实际预约请通过 Naver 进行。
+    </p>
+    <iframe
+      src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul">
+    </iframe>
+  </section>
 
-<!-- 同意勾选框 -->
-<div class="check-confirm">
-  <input type="checkbox" id="agree" />
-  <label for="agree">我已阅读并同意下面的所有事项</label>
-</div>
+  <!-- 信息 -->
+  <section class="info-box">
+    <p><strong>Cricri Beauty Studio</strong></p>
+    <p>营业时间：10:00 – 20:00</p>
+    <p>联系电话：010-3263-6984</p>
+    <p>地址：韩国大田广域市西区屯山中路54号</p>
+    <p>营业执照号码：641-22-02169</p>
+  </section>
 
-<!-- 预约前须知事项 -->
-<div class="section">
-  <h2>📌 预约前须知事项</h2>
-  <ul>
-    <li>如遇迟到，护理时间可能会进行调整。</li>
-    <li>请至少在护理前一天进行修改或取消预约。</li>
-    <li>如有无故缺席，未来将无法再次预约。</li>
-    <li>皮肤敏感/怀孕者需经过咨询后确定是否可进行护理。</li>
-  </ul>
-</div>
+</main>
 
-<!-- 预约时间表 -->
-<div class="section">
-  <h2>📆 预约可用时间</h2>
-  <p style="text-align:center; color:#666; font-size:0.9em;">（以下日历只供参考，预约请通过Naver进行）</p>
-  <iframe src="https://calendar.google.com/calendar/embed?src=ko.south_korea%23holiday%40group.v.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
-</div>
-
-<!-- 左下角信息框 -->
-<div class="info-box">
-  <p><strong>CriCri 美容站</strong></p>
-  <p>营业时间：10:00 ~ 20:00</p>
-  <p>联系电话：010-3263-6984</p>
-  <p>大田市西区敦山中路54号</p>
-</div>
-
-<!-- 页脚 -->
-<footer style="background-color: #fef0f4; padding: 30px 20px; text-align: center;">
-  <div style="font-weight: bold; font-size: 1.1em; color: #d94f7b;">CriCri 美容店</div>
-  <div style="margin: 10px 0; color:#666; font-size: 0.95em;">
-    营业时间: 10:00 ~ 20:00 ｜ 联系电话: 0507-1367-6984
-  </div>
- <div style="margin: 15px 0;">
-<a href="http://pf.kakao.com/_SGZrn" target="_blank" style="margin: 0 10px;">
-  <img src="https://cdn-icons-png.flaticon.com/512/3991/3991999.png" alt="KakaoTalk" width="26" />
-</a>
-<a href="https://www.instagram.com/cricribeautystudio/" target="_blank" style="margin: 0 10px;">
-  <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="26" />
-</a>
-<a href="https://blog.naver.com/cricri_beauty" target="_blank" style="margin: 0 10px;">
-  <img src="https://cdn-icons-png.flaticon.com/512/11423/11423248.png" alt="Blog" width="26" />
-</a>
-<a href="#" target="_blank" style="margin: 0 10px;">
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968850.png" alt="Band" width="26" />
-</a>
-</div>
-  <div style="margin-top: 20px; font-size: 0.8em; color: #aaa;">
-    &copy; 2025 Cricri Beauty Studio. All rights reserved.
-  </div>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-title">Cricri Beauty Studio</div>
+  <div class="footer-info">营业时间：10:00 – 20:00 ｜ 联系电话：0507-1367-6984</div>
+  <div class="footer-copy">&copy; 2025 Cricri Beauty Studio. All rights reserved.</div>
 </footer>
 
-<!-- 脚部脚本 -->
 <script>
   const checkbox = document.getElementById('agree');
   const naverBtn = document.getElementById('naverBtn');
@@ -117,10 +121,11 @@
     btn.addEventListener('click', (e) => {
       if (!checkbox.checked) {
         e.preventDefault();
-        alert("请先同意预约须知事项。");
+        alert("请先同意预约说明后再进行预约。");
       }
     });
   });
 </script>
+
 </body>
 </html>
