@@ -2,201 +2,205 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO -->
-  <title>Nối Mi & Phun Mày Bán Vĩnh Viễn Gần Ga City Hall Daejeon | CriCri Beauty</title>
-  <meta name="description" content="Studio nối mi và phun mày bán vĩnh viễn cao cấp gần ga City Hall Daejeon. Dịch vụ riêng tư, đặt lịch trước, thiết kế phù hợp từng khách hàng.">
-  <meta name="keywords" content="nối mi Daejeon, phun mày Daejeon, bán vĩnh viễn, CriCri Beauty, studio làm đẹp riêng tư">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="CriCri Beauty Studio">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Cricri Beauty Studio">
-  <meta property="og:description" content="Chuyên nối mi & phun mày bán vĩnh viễn tại Daejeon. Dịch vụ riêng tư theo lịch hẹn.">
-  <meta property="og:url" content="https://cricribeauty.github.io/index_vn.html">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://cricribeauty.github.io/images/intro.png">
-
-  <!-- Multilingual -->
-  <link rel="canonical" href="https://cricribeauty.github.io/index_vn.html">
-  <link rel="alternate" hreflang="ko" href="https://cricribeauty.github.io/index.html">
-  <link rel="alternate" hreflang="en" href="https://cricribeauty.github.io/index_en.html">
-  <link rel="alternate" hreflang="ja" href="https://cricribeauty.github.io/index_jp.html">
-  <link rel="alternate" hreflang="zh-CN" href="https://cricribeauty.github.io/index_ch.html">
-  <link rel="alternate" hreflang="vi" href="https://cricribeauty.github.io/index_vn.html">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/style.css?v=20260219_1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thư Viện Ảnh | CriCri Beauty</title>
+  <link rel="stylesheet" href="css/gallery.css?v=20260219_1"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-<!-- ================= MOBILE HEADER ================= -->
-<div class="mobile-header"> 
-  <div class="mobile-logo">CriCri Beauty</div>
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-</div>
+  <!-- Language Switch -->
+  <div class="lang-switcher">
+    <a href="index.html">KR</a> |
+    <a href="index_en.html">EN</a> |
+    <a href="index_jp.html">JP</a> |
+    <a href="index_ch.html">CH</a> |
+    <a href="index_vn.html">VN</a>
+  </div>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="예약_vn.html" onclick="closeMenu()">Đặt lịch</a>
-  <a href="service_vn.html" onclick="closeMenu()">Dịch vụ</a>
-  <a href="map_vn.html" onclick="closeMenu()">Vị trí</a>
-  <a href="gallery_vn.html" onclick="closeMenu()">Thư viện ảnh</a>
-</div>
+  <!-- Navigation -->
+  <header class="nav">
+    <ul class="menu">
+      <li><a href="index_vn.html">Trang Chủ</a></li>
+      <li><a href="service_vn.html">Dịch Vụ</a></li>
+      <li><a href="예약_vn.html">Đặt Lịch</a></li>
+      <li><a href="map_vn.html">Bản Đồ</a></li>
+      <li><a href="gallery_vn.html" aria-current="page">Thư Viện Ảnh</a></li>
+    </ul>
+  </header>
 
-<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">CriCri Style Book</h1>
+      <p class="hero-sub">
+        Chúng tôi giúp bạn tìm kiểu mi và chân mày phù hợp nhất với gương mặt của mình.  
+        “CriCri Beauty Studio”
+      </p>
 
-<!-- ================= LANGUAGE ================= -->
-<div class="lang-switcher">
-  <a href="index.html">KR</a> |
-  <a href="index_en.html">EN</a> |
-  <a href="index_jp.html">JP</a> |
-  <a href="index_ch.html">CH</a> |
-  <a href="index_vn.html">VN</a>
-</div>
-
-<!-- ================= DESKTOP NAV ================= -->
-<nav class="nav">
-  <ul class="menu">
-    <li><a href="예약_vn.html">Đặt lịch</a></li>
-    <li><a href="service_vn.html">Dịch vụ</a></li>
-    <li><a href="map_vn.html">Vị trí</a></li>
-    <li><a href="gallery_vn.html">Thư viện ảnh</a></li>
-  </ul>
-</nav>
-
-<div class="background"></div>
-
-<div class="logo-slide">
-
-  <!-- STYLE FINDER -->
-  <section class="style-finder">
-    <h2 class="sf-title">Tìm phong cách phù hợp với bạn</h2>
-    <p class="sf-sub">Nối mi / Chân mày – Trả lời 3 câu hỏi để nhận gợi ý phù hợp.</p>
-
-    <div class="sf-tabs">
-      <button type="button" class="sf-tab active" data-tab="lash">Nối mi</button>
-      <button type="button" class="sf-tab" data-tab="brow">Chân mày</button>
-    </div>
-
-    <div class="sf-card">
-
-      <!-- LASH -->
-      <div class="sf-pane active" data-pane="lash">
-
-        <div class="sf-q">
-          <div class="sf-qtitle">1) Bạn muốn phong cách nào?</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="natural">Tự nhiên</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="clear">Sắc nét</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="glam">Quyến rũ</button>
-          </div>
-        </div>
-
-        <div class="sf-q">
-          <div class="sf-qtitle">2) Trang điểm hằng ngày của bạn?</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="light">Nhẹ</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="normal">Bình thường</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="heavy">Đậm</button>
-          </div>
-        </div>
-
-        <div class="sf-q">
-          <div class="sf-qtitle">3) Hiệu ứng mong muốn?</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="curl">Nhấn mạnh độ cong</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="mascara">Hiệu ứng mascara</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="bigger">Mắt to hơn</button>
-          </div>
-        </div>
-
-        <div class="sf-result">
-          <div class="sf-rtitle">Kết quả gợi ý (Nối mi)</div>
-          <div class="sf-rbody">Hãy chọn các câu hỏi để xem gợi ý phù hợp.</div>
-
-          <div class="sf-actions">
-            <a class="btn sfGalleryBtn" href="javascript:void(0)">Xem trong thư viện</a>
-            <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Tư vấn qua Kakao</a>
-          </div>
-        </div>
-
+      <div class="quick-nav">
+        <a class="chip" href="#classic">Kiểu Mi</a>
+        <a class="chip" href="#browstyle">Thiết Kế Chân Mày (Bán Vĩnh Viễn)</a>
+        <a class="chip" href="#beforeafter">Trước & Sau</a>
+        <a class="chip" href="#interior">Không Gian Studio</a>
       </div>
-
-      <!-- BROW -->
-      <div class="sf-pane" data-pane="brow">
-
-        <div class="sf-q">
-          <div class="sf-qtitle">1) Bạn muốn ấn tượng như thế nào?</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="soft">Mềm mại</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="sharp">Sắc sảo</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="clean">Gọn gàng</button>
-          </div>
-        </div>
-
-        <div class="sf-q">
-          <div class="sf-qtitle">2) Tình trạng chân mày hiện tại?</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="sparse">Thưa / không đều</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="messy">Lông mày rối</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="oldpmu">Đã từng phun xăm</button>
-          </div>
-        </div>
-
-        <div class="sf-q">
-          <div class="sf-qtitle">3) Mong muốn cải thiện điều gì?</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="shape">Tạo dáng & cân đối</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="natural">Hiệu ứng tự nhiên</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="lift">Hiệu ứng nâng nhẹ</button>
-          </div>
-        </div>
-
-        <div class="sf-result">
-          <div class="sf-rtitle">Kết quả gợi ý (Chân mày)</div>
-          <div class="sf-rbody">Hãy chọn các câu hỏi để xem gợi ý phù hợp.</div>
-
-          <div class="sf-actions">
-            <a class="btn sfGalleryBtn" href="javascript:void(0)">Xem trong thư viện</a>
-            <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Tư vấn qua Kakao</a>
-          </div>
-        </div>
-
-      </div>
-
     </div>
   </section>
 
-  <h1>
-    <span class="slide">CriCri</span>
-    <span class="slide">BEAUTY</span>
-    <span class="slide">STUDIO</span>
-  </h1>
+  <main class="main">
 
-  <div class="tagline-slide">
-    <span class="tagline">
-      Ấn tượng đầu tiên bắt đầu từ chân mày.<br>
-      Hãy bắt đầu hành trình làm đẹp cùng CriCri.
-    </span>
-  </div>
+    <!-- Eyelash Styles -->
+    <section class="section" id="classic">
+      <div class="section-head">
+        <h2 class="section-title">Kiểu Mi</h2>
+        <p class="section-desc">Chọn kiểu phù hợp với phong cách bạn mong muốn.</p>
+      </div>
 
-  <div class="cta-buttons">
-    <a href="service_vn.html" class="btn">Xem dịch vụ</a>
-    <a href="booking_vn.html" class="btn">Đặt lịch ngay</a>
-  </div>
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track classic-slider-track">
 
-</div>
+            <div class="interior-slide">
+              <img src="images/natural.png" alt="Natural">
+              <p class="caption">NATURAL<br>Nhẹ nhàng và tự nhiên hằng ngày</p>
+            </div>
 
-<div class="info-box">
-  <p><strong>CriCri Beauty Studio</strong></p>
-  <p>Giờ hoạt động: 10:00 – 20:00</p>
-  <p>Điện thoại: 010-3263-6984</p>
-  <p>Địa chỉ: 54 Dunsanjung-ro, Seo-gu, Daejeon, Hàn Quốc</p>
-  <p>Mã đăng ký kinh doanh: 641-22-02169</p>
-</div>
+            <div class="interior-slide">
+              <img src="images/dolleye.png" alt="Doll Eye">
+              <p class="caption">DOLL EYE<br>Tập trung độ dài ở giữa, tạo hiệu ứng mắt tròn</p>
+            </div>
+
+            <div class="interior-slide">
+              <img src="images/cateye.png" alt="Cat Eye">
+              <p class="caption">CAT EYE<br>Kéo dài đuôi mắt, tạo vẻ sắc sảo</p>
+            </div>
+
+            <div class="interior-slide">
+              <img src="images/hybrid.png" alt="Hybrid">
+              <p class="caption">HYBRID<br>Kết hợp tự nhiên và độ dày</p>
+            </div>
+
+            <div class="interior-slide">
+              <img src="images/volume lash.png" alt="Volume Lash">
+              <p class="caption">VOLUME LASH<br>Dày và nổi bật hơn</p>
+            </div>
+
+            <div class="interior-slide">
+              <img src="images/wispy.png" alt="Wispy">
+              <p class="caption">WISPY<br>Tạo hiệu ứng nhiều tầng và mềm mại</p>
+            </div>
+
+          </div>
+
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.classic-slider-track')">« Trước</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.classic-slider-track')">Tiếp »</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before & After -->
+    <section class="section" id="beforeafter">
+      <div class="section-head">
+        <h2 class="section-title">Trước & Sau</h2>
+        <p class="section-desc">Xem rõ sự thay đổi sau khi thực hiện dịch vụ.</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track beforeafter-slider-track">
+            <div class="interior-slide">
+              <img src="images/B_F1.jpg" alt="Before After 1">
+              <p class="caption">Bên trái: Sau khi làm / Bên phải: Cận cảnh</p>
+            </div>
+            <div class="interior-slide">
+              <img src="images/B_F2.png" alt="Before After 2">
+              <p class="caption">Bên trái: Trước / Bên phải: Sau</p>
+            </div>
+          </div>
+
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.beforeafter-slider-track')">« Trước</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.beforeafter-slider-track')">Tiếp »</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brow Design -->
+    <section class="section" id="browstyle">
+      <div class="section-head">
+        <h2 class="section-title">Thiết Kế Chân Mày</h2>
+        <p class="section-desc">Khám phá quy trình thiết kế chân mày bán vĩnh viễn.</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track brow-slider-track">
+
+            <div class="interior-slide">
+              <img src="images/brow1.jpg" alt="Brow Process 1">
+              <p class="caption">Tư vấn và thiết kế dáng mày</p>
+            </div>
+
+            <div class="interior-slide">
+              <img src="images/brow2.jpg" alt="Brow Process 2">
+              <p class="caption">Thực hiện kỹ thuật tỉ mỉ</p>
+            </div>
+
+            <div class="interior-slide">
+              <img src="images/brow3.jpg" alt="Brow Process 3">
+              <p class="caption">Hoàn thiện tự nhiên và tinh tế</p>
+            </div>
+
+          </div>
+
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.brow-slider-track')">« Trước</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.brow-slider-track')">Tiếp »</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Interior -->
+    <section class="section" id="interior">
+      <div class="section-head">
+        <h2 class="section-title">Không Gian Studio</h2>
+        <p class="section-desc">Không gian riêng tư và thoải mái dành cho bạn.</p>
+      </div>
+
+      <div class="slider-card">
+        <div class="interior-slider">
+          <div class="interior-slider-track shopinterior-slider-track">
+            <div class="interior-slide"><img src="images/inte.jpg" alt="Interior 1"></div>
+            <div class="interior-slide"><img src="images/inte1.jpg" alt="Interior 2"></div>
+            <div class="interior-slide"><img src="images/inte2.jpg" alt="Interior 3"></div>
+            <div class="interior-slide"><img src="images/inte4.jpg" alt="Interior 4"></div>
+          </div>
+          <div class="slider-buttons">
+            <button type="button" class="sbtn" onclick="moveSlide(-1, '.shopinterior-slider-track')">« Trước</button>
+            <button type="button" class="sbtn" onclick="moveSlide(1, '.shopinterior-slider-track')">Tiếp »</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-wrap">
+      <div class="cta-card">
+        <h3>Đặt lịch hoặc tư vấn theo phong cách bạn yêu thích</h3>
+        <p>Liên hệ ngay để được tư vấn phù hợp với mong muốn của bạn.</p>
+        <div class="cta-actions">
+          <a class="cta-btn" href="booking_vn.html">Đặt Lịch Ngay</a>
+          <a class="cta-btn cta-kakao" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Tư Vấn Kakao</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
 </body>
 </html>
