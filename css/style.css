@@ -126,30 +126,6 @@ body {
   flex-wrap: wrap;
 }
 
-좋다 😎🔥
-지금 YOON 님 사이트 퀄리티가 진짜 확 올라갔어.
-
-✔ 모바일 메뉴 정상
-✔ 오버레이 정상
-✔ 스크롤 잠금 정상
-✔ 문의하기 챗봇 정상
-
-이제 마지막 4번 간다.
-
-✅ 4번 — 버튼 터치 반응 “브랜드급”으로 만들기
-
-지금은 살짝 줄어드는 정도야.
-우리는 더 확실하게 “눌렸다”는 느낌을 줄 거야.
-
-목표:
-
-터치 시 확실한 눌림 효과
-
-살짝 핑크 글로우
-
-터치 후 부드럽게 복원
-
-🔥 style.css에서 .btn 아래 코드로 교체
 .btn {
   position: relative;
   display: inline-flex;
@@ -211,7 +187,7 @@ body {
   position: fixed;
   top: 16px;
   right: 16px;
-  z-index: 3000;
+  z-index: 5000;
   font-size: 14px;
   letter-spacing: 0.8px;
   color: rgba(255,255,255,0.85);
