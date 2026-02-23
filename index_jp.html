@@ -4,54 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ✅ Search Console -->
-  <meta name="naver-site-verification" content="3371eda7e8882c7d645a420b116c75fa4681eab8" />
-  <meta name="google-site-verification" content="qnuIKB5IxqsUSj3U_9biSjNpaRY3AkN_ELw2S2xRQKs" />
-
-  <!-- SEO -->
-  <title>大田市庁駅 まつげ＆半永久眉 | CriCri Beauty</title>
-  <meta name="description" content="大田市庁駅5番出口近くの、まつげ＆半永久眉の専門PRIVATEビューティースタジオ。完全予約制でお一人おひとりに合わせた施術をご提供します。">
-  <meta name="keywords" content="大田市庁駅 まつげ, 大田市庁駅 眉アート, 大田 半永久眉, クリクリビューティー, プライベートサロン, 大田 まつげパーマ">
+  <title>大田市庁駅 まつげパーマ・眉アートメイク | CriCri Beauty Studio</title>
+  <meta name="description" content="大田市庁駅近くの完全予約制プライベートサロン。まつげパーマ（ラッシュリフト）と眉アートメイクを提供。KakaoTalkでのご相談も可能です。">
+  <meta name="keywords" content="大田 まつげパーマ, 大田 ラッシュリフト, 大田 眉アートメイク, 韓国 眉毛タトゥー, 大田 美容サロン, 市庁駅 まつげ, 外国人対応サロン, Cricri Beauty">
   <meta name="robots" content="index, follow">
   <meta name="author" content="CriCri Beauty Studio">
+  <link rel="canonical" href="https://cricribeauty.github.io/index_jp.html">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Cricri Beauty Studio">
-  <meta property="og:description" content="大田市庁駅 まつげ＆半永久眉の専門店。完全予約制のプライベート運営。">
+  <meta property="og:title" content="大田 まつげパーマ | CriCri Beauty Studio">
+  <meta property="og:description" content="大田市庁駅近くのプライベートサロン。まつげパーマと眉アートメイク。完全予約制。">
   <meta property="og:url" content="https://cricribeauty.github.io/index_jp.html">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://cricribeauty.github.io/images/intro.png">
+  <meta property="og:image" content="https://cricribeauty.github.io/images/og_en.jpg">
 
-  <!-- Multilingual -->
-  <link rel="canonical" href="https://cricribeauty.github.io/index_jp.html">
+  <!-- hreflang -->
   <link rel="alternate" hreflang="ko" href="https://cricribeauty.github.io/index.html">
   <link rel="alternate" hreflang="en" href="https://cricribeauty.github.io/index_en.html">
   <link rel="alternate" hreflang="ja" href="https://cricribeauty.github.io/index_jp.html">
-  <link rel="alternate" hreflang="zh-CN" href="https://cricribeauty.github.io/index_ch.html">
+  <link rel="alternate" hreflang="zh" href="https://cricribeauty.github.io/index_ch.html">
   <link rel="alternate" hreflang="vi" href="https://cricribeauty.github.io/index_vn.html">
+  <link rel="alternate" hreflang="x-default" href="https://cricribeauty.github.io/index_en.html">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "CriCri Beauty Studio",
+    "url": "https://cricribeauty.github.io/index_jp.html",
+    "telephone": "+82-10-3263-6984",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "54 Dunsanjung-ro, Seo-gu",
+      "addressLocality": "Daejeon",
+      "addressRegion": "Daejeon",
+      "addressCountry": "KR"
+    },
+    "openingHours": "Mo-Su 10:00-20:00",
+    "priceRange": "$$"
+  }
+  </script>
 
-  <!-- CSS -->
+  <style>
+    .seo-h1 {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+  </style>
+
   <link rel="stylesheet" href="css/style.css?v=20260219_1">
 </head>
+
 <body>
 
-<!-- ================= MOBILE HEADER ================= -->
-<div class="mobile-header"> 
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
   <div class="mobile-logo">CriCri Beauty</div>
   <div class="hamburger" onclick="toggleMenu()">☰</div>
 </div>
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="예약_jp.html" onclick="closeMenu()">予約</a>
-  <a href="service_jp.html" onclick="closeMenu()">施術</a>
+  <a href="service_jp.html" onclick="closeMenu()">サービス</a>
   <a href="map_jp.html" onclick="closeMenu()">アクセス</a>
   <a href="gallery_jp.html" onclick="closeMenu()">ギャラリー</a>
 </div>
 
-<!-- 언어 선택 -->
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+<!-- LANGUAGE -->
 <div class="lang-switcher">
   <a href="index.html">KR</a> |
   <a href="index_en.html">EN</a> |
@@ -60,336 +85,79 @@
   <a href="index_vn.html">VN</a>
 </div>
 
-<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
-
-<!-- ================= DESKTOP NAV ================= -->
 <nav class="nav">
   <ul class="menu">
     <li><a href="예약_jp.html">予約</a></li>
-    <li><a href="service_jp.html">施術</a></li>
+    <li><a href="service_jp.html">サービス</a></li>
     <li><a href="map_jp.html">アクセス</a></li>
     <li><a href="gallery_jp.html">ギャラリー</a></li>
   </ul>
 </nav>
 
-<!-- ================= BACKGROUND ================= -->
 <div class="background"></div>
 
-<!-- ================= MAIN CONTENT ================= -->
+<h1 class="seo-h1">大田市庁駅近く まつげパーマ・眉アートメイクサロン</h1>
+
 <div class="logo-slide">
 
-  <!-- ✅ Style Finder -->
-  <section class="style-finder" id="styleFinder">
-    <h2 class="sf-title">あなたに合う施術を見つける</h2>
-    <p class="sf-sub">まつげ / 眉毛、3つの質問でおすすめします。</p>
-
-    <!-- tabs -->
-    <div class="sf-tabs" role="tablist" aria-label="Style finder tabs">
-      <button type="button" class="sf-tab active" data-tab="lash" role="tab" aria-selected="true">まつげ</button>
-      <button type="button" class="sf-tab" data-tab="brow" role="tab" aria-selected="false">眉毛</button>
-    </div>
-
-    <div class="sf-card">
-
-      <!-- ===== LASH ===== -->
-      <div class="sf-pane active" data-pane="lash">
-        <div class="sf-q">
-          <div class="sf-qtitle">1) どんな雰囲気が好き？</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="natural">ナチュラル</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="clear">くっきり</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="mood" data-v="glam">華やか</button>
-          </div>
-        </div>
-
-        <div class="sf-q">
-          <div class="sf-qtitle">2) 普段のメイクは？</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="light">薄め</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="normal">普通</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="makeup" data-v="heavy">しっかり</button>
-          </div>
-        </div>
-
-        <div class="sf-q">
-          <div class="sf-qtitle">3) どんな効果が欲しい？</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="curl">カール強調</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="mascara">マスカラ効果</button>
-            <button type="button" class="sf-btn" data-group="lash" data-q="goal" data-v="bigger">目元を大きく</button>
-          </div>
-        </div>
-
-        <div class="sf-result" id="sfResultLash" aria-live="polite">
-          <div class="sf-rtitle">おすすめ（まつげ）</div>
-          <div class="sf-rbody">質問を選ぶとおすすめが表示されます。</div>
-
-          <div class="sf-actions">
-            <a class="btn sfGalleryBtn" href="javascript:void(0)">ギャラリーで見る</a>
-            <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Kakaoで相談</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===== BROW ===== -->
-      <div class="sf-pane" data-pane="brow">
-        <div class="sf-q">
-          <div class="sf-qtitle">1) どんな印象が好き？</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="soft">やわらかく</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="sharp">くっきり</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="look" data-v="clean">整った感じ</button>
-          </div>
-        </div>
-
-        <div class="sf-q">
-          <div class="sf-qtitle">2) 今の眉の状態は？</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="sparse">薄い/抜けて見える</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="messy">毛流れがバラバラ</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="state" data-v="oldpmu">既存のアートメイクあり</button>
-          </div>
-        </div>
-
-        <div class="sf-q">
-          <div class="sf-qtitle">3) 重視したいポイントは？</div>
-          <div class="sf-opts">
-            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="shape">ライン/左右差を整える</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="natural">自然な毛流れ</button>
-            <button type="button" class="sf-btn" data-group="brow" data-q="goal" data-v="lift">リフト感</button>
-          </div>
-        </div>
-
-        <div class="sf-result" id="sfResultBrow" aria-live="polite">
-          <div class="sf-rtitle">おすすめ（眉毛）</div>
-          <div class="sf-rbody">質問を選ぶとおすすめが表示されます。</div>
-
-          <div class="sf-actions">
-            <a class="btn sfGalleryBtn" href="javascript:void(0)">ギャラリーで見る</a>
-            <a class="btn kakao sfKakaoBtn" href="http://pf.kakao.com/_SGZrn/chat" target="_blank">Kakaoで相談</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Logo -->
   <h1>
     <span class="slide">CriCri</span>
     <span class="slide">BEAUTY</span>
     <span class="slide">STUDIO</span>
   </h1>
 
-  <!-- Tagline -->
   <div class="tagline-slide">
     <span class="tagline">
-      第一印象は、眉で完成します。<br>
-      CriCri Beautyから始めましょう。
+      第一印象は、眉と目元から。<br>
+      CriCriであなたの美しさをスタート。
     </span>
   </div>
 
-  <!-- CTA -->
   <div class="cta-buttons">
-    <a href="service_jp.html" class="btn">サービス</a>
-    <a href="예약_jp.html" class="btn">予約</a>
+    <a href="service_jp.html" class="btn">サービスを見る</a>
+    <a href="예약_jp.html" class="btn">今すぐ予約</a>
   </div>
 
 </div>
 
-<!-- Info -->
+<section style="max-width: 900px; margin: 40px auto; padding: 0 18px; line-height: 1.7;">
+  <h2>大田市庁駅近くのまつげパーマ（ラッシュリフト）</h2>
+
+  <p>
+    CriCri Beauty Studioは、大田市庁駅近くにある完全予約制のプライベートサロンです。
+    ナチュラルで上品な仕上がりの<strong>まつげパーマ（ラッシュリフト）</strong>と
+    <strong>眉アートメイク</strong>を提供しています。
+  </p>
+
+  <p>
+    大田へ旅行や出張でお越しの方も大歓迎。
+    市庁駅から徒歩圏内でアクセスも便利です。
+    「大田 まつげパーマ」「韓国 眉アートメイク」をお探しの方は、
+    ぜひお気軽にご予約ください。
+  </p>
+
+  <p>
+    オンライン予約、またはKakaoTalkでのご相談も可能です。
+  </p>
+</section>
+
 <div class="info-box">
-  <p><strong>クリクリ ビューティースタジオ</strong></p>
-  <p>営業時間 : 10:00 ~ 20:00</p>
-  <p>電話 : 010-3263-6984</p>
-  <p>大田広域市 西区 둔산중로 54</p>
-  <p>事業者登録番号 : 641-22-02169</p>
-</div>
-
-<!-- Chatbot -->
-<div id="chatbot-toggle" onclick="toggleChatbot()">💬 お問い合わせ</div>
-
-<div id="chatbot-box">
-  <div class="chat-header">CriCri Chat</div>
-  <div class="chat-content">
-    <p>何をお手伝いしましょうか？</p>
-    <button onclick="alert('営業時間: 10:00 ~ 20:00')">営業時間</button>
-    <button onclick="alert('市庁駅4番出口 徒歩5分')">場所</button>
-    <button onclick="location.href='예약_jp.html'">予約</button>
-  </div>
+  <p><strong>CriCri Beauty Studio</strong></p>
+  <p>営業時間：10:00 ~ 20:00</p>
+  <p>電話：010-3263-6984</p>
+  <p>住所：韓国 大田広域市 西区 Dunsanjung-ro 54</p>
+  <p>事業者登録番号：641-22-02169</p>
 </div>
 
 <script>
 function toggleMenu() {
-  const menu = document.getElementById("mobileMenu");
-  const overlay = document.getElementById("menuOverlay");
-  if (!menu || !overlay) return;
-  menu.classList.toggle("active");
-  overlay.classList.toggle("active");
-  document.body.classList.toggle("no-scroll");
+  document.getElementById("mobileMenu").classList.toggle("active");
+  document.getElementById("menuOverlay").classList.toggle("active");
 }
 function closeMenu() {
-  const menu = document.getElementById("mobileMenu");
-  const overlay = document.getElementById("menuOverlay");
-  if (!menu || !overlay) return;
-  menu.classList.remove("active");
-  overlay.classList.remove("active");
-  document.body.classList.remove("no-scroll");
+  document.getElementById("mobileMenu").classList.remove("active");
+  document.getElementById("menuOverlay").classList.remove("active");
 }
-function toggleChatbot() {
-  const box = document.getElementById("chatbot-box");
-  if (!box) return;
-  const isOpen = box.style.display === "block";
-  box.style.display = isOpen ? "none" : "block";
-}
-
-/* ===== Style Finder (Tabs + Recommender) ===== */
-const sfState = {
-  lash: { mood: null, makeup: null, goal: null },
-  brow: { look: null, state: null, goal: null }
-};
-
-function setActivePane(tab) {
-  document.querySelectorAll(".sf-tab").forEach(t => {
-    const isOn = t.dataset.tab === tab;
-    t.classList.toggle("active", isOn);
-    t.setAttribute("aria-selected", isOn ? "true" : "false");
-  });
-  document.querySelectorAll(".sf-pane").forEach(p => {
-    p.classList.toggle("active", p.dataset.pane === tab);
-  });
-}
-
-function updateLash() {
-  const r = document.getElementById("sfResultLash");
-  const body = r.querySelector(".sf-rbody");
-  const s = sfState.lash;
-
-  if (!s.mood || !s.makeup || !s.goal) {
-    body.textContent = "質問を選ぶとおすすめが表示されます。";
-    return;
-  }
-
-  let rec = "🌸 バッチリ上向き ベーシックパーマ";
-  let reason = "毎日ナチュラルに、でもくっきり見せたい方へおすすめです。";
-
-  if (s.goal === "mascara") {
-    rec = "🌿 ブラックティントパーマ";
-    reason = "マスカラを塗ったように、より濃くはっきりした目元に。";
-  } else if (s.goal === "bigger") {
-    rec = "✨ デュアルパーマ";
-    reason = "上まつげ＋下まつげを同時に施術して、目元を大きく見せます。";
-  } else if (s.mood === "natural" && s.makeup === "light") {
-    rec = "🌸 バッチリ上向き ベーシックパーマ";
-    reason = "抜け感のある自然なカールがぴったりです。";
-  }
-
-  body.innerHTML = `<b>${rec}</b><br>${reason}`;
-}
-
-function updateBrow() {
-  const r = document.getElementById("sfResultBrow");
-  const body = r.querySelector(".sf-rbody");
-  const s = sfState.brow;
-
-  if (!s.look || !s.state || !s.goal) {
-    body.textContent = "質問を選ぶとおすすめが表示されます。";
-    return;
-  }
-
-  let rec = "🍃 ナチュラル眉デザイン";
-  let reason = "毛流れを活かして自然に整え、柔らかい印象に仕上げます。";
-
-  if (s.state === "messy" || s.goal === "lift") {
-    rec = "🌈 ブロウラミネーション（眉リフト）";
-    reason = "毛流れを整え、リフト感のあるすっきりした印象に。";
-  }
-  if (s.state === "oldpmu") {
-    rec = "🌈 ブロウラミネーション（眉リフト）";
-    reason = "既存のアートメイクが薄くなった/毛流れが崩れた場合にもおすすめ。";
-  }
-  if (s.state === "sparse" && s.goal === "shape") {
-    rec = "🍃 ナチュラル眉デザイン";
-    reason = "薄い部分を自然にカバーしながら、ライン/左右差を整えます。";
-  }
-
-  body.innerHTML = `<b>${rec}</b><br>${reason}`;
-}
-
-document.addEventListener("click", (e) => {
-  const tabBtn = e.target.closest(".sf-tab");
-  if (tabBtn) {
-    setActivePane(tabBtn.dataset.tab);
-    return;
-  }
-
-  const btn = e.target.closest(".sf-btn");
-  if (!btn) return;
-
-  const group = btn.dataset.group;
-  const q = btn.dataset.q;
-  const v = btn.dataset.v;
-
-  sfState[group][q] = v;
-
-  document
-    .querySelectorAll(`.sf-btn[data-group="${group}"][data-q="${q}"]`)
-    .forEach(b => b.classList.remove("active"));
-  btn.classList.add("active");
-
-  if (group === "lash") updateLash();
-  if (group === "brow") updateBrow();
-});
-
-// default tab
-setActivePane("lash");
-
-/* ===== Kakao 상담: 추천 내용 복사 ===== */
-document.addEventListener("click", function(e) {
-  const kakaoBtn = e.target.closest(".sfKakaoBtn");
-  if (!kakaoBtn) return;
-
-  const activePane = document.querySelector(".sf-pane.active");
-  const resultText = activePane?.querySelector(".sf-rbody")?.innerText || "";
-
-  if (!resultText || resultText.includes("質問を選ぶと")) {
-    alert("先にスタイルを選択してください 😊");
-    e.preventDefault();
-    return;
-  }
-
-  const message =
-    "こんにちは 😊\nホームページのおすすめ結果は以下です:\n\n" +
-    resultText +
-    "\n\n相談お願いします。";
-
-  navigator.clipboard.writeText(message).then(() => {
-    alert("おすすめ内容をコピーしました！\nKakaoトークに貼り付けてください 💕");
-  }).catch(() => {
-    alert("コピーに失敗しました。手動でコピーしてください。");
-  });
-});
-
-/* ===== 추천 결과 → 갤러리 이동 ===== */
-document.addEventListener("click", function(e) {
-  const galleryBtn = e.target.closest(".sfGalleryBtn");
-  if (!galleryBtn) return;
-
-  const activePane = document.querySelector(".sf-pane.active");
-  const resultText = activePane?.querySelector(".sf-rbody")?.innerText || "";
-
-  if (!resultText || resultText.includes("質問を選ぶと")) {
-    alert("先にスタイルを選択してください 😊");
-    return;
-  }
-
-  let target = "classic";
-  if (resultText.includes("ラミネーション") || resultText.includes("眉")) {
-    target = "beforeafter";
-  }
-
-  window.location.href = "gallery_jp.html#" + target;
-});
 </script>
 
 </body>
